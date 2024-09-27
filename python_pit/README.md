@@ -26,47 +26,73 @@ The repository is organized into weekly folders (`wk01`, `wk02`, ..., `wk08`), e
 
 ---
 
-## Weekly Breakdown
+## Instructions for Students
 
-### Week 1: Introduction to Python
-- **Activity**: Basic syntax, variables, and data types
-- **Challenge**: Create a simple Python program to practice basic concepts
-- **Advanced Challenge**: Expand the program to include user input and simple conditionals
+### 1. Fork the Repository
 
-### Week 2: Control Structures
-- **Activity**: Learn about `if`, `else`, and `elif` statements
-- **Challenge**: Build a decision-making program
-- **Advanced Challenge**: Implement a simple calculator
+To get started with the program, you need to fork this repository to your own GitHub account.
 
-### Week 3: Loops in Python
-- **Activity**: Introduction to `for` and `while` loops
-- **Challenge**: Create a program that uses loops to iterate over data
-- **Advanced Challenge**: Build a number guessing game
+1. Go to the main page of the repository: [python_pit](https://github.com/yourusername/python_pit).
+2. In the top-right corner of the page, click **Fork**.
+3. GitHub will create a copy of the repository under your own account. You now have your own version of the repository, and you can make changes to it independently.
 
-### Week 4: Functions and Modular Code
-- **Activity**: Learn how to define and call functions
-- **Challenge**: Write reusable functions in a program
-- **Advanced Challenge**: Implement a program with multiple functions interacting
+### 2. Clone Your Forked Repository
 
-### Week 5: Data Structures - Lists and Tuples
-- **Activity**: Explore lists, tuples, and their operations
-- **Challenge**: Manipulate data using lists and tuples
-- **Advanced Challenge**: Create a program that stores and processes user information
+After forking the repository, clone it to your local machine so that you can start working on the assignments.
 
-### Week 6: Dictionaries and Sets
-- **Activity**: Learn about dictionaries and sets, and how to use them
-- **Challenge**: Build a contact book using dictionaries
-- **Advanced Challenge**: Extend the contact book to handle multiple operations
+1. Copy the URL of your forked repository (you can find it by clicking the green **Code** button on your repository page).
+2. Open your terminal and run the following command, replacing `yourusername` with your GitHub username:
+   ```bash
+   git clone https://github.com/yourusername/python_pit.git
+   ```
+3. Navigate to the cloned repository:
+   ```bash
+   cd python_pit
+   ```
 
-### Week 7: File Handling in Python
-- **Activity**: Introduction to reading from and writing to files
-- **Challenge**: Create a program that reads data from a file and processes it
-- **Advanced Challenge**: Build a program that logs user activity to a file
+### 3. Work on the Assignments
 
-### Week 8: Advanced Topics - Exception Handling and Recursion
-- **Activity**: Learn how to handle exceptions and understand recursion
-- **Challenge**: Write a program that uses recursion for solving a problem
-- **Advanced Challenge**: Implement a robust program with error handling and recursion
+1. Each week, go to the corresponding folder (e.g., `wk01`, `wk02`) and open the `README.md` file for instructions on the activities and challenges.
+2. Make changes to the Python scripts as required by the assignments.
+
+### 4. Commit Your Changes
+
+After working on an assignment, you need to commit your changes to your local repository:
+
+1. Stage the changes you want to commit:
+   ```bash
+   git add .
+   ```
+
+2. Commit the changes with a descriptive message:
+   ```bash
+   git commit -m "Completed Week 1 Assignment"
+   ```
+
+### 5. Push Your Changes to Your Fork
+
+After committing your changes, push them to your forked repository on GitHub:
+
+```bash
+git push origin master
+```
+
+### 6. Submit a Pull Request (For Feedback Only)
+
+Once you have completed an assignment and pushed your changes to your forked repository, you need to submit a pull request to the original repository so that your work can be reviewed.
+
+1. Go to your forked repository on GitHub.
+2. Click on the **Pull Requests** tab.
+3. Click on the **New Pull Request** button.
+4. Select the branch you want to merge from (typically `master` in your fork) and the branch you want to merge into (`master` in the original repository).
+5. Add a meaningful title and description for your pull request, explaining the changes you made.
+6. Submit the pull request.
+
+**Important**: The pull request will not affect the main repository code. It is solely for feedback and review. The teacher will review your code and provide feedback through the pull request.
+
+### 7. Wait for Feedback
+
+Once your pull request is submitted, the repository owner (your teacher) will review your code and provide feedback. If changes are requested, you can make the necessary updates to your fork and the pull request will automatically update.
 
 ---
 
