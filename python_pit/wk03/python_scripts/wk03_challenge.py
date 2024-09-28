@@ -1,25 +1,55 @@
-# Week 1 Challenge: Python Basics
+# Week 3 Challenge: Loops
 # Instructions:
-# 1. Modify the program to ask the user three different questions (e.g., favorite hobby, favorite food, etc.).
-# 2. Based on the user's input, respond with a personalized message for each question.
-# 3. Ensure the program uses variables, input/output, and prints a final message summarizing the user’s responses.
+# 1. Modify the program to ask the user what difficulty level they want
+# 2. Based on the user's input, change what range of number the computer can guess from (10, 100, 1000 etc.)
+# 3. Ensure, if the user enters an invalid difficulty, they are asked again until they don't.
 
-# Start by greeting the user
-print("Hello! Let's play a quick Q&A game.")
+# We import the "random" and "time" libraries here for use later. You will learn more about how this works in Week 7
+import random
+import time
 
-# Section 1: Ask for the user's favorite hobby
-hobby = input("What is your favorite hobby? ")
+# Print a message to greet the user
+print("Welcome to the Higher or Lower Game!")
 
-# Section 2: Ask for the user's favorite food
-food = input("What is your favorite food? ")
+# Ask for the difficulty
+validDifficulty = False
+targetRange = 10
+# Keep looping until they enter a valid difficulty
+while not validDifficulty:
 
-# Section 3: Ask for the user's favorite movie
-movie = input("What is your favorite movie? ")
+    print("Which difficulty do you want to play?")
+    difficulty = input("Easy, Medium or Hard: ")
+    
+    if difficulty.lower() == "easy":
+        targetRange = 10
+        validDifficulty = True
+    elif difficulty.lower() == "medium":
+        targetRange = 100
+        validDifficulty = True
+    elif difficulty.lower() == "hard":
+        targetRange = 1000
+        validDifficulty = True
 
-# Section 4: Respond to the user based on their answers
-print("Wow, " + hobby + " sounds like a lot of fun!")
-print("Yum, I love " + food + " too!")
-print(movie + " is an awesome movie choice!")
+# Generate a random number
+targetNumber = random.randint(1, 100)
 
-# Section 5: Summarize the user's responses in a final message
-print("So, you like " + hobby + ", enjoy eating " + food + ", and your favorite movie is " + movie + ". Thanks for sharing!")
+# While the user hasn't guessed the number:
+guess = 0
+while (guess != targetNumber):
+    # Ask the user for a number
+    guess = int(input("Enter your guess: "))
+
+    # Print higher or lower depending on the guess
+    if (guess < targetNumber):
+        print("Higher!")
+    elif (guess > targetNumber):
+        print("Lower!")
+
+# When they've guessed it, launch a rocket using a countdown
+print("You guessed the number! Rocket Launching!")
+
+for countdown in range(10):
+    print(10 - countdown)
+    time.sleep(1) # This makes the program pause for a second before printing the next value
+    
+print("Blastoff!")

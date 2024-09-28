@@ -1,39 +1,59 @@
-# Week 1 Advanced Challenge: Python Basics with Decision Making
+# Week 3 Advanced Challenge: Loops using Lists
 # Instructions:
-# 1. Modify the program to ask the user five different questions (e.g., name, favorite hobby, favorite food, favorite color, favorite number).
-# 2. Based on the user's input, provide unique responses.
-# 3. Add decision-making using conditional statements (`if` statements) to customize the responses. 
-# 4. Use at least one comparison for a numerical value (e.g., favorite number) to change the response.
+# 1. Add a list of different words to print at different points in the rocket launch
+# 2. At each second, get the word it needs to print from the list, and print it
+# 3. Have your difficulty and how many guesses it took affect the words in the list
+# 4. Loop through each word at the end, after the launch, in a fun way.
 
-# Start by greeting the user
-print("Welcome to the advanced Q&A game!")
+# We import the "random" and "time" libraries here for use later. You will learn more about how this works in Week 7
+import random
+import time
 
-# Section 1: Ask for the user's name
-name = input("What's your name? ")
+# Print a message to greet the user
+print("Welcome to the Higher or Lower Game!")
 
-# Section 2: Ask for the user's favorite hobby
-hobby = input("What is your favorite hobby, " + name + "? ")
+# Ask for the difficulty
+validDifficulty = False
+targetRange = 10
+# Keep looping until they enter a valid difficulty
+while not validDifficulty:
 
-# Section 3: Ask for the user's favorite food
-food = input("Yum! What is your favorite food? ")
+    print("Which difficulty do you want to play?")
+    difficulty = input("Easy, Medium or Hard: ")
+    
+    if difficulty.lower() == "easy":
+        targetRange = 10
+        validDifficulty = True
+    elif difficulty.lower() == "medium":
+        targetRange = 100
+        validDifficulty = True
+    elif difficulty.lower() == "hard":
+        targetRange = 1000
+        validDifficulty = True
 
-# Section 4: Ask for the user's favorite color
-color = input("What is your favorite color? ")
+# Generate a random number
+targetNumber = random.randint(1, 100)
 
-# Section 5: Ask for the user's favorite number (using int() to convert the input to a number)
-number = int(input("Lastly, what's your favorite number? "))
+# While the user hasn't guessed the number:
+guess = 0
+guessCount = 0
+while (guess != targetNumber):
+    # Ask the user for a number
+    guess = int(input("Enter your guess: "))
 
-# Section 6: Respond to the user based on their answers
-print("Cool! " + hobby + " is a great way to spend your time.")
-print("I could go for some " + food + " right now!")
+    guessCount += 1
 
-# Section 7: Use conditionals to customize the response based on the favorite number
-if number > 10:
-    print("Wow, " + str(number) + " is a big number!")
-elif number < 5:
-    print(str(number) + " is a small number, but it's still great!")
-else:
-    print(str(number) + " is a perfect number!")
+    # Print higher or lower depending on the guess
+    if (guess < targetNumber):
+        print("Higher!")
+    elif (guess > targetNumber):
+        print("Lower!")
 
-# Section 8: Respond to the favorite color and wrap up the program
-print("Finally, " + color + " is such a vibrant color. Thanks for sharing all these cool things about yourself, " + name + "!")
+# When they've guessed it, launch a rocket using a countdown
+print("You guessed the number! Rocket Launching!")
+
+for countdown in range(10):
+    print(10 - countdown)
+    time.sleep(1) # This makes the program pause for a second before printing the next value
+    
+print("Blastoff!")
