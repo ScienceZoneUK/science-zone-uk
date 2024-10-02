@@ -1,33 +1,25 @@
-# Week 1: Introduction to Python - Class Activity
+# Week 4: Lists and Arrays - Class Activity
 
-# Start with a simple print statement to greet the user
-print("Hello! Let's get to know each other!")
+# Start by creating a variable to store data in a list
+playlist = []
+end = False
 
-# Ask the user for their name using the input function
-# The input function collects data from the user and stores it in the variable 'name'
-name = input("What is your name? ")
+while (end != False):
 
-# Now that we have the user's name, we can personalize our responses
-# Use the variable 'name' inside a print statement
-print("Nice to meet you, " + name + "!")
+    print("Manage the playlist")
+    choice = input("Do you want to add, view or delete a song").lower()
 
-# Ask the user for their favorite color
-# Again, we use the input function and store the response in a variable called 'color'
-color = input("What's your favorite color? ")
+    if choice == "add":
+        song = input("What song do you want to add?")
+        playlist.append(song)
+      
+    elif choice == "delete":
+        song = input("What song do you want to delete?")
+        playlist.remove(song)
 
-# Respond to the user's input
-# We combine strings using '+' and include the 'color' variable in our response
-print(color + " is a great color!")
+    elif choice == "view":
+        print(playlist)
 
-# Let's ask for the user's age
-# The input function returns data as a string, so we need to convert it to an integer using int()
-age = int(input("How old are you? "))
+    else:
+        print("Please write the commands, add, view or delete")
 
-# Now let's print a message based on their age
-if age < 18:
-    print("You're still young, " + name + "!")
-else:
-    print("You're an adult now, " + name + "!")
-
-# Final message to end the conversation
-print("It was fun chatting with you, " + name + ". Have a great day!")
