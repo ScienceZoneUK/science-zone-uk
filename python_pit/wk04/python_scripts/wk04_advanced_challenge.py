@@ -1,39 +1,51 @@
-# Week 1 Advanced Challenge: Python Basics with Decision Making
+# Week 4 Advanced Challenge: Python Basics with Decision Making
 # Instructions:
-# 1. Modify the program to ask the user five different questions (e.g., name, favorite hobby, favorite food, favorite color, favorite number).
-# 2. Based on the user's input, provide unique responses.
-# 3. Add decision-making using conditional statements (`if` statements) to customize the responses. 
-# 4. Use at least one comparison for a numerical value (e.g., favorite number) to change the response.
+# 1.
+# 2.
+# 3. 
 
-# Start by greeting the user
-print("Welcome to the advanced Q&A game!")
 
-# Section 1: Ask for the user's name
-name = input("What's your name? ")
+import time
 
-# Section 2: Ask for the user's favorite hobby
-hobby = input("What is your favorite hobby, " + name + "? ")
+shop = ["Pears", "Apples", "Bananas"]
+end = False
 
-# Section 3: Ask for the user's favorite food
-food = input("Yum! What is your favorite food? ")
+while (end != True):
 
-# Section 4: Ask for the user's favorite color
-color = input("What is your favorite color? ")
+    print("Welcome to your own Tesco store!")
+    time.sleep(1)
+    print("Currently in stock: ")
+    for item in shop:
+      print(item)
+      time.sleep(0.3)
+      
+    choice = input("Add, delete or sort your shop's stock").lower()
 
-# Section 5: Ask for the user's favorite number (using int() to convert the input to a number)
-number = int(input("Lastly, what's your favorite number? "))
+    if choice == "add":
+        item = input("What item do you want to add to your shop?")
+        shop.append(item)
+        print(item + " is now in your basket.")
+        time.sleep(1)
+      
+    elif choice == "delete":
+        item = input("What item do you want to delete from your shop?")
+        if shop.count(item) > 0:
+            shop.remove(item)
+            print(item + " has been removed from your shop.")
+            time.sleep(1)
+        else:
+            print(item + " is not in your shop.")
+            time.sleep(1)
 
-# Section 6: Respond to the user based on their answers
-print("Cool! " + hobby + " is a great way to spend your time.")
-print("I could go for some " + food + " right now!")
+    elif choice == "sort":
+        print("Sorting into Alphabetical Order...")
+        shop.sort()
+        time.sleep(1)
+        checkout = input("Shop has been sorted, have you completed your tasks? Y/N").lower()
+        if checkout == "y":
+          end = True
+        
+    else:
+        print("Please write the commands, add, delete or sort")
 
-# Section 7: Use conditionals to customize the response based on the favorite number
-if number > 10:
-    print("Wow, " + str(number) + " is a big number!")
-elif number < 5:
-    print(str(number) + " is a small number, but it's still great!")
-else:
-    print(str(number) + " is a perfect number!")
-
-# Section 8: Respond to the favorite color and wrap up the program
-print("Finally, " + color + " is such a vibrant color. Thanks for sharing all these cool things about yourself, " + name + "!")
+print("Thanks for shopping with us!")
