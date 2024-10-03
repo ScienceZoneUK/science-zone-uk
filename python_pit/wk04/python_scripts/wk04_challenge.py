@@ -1,25 +1,56 @@
-# Week 1 Challenge: Python Basics
+# Week 4 Challenge: Lists and Arrays
 # Instructions:
-# 1. Modify the program to ask the user three different questions (e.g., favorite hobby, favorite food, etc.).
-# 2. Based on the user's input, respond with a personalized message for each question.
-# 3. Ensure the program uses variables, input/output, and prints a final message summarizing the user’s responses.
+# 1.
+# 2. 
+# 3. 
 
-# Start by greeting the user
-print("Hello! Let's play a quick Q&A game.")
+import time
 
-# Section 1: Ask for the user's favorite hobby
-hobby = input("What is your favorite hobby? ")
+shop = ["Apples", "Chicken", "Pasta", "Canned Tomatoes", "Milk", "Bread", "Eggs", "Lawnmower", "Switch Game", "Dinosaur Egg"]
+basket = []
+end = False
 
-# Section 2: Ask for the user's favorite food
-food = input("What is your favorite food? ")
+while (end != True):
 
-# Section 3: Ask for the user's favorite movie
-movie = input("What is your favorite movie? ")
+    print("Welcome to Tesco!")
+    time.sleep(1)
+    print("Currently in stock: ")
+    for item in shop:
+      print(item)
+      time.sleep(0.3)
+      
+    choice = input("Add, delete or view your basket").lower()
 
-# Section 4: Respond to the user based on their answers
-print("Wow, " + hobby + " sounds like a lot of fun!")
-print("Yum, I love " + food + " too!")
-print(movie + " is an awesome movie choice!")
+    if choice == "add":
+        item = input("What item do you want to add to your basket?")
+        if shop.count(item) > 0:
+          basket.append(item)
+          print(item + " is now in your basket.")
+          time.sleep(1)
+        else:
+          print(item + " is currently not in stock.")
+          time.sleep(1)
+      
+    elif choice == "delete":
+        item = input("What item do you want to delete from your basket?")
+        if basket.count(item) > 0:
+          basket.remove(item)
+          print(item + " has been removed your basket.")
+          time.sleep(1)
+        else:
+          print(item + " is not in your basket.")
+          time.sleep(1)
 
-# Section 5: Summarize the user's responses in a final message
-print("So, you like " + hobby + ", enjoy eating " + food + ", and your favorite movie is " + movie + ". Thanks for sharing!")
+    elif choice == "view":
+        print("Your basket contains: ")
+        for item in basket:
+          print(item)
+          time.sleep(0.3)
+        checkout = input("Would you like to checkout? Y/N").lower()
+        if checkout == "y":
+          end = True
+        
+    else:
+        print("Please write the commands, add, view or delete")
+
+print("Thanks for shopping with us!")
