@@ -4,7 +4,7 @@
 playlist = []
 end = False
 
-while (end != False):
+while (end != True):
 
     print("Manage the playlist")
     choice = input("Do you want to add, view or delete a song").lower()
