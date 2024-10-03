@@ -35,7 +35,7 @@ while (end != True):
         item = input("What item do you want to delete from your basket?")
         if basket.count(item) > 0:
           basket.remove(item)
-          print(item + " has been removed your basket.")
+          print(item + " has been removed from your basket.")
           time.sleep(1)
         else:
           print(item + " is not in your basket.")
