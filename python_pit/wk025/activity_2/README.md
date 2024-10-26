@@ -1,3 +1,4 @@
+
 # Random Number Generation in Python
 
 Python’s `random` module is a powerful tool for generating pseudo-random numbers, which means the numbers are generated in a sequence that only appears random. It uses an algorithm called the **Mersenne Twister** to ensure high-quality randomness, making it suitable for a variety of applications, from games to simulations and data sampling.
@@ -5,6 +6,10 @@ Python’s `random` module is a powerful tool for generating pseudo-random numbe
 ## How the `random` Module Works
 
 The `random` module includes several functions for generating random numbers and manipulating data randomly. While "true" randomness would require a physical process, **pseudo-random** numbers are generated through complex algorithms and are suitable for most programming tasks.
+
+### Why We Import Modules
+
+In Python, modules like `random` provide specialized functions that don’t need to be written from scratch every time. Importing a module brings these pre-built tools into your program, saving time and ensuring accuracy. By using the `import` keyword, we can access any functions and variables defined in that module. For example, importing `random` allows us to use its functions for generating random numbers, selecting random items, and shuffling data.
 
 ### Key Functions in `random`:
 
@@ -60,8 +65,9 @@ from random import choice
 friends = ["Chris", "Samantha", "Kate", "John"]
 
 # Randomly select a person to pay the bill
-bill_payer = choice(friends)
-print(f"The person who will pay the bill is: {bill_payer}")
+bill_payer = #choice()
+#Use f-strings to print who pays the bill
+print()
 ```
 
 ## Challenge: Random Dice Roll
