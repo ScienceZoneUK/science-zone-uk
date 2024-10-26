@@ -63,3 +63,11 @@ friends = ["Chris", "Samantha", "Kate", "John"]
 bill_payer = choice(friends)
 print(f"The person who will pay the bill is: {bill_payer}")
 ```
+
+## Challenge: Random Dice Roll
+
+### Task
+
+Create a program that simulates the roll of a six-sided dice. Every time you run the program, it should randomly pick a number from 1 to 6 and display the result. This is great for kids to understand how randomness can be used to simulate real-life games!
+
+
