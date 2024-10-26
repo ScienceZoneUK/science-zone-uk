@@ -45,3 +45,21 @@ if no == 0:
     print('Heads')
 else:
     print('Tails')
+```
+## Challenge: Random Bill Payer
+
+### Task
+
+Imagine a scenario: in London, bankers head to the pub after work. When it's time to pay, they place all their bank cards in a hat. The card randomly drawn from the hat determines who will pay the bill. Let’s create a program that selects a random person to cover the bill from a predefined list of friends.
+
+### Code
+
+```python
+from random import choice
+
+friends = ["Chris", "Samantha", "Kate", "John"]
+
+# Randomly select a person to pay the bill
+bill_payer = choice(friends)
+print(f"The person who will pay the bill is: {bill_payer}")
+```
