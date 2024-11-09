@@ -12,7 +12,7 @@ Welcome! This project will show you how to create a particle effect using PNG im
 
 ### Step 1: Open the p5.js Web Editor
 
-1. Go to [p5.js Web Editor](https://editor.p5js.org/).
+1. Go to [p5.js Web Editor]([https://editor.p5js.org/](https://editor.p5js.org/cuvner/sketches/XHyurb_yN)).
 2. Click **Sign In** if you want to save your work. If not, you can continue without signing in.
 
 ### Step 2: Set Up the Code
