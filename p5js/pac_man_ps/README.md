@@ -108,10 +108,13 @@ function mouseDragged() {
 }
 ```
 
-### Step 4: Add Your Images
+### Step 4: Download the Images
 
-1. Click the **Upload File** button in the p5.js editor (it looks like an upward arrow).
-2. Upload each image, making sure they are named `img1.png`, `img2.png`, etc.
+To use the images for the particles:
+
+1. Download the project repository using the **Download** button.
+2. Unzip the folder. Inside, you’ll find example images named `img1.png`, `img2.png`, etc.
+3. Upload these images to your project in the p5.js editor by clicking the **Upload File** button.
 
 ### Step 5: Run the Code
 
@@ -128,6 +131,10 @@ function mouseDragged() {
 - **`Particle` Class**: This class holds data about each particle and controls how it moves and displays.
 
 ---
+
+### Example
+
+Check out a live example of a particle project [here](https://editor.p5js.org/cuvner/full/7n9lmC4YC).
 
 Enjoy exploring your particle project and feel free to try new images or change the movement rules to see what happens!
 
