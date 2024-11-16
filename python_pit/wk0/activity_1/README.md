@@ -23,6 +23,11 @@ By the end, you’ll have **10+ Python programs**!
 
 ---
 
+## Need Help?
+If you’re stuck or want to learn more, check out [W3Schools Python Basics](https://www.w3schools.com/python/) for more tips!
+
+---
+
 ## Step 1: Print Statements - Write a Recipe
 
 **What is `print()`?**
