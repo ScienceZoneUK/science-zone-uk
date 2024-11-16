@@ -52,11 +52,8 @@ print("3. Serve with syrup!")
 **Examples**
 ```python
 print("Hello, " + "world!")
-print("Welcome to Python!\n
-Let’s learn coding step by step.\n
-Have fun!")
+print("Welcome to Python!\n Let’s learn coding step by step.\n Have fun!")
 ```
-
 ---
 
 ## Step 3: Using `input()`
