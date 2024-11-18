@@ -1,3 +1,9 @@
+# Sensei's
+Go find projects online or use [chatgpt](chatgpt.com) to generate activities that teach coding concepts. We want things variables, using functions, functions that return information, while loops, forloops, python lists, python dictionaries, modifying lists and dictionaries, global/local variables, fixing bugs and soo on. There are tons of resources online, checkout [rpi](https://www.raspberrypi.org/teach/), [another rpi](https://www.raspberrypi.org/blog/python-coding-for-kids-beyond-the-basics/), [python for kids](https://kidspython.com/#/).
+Use your imagination and create fun challenges with real-world contexts.
+
+Please generate and save your activities using this template(copy-paste) and create a new folder with the name of your workshop in the sensei_activities folder
+
 
 # Python Workshop Activity Template
 
