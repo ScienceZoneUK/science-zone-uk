@@ -81,7 +81,7 @@ If you’re ever curious or need more help, check out [W3Schools Functions](http
 ### Step 6: Practicing with Reeborg’s World 🐍
 
 - **Reeborg’s World** is a fun way to practice functions by giving Reeborg (a virtual robot) instructions.
-- Visit [Reeborg’s World][(http://reeborg.ca/](https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle%201&url=worlds%2Ftutorial_en%2Fhurdle1.json)) and select a simple world to start.
+- Visit [Reeborg’s World](https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle%201&url=worlds%2Ftutorial_en%2Fhurdle1.json)
 - **Challenge:** Write a function in Reeborg’s World to help him move forward or turn left.
 
    ```python
