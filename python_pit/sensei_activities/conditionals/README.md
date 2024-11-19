@@ -54,6 +54,11 @@ def example_function():
 example_function()
 ```
 
+```python
+print("hello world")
+```
+
+
 ### Steps to Follow
 1. Open **Thonny** and create a new file.
 2. Copy and paste the code above into your file.
