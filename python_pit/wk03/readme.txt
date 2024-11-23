@@ -1,6 +1,7 @@
 # Let's Learn Python: Lists and Loops! 🐍
 
-Hi everyone! 🎉 Welcome to your Python programming lesson. Today, we’ll learn about **lists** and **loops** while creating a fun game called "Simon Says." Follow these steps, practice the concepts, and by the end, you’ll have written your own program!
+Hi everyone! 🎉 Welcome to your Python programming lesson. Today, we’ll learn about **lists** and **loops** while creating a fun game called "Simon Says." 
+Follow these steps, practice the concepts, and by the end, you’ll have written your own program!
 
 ---
 
@@ -26,7 +27,9 @@ Here are some important programming words we’ll use today:
 
 ## Step 1: Practice the Basics 🖥️
 
-Before we make the game, let’s practice some basics. Follow these steps, try the code, and see what happens! Remember to **save your program** after every step so you don’t lose your work. If you need extra help, you can look up examples on [W3Schools](https://www.w3schools.com/).
+Before we make the game, let’s practice some basics. Follow these steps, try the code, and see what happens! 
+Remember to **save your program** after every step so you don’t lose your work. If you need extra help, 
+you can look up examples on [W3Schools](https://www.w3schools.com/).
 
 ---
 
