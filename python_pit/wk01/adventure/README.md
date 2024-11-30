@@ -117,5 +117,63 @@ To play the game, open a terminal and run the following command:
 python adventure_game.py
 ```
 
+```python
+from sense_hat import SenseHat
+
+sense = SenseHat()
+
+# Define colors
+R = [255, 0, 0]    # Red
+G = [0, 255, 0]    # Green
+B = [0, 0, 255]    # Blue
+Y = [255, 255, 0]  # Yellow
+W = [255, 255, 255]  # White
+O = [0, 0, 0]      # Off (black)
+
+# Smiley Face
+smiley = [
+    O, O, Y, Y, Y, Y, O, O,
+    O, Y, O, O, O, O, Y, O,
+    Y, O, B, O, O, B, O, Y,
+    Y, O, O, O, O, O, O, Y,
+    Y, O, B, O, O, B, O, Y,
+    Y, O, O, B, B, O, O, Y,
+    O, Y, O, O, O, O, Y, O,
+    O, O, Y, Y, Y, Y, O, O,
+]
+
+# Star
+star = [
+    O, O, O, Y, Y, O, O, O,
+    O, O, Y, Y, Y, Y, O, O,
+    O, Y, Y, Y, Y, Y, Y, O,
+    Y, Y, Y, O, O, Y, Y, Y,
+    O, O, Y, Y, Y, Y, O, O,
+    O, O, O, Y, Y, O, O, O,
+    O, O, O, Y, Y, O, O, O,
+    O, O, O, Y, Y, O, O, O,
+]
+
+# Checkmark
+checkmark = [
+    O, O, O, O, O, G, O, O,
+    O, O, O, O, G, O, O, O,
+    O, O, O, G, O, O, O, O,
+    O, O, G, O, O, O, O, O,
+    O, G, O, O, O, G, O, O,
+    G, O, O, O, O, G, O, O,
+    O, G, G, G, G, O, O, O,
+    O, O, O, O, O, O, O, O,
+]
+
+# Display the pixel art based on the correct answer
+def show_correct_answer(art):
+    sense.set_pixels(art)
+
+# Example usage: Show a smiley face for a correct answer
+show_correct_answer(smiley)
+
+```
+
 Enjoy your adventure!
 
