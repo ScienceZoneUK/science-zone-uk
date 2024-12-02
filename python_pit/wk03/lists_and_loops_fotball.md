@@ -13,6 +13,10 @@ Welcome to this workshop! Today, we’ll learn about **lists** and **loops** in 
 
 ---
 
+## Remember
+Remember to **save your program** after every step so you don’t lose your work. If you need extra help, 
+you can look up examples on [W3Schools](https://www.w3schools.com/).
+
 ## 🛠️ Step 1: Getting Started with Python Lists
 
 ### What are Lists?
