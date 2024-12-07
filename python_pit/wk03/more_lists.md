@@ -12,6 +12,14 @@
 
 A list is a collection of items, like a shopping list or a list of your friends’ names. You can store numbers, words, or a mix of both in a list.
 
+To create a list in Python, place elements inside square brackets. Each item is separated by commas. An empty list is simply a pair of empty brackets.
+
+Computer languages deal with numbers. When you want to use words, you’ll need to create a list of strings. Strings are a collection of characters. To make a list composed of strings, you place each of them inside quotation marks.
+
+In Python, a string of characters is encoded. This conversion process happens with the use of Python Unicode, which covers every character found in languages around the world!
+
+A list can contain any object or even another list (called a sublist). Lists that contain sublists are known as nested lists. Elements in a list are numbered 0 (first element) to -1 (last item).
+
 ### Example:
 ```python
 # A list of numbers
