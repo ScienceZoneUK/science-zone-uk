@@ -57,6 +57,17 @@ I have a dog.
 I have a rabbit.
 ```
 
+### List Length
+
+To determine how many items a list has, use the len() function:
+Example
+
+```python
+Print the number of items in the list:
+thislist = ["apple", "banana", "cherry"]
+print(len(thislist))
+```
+
 ### Using Loops with Indexes
 
 Sometimes, you need to know the position of items in a list. Use a combination of `range()` and `len()` to loop through lists with their indexes.
