@@ -1,5 +1,8 @@
 
-# Python Workshop: Lists and Loops for 12-Year-Olds
+# Python Workshop: More Lists and Loops 
+
+## Resources
+find examples of lists and its methods here: [W3Schools](https://www.w3schools.com/python/python_lists.asp)
 
 ## What You’ll Learn Today:
 - How to create and use lists.
