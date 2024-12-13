@@ -133,6 +133,63 @@ Amazing job! You’ve learned:
 
 Python Turtle is just the beginning of your coding creativity—keep exploring and making cool things!
 
+```python
+import turtle
+
+# Define the colors
+a = (255, 255, 255)  # White
+c = (0, 0, 0)        # Black
+f = (25, 25, 112)    # MidnightBlue
+m = (34, 139, 34)    # ForestGreen
+
+# Define the image matrix
+image = [
+    m, m, m, m, m, c, c, c,
+    m, f, m, f, m, m, m, m,
+    m, m, m, m, m, m, m, m,
+    m, m, c, a, c, c, c, a,
+    m, m, c, c, c, c, c, c,
+    m, m, c, c, c, a, c, c,
+    m, m, m, m, m, m, m, m,
+    m, m, m, m, m, m, m, m,
+]
+
+# Set up the turtle screen
+turtle.setup(500, 500)
+screen = turtle.Screen()
+screen.colormode(255)  # Allow RGB colors
+screen.bgcolor("white")
+
+# Create the turtle
+t = turtle.Turtle()
+t.speed(0)
+t.penup()
+
+# Size of each pixel
+pixel_size = 20
+
+# Draw the image
+rows, cols = 8, 8  # Dimensions of the image matrix
+start_x = -cols * pixel_size // 2
+start_y = rows * pixel_size // 2
+
+for row in range(rows):
+    for col in range(cols):
+        color = image[row * cols + col]
+        t.goto(start_x + col * pixel_size, start_y - row * pixel_size)
+        t.fillcolor(color)
+        t.begin_fill()
+        for _ in range(4):
+            t.forward(pixel_size)
+            t.right(90)
+        t.end_fill()
+
+# Hide the turtle and display the result
+t.hideturtle()
+turtle.done()
+```
+
+
 ---
 
 ## 📚 Learn More
