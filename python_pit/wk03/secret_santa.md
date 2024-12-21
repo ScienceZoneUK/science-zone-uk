@@ -45,6 +45,27 @@ for i in range(len(participants)):
     print(f"{giver} gives a gift to {receiver}")
 ```
 
+### How modulo % works 
+```python
+receiver = participants[(i + 1) % len(participants)]
+```
+Here’s what it does:
+
+   - ```i + 1```:
+        We're moving to the next person in the list.
+        For example, if i is 0, i + 1 will be 1 (the next participant).
+
+   - ```% len(participants)```:
+        Ensures the index wraps around to the beginning of the list when it reaches the end.
+        len(participants) gives the total number of participants.
+        When ```i + 1 equals len(participants)```, the modulo operator makes the index wrap back to 0.
+
+Example:
+        If ```len(participants) = 5``` and ```i + 1 = 5```, ```5 % 5 = 0``` (the index goes back to the first person).
+
+Result:
+        This ensures that the last person (i = len(participants) - 1) is paired with the first person (i = 0), creating a circular assignment.
+
 ### 5. Make It Interactive (Optional)
 Let people type in their names!
 
