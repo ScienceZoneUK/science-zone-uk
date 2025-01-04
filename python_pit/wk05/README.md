@@ -151,7 +151,7 @@ for key, value in mercury.items():
 ## **7. Using Turtle to Draw Single Dictionary Data**
 
 ### Activity 7: Draw Mercury Using Turtle
-Write this program to visualize Mercury using Turtle:
+Write this program to visualise Mercury using Turtle:
 
 ```python
 import turtle
@@ -171,6 +171,7 @@ planet_turtle = turtle.Turtle()
 planet_turtle.shape("circle")
 
 # Use the dictionary data to set the turtle's attributes.
+#vvv Create a function and put this code into it vvv
 planet_turtle.color(planet["colour"])
 planet_turtle.penup()
 planet_turtle.goto(planet["position"])
@@ -228,6 +229,8 @@ screen.title("Solar System Visualization")
 
 planet_turtle = turtle.Turtle()
 planet_turtle.shape("circle")
+
+#vvv Create a function and put this code into it vvv
 
 for planet_name, planet_data in planets.items():
     planet_turtle.color(planet_data["colour"])
