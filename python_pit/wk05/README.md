@@ -12,7 +12,7 @@
 
 ## What is a Dictionary?
 
-Imagine you are 100yrs 👵 , you hear someone use the word "Riz" and you're not sure what it means. You might look it up online 💻. Before the internet 💾, people used dictionariese📚books 🥱 that matched words (keys) to their meanings (values). Python dictionaries are:
+Imagine you are 100yrs 👵 , you hear someone use the word "Rizz" and you're not sure what it means. You might look it up online 💻. Before the internet 💾, people used dictionariese📚books 🥱 that matched words (keys) to their meanings (values). Python dictionaries are:
 
 - **Ordered** (since Python 3.7): The order in which you add items is remembered.
 - **Mutable**: You can add, remove, or change items after creating the dictionary.
