@@ -24,7 +24,8 @@ In this workshop, you will learn:
 ---
 
 ## Resources
-[W3 Dictionaries](https://www.w3schools.com/python/python_dictionaries.asp)
+- [W3 Dictionaries](https://www.w3schools.com/python/python_dictionaries.asp)
+- [More dictionaries](https://www.dataquest.io/blog/python-dictionaries/)
 
 ---
 
