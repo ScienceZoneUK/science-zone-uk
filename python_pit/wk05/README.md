@@ -258,3 +258,16 @@ turtle.done()
 ### Challenge:
 
 Create a solar system with at least five planets and visualize it using Turtle.
+
+```python
+surf_destinations = {
+    "morocco": {
+        "wave quality": "good to excellent",
+        "spots":["tagazoute", "immosane", "safi"],
+        "wave types":"point breaks",
+        "wetsuit": "yes",
+    
+    }
+    }
+
+```
