@@ -71,5 +71,25 @@ for team, players in premier_league.items():
             print(f'{stats}:{info}')
 ```
         
-        
+### Data detective challenge
+```python
+afc_bournemouth = {
+    "Club Info": {
+        "Name": "AFC Bournemouth",
+        "Founded": 1899,
+        "Stadium": "Vitality Stadium",
+        "Nickname": "The Cherries",
+    },
+    "Performance": {
+        "League": "Premier League",
+        "Best Finish": "9th (2016-17)",
+        "Major Trophies": {
+            "League Cup": None,
+            "FA Cup": None,
+            "EFL Championship": "Winners (2014-15)"
+        }
+    }
+}
+```
+
 
