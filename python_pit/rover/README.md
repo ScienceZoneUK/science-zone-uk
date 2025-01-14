@@ -1,5 +1,5 @@
 
-# MecanumRover Class
+# Rover Class
 ![ROVER](rover.jpg)
 
 ## Overview
@@ -30,10 +30,10 @@ The `MecanumRover` class provides an easy-to-use interface for controlling a mec
 ## Usage
 ### Importing and Initializing the Class
 ```python
-from mecanum_rover import MecanumRover
+from rover import Rover
 
 # Initialize the rover
-rover = MecanumRover(speed_scale=10.0)
+rover = Rover(speed_scale=10.0)
 ```
 
 ### Controlling the Rover
@@ -88,10 +88,10 @@ rover.dance_sequence(speed=3.0, duration=3)
 ---
 
 ## Class Documentation
-### `MecanumRover`
+### `Rover`
 #### Constructor
 ```python
-MecanumRover(speed_scale=10.0)
+Rover(speed_scale=10.0)
 ```
 - **Parameters**:
   - `speed_scale` (float): Scaling factor for motor speed. Default is `10.0`.
@@ -132,10 +132,10 @@ MecanumRover(speed_scale=10.0)
 
 ## Example
 ```python
-from mecanum_rover import MecanumRover
+from rover import Rover
 
 # Initialize the rover
-rover = MecanumRover(speed_scale=10.0)
+rover = Rover(speed_scale=10.0)
 
 # Perform dance sequence
 rover.dance_sequence(speed=3.0, duration=3)
