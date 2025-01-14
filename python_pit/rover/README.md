@@ -3,7 +3,7 @@
 ![ROVER](rover.jpg)
 
 ## Overview
-The `MecanumRover` class provides an easy-to-use interface for controlling a mecanum wheel rover. The class simplifies movement and dance sequences by abstracting motor operations into reusable methods. It is designed for embedded systems, such as microcontrollers, with limited resources. This class is inspired by the rover design and control concepts detailed at [Kev's Robots](https://www.kevsrobots.com/blog/Rover-mecanum.html). The 3D printable files for the rover are also available on this website.
+The `Rover` class provides an easy-to-use interface for controlling a mecanum wheel rover. The class simplifies movement and dance sequences by abstracting motor operations into reusable methods. It is designed for embedded systems, such as microcontrollers, with limited resources. This class is inspired by the rover design and control concepts detailed at [Kev's Robots](https://www.kevsrobots.com/blog/Rover-mecanum.html). The 3D printable files for the rover are also available on this website.
 
 
 ## Features
