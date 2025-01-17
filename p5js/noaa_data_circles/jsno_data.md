@@ -101,45 +101,52 @@ function preload() {
   table = loadTable(
     "https://raw.githubusercontent.com/datasets/global-temp/main/data/monthly.csv",
     "csv",
-    "header"
+    "header",
+    onLoadSuccess,
+    onLoadError
   );
 }
 
 function setup() {
-  createCanvas(800, 600);
+  createCanvas(400, 400);
   background(220);
 
-  // Process the CSV data into a JSON structure
-  jsonData = processCSVToJSON(table);
-
-  // Log the JSON structure
-  console.log(jsonData);
-
-  // Save the JSON to a file (for use outside p5.js)
-  saveJSON(jsonData, "temperature_data.json");
+  if (table && table.getRowCount() > 0) {
+    jsonData = processCSVToJSON(table);
+    console.log(jsonData);
+    saveJSON(jsonData, "temperature_data.json");
+  } else {
+    console.error("No data to process.");
+  }
 }
 
 function processCSVToJSON(table) {
-  let data = {}; // Initialize an empty object to store the processed data
+  let data = {};
 
   for (let i = 0; i < table.getRowCount(); i++) {
-    let date = table.getString(i, "Date"); // Example: "1850-01"
-    let meanTemp = table.getNum(i, "Mean");
-
-    // Extract year and month
-    let [year, month] = date.split("-");
+    let year = table.getString(i, "Year"); // Use "Year" instead of "Date"
+    let meanTemp = table.getString(i, "Mean"); // No change needed for "Mean"
 
     // Ensure the year exists in the data object
     if (!data[year]) {
       data[year] = [];
     }
 
-    // Store the monthly mean temperature
-    data[year][parseInt(month) - 1] = meanTemp;
+    // Populate with mean temperatures (assuming one entry per year in this file)
+    data[year].push(parseFloat(meanTemp));
   }
 
   return data;
 }
+
+function onLoadSuccess() {
+  console.log("CSV loaded successfully!");
+}
+
+function onLoadError(err) {
+  console.error("Error loading CSV:", err);
+}
+
 ```
 
 ### JSON Output Format
