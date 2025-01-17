@@ -124,16 +124,19 @@ function processCSVToJSON(table) {
   let data = {};
 
   for (let i = 0; i < table.getRowCount(); i++) {
-    let year = table.getString(i, "Year"); // Use "Year" instead of "Date"
-    let meanTemp = table.getString(i, "Mean"); // No change needed for "Mean"
+    let source = table.getString(i, "Source"); // Source column
+    let yearMonth = table.getString(i, "Year"); // Combined Year and Month
+    let meanTemp = parseFloat(table.getString(i, "Mean")); // Mean temperature
 
-    // Ensure the year exists in the data object
+    // Split year and month
+    let [year, month] = yearMonth.split("-"); // Expected format: "YYYY-MM"
+
     if (!data[year]) {
-      data[year] = [];
+      data[year] = new Array(12).fill(null); // Initialize array for 12 months
     }
 
-    // Populate with mean temperatures (assuming one entry per year in this file)
-    data[year].push(parseFloat(meanTemp));
+    // Insert the mean temperature into the correct month slot
+    data[year][parseInt(month) - 1] = meanTemp;
   }
 
   return data;
@@ -146,6 +149,7 @@ function onLoadSuccess() {
 function onLoadError(err) {
   console.error("Error loading CSV:", err);
 }
+
 
 ```
 
