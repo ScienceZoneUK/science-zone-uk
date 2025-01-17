@@ -6,6 +6,9 @@ This guide explains how to use the `monthly.csv` dataset from the [Global Temper
 
 The dataset is hosted on GitHub. Use the raw file link to access the CSV file:
 
+The Global Climate at a Glance (GCAG) is a dataset that provides global temperature data from 1850 to the present. The GCAG data is available from the National Centers for Environmental Information (NCEI). 
+
+
 ```
 https://raw.githubusercontent.com/datasets/global-temp/main/data/monthly.csv
 ```
