@@ -5,6 +5,19 @@ Welcome, young coder! 🎉 This is your Python starter program. Follow this guid
 
 ---
 
+## Setup your program
+copy this section into your empty python file
+```
+# variables
+world = '🌍🌎🌏'
+python = 'Python 🐍'
+fire = '🔥'
+
+# Function definitions        
+    
+# Put code to run under here
+```
+
 ## Step 1: Set Up Your Imports 📚
 
 Sometimes, Python needs special tools to do cool things like math, timekeeping, or random numbers. These tools are called "libraries." 
