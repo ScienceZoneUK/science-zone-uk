@@ -178,12 +178,94 @@ The `football_players` dictionary is a collection of data about players. Each ke
 
 ### **Sorting Data with the sorted() Function**
 
+The `sorted()` function is a powerful tool in Python for organizing data. Let’s explore it in detail.
+
+### **What is `sorted()`?**
+The `sorted()` function arranges items in a list or other iterable object in a specific order. By default, it sorts in **ascending order**.
+
+### **Syntax**
+```python
+sorted(iterable, key=None, reverse=False)
+```
+
+### **Parameters**
+1. **`iterable`**:
+   - The data structure to sort. It can be a list, tuple, dictionary keys, or items.
+   - Example: A list of country names or a list of key-value pairs.
+
+2. **`key`** (optional):
+   - A function that specifies a custom sort order.
+   - Example: Sort countries by population using `key=lambda x: x[1]["population"]`.
+
+3. **`reverse`** (optional):
+   - A boolean (`True` or `False`).
+   - Default is `False` (ascending order). Set to `True` for descending order.
+
+---
+
+### **Examples**
+
+#### **1. Sorting a List**
+Sort a simple list of numbers in ascending order:
+```python
+numbers = [5, 2, 9, 1, 7]
+sorted_numbers = sorted(numbers)
+print(sorted_numbers)  # Output: [1, 2, 5, 7, 9]
+```
+
+#### **2. Sorting in Descending Order**
+Use the `reverse=True` parameter:
+```python
+sorted_numbers_desc = sorted(numbers, reverse=True)
+print(sorted_numbers_desc)  # Output: [9, 7, 5, 2, 1]
+```
+
+#### **3. Sorting a Dictionary by Keys**
+Sort country names alphabetically:
+```python
+sorted_countries = sorted(countries_data.keys())
+print(sorted_countries)
+# Output: ['Brazil', 'Germany', 'India', 'USA', ...]
+```
+
+---
+
+### **Sorting Nested Data**
+
+#### **4. Sorting by Population**
+Sort countries by their population in descending order:
+```python
+sorted_by_population = sorted(countries_data.items(), key=lambda x: x[1]["population"], reverse=True)
+
+for country, details in sorted_by_population:
+    print(f"{country}: {details['population']} people")
+```
+
+#### **5. Sorting by CO2 Pollution**
+Sort countries based on their CO2 pollution:
+```python
+sorted_by_pollution = sorted(countries_data.items(), key=lambda x: float(x[1]["pollution_co2"].split()[0]))
+
+for country, details in sorted_by_pollution:
+    print(f"{country}: {details['pollution_co2']}")
+```
+
+---
+
+### **Key Takeaways**
+1. The `sorted()` function can sort lists, dictionaries, and tuples.
+2. Use the `key` parameter for custom sorting logic.
+3. Use `reverse=True` for descending order.
+
+---
+
 #### **Sorting by Goals Scored**
 ```python
 sorted_by_goals = sorted(football_players.items(), key=lambda x: x[1]["goals_scored"], reverse=True)
 for player, details in sorted_by_goals:
     print(f"{player}: {details['goals_scored']} goals")
 ```
+
 
 ---
 
