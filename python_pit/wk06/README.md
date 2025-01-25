@@ -134,11 +134,11 @@ def get_grade(score):
 
 
 
-# Assign grades using a loop, 
+# Get grade function returns a grade then assign grades using a loop, put the student grades into a dictionary
 for ???, ??? in ???.items():
     student_grades[???] = get_grade(???)
 
-# Output
+# Output the dictionary
 print(student_grades)
 ```
 
@@ -156,20 +156,22 @@ print(student_grades)
 
 ### Solution and Code
 ```python
+# A function that takes a dictionary, sorts it and returns the highest bidder. Use the '.max(key=lambda x: x['???'])' method on the dictionary
 def get_highest_bidder(bidders):
-    highest_bidder = max(bidders, key=lambda x: x['Bid'])
-    return highest_bidder
+    highest_bidder = ???
+    return ????
 
 # Input logic
 bidders = []
 bidding_active = True
 
 while bidding_active:
-    name = input("Enter the bidder's name: ")
-    bid = int(input("Enter the bid amount: "))
-    bidders.append({"Name": name, "Bid": bid})
+    name = input("????")
+    bid = int(input("???"))
+   #Append a list of bidders and their bid in a dictionary structure
+   ???.append({????})
 
-    more_bids = input("Are there more bidders? Type 'yes' or 'no': ").lower()
+    more_bids = input("???").lower()
     if more_bids == 'no':
         bidding_active = False
 
