@@ -29,6 +29,8 @@ This README provides step-by-step instructions and examples for learning about f
 
 ### What Are Functions That Return Values?
 The Python return statement marks the end of a function and specifies the value or values to pass back from the function. Return statements can return data of any type, including integers, floats, strings, lists, dictionaries, and even other functions.
+### *Tip*
+**Do not modify global variables inside of functions. It can cause misery in debugging.** Instead use a function that returns a value and modify the global variable in the main code!
 [W3Schools](https://www.w3schools.com/python/gloss_python_function_return_value.asp)
 
 **Syntax:**
