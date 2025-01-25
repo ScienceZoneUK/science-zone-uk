@@ -28,7 +28,8 @@ This README provides step-by-step instructions and examples for learning about f
 ## Functions That Return Values
 
 ### What Are Functions That Return Values?
-A function that returns a value is one that outputs a result when it is called. The output can be stored in a variable or used immediately.
+The Python return statement marks the end of a function and specifies the value or values to pass back from the function. Return statements can return data of any type, including integers, floats, strings, lists, dictionaries, and even other functions.
+[W3Schools](https://www.w3schools.com/python/gloss_python_function_return_value.asp)
 
 **Syntax:**
 ```python
