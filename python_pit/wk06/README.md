@@ -50,7 +50,10 @@ print(output)  # Prints: 7
 
 #### Example 2: Is Leap Year?
 Determine whether a year is a leap year.
-Use modulo to check if the year is divisible by a value ex: divisible by 4 ```  print(year % 4 == 0) ```
+- See if the number is evenly divisible by 4. Dividing the year by 4 will result in a whole number with no remainder if the number is evenly divisible. The number must be evenly divisible by 4! Otherwise, it is not a leap year
+- Confirm the number isn't evenly divisible by 100. If a year is evenly divisible by 4, but it is not evenly divisible 100, then it is a leap year. If a year is divisible by both 4 and 100, then it might not be a leap year, and you will have to perform 1 more calculation to check
+- Check if the number is evenly divisible by 400 to confirm a leap year. If a year is divisible by 100, but not 400, then it is not a leap year. If a year is divisible by both 100 and 400, then it is a leap year.
+Use modulo to check if the year is divisible by a value example: divisible by 4 ```  print(year % 4 == 0) ```
 Use nested if statements that return a boolean:
 ```python
  if ___:
@@ -110,17 +113,6 @@ You have a dictionary of student scores. Write a program to assign grades based 
 
 ### Solution and Code
 ```python
-# Grading function
-def get_grade(score):
-    if score >= 91:
-        return "Outstanding"
-    elif score >= 81:
-        return "Exceeds Expectations"
-    elif score >= 71:
-        return "Acceptable"
-    else:
-        return "Fail"
-
 # Input data
 student_scores = {
     'Harry': 88,
@@ -131,11 +123,20 @@ student_scores = {
 }
 
 # Initialize student grades dictionary
-student_grades = {}
+
+
+# Grading function
+def get_grade(score):
+   #add code
+   #add code
+   #add code
+
+
+
 
 # Assign grades using a loop
-for student, score in student_scores.items():
-    student_grades[student] = get_grade(score)
+for ???, ??? in ???.items():
+    student_grades[???] = get_grade(???)
 
 # Output
 print(student_grades)
