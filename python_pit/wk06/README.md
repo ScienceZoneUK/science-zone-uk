@@ -52,7 +52,7 @@ print(output)  # Prints: 7
 ### Custom return function
 Deadpool has an 18 Cert. Create a function that checks and returns if someone can see the movie
 
-```
+```python
 def can_i_see_deadpool():
    ???
    ???
