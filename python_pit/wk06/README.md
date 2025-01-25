@@ -50,34 +50,44 @@ print(output)  # Prints: 7
 
 #### Example 2: Is Leap Year?
 Determine whether a year is a leap year.
+Use modulo to check if the year is divisible by a value ex: divisible by 4 ```  print(year % 4 == 0) ```
+Use nested if statements that return a boolean:
+```python
+ if ___:
+        if ___:
+            if ___:
+                return ___
+            else:
+                return ___
+        else:
+            return ___
+    else:
+        return ___
+```
 ```python
 def is_leap_year(year):
-    if year % 4 == 0:
-        if year % 100 == 0:
-            if year % 400 == 0:
-                return True
-            else:
-                return False
-        else:
-            return True
-    else:
-        return False
+   ___
+   ___
 
+#Answers
 print(is_leap_year(2000))  # True
 print(is_leap_year(1900))  # False
 print(is_leap_year(2024))  # True
 ```
 
 #### Example 3: Check Prime Numbers
+Use modulo again to check is a number is divisible by a value.
+Copy the code into your file.
 ```python
 def is_prime(num):
-    if num <= 1:
-        return False
-    for i in range(2, int(num ** 0.5) + 1):
-        if num % i == 0:
-            return False
-    return True
+   #Use a conditional to check number is < or == 1
+   #Return ???
+   #Loop to check a range
+   #range(2, int(num ** 0.5) + 1)
+   #conditional to check if the number is divisiable by i in the for loop, return false
+   #Otherwise the function returns true
 
+#Answers
 print(is_prime(11))  # True
 print(is_prime(25))  # False
 print(is_prime(2))   # True
