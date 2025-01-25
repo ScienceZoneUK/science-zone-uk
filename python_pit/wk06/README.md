@@ -49,6 +49,17 @@ output = add_numbers(3, 4)  # Call the function
 print(output)  # Prints: 7
 ```
 
+### Custom return function
+Deadpool has an 18 Cert. Create a function that checks and returns if someone can see the movie
+
+```
+def can_i_see_deadpool():
+   ???
+   ???
+   return True
+
+```
+
 #### Example 2: Is Leap Year?
 Determine whether a year is a leap year.
 - See if the number is evenly divisible by 4. Dividing the year by 4 will result in a whole number with no remainder if the number is evenly divisible. The number must be evenly divisible by 4! Otherwise, it is not a leap year
