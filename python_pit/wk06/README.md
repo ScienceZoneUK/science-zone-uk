@@ -125,7 +125,7 @@ student_scores = {
 # Initialize student grades dictionary
 
 
-# Grading function
+# Grading function that checks a score against the grading criteria
 def get_grade(score):
    #add code
    #add code
@@ -134,7 +134,7 @@ def get_grade(score):
 
 
 
-# Assign grades using a loop
+# Assign grades using a loop, 
 for ???, ??? in ???.items():
     student_grades[???] = get_grade(???)
 
