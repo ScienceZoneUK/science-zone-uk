@@ -21,8 +21,154 @@ There are two routes
 - [Easy](#easy) here
 - [Hard](#hard) here
 
+## Easy
+---
+
+## **Step-by-Step Instructions**
+
+### **1. Setup the Program**
+#### **Task**
+Start by setting up the basic program:
+1. Create a list of all the lowercase letters in the alphabet.
+2. Prompt the user to provide:
+   - Whether they want to encode or decode a message.
+   - The message they want to process.
+   - The shift amount.
+
+**Pseudocode**:
+```plaintext
+1. Create an alphabet list containing 'a' to 'z'.
+2. Ask the user if they want to encode or decode.
+3. Ask the user for their message.
+4. Ask the user for the shift amount.
+```
+
+---
+
+### **2. Create the `encrypt()` Function**
+#### **TODO-1: Define the Function**
+Write a function called `encrypt()` that takes two inputs:
+1. `original_text`: The message to encode.
+2. `shift_amount`: The number of positions to shift each letter.
+
+**Pseudocode**:
+```plaintext
+Define a function encrypt(original_text, shift_amount):
+1. Create an empty string to hold the encoded result.
+2. Loop through each letter in the original_text:
+   - If the letter is in the alphabet:
+     1. Find its current position in the alphabet.
+     2. Add the shift_amount to the position.
+     3. Handle wrapping around the alphabet.
+     4. Find the new letter and add it to the result.
+   - If the character is not in the alphabet, add it unchanged to the result.
+3. Print the final encoded result.
+```
+
+#### **Logic Snippet**
+To find and shift a letter:
+- Use the `.index()` method to get the position of a letter in the alphabet list:
+  ```python
+  position = alphabet.index(letter)
+  ```
+- Add the shift amount and wrap around using modulo:
+  ```python
+  new_position = (position + shift_amount) % len(alphabet)
+  ```
+
+---
+
+### **3. Test the `encrypt()` Function**
+#### **TODO-2: Shift Letters**
+1. Loop through each letter in the user’s message.
+2. Use the logic snippets provided to:
+   - Find the position of the letter in the alphabet.
+   - Shift the letter by the user-provided shift amount.
+   - Wrap around if necessary.
+3. Build the encoded message letter by letter.
+4. Print the final result.
+
+**Example**:
+Input:
+```plaintext
+plain_text = "hello"
+shift_amount = 1
+```
+Output:
+```plaintext
+Here is the encoded result: ifmmp
+```
+
+---
+
+### **4. Handle Edge Cases**
+#### **TODO-3: Fix the Wrapping Around**
+When shifting the letter 'z' by a positive shift amount, the position will go beyond the alphabet. To fix this:
+1. Use modulo to ensure the position wraps around.
+2. Test the program with larger shift amounts (e.g., shifting "z" by 9).
+
+**Hint**: Modulo (`%`) helps keep numbers within a specific range.
+
+**Pseudocode**:
+```plaintext
+1. Calculate the new position as (current_position + shift_amount) % len(alphabet).
+2. Use the new position to find the correct letter.
+```
+
+---
+
+### **5. Call the Function**
+#### **TODO-4: Use User Inputs**
+Once the `encrypt()` function is complete, call it using the inputs collected earlier:
+1. Pass the user’s message and shift amount to the function.
+2. Test the function with different inputs.
+
+**Pseudocode**:
+```plaintext
+1. Get user inputs for direction, message, and shift.
+2. Call encrypt() with the user inputs.
+```
+
+**Example Snippet**:
+```python
+encrypt(original_text=text, shift_amount=shift)
+```
+
+---
+
+### **6. Test Your Program**
+Test your program with different scenarios:
+1. Basic encoding: Shift "hello" by 5.
+2. Wrap-around case: Shift "zoo" by 3.
+3. Special characters: Test with spaces and punctuation (e.g., "hello, world!").
+
+---
+
+## **Hints for Success**
+1. **Break the Problem into Steps**:
+   - Loop through the message.
+   - Find each letter’s position.
+   - Shift the position and wrap around if necessary.
+2. **Handle Non-Alphabet Characters**:
+   - Check if the character is in the alphabet before shifting.
+3. **Test with Edge Cases**:
+   - Large shifts (e.g., shift = 50).
+   - Messages with special characters and spaces.
+
+---
+
+## **Extensions**
+1. Add a `decrypt()` function to reverse the process.
+2. Allow the program to handle uppercase letters.
+3. Test with longer messages or custom alphabets.
+
+---
+
+
 
 ## Hard
+Copy the code templete then follow the steps described below. This is a hard challange. Take your time, break the problem down into manageable chuncks. Test code in a seperate file if that helps!!
+GOODLUCK
 ### **1. Setup the Program**
 
 **Setup code**:
