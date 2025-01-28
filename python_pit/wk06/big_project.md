@@ -17,6 +17,9 @@ Instead of copying full sections of code, you’ll piece together smaller parts 
 ---
 
 ## **Step-by-Step Instructions**
+There are two routes
+- Easy here
+- Hard here
 
 ### **1. Setup the Program**
 #### **Task**
