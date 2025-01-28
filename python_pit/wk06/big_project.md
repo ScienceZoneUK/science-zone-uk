@@ -18,13 +18,12 @@ Instead of copying full sections of code, you’ll piece together smaller parts 
 
 ## **Step-by-Step Instructions**
 There are two routes
-- Easy here
-- Hard here
+- [Easy here](#homework-and-extensions)
+- [Hard Here](#hard)
 
+
+#Hard
 ### **1. Setup the Program**
-#### **Task**
-1. Import any modules if needed.
-2. Create a list of the alphabet that the cipher will use.
 
 **Setup code**:
 ```python
