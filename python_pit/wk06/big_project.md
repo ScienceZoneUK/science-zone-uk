@@ -37,10 +37,16 @@ Start by setting up the basic program:
 
 **Pseudocode**:
 ```plaintext
-1. Create an alphabet list containing 'a' to 'z'.
-2. Ask the user if they want to encode or decode.
-3. Ask the user for their message.
-4. Ask the user for the shift amount.
+#Create an alphabet list containing 'a' to 'z'.
+#Ask the user if they want to encode or decode.
+#Ask the user for their message.
+#Ask the user for the shift amount.
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
 ```
 
 ---
