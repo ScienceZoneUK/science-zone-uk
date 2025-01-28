@@ -36,7 +36,7 @@ Start by setting up the basic program:
    - The shift amount.
 
 **Pseudocode**:
-```plaintext
+```python
 #Create an alphabet list containing 'a' to 'z'.
 #Ask the user if they want to encode or decode.
 #Ask the user for their message.
