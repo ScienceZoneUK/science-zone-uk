@@ -272,6 +272,126 @@ if __name__ == "__main__":
 - Ensure the **HuskyLens** is in **Face Recognition Mode**.
 - The **Pico** operates at **3.3V logic**; the HuskyLens can handle both **3.3V and 5V logic**.
 - If using a different microcontroller, update the **GPIO pin numbers** accordingly.
+# HuskyLens Python Library - Face & Object Recognition
+
+## Overview
+This library provides an interface for controlling the **HuskyLens AI Camera** with **MicroPython** on a **Raspberry Pi Pico** or similar microcontroller. It allows interaction with the HuskyLens for **face recognition, object tracking, and more** using **I2C or UART** communication.
+
+## Features
+- Supports **I2C and UART** communication
+- Face recognition, object tracking, line tracking, and tag detection
+- Easy integration with **Raspberry Pi Pico**
+
+## Wiring - Raspberry Pi Pico
+
+| HuskyLens Pin | Raspberry Pi Pico GPIO |
+|--------------|----------------------|
+| TX (UART)    | GPIO 8 |
+| RX (UART)    | GPIO 9 |
+| SDA (I2C)    | GPIO 4 |
+| SCL (I2C)    | GPIO 5 |
+| VCC          | 3.3V or 5V |
+| GND          | GND |
+
+## Class Usage
+
+### **1. Import the Class**
+```python
+from huskylensPythonLibrary import HuskyLensLibrary
+```
+
+### **2. Initialize the HuskyLens**
+- **For I2C Communication**
+```python
+husky = HuskyLensLibrary("I2C")
+```
+- **For UART Communication**
+```python
+husky = HuskyLensLibrary("SERIAL")
+```
+
+### **3. Set an Algorithm**
+```python
+husky.command_request_algorthim("ALGORITHM_FACE_RECOGNITION")
+```
+
+### **4. Read Detected Objects**
+```python
+results = husky.command_request_blocks()
+if results:
+    print("Detected Objects:", results)
+else:
+    print("No object detected.")
+```
+
+## Class Reference
+```python
+class HuskyLensLibrary:
+    def __init__(self, proto):
+        """
+        Initialize HuskyLens communication.
+        
+        Parameters:
+        - proto: "I2C" or "SERIAL" (UART)
+        """
+```
+
+```python
+def command_request_algorthim(self, alg):
+    """
+    Set the algorithm mode on the HuskyLens.
+    
+    Parameters:
+    - alg: Algorithm name as string
+    Example: "ALGORITHM_FACE_RECOGNITION"
+    """
+```
+
+```python
+def command_request_blocks(self):
+    """
+    Retrieve detected objects (blocks) from HuskyLens.
+    
+    Returns:
+    - List of detected objects (if any)
+    """
+```
+
+```python
+def command_request_learned(self):
+    """
+    Retrieve learned objects (recognized faces or trained objects).
+    
+    Returns:
+    - List of learned objects (if any)
+    """
+```
+
+## Example Program - Face Detection Test
+```python
+import time
+from huskylensPythonLibrary import HuskyLensLibrary
+
+# Initialize HuskyLens
+husky = HuskyLensLibrary("I2C")
+husky.command_request_algorthim("ALGORITHM_FACE_RECOGNITION")
+
+while True:
+    results = husky.command_request_blocks()
+    
+    if results:
+        print("Face Detected:", results)
+    else:
+        print("No face detected.")
+    
+    time.sleep(1)
+```
+
+## Notes
+- Ensure the **HuskyLens** is set to the **correct algorithm** for your use case.
+- The **Pico** operates at **3.3V logic**, but the HuskyLens can handle **3.3V or 5V**.
+- Use **I2C for better stability**, but **UART** is also supported.
 
 ## License
 This project is open-source under the MIT License.
+
