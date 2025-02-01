@@ -48,7 +48,7 @@ This guide explains how to connect and configure the **28BYJ-48 Stepper Motor** 
 | GND | GND |
 
 
-![Husky lens pins]("i2c_pins_lens.png")
+![Husky Lens](i2c_husky_lens.png "Husky Lens")
 
 
 ## Software Setup
