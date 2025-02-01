@@ -47,6 +47,10 @@ This guide explains how to connect and configure the **28BYJ-48 Stepper Motor** 
 | VCC | 5V |
 | GND | GND |
 
+
+![Husky lens pins](i2c_lens.png")
+
+
 ## Software Setup
 ### **1. Install MicroPython on Pico**
 1. Download MicroPython firmware from [Raspberry Pi Official Site](https://micropython.org/download/)
