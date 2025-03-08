@@ -12,6 +12,31 @@ Welcome to the **Calculator Challenge!** In this challenge, you will create a Py
 ---
 
 ## Getting Started
+Run this code, you might have an error! Fix it!  
+Make the calculation work
+```python
+print("Do you have an error? FIX IT")
+
+
+operations = {
+    "+" : add,
+    }
+
+
+def add(n1,n2):
+    return n1+n2
+
+
+user_input_one = 2
+user_operation = "+"
+user_input_two = 2
+answer = operations[user_operation](user_input_one, user_input_two)
+
+print(f'{user_input_one} {user_operation} {user_input_two} = {answer}')
+
+```
+
+
 
 ### Storing Functions as Variables
 In Python, you can store a function in a variable just like any other value. For example:
