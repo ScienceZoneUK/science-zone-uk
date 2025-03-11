@@ -47,7 +47,6 @@ class Mover {
   
   applyForce(force){
     let f = p5.Vector.div(force, this.mass)
-    print(f)
     this.acc.add(f);
     
   }
