@@ -1,22 +1,26 @@
+<html lang="en-uk">
+
+<body>
+<h1>
 The following links will show you different examples of interactive fractals and how the can be changed.
+</h1>
 
-Ahdut Fractal Tree:
-https://openprocessing.org/sketch/2499929
+<p>
 
-Quadratic Koch Fractal:
-https://openprocessing.org/sketch/2494775
+<a href="https://openprocessing.org/sketch/2499929" target="_blank">Ahdut Fractal Tree</a>
 
-3D Fractal Plant Generator:
-https://openprocessing.org/sketch/2521782
+<a href="https://openprocessing.org/sketch/2494775" target="_blank">Quadratic Koch Fractal</a>
 
-Mandelbrot Set:
-https://openprocessing.org/sketch/2275464
+<a href="https://openprocessing.org/sketch/2521782" target="_blank">3D Fractal Plant Generator</a>
 
-Alternate Mandelbrot Set:
-https://openprocessing.org/sketch/2363409
+<a href="https://openprocessing.org/sketch/2275464" target="_blank">Mandelbrot Set</a>
 
-Fractal Oscillating Rectangles:
-https://openprocessing.org/sketch/2064690
+<a href="https://openprocessing.org/sketch/2363409" target="_blank">Alternate Mandelbrot Set</a>
 
-City Grid Fractal:
-https://openprocessing.org/sketch/2331010
+<a href="https://openprocessing.org/sketch/2064690" target="_blank">Fractal Oscillating Rectangles</a>
+
+<a href="https://openprocessing.org/sketch/2331010" target="_blank">City Grid Fractal</a>
+
+</p>
+</body>
+</html>
