@@ -1,10 +1,10 @@
 // Define the global variables.
 // The symmetry variable will define how many reflective sections the canvas
 // is split into.
-let symmetry = 6;
+
 
 // The angle button will calculate the angle at which each section is rotated.
-let angle = 360 / symmetry;
+
 
 function setup() {
   describe(
@@ -34,10 +34,8 @@ function draw() {
       // For every reflective section the canvas is split into, draw the cursor's
       // coordinates while pressed...
       for (let i = 0; i < symmetry; i++) {
-        rotate(angle);
-        stroke(255,150,100);
-        strokeWeight(3);
-        line(lineStartX, lineStartY, lineEndX, lineEndY);
+      //Add code here
+        
 
         // ... and reflect the line within the symmetry sections as well.
         push();
