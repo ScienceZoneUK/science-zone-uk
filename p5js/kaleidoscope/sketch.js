@@ -1,10 +1,10 @@
 // Define the global variables.
 // The symmetry variable will define how many reflective sections the canvas
 // is split into.
-
+let symmetry = 6;
 
 // The angle button will calculate the angle at which each section is rotated.
-
+let angle = 360/symmetry;
 
 function setup() {
   createCanvas(720, 400);
