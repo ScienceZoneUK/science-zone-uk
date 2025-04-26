@@ -12,6 +12,7 @@
 - Learn how to send HTTP requests in Python
 - Parse JSON responses
 - Build a simple command-line weather app using OpenWeatherMap
+- **FIX DELIBERATE ERRORS**
 
 ### 2. Prerequisites & Setup
 
@@ -58,7 +59,7 @@ Here is a free one we can use [Open Weather](https://openweathermap.org/city/264
 # API call
 # https://openweathermap.org/current
 
-import requests
+impot requests
 
 url = "https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=930bfccfb3f0cd04fb6f23fa7803e63c"
 # Fetch and display raw JSON
@@ -81,7 +82,7 @@ city = "London"
 base_url = "https://api.openweathermap.org/data/2.5/weather"
 
 # Construct URL programmatically using f-string
-url = f"{base_url}?q={city}&units=metric&appid={api_key}"
+url = "{base_url}?q={city}&units=metric&appid={api_key}"
 print("Constructed URL:", url)
 
 # Fetch and display raw JSON
@@ -168,7 +169,7 @@ print("Weather description:", data['weather'][0]['description'])
 ```python
 #Reference to excepts
 #https://www.w3schools.com/python/python_try_except.asp
-def risky_code():
+def non_risky_code():
     print(risky)
     
 try:
@@ -207,7 +208,6 @@ risky_code()
 #### Apply to our Weather Example
 
 ```python
-import requests
 
 # Your API key
 api_key = "930bfccfb3f0cd04fb6f23fa7803e63c"
