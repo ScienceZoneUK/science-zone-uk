@@ -16,12 +16,10 @@
 
 ### 2. Prerequisites & Setup
 
-1. Python 3 installed on your machine
-2. `pip` package manager available
+1. Thonny installed on your machine
+2. Thonny package manager available
 3. Install the `requests` library:
-   ```bash
-   pip install requests
-   ```
+
 4. Your OpenWeatherMap API key (e.g., `930bfccfb3f0cd04fb6f23fa7803e63c`)
 
 ---
