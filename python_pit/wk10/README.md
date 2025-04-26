@@ -39,6 +39,9 @@
 ---
 
 ### 4. Testing the Endpoint Directly (5 min)
+There are many web services that provide API's: Google,Facebook, Apple maps etc—sometimes they require payment.   
+You can create special keys that allow you to use their data, however, you are monitored.   
+Here is a free one we can use [Open Weather](https://openweathermap.org/city/2643743)
 
 - **Endpoint:** `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=YOUR_API_KEY`
 - Paste this URL into your web browser or run:
