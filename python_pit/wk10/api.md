@@ -4,8 +4,8 @@ Search for fun apis to test your skills in using them!
 [List of api's](https://github.com/public-apis/public-apis)
 
 ## Raw endpoints
-[Dog facts](https://dogapi.dog/api/v2/facts) 
-[Bank Holidays](https://www.gov.uk/bank-holidays.json)
+[Dog facts](https://dogapi.dog/api/v2/facts)    
+[Bank Holidays](https://www.gov.uk/bank-holidays.json)     
 
 ------   
 [Carbon Intensity API](https://api.carbonintensity.org.uk/intensity)   
