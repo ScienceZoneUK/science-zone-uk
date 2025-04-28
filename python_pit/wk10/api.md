@@ -15,3 +15,63 @@ Our OpenAPI allows consumers and smart devices to schedule and minimise COz emis
 
 
 ------- 
+[Currencies-GBP](https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/gbp.json)
+
+
+
+
+
+
+-------
+```python
+import turtle
+import requests
+
+# Setup turtle screen
+screen = turtle.Screen()
+screen.title("Simple Currency Converter")
+screen.setup(600, 400)
+screen.bgcolor("lightblue")
+
+# Create turtle to display text
+writer = turtle.Turtle()
+writer.hideturtle()
+writer.penup()
+
+# Get currency data from API
+def get_rate(base, target):
+    url = f"https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/{base.lower()}.json"
+    response = requests.get(url)
+    data = response.json()
+    rate = data[base.lower()][target.lower()]
+    return rate
+
+# Convert and display currency
+def convert():
+    base_currency = screen.textinput("Currency Converter", "Enter base currency (e.g. EUR, USD, GBP):").upper()
+    target_currency = screen.textinput("Currency Converter", "Enter target currency (e.g. EUR, USD, GBP):").upper()
+    amount = float(screen.textinput("Currency Converter", f"Enter amount in {base_currency}:"))
+
+    try:
+        rate = get_rate(base_currency, target_currency)
+        converted_amount = amount * rate
+        writer.clear()
+        writer.goto(0, 0)
+        writer.write(f"{amount} {base_currency} = {converted_amount:.2f} {target_currency}", align="center", font=("Arial", 20, "bold"))
+    except:
+        writer.clear()
+        writer.goto(0, 0)
+        writer.write("Invalid currency code!", align="center", font=("Arial", 20, "bold"))
+
+# Run converter on click
+turtle.listen()
+screen.onclick(lambda x, y: convert())
+
+# Initial message
+writer.goto(0, 50)
+writer.write("Click anywhere to start currency conversion!", align="center", font=("Arial", 16, "bold"))
+
+# Keep window open
+
+
+```
