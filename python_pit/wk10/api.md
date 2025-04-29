@@ -99,7 +99,9 @@ while True:
 ```
 
 
-- Write a try and except to catch the error and print a meaningful message
+- Write a try and except to catch the error and print a meaningful message        
+  Errors interupt and crash programs, python try:except catch them and keep everything running.       
+  reference: [Try:except](https://www.geeksforgeeks.org/python-try-except/)
 
 ```python
 import requests
@@ -111,7 +113,7 @@ data = response.json()
 def my_func():
     user = input('\nget some user data\n')
     if user not in data:
-        raise ValueError ("Wrong currency entered")
+        raise ValueError ("You created an error")
     else:
         print("Yes currency available")
 
@@ -123,11 +125,13 @@ while True:
         print(f"{e}, try again!!")
         
 ```
+- Write some more meaningful messages
 
 
+------
 
-
-
+- Predict what the code below will do
+  
 ```python
 import requests
 
@@ -159,7 +163,10 @@ while True:
     run()
 
 ```
+- Create a new program and run code
+- Now step through code to fully understand it
 
+-------
 
 
 ```python
