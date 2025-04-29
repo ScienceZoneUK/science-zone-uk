@@ -23,6 +23,41 @@ Our OpenAPI allows consumers and smart devices to schedule and minimise COz emis
 
 
 -------
+
+```python
+import requests
+
+#Build the URL in sections for legibility
+base_url = "https://cdn.jsdelivr.net/npm/@fawazahmed0"
+endpoint = "/currency-api@latest/v1/currencies/"
+base_curr = "gbp"
+data_type = ".json"
+url = f"{base_url}{endpoint}{base_curr}{data_type}"
+
+#Request the data
+response = requests.get(url)
+
+#Save the response into a dictionary
+data = response.json()
+
+#Print the data
+print(data)
+
+#get the exchange rate
+rate = data["gbp"]["eur"]
+
+#Print the exchange rate
+print(rate)
+
+```
+
+- Step through the code and understand it
+- Modify the conversion 'gbp' to .....?
+- If you enter the wrong currency, what's the error?
+- Write a try and except to catch the error and print a meaningful message
+
+
+
 ```python
 import turtle
 import requests
