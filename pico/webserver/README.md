@@ -163,9 +163,24 @@ Now open a browser and go to that address! You’ll get an error — we haven’
 
 ## 🌍 Step 6: Send a Web Page
 
-Add to the above:
+Make a new program
 
 ```python
+import wifi
+import socketpool
+from adafruit_httpserver.server import Server, Request, Response
+from secrets import secrets
+
+# Connect to Wi-Fi
+print("Connecting to WiFi...")
+wifi.radio.connect(secrets["ssid"], secrets["password"])
+print("Connected to", secrets["ssid"])
+print("IP address:", wifi.radio.ipv4_address)
+
+# Create server
+pool = socketpool.SocketPool(wifi.radio)
+server = Server(pool, "/static", debug=True)
+
 # Define a route and response
 @server.route("/")
 def base(request: Request):
@@ -180,6 +195,7 @@ while True:
         server.poll()
     except Exception as e:
         print("Error:", e)
+
 ```
 
 ---
