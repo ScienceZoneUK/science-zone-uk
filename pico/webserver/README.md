@@ -132,7 +132,7 @@ print("SocketPool created!")
 ---
 
 ## 🕸️ Step 5: Build a Tiny Web Server
-You will need to download [THIS](https://learn.adafruit.com/elements/3130634/download?type=zip)
+You will need to download [THIS]([https://learn.adafruit.com/elements/3130634/download?type=zip](https://github.com/adafruit/Adafruit_CircuitPython_HTTPServer/releases/download/4.6.2/adafruit-circuitpython-httpserver-9.x-mpy-4.6.2.zip))
 
 ```python
 import wifi
@@ -199,6 +199,67 @@ while True:
 ```
 
 ---
+## Add a button
+```python
+import wifi
+import socketpool
+import board
+import digitalio
+from secrets import secrets
+from adafruit_httpserver import Server, Request, Response, GET
+
+# Connect to Wi-Fi
+print("Connecting to Wi-Fi...")
+wifi.radio.connect(secrets["ssid"], secrets["password"])
+print("Connected to", secrets["ssid"])
+print("IP address:", wifi.radio.ipv4_address)
+
+# Setup onboard LED
+led = digitalio.DigitalInOut(board.LED)
+led.direction = digitalio.Direction.OUTPUT
+
+# Create a socket pool and server
+pool = socketpool.SocketPool(wifi.radio)
+server = Server(pool, "/static", debug=True)
+
+# HTML page with a button
+HTML = """
+<html>
+  <head><title>LED Control</title></head>
+  <body>
+    <h1>Blink the LED</h1>
+    <form action="/blink" method="get">
+      <button type="submit">Blink LED</button>
+    </form>
+  </body>
+</html>
+"""
+
+@server.route("/", GET)
+def base(request: Request):
+    return Response(request, HTML, content_type="text/html")
+
+@server.route("/blink", GET)
+def blink(request: Request):
+    led.value = True
+    import time
+    time.sleep(0.2)
+    led.value = False
+    return Response(request, body="LED blinked!<br><a href='/'>Go back</a>", content_type="text/html")
+
+# Start the server
+server.start(str(wifi.radio.ipv4_address))
+print("Server started, connect to: http://{}".format(wifi.radio.ipv4_address))
+
+# Main loop
+while True:
+    try:
+        server.poll()
+    except Exception as e:
+        print("Error:", e)
+
+
+```
 
 ## ✅ Final Challenge!
 
