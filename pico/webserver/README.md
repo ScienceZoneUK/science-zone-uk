@@ -132,6 +132,7 @@ print("SocketPool created!")
 ---
 
 ## 🕸️ Step 5: Build a Tiny Web Server
+You will need to download [THIS](https://learn.adafruit.com/elements/3130634/download?type=zip)
 
 ```python
 import wifi
