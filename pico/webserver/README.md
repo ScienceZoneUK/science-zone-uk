@@ -2,7 +2,7 @@
 # 🌐 Raspberry Pi Pico W: Web Server Lesson for 12-Year-Olds
 
 Welcome to your first **web server** lesson using **CircuitPython** and the **Raspberry Pi Pico W**! This guide is designed for beginners aged 12+ and focuses on **Physical Computing** and **Web Concepts**.
-![Alt text](./conceptmap.png)
+![Alt text](./images/conceptmap.png)
 
 ---
 
