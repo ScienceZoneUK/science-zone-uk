@@ -136,14 +136,22 @@ print("SocketPool created!")
 ```python
 import wifi
 import socketpool
+from adafruit_httpserver.server import Server, Request, Response
 from secrets import secrets
 
+# Connect to Wi-Fi
+print("Connecting to WiFi...")
 wifi.radio.connect(secrets["ssid"], secrets["password"])
-pool = socketpool.SocketPool(wifi.radio)
+print("Connected to", secrets["ssid"])
+print("IP address:", wifi.radio.ipv4_address)
 
-server = pool.socket()
-server.bind(("0.0.0.0", 80))
-server.listen(1)
+# Create server
+pool = socketpool.SocketPool(wifi.radio)
+server = Server(pool, "/static", debug=True)
+
+# Start server
+server.start(str(wifi.radio.ipv4_address))
+
 
 print("Go to: http://", wifi.radio.ipv4_address)
 ```
@@ -157,17 +165,20 @@ Now open a browser and go to that address! You’ll get an error — we haven’
 Add to the above:
 
 ```python
-html = "<html><body><h1>Hello from Pico W!</h1></body></html>"
+# Define a route and response
+@server.route("/")
+def base(request: Request):
+    return Response(request, body="Hello from Pico W!")
 
+# Start server
+server.start(str(wifi.radio.ipv4_address))
+
+# Loop forever
 while True:
-    conn, addr = server.accept()
-    print("Connected to", addr)
-    request = conn.recv(1024)
-    print("Request:", request)
-
-    response = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n" + html
-    conn.send(response.encode("utf-8"))
-    conn.close()
+    try:
+        server.poll()
+    except Exception as e:
+        print("Error:", e)
 ```
 
 ---
