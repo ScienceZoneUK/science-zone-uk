@@ -42,3 +42,8 @@ print(df.columns)
 ```python
 print(df.describe())
 ```
+
+- Import a csv file from a URL, local or over the web
+```python
+df = pd.read_csv(url)
+```
