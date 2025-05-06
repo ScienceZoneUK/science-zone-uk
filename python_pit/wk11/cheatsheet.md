@@ -5,7 +5,9 @@
 ## Cheat sheet
 
 Import library
-- import pandas as pd
+The conscenouse
+- ```import pandas as pd```
+- 
 - Create a data frame(df) ```df = pd.DataFrame(...some data....) ```
 ```python
 df = pd.DataFrame(
@@ -44,6 +46,11 @@ print(df.describe())
 ```
 
 - Import a csv file from a URL, local or over the web
+  
+```python
+df = pd.read_csv('your_csv_path.csv', sep=';')
+```
+  
 ```python
 df = pd.read_csv(url)
 ```
