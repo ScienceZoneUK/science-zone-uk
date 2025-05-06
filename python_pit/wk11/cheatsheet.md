@@ -6,8 +6,11 @@
 
 Import library
 The conscenouse
+- Pandas is usually imported under the pd alias.    
+  alias: In Python alias are an alternate name for referring to the same thing.
+
 - ```import pandas as pd```
-- 
+  
 - Create a data frame(df) ```df = pd.DataFrame(...some data....) ```
 ```python
 df = pd.DataFrame(
