@@ -18,14 +18,15 @@ By the end of this worksheet, you will:
 
 ## 🔑 CHEAT SHEET – Things You’ll Use
 
-| What You’re Doing        | Example                         | What It Means                               |
-|--------------------------|----------------------------------|----------------------------------------------|
-| Start a function         | `def say_hi():`                 | You’re telling Python to make a function     |
-| Return a value           | `return "Hello"`                | This sends back something                    |
-| Run the function         | `say_hi()`                      | This runs it (calls it)                      |
-| Save the result          | `message = say_hi()`            | Stores what the function returned            |
-| Ask for input            | `input("What is your name?")`   | Gets text from the user                      |
-| Make a decision          | `if x == y:`                    | Only do something if this is true            |
+| What You’re Doing        | Example                               | What It Means                                   |
+|--------------------------|----------------------------------------|--------------------------------------------------|
+| Start a function         | `def say_hi():`                       | You’re telling Python to make a function         |
+| Return a value           | `return "Hello"`                      | This sends back something                        |
+| Run the function         | `say_hi()`                            | This runs it (calls it)                          |
+| Save the result          | `message = say_hi()`                  | Stores what the function returned                |
+| Ask for input            | `input("What is your name?")`         | Gets text from the user                          |
+| Make a decision          | `if x == y:`                          | Only do something if this is true                |
+| Get real time            | `datetime.now().strftime("%H:%M")`   | Gets the computer's clock in hour:minute format |
 
 ---
 
@@ -88,15 +89,44 @@ print(__________)
 
 ---
 
-## ⭐ CHALLENGE TIME
+## ⏰ BONUS TASK: Real-Time Alarm with Loop
 
-- Can you add a loop to keep asking the time until it’s the alarm time?
-- Try printing a **computer beep** with `print("\a")`
-- Add a **funny or dramatic message** when the alarm rings!
+This version uses the real computer time and keeps checking every few seconds.
+
+```python
+from datetime import datetime
+import time
+
+def get_current_time():
+    return ____________________________
+
+def get_alarm_time():
+    return ____________________________
+
+def check_alarm(current, alarm):
+    if current == alarm:
+        return "⏰ WAKE UP! It's time!"
+    else:
+        return ____________________________
+
+# --- MAIN PROGRAM ---
+
+alarm_time = get_alarm_time()
+
+while True:
+    current_time = get_current_time()
+    message = check_alarm(current_time, alarm_time)
+
+    if message == "⏰ WAKE UP! It's time!":
+        print(message)
+        break
+
+    time.sleep(10)
+```
 
 ---
 
-# 🐢 HORSE RACING GAME (TURTLE)
+## 🐢 HORSE RACING GAME (TURTLE)
 
 Let’s make a race where your horse (a square) runs across the screen!
 
@@ -159,13 +189,9 @@ horse.write("🏁 Finished!", align="left", font=("Arial", 16, "bold"))
 turtle.done()
 ```
 
-🧪 Try running it! The horse moves across the screen and stops.
-
 ---
 
 ## 🕹️ ADD KEYBOARD CONTROL (spacebar to move)
-
-Change the code to let **you control the horse** by pressing **space**:
 
 ```python
 def move_horse():
@@ -180,8 +206,6 @@ screen.onkey(move_horse, "space")
 turtle.done()
 ```
 
-👉 Each time you press **space**, the horse moves a little bit.
-
 ---
 
 ## 🎉 NICE JOB!
@@ -189,6 +213,6 @@ turtle.done()
 You learned how to:
 - Make and use functions
 - Build a text-based alarm clock
+- Use your computer’s real clock
 - Create a horse racing game
-- Control your game with a button!
-
+- Control it with the keyboard
