@@ -1,40 +1,52 @@
 
-# 🐍 Python Functions + Alarm Clock Worksheet  
-## Age: 11–13 | Theme: Writing Functions, Using Returns  
+# 🐍 Python Functions + Alarm Clock + Horse Game Worksheet  
+## For Ages 11–13 | Theme: Writing Functions, Using Return Values, Turtle Graphics  
 
 ---
 
-## 🔑 CHEAT SHEET
+## 🎯 OBJECTIVES
 
-| Concept              | Example                         | Description                              |
-|----------------------|----------------------------------|-------------------------------------------|
-| Define a function    | `def say_hi():`                 | Start of a function                       |
-| Return something     | `return "Hello"`                | Sends back a value                        |
-| Call a function      | `say_hi()`                      | Runs the function                         |
-| Store return value   | `message = say_hi()`            | Saves the output                          |
-| Input from user      | `input("Type here: ")`          | Ask the user to type something            |
-| If statement         | `if x == y:`                    | Checks if something is true               |
+By the end of this worksheet, you will:
+
+- ✅ Know how to write your own functions in Python  
+- ✅ Understand how to use `return` to send back values  
+- ✅ Create a simple text-based alarm clock  
+- ✅ Build a fun horse racing game using Turtle graphics  
+- ✅ Learn how to control the game with the keyboard  
 
 ---
 
-## 🧠 TASK 1: THREE FUNCTIONS (WARM-UP)
+## 🔑 CHEAT SHEET – Things You’ll Use
 
-Fill in the blanks to complete the program.
+| What You’re Doing        | Example                         | What It Means                               |
+|--------------------------|----------------------------------|----------------------------------------------|
+| Start a function         | `def say_hi():`                 | You’re telling Python to make a function     |
+| Return a value           | `return "Hello"`                | This sends back something                    |
+| Run the function         | `say_hi()`                      | This runs it (calls it)                      |
+| Save the result          | `message = say_hi()`            | Stores what the function returned            |
+| Ask for input            | `input("What is your name?")`   | Gets text from the user                      |
+| Make a decision          | `if x == y:`                    | Only do something if this is true            |
+
+---
+
+## 🧠 TASK 1: Three Simple Functions
+
+👉 Fill in the blanks to finish this small program. It uses **3 functions**.
 
 ```python
-# A. Write a function that says hello
+# A. Function that says hello
 def greet():
     return _______
 
-# B. Write a function that asks for your name
+# B. Function that asks for your name
 def get_name():
     return _______("What is your name? ")
 
-# C. Write a function that combines the message
+# C. Function that builds a message
 def make_message(name):
     return "Nice to meet you, " + _______
 
-# D. Now run your functions!
+# D. Use your functions!
 print(greet())
 name = get_name()
 message = make_message(name)
@@ -43,27 +55,24 @@ print(_______)
 
 ---
 
-## ⏰ TASK 2: MAKE A SIMPLE ALARM CLOCK
+## ⏰ TASK 2: Make an Alarm Clock
 
-Your goal: Ask for the current time and the alarm time, and then print a message if it's time to wake up.
+This program:
+- Asks the current time
+- Asks the alarm time
+- Prints a message if it’s time to wake up
 
-You **must use 3 functions** and return values.
+You MUST use **3 functions** and **return values**.
 
----
-
-### ✅ Scaffold
+### ✍️ Fill in the scaffold:
 
 ```python
-# 1. Ask the user for the current time
 def get_current_time():
-    # Ask for input and return it
     return ____________________________
 
-# 2. Ask the user to set an alarm
 def get_alarm_time():
     return ____________________________
 
-# 3. Compare the current time and alarm
 def check_alarm(current, alarm):
     if current == alarm:
         return "⏰ WAKE UP! It's time!"
@@ -71,29 +80,31 @@ def check_alarm(current, alarm):
         return ____________________________
 
 # --- MAIN PROGRAM ---
-
 current_time = get_current_time()
 alarm_time = get_alarm_time()
 message = check_alarm(current_time, alarm_time)
-
 print(__________)
 ```
 
 ---
 
-## ⭐️ CHALLENGE
+## ⭐ CHALLENGE TIME
 
-- Can you make the program repeat using a `while` loop?
-- Can you make the computer beep? Try `print("\a")`  
-- Add your own funny alarm message
+- Can you add a loop to keep asking the time until it’s the alarm time?
+- Try printing a **computer beep** with `print("\a")`
+- Add a **funny or dramatic message** when the alarm rings!
 
+---
 
-## Horse racing game
+# 🐢 HORSE RACING GAME (TURTLE)
 
-Copy the blocks one by code to build program. 
+Let’s make a race where your horse (a square) runs across the screen!
 
+---
 
-1) Import the libraries
+## 🎮 STEP-BY-STEP GAME
+
+### 1️⃣ Import the libraries
 
 ```python
 import turtle
@@ -101,19 +112,17 @@ import time
 import random
 ```
 
-2) Set up the screen
+### 2️⃣ Set up the race screen
 
 ```python
-# Set up the screen
 screen = turtle.Screen()
 screen.title("🐎 Horse Race!")
 screen.bgcolor("lightgreen")
 ```
 
-3) Place a finish line
+### 3️⃣ Draw a finish line
 
 ```python
-# Draw the finish line
 finish_line = 200
 line = turtle.Turtle()
 line.penup()
@@ -124,10 +133,9 @@ line.forward(200)
 line.hideturtle()
 ```
 
-4) Draw a horse
+### 4️⃣ Draw your horse
 
 ```python
-# Create the horse
 horse = turtle.Turtle()
 horse.shape("square")
 horse.color("brown")
@@ -135,34 +143,31 @@ horse.penup()
 horse.goto(-200, 0)
 ```
 
-5) Loop that moves the horse
+### 5️⃣ Make it run (automatic)
 
 ```python
-# Move the horse forward until it crosses the finish line
 while horse.xcor() < finish_line:
-    step = random.randint(5, 15)  # random step for fun
+    step = random.randint(5, 15)
     horse.forward(step)
     time.sleep(0.1)
 ```
 
-6) Horse crosses finish line, print message
+### 6️⃣ Show the finish message
 
 ```python
-# Print message when done
 horse.write("🏁 Finished!", align="left", font=("Arial", 16, "bold"))
-
-# Keep window open
 turtle.done()
 ```
 
-7) Play game, use debug and step-into to help you understand whats happening
+🧪 Try running it! The horse moves across the screen and stops.
 
-## Add user interactivity
-Replace the game logic while loop with this function.    
-The screen object is then setup to listen for a space bar input.
+---
+
+## 🕹️ ADD KEYBOARD CONTROL (spacebar to move)
+
+Change the code to let **you control the horse** by pressing **space**:
 
 ```python
-# Function to move the horse when spacebar is pressed
 def move_horse():
     if horse.xcor() < finish_line:
         step = random.randint(5, 15)
@@ -170,15 +175,20 @@ def move_horse():
         if horse.xcor() >= finish_line:
             horse.write("🏁 Finished!", align="left", font=("Arial", 16, "bold"))
 
-# Connect the spacebar to the move_horse function
 screen.listen()
 screen.onkey(move_horse, "space")
-
-# Keep window open
 turtle.done()
-
 ```
 
+👉 Each time you press **space**, the horse moves a little bit.
 
+---
 
+## 🎉 NICE JOB!
+
+You learned how to:
+- Make and use functions
+- Build a text-based alarm clock
+- Create a horse racing game
+- Control your game with a button!
 
