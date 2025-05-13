@@ -193,7 +193,15 @@ computer program. You can create objects to represent real physical things,
 like a human being. They can also be used for small parts of a larger program,    
 like a widget in a user-interface.
 
+To create objects you must first define a class. Here we have a robot class.   
+A class is like a blueprint, it contains the plans for the data and    
+behaviours an object should possess. You can create many objects from    
+a single class. Just like you can make many robots from the same blueprint. 
+
 ![OOP Robot](robot_oops.png)
+
+![OOP car](car_oops.png)
+
 
 
 
