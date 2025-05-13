@@ -112,7 +112,7 @@ What paradigm have we been using already?
 
 **Procedural**
 Code that runs from top to bottom, combining    
-- Subroutines: repeated steps bundled togerther
+- Subroutines: repeated steps bundled together
 - Functions: blocks of code that return calculations
 
 ```python
@@ -128,7 +128,8 @@ Is it a function or a procedure?
 ### Problem
 Work in pairs. 
 - What does the program do?
-- Make the program more efficient using subroutines
+- Why is the program inefficient?
+- Improve it
 
 
 ```python
