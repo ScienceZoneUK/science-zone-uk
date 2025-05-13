@@ -245,6 +245,9 @@ my_car.honk()
 pm_car.honk()
 
 ```
+....... it contains both a class and object.     
+What do you think the class is called?     
+What do you think the objects are called?     
 
 ![OOP car](car_oops.png)
 
