@@ -232,26 +232,30 @@ a single class. Just like you can make many robots from the same blueprint.
 
 ```
 
-Take a look at this program:
-```python
-# main.py
-
-from car import Car
-
-my_car = Car("Toyota", "Yaris", 2022)
-pm_car = Car("Tesla", "Cyber Truck", 2025)
-
-my_car.honk()
-pm_car.honk()
-
-```
 ....... it contains both a class and object.     
 - 5a) What do you think the class is called?     
 - 5b) What do you think the objects are called?
 
 The class is called Car
 We import the class so it can be used to create objects.
-Classes usually have capital letters at the start of their names - another convention!    
+Classes usually have capital letters at the start of their names - another convention!   
+
+
+
+Take a look at this program:
+```python
+
+#Setup the class import Something
+
+something = Something()
+something_else = Something()
+
+
+something.hello_world()
+something_else.hello_world()
+
+```
+ 
 
 ![OOP car](car_oops.png)
 
