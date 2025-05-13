@@ -166,6 +166,14 @@ print("Your alphabetical collection is...")
 print(books)
 ```
 
+### Questions
+- What is different about the execution of the program?     
+- What is the difference in the way the program is written?     
+- What benefits are there for a reader?     
+- What benefits are there for the writer of the program?
+    
+How would you change it so the list was sorted in the opposite order?    
+
 
 
 
