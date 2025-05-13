@@ -102,8 +102,8 @@ Conventions help a reader to interpret a program, helping them locate specific p
 Conventions gives us guidelines on how to write and structure better programs.
 
 ---
-## object-oriented programming (OOP). 
-It is a programming paradigm, a specific way to write programs.
+## Programming paradigms 
+A programming paradigm is a specific way to write programs.
 
 **Programming paradigms** give us a set of guidelines on how to write entire programs!
 Paradigm - a typical example or pattern of something; a pattern or model.
@@ -174,9 +174,24 @@ print(books)
     
 How would you change it so the list was sorted in the opposite order?    
 
+## object-oriented programming (OOP).
+Object-oriented programming (OOP) is another programming paradigm           
+derived from procedural programming. The first language to include.    
+object-oriented principles, Simula, was released in 1967. Today, a   
+number of modern languages use or allow the use of OOP. 
 
 
+In procedural programming, data is stored in the main program and passed   
+to subroutines. In OOP the data and subroutines are stored together in      
+objects which are created from classes.
+### New terms
+- Objects
+- Classes
 
+The OOP paradigm is focused on objects which represent parts of a    
+computer program. You can create objects to represent real physical things,    
+like a human being. They can also be used for small parts of a larger program,    
+like a widget in a user-interface.
 
 
 
