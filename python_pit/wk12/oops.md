@@ -247,9 +247,15 @@ pm_car.honk()
 ```
 ....... it contains both a class and object.     
 - 5a) What do you think the class is called?     
-- 5b) What do you think the objects are called?     
+- 5b) What do you think the objects are called?
+
+The class is called Car
+We import the class so it can be used to create objects.
+Classes usually have capital letters at the start of their names - another convention!    
 
 ![OOP car](car_oops.png)
+
+Create a program for the car class
 
 
 
