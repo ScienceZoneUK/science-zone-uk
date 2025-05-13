@@ -1,6 +1,6 @@
 # Programing Paradigms ⠶
 
-
+## 1)
 Copy this program, DO NOT RUN yet:
 - Discuss what it will execute
 - Run it
@@ -28,7 +28,7 @@ for i in range(3):
 
 ---
 
-## Conventions
+## 2) Conventions
 
 A convention is…     
 An agreed-upon practice, it is the way things are usually done.
@@ -49,10 +49,10 @@ Why is this convention useful?
 - Discuss
 
 
-### Problems
+### 3) Problems
 
 
-1) What is the convention that is broken?
+3a) What is the convention that is broken?
 - Fix it
 ```python
 count = 10
@@ -73,7 +73,7 @@ print(numbers)
 print(time_taken)
 ```
 
-2) What is wrong with this program?
+3b) What is wrong with this program?
 Describe the convention that has been broken here.
 ```python
 timer = 5
@@ -102,7 +102,7 @@ Conventions help a reader to interpret a program, helping them locate specific p
 Conventions gives us guidelines on how to write and structure better programs.
 
 ---
-## Programming paradigms 
+## 4) Programming paradigms 
 A programming paradigm is a specific way to write programs.
 
 **Programming paradigms** give us a set of guidelines on how to write entire programs!
@@ -127,9 +127,9 @@ Is it a function or a procedure?
 
 ### Problem
 Work in pairs. 
-- What does the program do?
-- Why is the program inefficient?
-- Improve it
+- 4a) What does the program do?
+- 4b) Why is the program inefficient?
+- 4c) Improve it
 
 
 ```python
@@ -167,14 +167,14 @@ print(books)
 ```
 
 ### Questions
-- What is different about the execution of the program?     
-- What is the difference in the way the program is written?     
-- What benefits are there for a reader?     
-- What benefits are there for the writer of the program?
+- 4d) What is different about the execution of the program?     
+- 4e) What is the difference in the way the program is written?     
+- 4f) What benefits are there for a reader?     
+- 4g) What benefits are there for the writer of the program?
     
-How would you change it so the list was sorted in the opposite order?    
+4h) How would you change it so the list was sorted in the opposite order?    
 
-## object-oriented programming (OOP).
+## 5) object-oriented programming (OOP).
 Object-oriented programming (OOP) is another programming paradigm           
 derived from procedural programming. The first language to include.    
 object-oriented principles, Simula, was released in 1967. Today, a   
@@ -246,8 +246,8 @@ pm_car.honk()
 
 ```
 ....... it contains both a class and object.     
-What do you think the class is called?     
-What do you think the objects are called?     
+- 5a) What do you think the class is called?     
+- 5b) What do you think the objects are called?     
 
 ![OOP car](car_oops.png)
 
