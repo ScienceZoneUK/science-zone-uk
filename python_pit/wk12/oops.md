@@ -200,6 +200,38 @@ a single class. Just like you can make many robots from the same blueprint.
 
 ![OOP Robot](robot_oops.png)
 
+```
+                    +--------------------+
+                    |      CLASS         |
+                    |      Robot         |
+                    +--------------------+
+                    | Attributes:        |
+                    | - color            |
+                    | - size             |
+                    | - battery_level    |
+                    |                    |
+                    | Methods:           |
+                    | - move()           |
+                    | - beep()           |
+                    | - recharge()       |
+                    +--------------------+
+                            / | \
+                           /  |  \
+                          /   |   \
+                         /    |    \
+                        /     |     \
+                       /      |      \
+        +----------------+ +----------------+ +----------------+
+        |  Object: R1    | |  Object: R2    | |  Object: R3    |
+        +----------------+ +----------------+ +----------------+
+        | color: silver  | | color: orange  | | color: teal    |
+        | size: small    | | size: medium   | | size: large    |
+        | battery: 70%   | | battery: 40%   | | battery: 90%   |
+        | move(), beep() | | move(), beep() | | move(), beep() |
+        +----------------+ +----------------+ +----------------+
+
+```
+
 ![OOP car](car_oops.png)
 
 
