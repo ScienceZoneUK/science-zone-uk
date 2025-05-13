@@ -232,6 +232,20 @@ a single class. Just like you can make many robots from the same blueprint.
 
 ```
 
+Take a look at this program:
+```python
+# main.py
+
+from car import Car
+
+my_car = Car("Toyota", "Yaris", 2022)
+pm_car = Car("Tesla", "Cyber Truck", 2025)
+
+my_car.honk()
+pm_car.honk()
+
+```
+
 ![OOP car](car_oops.png)
 
 
