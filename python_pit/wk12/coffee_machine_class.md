@@ -119,7 +119,7 @@ for _ in range(100):
 ---
 
 ## ☕ Activity 2: Coffee Machine
-You need to save the class CoffeeMachine.py into a folder to be able to use it. 
+You need to copy and save the class coffee_machine.py ( in wk12 repository) into your python folder to be able to use it. 
 
 ### ☕ CoffeeMachine Class Documentation
 
