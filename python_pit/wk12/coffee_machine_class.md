@@ -187,9 +187,9 @@ from coffee_machine import CoffeeMachine
 
 # Step 3: Ask the user
 
-# Step 4: Check ingredients and payment
-        # if resources then get price
-            #if processed payment then make coffee
+# Step 4: If resources then get price from menu
+
+# Step 5  If processed payment then make coffee
 ```
 
 ## 🎯 Bonus Challenges
