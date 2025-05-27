@@ -17,6 +17,10 @@ In this session, you'll build an intruder alarm system using code, electronics, 
 - Jumper wires (male-to-male)
 
 ---
+- wifi ssid: BTBHub6-JQ2W
+- Password: d6QGFiGEGLxv
+
+---
 
 ## 🕐 Part 1: Using the Terminal & Writing Python
 
