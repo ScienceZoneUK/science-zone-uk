@@ -1,0 +1,70 @@
+
+==============================
+🧰 Useful Raspberry Pi Terminal Commands
+==============================
+
+A quick reference guide for essential Raspberry Pi terminal commands — great for beginners and workshops.
+
+------------------------------
+🟢 System Info & Network
+------------------------------
+hostname -I          # Show your Pi's IP address
+uname -a             # Show kernel and system info
+df -h                # Check free disk space
+free -h              # Show available RAM
+uptime               # Show how long the Pi has been running
+
+------------------------------
+🔁 Update Your Pi
+------------------------------
+sudo apt update             # Update list of packages
+sudo apt upgrade            # Upgrade installed packages
+sudo apt full-upgrade       # Full upgrade including dependencies
+sudo apt autoremove         # Clean up unused packages
+
+Run all together:
+sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
+
+------------------------------
+🔧 Configuration Tools
+------------------------------
+sudo raspi-config           # Open the Raspberry Pi configuration menu
+
+Enable things like:
+- SSH
+- VNC
+- I2C, SPI
+- Camera
+
+------------------------------
+📁 File & Folder Management
+------------------------------
+ls                          # List files in current folder
+ls -l                       # List files with details
+cd foldername               # Move into a folder
+cd ..                       # Go back one folder
+mkdir foldername            # Create a new folder
+rm filename                 # Delete a file
+rm -r foldername            # Delete a folder and contents
+
+------------------------------
+📝 Editing Files with nano
+------------------------------
+nano filename.py            # Open or create a file in nano editor
+
+Nano Shortcuts:
+Ctrl + O = Save
+Ctrl + X = Exit
+Ctrl + K = Cut line
+Ctrl + U = Paste line
+
+------------------------------
+🐍 Run Python Programs
+------------------------------
+python3 filename.py
+
+------------------------------
+📴 Shutdown and Reboot
+------------------------------
+sudo shutdown now           # Shutdown the Pi immediately
+sudo reboot                 # Restart the Pi
