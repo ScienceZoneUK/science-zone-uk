@@ -113,20 +113,61 @@ We will use a **custom class** to create horses and make them race!
 ## 📚 Class Documentation
 
 ```
-Horse(name, color, y_pos)
-    → Makes a horse with color and Y position
 
-.move()
-    → Moves horse forward randomly
+===============================
+🐎 Horse Class Documentation 🐎
+===============================
 
-.get_position()
-    → Gets how far the horse has run
+This guide shows you how to use the Horse class in your Python turtle race.
 
-.celebrate()
-    → Shows a message if this horse wins
+-----------------------------------
+1. Create a Horse
+-----------------------------------
 
-.draw_lane()
-    → Draws a race lane for this horse
+# Create a horse named "Blazer", color blue, y-position 50, finish line at 200
+blazer = Horse("Blazer", "blue", 50, finish_line=200)
+
+
+-----------------------------------
+2. Move the Horse
+-----------------------------------
+
+# Move the horse forward by a random step (1–10)
+blazer.move()
+
+
+-----------------------------------
+3. Get Horse Position
+-----------------------------------
+
+# Check how far the horse has gone (X position)
+print(blazer.get_position())   # e.g., -120.0
+
+
+-----------------------------------
+4. Check if the Horse has Won
+-----------------------------------
+
+# This returns True if the horse passed the finish line
+if blazer.check_win():
+    print("Blazer has won!")
+
+
+-----------------------------------
+5. Celebrate!
+-----------------------------------
+
+# Display a winner message near the turtle
+blazer.celebrate()
+
+
+-----------------------------------
+6. Draw the Race Lane
+-----------------------------------
+
+# Draw a horizontal track for the horse
+blazer.draw_lane()
+
 ```
 
 ---
