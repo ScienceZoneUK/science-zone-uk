@@ -144,7 +144,7 @@ from turtle import Screen
 - Setup the turtle screen.
 ```python
 # Setup screen
-screen = turtle.Screen()
+screen = Screen()
 screen.title("Horse Race")
 screen.bgcolor("white")
 ```
