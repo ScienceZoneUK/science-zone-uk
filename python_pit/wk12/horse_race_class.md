@@ -108,49 +108,9 @@ We will use a **custom class** to create horses and make them race!
 
 ---
 
-### 1. Create a project folder called horse_race_class
-
-### 2. Save the Horse class from this repo into your project folder
-
-```python
-
-```
-
 ---
 
-### 2. Now Use the Class in a Race
-
-```python
-# Setup screen
-screen = turtle.Screen()
-screen.title("Horse Race")
-screen.bgcolor("white")
-
-# Create horses
-horse1 = Horse("Lightning", "blue", 50)
-horse2 = Horse("Thunder", "red", -50)
-
-# Draw lanes
-horse1.draw_lane()
-horse2.draw_lane()
-
-# Race!
-while horse1.get_position() < 200 and horse2.get_position() < 200:
-    horse1.move()
-    horse2.move()
-
-# Who won?
-if horse1.get_position() > horse2.get_position():
-    horse1.celebrate()
-else:
-    horse2.celebrate()
-
-turtle.done()
-```
-
----
-
-## 📚 Class Cheat Sheet
+## 📚 Class Documentation
 
 ```
 Horse(name, color, y_pos)
@@ -170,6 +130,55 @@ Horse(name, color, y_pos)
 ```
 
 ---
+
+### 1. Create a project folder called horse_race_class
+
+### 2. Save the Horse class from this repo into your project folder
+
+### 3. Now Use the Class in a Race
+- Import the turtle and Horse class.
+```python
+from horse_race import Horse
+from turtle import Screen
+```
+- Setup the turtle screen.
+```python
+# Setup screen
+screen = turtle.Screen()
+screen.title("Horse Race")
+screen.bgcolor("white")
+```
+- Create instances of the horse class.
+```python
+# Create horses
+horse1 = Horse("Lightning", "blue", 50)
+horse2 = Horse("Thunder", "red", -50)
+```
+- The class provides horse lanes, just call the method .draw_lane().
+```python
+# Draw lanes
+horse1.draw_lane()
+horse2.draw_lane()
+```
+- Use a loop to move the horses until they pass the finish.
+```python
+# Race!
+while horse1.get_position() < 200 and horse2.get_position() < 200:
+    horse1.move()
+    horse2.move()
+```
+- Write a message to celebrate the winning horse.
+```python
+# Who won?
+if horse1.get_position() > horse2.get_position():
+    horse1.celebrate()
+else:
+    horse2.celebrate()
+
+turtle.done()
+```
+
+
 
 🎯 Tip: When stuck, search on [W3Schools Python](https://www.w3schools.com/python/).  
 Happy coding!
