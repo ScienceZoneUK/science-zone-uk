@@ -95,9 +95,10 @@ screen.exitonclick()
 ```
 
 ✅ Modify it:
-1. Try a different color list and cycle through it.
-2. Add random positions or a background color.
-3. Try more rows and columns!
+1. Make a bigger grid.
+2. Try a different color list and cycle through it.
+3. Add random positions or a background color.
+4. Make the grid appear hand drawn
 
 ---
 
@@ -107,7 +108,9 @@ We will use a **custom class** to create horses and make them race!
 
 ---
 
-### 1. Copy the Horse Class Below
+### 1. Create a project folder called horse_race_class
+
+### 2. Save the Horse class from this repo into your project folder
 
 ```python
 import turtle
