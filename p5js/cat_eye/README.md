@@ -118,3 +118,78 @@ That way, the **black pupil stays inside the eye** but still points toward your 
 
 
 ---
+
+### ✅ Step 3: Grid of Cat Eyes! 😼
+
+- Create a whole bunch of eyes in a grid
+- Change the eye design to look like **cat eyes**
+- Yellow eyes + vertical black pupils!
+
+```js
+let eyes = [];
+
+function setup() {
+  createCanvas(400, 400);
+  let spacing = 80;
+  for (let x = spacing / 2; x < width; x += spacing) {
+    for (let y = spacing / 2; y < height; y += spacing) {
+      eyes.push(new Eye(x, y, 50));
+    }
+  }
+}
+
+function draw() {
+  background(220);
+  for (let eye of eyes) {
+    eye.update();
+    eye.display();
+  }
+}
+
+class Eye {
+  constructor(x, y, r) {
+    this.pos = createVector(x, y);
+    this.r = r;
+    this.dir = createVector(0, 0);
+  }
+
+  update() {
+    this.dir = p5.Vector.sub(createVector(mouseX, mouseY), this.pos);
+    this.dir.setMag(this.r / 4);
+  }
+
+  display() {
+    fill(255, 204, 0); // yellow cat eye
+    stroke(0);
+    strokeWeight(2);
+    ellipse(this.pos.x, this.pos.y, this.r, this.r * 1.2);
+
+    fill(0); // black pupil
+    noStroke();
+    let pupilW = this.r / 6;
+    let pupilH = this.r / 1.5;
+    ellipse(this.pos.x + this.dir.x, this.pos.y + this.dir.y, pupilW, pupilH);
+  }
+}
+```
+
+---
+
+## ✅ Extra Challenges!
+
+Try these out if you finish early:
+- Can you make the eyes blink?
+- Can you make them follow a bouncing ball instead of your mouse?
+- Can you randomize eye colors?
+
+---
+
+## 💡 Tips
+
+- If something breaks, check your brackets `{}` and semicolons `;`
+- Use `console.log()` to help debug
+- Be creative – you’re the artist!
+
+---
+
+Happy Coding! 🧑‍💻✨
