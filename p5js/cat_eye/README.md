@@ -81,6 +81,40 @@ class Eye {
   }
 }
 ```
+---
+
+## 🧿 How It Works – Eye Class & Vectors (Simple Explanation)
+
+### 🧠 What is a Class?
+
+A **class** is like a blueprint for an object. In this case, we made a class called `Eye`. Every time we want to create a new cat eye, we use that blueprint.
+
+Each `Eye`:
+- Knows where it lives (`x`, `y`)
+- Knows how big it is (`r`)
+- Has functions (`update()` and `display()`) to follow the mouse and draw itself
+
+### 🧠 What is a Vector?
+
+A **vector** is like an arrow that tells us:
+- **Where to go** (direction)
+- **How far to go** (magnitude or length)
+
+We use vectors to find the direction from the center of the eye to your mouse.
+
+```js
+this.dir = p5.Vector.sub(createVector(mouseX, mouseY), this.pos);
+```
+
+This says:  
+“Make a vector from the eye to the mouse.”  
+Then we **shrink** that arrow so the pupil doesn’t fly out of the eye:
+
+```js
+this.dir.setMag(this.r / 2);
+```
+
+That way, the **black pupil stays inside the eye** but still points toward your mouse.
 
 
 ---
