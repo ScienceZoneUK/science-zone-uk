@@ -41,3 +41,46 @@ function draw() {
 ```
 
 ---
+
+### ✅ Step 2: One Eye Follows the Mouse
+
+- Wrap the eye into a class
+- Use vector math to move the pupil
+
+```js
+let eye;
+
+function setup() {
+  createCanvas(400, 400);
+  eye = new Eye(200, 200, 60);
+}
+
+function draw() {
+  background(220);
+  eye.update();
+  eye.display();
+}
+
+class Eye {
+  constructor(x, y, r) {
+    this.pos = createVector(x, y);
+    this.r = r;
+  }
+
+  update() {
+    this.dir = p5.Vector.sub(createVector(mouseX, mouseY), this.pos);
+    this.dir.setMag(this.r / 2);
+  }
+
+  display() {
+    fill(255);
+    stroke(0);
+    ellipse(this.pos.x, this.pos.y, this.r);
+    fill(0);
+    ellipse(this.pos.x + this.dir.x, this.pos.y + this.dir.y, this.r / 3);
+  }
+}
+```
+
+
+---
