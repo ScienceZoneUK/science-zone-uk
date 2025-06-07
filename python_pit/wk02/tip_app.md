@@ -1,9 +1,54 @@
 # 🐍 Python Tip Calculator Workshop 🎉
 
-> 🚀 **New coders**  
 > ✏️ **Use Thonny to write your Python code**
 
+
+
+## 🚀 Quick Exercise: Think Like a Computer!
+
+To make a working program, you have to **think like a computer**. Computers follow instructions step by step.
+
+> 💡 **What is pseudo-code?**  
+> Pseudo-code means writing instructions clearly in plain English. It helps us plan before writing actual code!
+
+
 ---
+
+### 📝 **Your Task**
+
+Write **pseudo-code** to explain how you'd make a program that:
+
+- **Asks the user** for their favorite food.
+- Then **replies**: `"Yum, I like [food] too!"`
+
+Here's an example to help you start:
+
+```plain
+1. Ask the user: "What's your favorite food?"
+2. Wait for the user's answer and store it as "food".
+3. Say: "Yum, I like [food] too!"
+```
+✍️ Your Turn: Write your own pseudo-code for the next task!
+
+Write **pseudo-code** to explain how you'd make a program that:
+
+- **Asks the user** for the favourite band.
+- Then **replies**: `"Great, I like [band] too!"`
+
+
+
+✅ Remember:
+
+- Write each step clearly.
+
+- Number your instructions.
+
+- Keep it simple!
+
+
+
+---
+
 
 ## 🎈 Activity 1: My First Tip Calculator 🎈
 
@@ -13,8 +58,31 @@ You'll make a Python program that works out how much tip to add when sharing a b
 
 
 ---
+### Step 1
+### 📝 **Your Task**
 
-### 🔍 Step 1: Guess What Happens!
+Write **pseudo-code** to explain how you'd make a program that:
+
+- **Asks the user** For their bill, tip percentage and how many people are sharing the bill.
+- Then **replies**: `"Each person pays:[final_amount]"`
+
+Here's a template to help you start:
+
+```plain
+#1. Print a welcome note
+#2. User inputs their amount and we save it in [bill]
+#3. (tip?)
+#4. User inputs how many sharers and we save it in [people]
+#5. Convert the tip into a percent and save in [tip_percent]
+#6. Do some maths to calculate [total_tip] and save it
+#7. Calculate the [total_bill] = [total_tip] + [bill]
+#8. (Each person pays?)
+#9. Round the final amount and save in [final_amount]
+#11.(Final message?)
+```
+
+
+### 🔍 Step 2: Guess What Happens!
 
 Look at this code carefully:
 
