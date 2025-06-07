@@ -45,6 +45,14 @@ Write **pseudo-code** to explain how you'd make a program that:
 
 - Keep it simple!
 
+Complete the psuedo-code (Use thonny)
+
+```plain
+1. .......
+2. .......
+3. .......
+```
+
 
 
 ---
