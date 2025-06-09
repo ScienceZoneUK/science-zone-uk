@@ -23,7 +23,7 @@ function draw() {
 }
 
 ```
-
+### Basic circle with fill
 ```javascript
 // We setup things here but they only happen once
 // This setup creates a canvas for us to draw on
