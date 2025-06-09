@@ -63,3 +63,30 @@ function draw(){
 
 }
 ```
+
+You can use a button press to change images
+
+```javascript
+let img;
+
+function preload() {
+  img = loadImage("horse.png");
+}
+
+function setup() {
+  createCanvas(800, 800);
+  background(180);
+}
+
+function draw() {
+  // Draw the image at the mouse position
+  image(img, mouseX, mouseY, 100, 100);
+}
+
+function keyPressed() {
+  if (key === '1') {
+    img = loadImage("oreo.png");
+  }
+}
+
+```
