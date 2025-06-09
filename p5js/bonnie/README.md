@@ -1,4 +1,8 @@
 # Bonnie's p5 journey
+---
+P5js is a javascript environment for drawing, animating and interacting with your computer
+
+---
 
 
 
