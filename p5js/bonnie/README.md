@@ -41,3 +41,25 @@ function draw() {
   circle(200,200,200)
 }
 ```
+
+### Load an image
+Save the horse png on to your computer then upload to the sketch
+```javascript
+let img;
+
+// Load the image and create a p5.Image object.
+function preload() {
+  img = loadImage('horse.png');
+}
+
+function setup() {
+  createCanvas(800, 800);
+background(180)
+}
+
+function draw(){
+    // Draw the image.
+  image(img, mouseX, mouseY,100,100);
+
+}
+```
