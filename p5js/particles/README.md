@@ -20,14 +20,12 @@ We start by drawing one particle using a vector for position.
 
 ```js
 let pos;
-```
-```js
+
 function setup() {
   createCanvas(400, 400);
   pos = createVector(200, 200); // Starting position as a vector
 }
-```
-```js
+
 function draw() {
   background(220);
   ellipse(pos.x, pos.y, 20); // Access x and y from the vector
