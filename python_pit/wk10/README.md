@@ -45,7 +45,7 @@ Here is a free one we can use [Open Weather](https://openweathermap.org/city/264
 - **Endpoint:** `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=YOUR_API_KEY`
 - Paste this URL into your web browser or run:
   ```
-  https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=YOUR_API_KE
+  https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=930bfccfb3f0cd04fb6f23fa7803e63c
   ```
 - Observe the raw JSON response shown in the browser or terminal.
 
