@@ -44,8 +44,8 @@ Here is a free one we can use [Open Weather](https://openweathermap.org/city/264
 
 - **Endpoint:** `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=YOUR_API_KEY`
 - Paste this URL into your web browser or run:
-  ```bash
-  curl "https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=YOUR_API_KEY"
+  ```
+  https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=YOUR_API_KE
   ```
 - Observe the raw JSON response shown in the browser or terminal.
 
