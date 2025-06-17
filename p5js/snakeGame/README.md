@@ -48,14 +48,16 @@ class Snake {
   }
 
   update() {
+    // Move the head
     this.segments[0].add(this.vel);
 
-  
-    if (this.pos.x > width) this.pos.x = 0;
-    if (this.pos.x < 0) this.pos.x = width;
-    if (this.pos.y > height) this.pos.y = 0;
-    if (this.pos.y < 0) this.pos.y = height;
-  
+    // Wrap the head around screen edges
+    let head = this.segments[0];
+
+    if (head.x >= width) head.x = 0;
+    if (head.x < 0) head.x = width - 20;
+    if (head.y >= height) head.y = 0;
+    if (head.y < 0) head.y = height - 20;
   }
 
   show() {
@@ -70,6 +72,7 @@ class Snake {
     else if (keyCode === DOWN_ARROW) this.vel.set(0, 20);
   }
 }
+
 ```
 
 ---
