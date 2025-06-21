@@ -11,7 +11,7 @@ A fun, hands-on project using p5.js to build the classic Snake game while learni
 🧠 _Big Idea:_ The canvas is made of little squares — we will move the snake one square at a time.    
 
 Lets start by thinking about the game snake, who has played it?    
-Update you p5 sketch with this full code.    
+Update you p5 sketch with this full code and don't forget to call the function.            
 
 ```js
 // 🐍 Snake Game Starter Code
@@ -23,6 +23,9 @@ function setup() {
 
 function draw() {
   background(220); // Light gray background
+
+
+// Call the drawGrid() function
 
 }
 
