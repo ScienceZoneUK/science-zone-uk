@@ -8,7 +8,39 @@ A fun, hands-on project using p5.js to build the classic Snake game while learni
 
 **Goal:** Create the canvas, show the grid, and place the snake’s head.
 
-🧠 _Big Idea:_ The canvas is made of little squares — we will move the snake one square at a time.
+🧠 _Big Idea:_ The canvas is made of little squares — we will move the snake one square at a time.    
+
+Lets start by thinking about the game snake, who has played it?    
+Update you p5 sketch with this full code.    
+
+```js
+// 🐍 Snake Game Starter Code
+
+function setup() {
+  createCanvas(800, 800); // Creates a square canvas that's 800 by 800 pixels
+  frameRate(5);           // Slow the game down to 5 frames per second
+}
+
+function draw() {
+  background(220); // Light gray background
+
+}
+
+
+// 🟢 STEP 1: Draw the grid using horizontal and vertical lines
+function drawGrid() {
+  for (let x = 0; x < width; x += gridSize) {
+    for (let y = 0; y < height; y += gridSize) {
+      noFill();
+      stroke(200); // Light gray grid lines
+      rect(x, y, gridSize, gridSize);
+    }
+  }
+}
+
+```
+
+NOw lets add the snake head, delete all your previous code and paste this:     
 
 ```js
 // 🐍 Snake Game Starter Code
