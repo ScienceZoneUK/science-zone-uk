@@ -49,41 +49,44 @@ NOw lets add the snake head, delete all your previous code and paste this:
 // 🐍 Snake Game Starter Code
 
 let gridSize = 40; // Each square in our grid is 40x40 pixels
-let snakeHead;     // This will hold the snake's head position
-let vel;           // This will hold the snake's velocity (movement speed)
-let snake = [];    // This will become the snake's body
-let food;          // This will store the food location
+let snakeHead; // This will hold the snake's head position
+let vel; // This will hold the snake's velocity (movement speed)
+let snake = []; // This will become the snake's body
+let food; // This will store the food location
 
 function setup() {
   createCanvas(800, 800); // Creates a square canvas that's 800 by 800 pixels
-  frameRate(5);           // Slow the game down to 5 frames per second
+  frameRate(3); // Slow the game down to 5 frames per second
 
-  // 🟢 STEP 1: Start the snake head at the top-left of the grid
+  // 🟢 Snake head/body start head at the top-left of the grid
   snakeHead = createVector(0, 0);
+
+  // 🟢 Create a velocity
+
+
+  // 🟢 Place the first food item
+
 }
 
 function draw() {
-  background(220); // Light gray background
-
-  // 🟢 STEP 1: Draw the snake head
-  fill(0); // Black fill for the snake
-  rect(snakeHead.x, snakeHead.y, gridSize, gridSize);
-
-  // 🟢 STEP 1: Show the grid to help us see movement steps
+  background(220);
+  // 🟢 Draw the grid
   drawGrid();
 
-  // ⏩ STEP 2: Move the snake head using a velocity (coming soon)
+  // 🟢 Move the snake head
 
-  // ⏩ STEP 3: Add arrow key controls (coming soon)
+  // 🟢 Check for food collision
 
-  // ⏩ STEP 4: Wrap around the edges of the screen (coming soon)
+  // 🟢 Wrap around screen
 
-  // ⏩ STEP 5: Store the snake body in a list (coming soon)
+  // 🟢 Draw snake
+  fill(0);
+  rect(snakeHead.x, snakeHead.y, gridSize, gridSize);
 
-  // ⏩ STEP 6: Spawn food and eat it to grow (coming soon)
+  // 🟢 Draw food
 }
 
-// 🟢 STEP 1: Draw the grid using horizontal and vertical lines
+// 🟢 function drawGrid
 function drawGrid() {
   for (let x = 0; x < width; x += gridSize) {
     for (let y = 0; y < height; y += gridSize) {
@@ -93,6 +96,10 @@ function drawGrid() {
     }
   }
 }
+
+// 🟢 function keyPressed
+
+// 🟢 function placeFood
 
 ```
 
