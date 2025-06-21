@@ -197,19 +197,21 @@ In setup add the 3 segments:
   snake.push(createVector(-2 * gridSize, 0));
 ```
 
-In draw add the snake movement logic:     
-```
-  let head = snake[0].copy();
-  head.add(vel);
-  snake.unshift(head);  // Add new head
-  snake.pop();          // Remove tail
-```
 We need to change how we draw the snake, we are now drawing the array that holds the snake segments:      
 ```js
   for (let part of snake) {
     rect(part.x, part.y, gridSize, gridSize);
   }
 ```
+
+In draw add the new snake head movement logic:     
+```
+  let head = snake[0].copy();
+  head.add(vel);
+  snake.unshift(head);  // Add new head
+  snake.pop();          // Remove tail
+```
+
 Here is the full code for the snake:      
 ```js
 // 🐍 Snake Game Starter Code
