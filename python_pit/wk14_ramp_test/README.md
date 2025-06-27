@@ -203,3 +203,12 @@ Repeat 3 times:
 Define function to print message
 Loop through list, call function
 ```
+
+# 🎓 EXTRA CHALLENGE! (till end)
+🧪 **Task:** Make some code art using turtle:  
+
+
+✍️ **Pseudocode:**
+```
+Draw geometry, lines, anything,  in a grid or random positions
+```
