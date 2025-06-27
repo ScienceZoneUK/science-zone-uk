@@ -20,6 +20,15 @@ x = int(input("Enter a number: "))
 y = int(input("Another: "))
 print("Sum:", x + y)
 
+#Print tricks
+print("#", end="") # removes the line break /n
+print("#", end="")
+print("#", end="")
+print("#")
+print("#")
+print("#")
+
+
 # STRINGS
 text = "hello"
 print(text.upper())     # HELLO
@@ -112,7 +121,7 @@ Repeat that many times
 Ask for width and height
 Outer loop = height
 Inner loop = width
-    Print '#' without new line
+    Print '#' without new line *hint- look at cheat sheet
 Print new line after each row
 ```
 
