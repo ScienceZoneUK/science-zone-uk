@@ -5,6 +5,7 @@
 👧🏽 For: Young Coders  
 🧠 Goal: Practice input, strings, loops, lists, functions & more!  
 💡 Need help? Use **[w3schools.com/python](https://www.w3schools.com/python)** – it's super helpful!
+☠️ Completely stuck? go here!!
 
 ---
 
