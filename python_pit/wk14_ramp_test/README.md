@@ -3,9 +3,10 @@
 
 ### ⏱️ Time: 1 hour 15 mins  
 👧🏽 For: Young Coders  
-🧠 Goal: Practice input, strings, loops, lists, functions & more!  
+🧠 Goal: Practice input, strings, loops, lists, functions & more!
+⛑️ Aid: Use the cheat sheet below vvvv
 💡 Need help? Use **[w3schools.com/python](https://www.w3schools.com/python)** – it's super helpful!        
-☠️  [Completely stuck? Click here.](last_resort_help.md)   
+☠️  TRY the tasks first [Completely stuck? Click here.](last_resort_help.md)   
 
 
 ---
