@@ -35,7 +35,7 @@ Watch the [video](https://www.youtube.com/watch?v=oq1fLK5vn-g) and answer the qu
 
 5. **What can you do with the REPL in MicroPython?**  
    a. Watch videos  
-   b. Test small pieces of code
+   b. Test small pieces of code    
    c. Play music  
    d. Create games  
 
