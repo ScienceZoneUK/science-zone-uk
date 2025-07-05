@@ -25,16 +25,28 @@ Watch the [video](https://www.youtube.com/watch?v=oq1fLK5vn-g) and answer the qu
    a. To make music  
    b. To run Python code          
    c. To build houses  
-   d. To cook food  
+   d. To cook food
 
-4. **What can you do with the REPL in MicroPython?**  
+4. **What does REPL stand for?**  
+   a. Read-Eval-Print Loop 
+   b. Read-Eat-Program Loop
+   c. Run-Entertain-Play Loop 
+   d. Ruin-Every-Programm Loop 
+
+5. **What can you do with the REPL in MicroPython?**  
    a. Watch videos  
    b. Test small pieces of code
    c. Play music  
    d. Create games  
 
-5. **What did the device measure in the video?**  
+6. **What did the device measure in the video?**  
    a. Temp   
    b. UV      
    c. HAPPINESS     
-   d. ROBUCKS     
+   d. ROBUCKS
+
+7. **Where is MicroPython used?**  
+   a. Macbooks  
+   b. Windows     
+   c. Hardware devices    
+   d. Doorbells
