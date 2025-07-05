@@ -1,5 +1,12 @@
-# Comprehension Questions on MicroPython
+# Embedded computing
 
+![Embedded Computers Examples](https://computerguidehub.com/wp-content/uploads/embedded-computers-examples-images.webp)     
+
+Did you know that most computers around you are hidden inside other devices? Over 90% of our computers are embedded inside phones, cars, and toys! Embedded computers help make our everyday lives easier and smarter. 
+
+
+
+---
 Watch the [video](https://www.youtube.com/watch?v=oq1fLK5vn-g) and answer the questions 
 
 1. **What does MicroPython help you do?**  
