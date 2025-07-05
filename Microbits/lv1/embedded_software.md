@@ -28,10 +28,10 @@ Watch the [video](https://www.youtube.com/watch?v=oq1fLK5vn-g) and answer the qu
    d. To cook food
 
 4. **What does REPL stand for?**  
-   a. Read-Eval-Print Loop 
-   b. Read-Eat-Program Loop
-   c. Run-Entertain-Play Loop 
-   d. Ruin-Every-Programm Loop 
+   a. Read-Eval-Print Loop   
+   b. Read-Eat-Program Loop    
+   c. Run-Entertain-Play Loop    
+   d. Ruin-Every-Programm Loop     
 
 5. **What can you do with the REPL in MicroPython?**  
    a. Watch videos  
