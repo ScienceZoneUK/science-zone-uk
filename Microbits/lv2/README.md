@@ -44,6 +44,9 @@ from microbit import *
 display.scroll("Hello!")
 ```
 
+![Mu](mu_editor_flash.png)
+
+
 ---
 
 ### 🔹 2. Try the REPL
