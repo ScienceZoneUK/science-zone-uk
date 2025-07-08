@@ -12,6 +12,7 @@ Please read each section carefully. The pseudocode tells you what the code shoul
 ---
 Open MU editor or download it [here](https://codewith.mu/)
 
+![Mu](mu_editor.png)
 
 
 ## 📂 Part 1: Code Explorations
