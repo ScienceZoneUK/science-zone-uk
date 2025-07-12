@@ -1,9 +1,17 @@
 Getting started
 ---
+Video
+![Getting started Micro:Bit](https://youtu.be/u2u7UJSRuko)
+
 There is lots of info online
-[Click-Here](https://microbit.org/get-started/what-is-the-microbit/)
+[Click-Here](https://microbit.org/get-started/getting-started/introduction/)
+
+
 
 ---
+Either code using an online editor      
+
+**OR**      
 
 Open MU editor or download it [here](https://codewith.mu/)
 
