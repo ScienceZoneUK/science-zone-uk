@@ -25,6 +25,8 @@ Today, we’ll recreate that animation to learn about algorithms, iteration, and
 
 ## Microbit Documentation
 
+vvv If you want to know how to use the microbit python api look here vvv
+
 [Code Docs here](https://microbit-micropython.readthedocs.io/en/v2-docs/index.html)
 
 ## 🔄 Code Concepts We Will Use         
