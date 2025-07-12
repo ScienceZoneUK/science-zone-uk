@@ -47,6 +47,12 @@ The step-by-step processes.
 
 ### 🎯 Goal: Learn how to turn on one light at a specific position
 
+#### 🧠 Pseudocode:
+
+```
+Turn on a single LED at a specific (x, y) coordinate with full brightness.
+```
+
 ```python
 from microbit import *
 
@@ -65,6 +71,14 @@ display.set_pixel(2, 2, 9)
 ## 🔁 Stage 2: Move a Single Pixel Left to Right
 
 ### 🎯 Goal: Use a loop to move a pixel
+
+#### 🧠 Pseudocode:
+```
+Repeat forever:
+    Move a single pixel across row 2 from left to right
+    Wait a moment
+    Turn off the pixel before moving to the next
+```
 
 ```python
 from microbit import *
@@ -87,6 +101,12 @@ while True:
 
 ### 🎯 Goal: Light a whole column using a loop
 
+#### 🧠 Pseudocode:
+```
+For each row from 0 to 4:
+    Turn on the LED at column 2
+```
+
 ```python
 from microbit import *
 
@@ -99,6 +119,17 @@ for y in range(0, 5):       # y = 0 to 4
 ## 🔁 Stage 4: Sweep a Column Left to Right and Back
 
 ### 🎯 Goal: Use nested loops to animate a sweeping column
+
+#### 🧠 Pseudocode:
+```
+Repeat forever:
+    For each column from 0 to 4:
+        Light up all LEDs in that column
+        Wait
+        Turn off that column
+    Then for each column from 4 to 0:
+        Do the same in reverse
+```
 
 ```python
 from microbit import *
@@ -124,6 +155,17 @@ while True:
 ## 🌟 Stage 5: Add Fading Trail (Final Knight Rider Effect)
 
 ### 🎯 Goal: Add memory and fading effect to previous columns
+
+#### 🧠 Pseudocode:
+```
+Repeat forever:
+    For each column from 0 to 4:
+        Light up the current column brightly
+        Light up the previous 1–2 columns with dimmer brightness
+        Wait
+        Turn off all 3 columns
+    Then repeat in reverse from column 4 to 0
+```
 
 ```python
 from microbit import *
