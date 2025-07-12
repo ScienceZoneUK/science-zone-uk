@@ -52,7 +52,7 @@ they have their own positions that we use
 to individually set a brightness.
 
 
-
+![microbit pixel gris](https://github.com/ScienceZoneUK/science-zone-uk/blob/main/Microbits/car_wash_lv2/mb_pixels.png)
 
 #### 🧠 Pseudocode:
 
