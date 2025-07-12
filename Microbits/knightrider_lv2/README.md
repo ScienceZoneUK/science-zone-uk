@@ -242,7 +242,7 @@ Repeat forever:
 from microbit import *
 
 while True:
-    for x in range(0, 5): iterate through x coord for the verticle columns L->R
+    for x in range(0, 5): #iterate through x coord for the verticle columns L->R
         for y in range(0, 5): #Turn on column
             display.set_pixel(x, y, 9) # As before we loop through pixels vertically and turn on a column of pixels at x and y
             if x > 0: #if column has moved over 1 in x then light up a second column less bright
