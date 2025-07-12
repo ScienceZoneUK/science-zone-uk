@@ -68,10 +68,6 @@ Troubleshooting if flash fails:
 - Press reset button on back of microbit resets the code
 
 
-
-![Mu](mu_editor_flash.png)
-
-
 ---
 
 ## 🧱 Stage 1 : Light a Single Pixel
