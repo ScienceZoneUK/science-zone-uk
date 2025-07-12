@@ -79,6 +79,10 @@ We have a couple of methoods to use the pixels.
 - What will the code draw?
 
 Here's the pixel grid illustrated:
+
+
+
+
 ```
     y →
   x ↓
