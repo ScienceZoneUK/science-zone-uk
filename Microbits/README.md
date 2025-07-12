@@ -4,6 +4,11 @@ Open MU editor or download it [here](https://codewith.mu/)
 
 ![Mu](mu_editor.png)
 
+## Microbit Documentation
+
+vvv If you want to know how to use the microbit python library look here vvv
+
+[Code Docs here](https://microbit-micropython.readthedocs.io/en/v2-docs/index.html)
 
 ---
 
