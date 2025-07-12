@@ -14,7 +14,7 @@ vvv If you want to know how to use the microbit python library look here vvv
 
 ### 🌟 1. Starter - Scroll a Message
 
-**Concept:** This is your very first Micro\:bit program! You're using a built-in function called `display.scroll()` to scroll text across the LED screen. It's a great way to check if your Micro\:bit is working and to try your first bit of Python.     
+This is your very first Micro\:bit program! You're using a built-in function called `display.scroll()` to scroll text across the LED screen. It's a great way to check if your Micro\:bit is working and to try your first bit of Python.     
 **Pseudocode:**
 
 ```
