@@ -80,6 +80,7 @@ We have a couple of methoods to use the pixels.
 
 Here's the pixel grid illustrated:
 
+![Micro:bit 5x5 Grid](mb_pixels.png)
 
 
 
