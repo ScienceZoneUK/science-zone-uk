@@ -101,12 +101,14 @@ Here's the pixel grid illustrated:
 ```python
 from microbit import *
 
+#create the custom image and save into a variable 
 border = Image("99999:"
               "00000:"
               "00000:"
               "00000:"
               "00000")
 
+#use the built-in display function
 display.show(border)
 
 
@@ -128,17 +130,147 @@ I want you to create a bright pixel border around the pixels
 - First discuss how you might achieve this
 - Use psuedocode to plan your **ATTACK**
 - Write some code
-- Is it possible to use both methods?
+- Is it possible to use both methods?      
+
+Paste this code into the editor, flash microbit, discuss the code amoungst yourselves
+```python
+from microbit import *
+
+#I want to animate the border to show it as a timer
+#Ive created a list of the pixels I want to use for the border
+#The pixels are ordered from start to finsh of the border, IMPORTANT
+pixel_numbers = [0, 1, 2, 3, 4, 9, 14, 19, 24, 23, 22, 21, 20, 15, 10, 5]
 
 
+# This loop below goes through the list to create an x and y coord for every pixel, I will have 16 pairs of x anf y values
+# Im using modulo(%) to return an x value and (//) to return a y value
+# A list of 16 tuples (x and y) will be saved into variable xy_coords, this is where all 16 positons will be saved
+xy_coords = [(n % 5, n// 5) for n in pixel_numbers]
+
+#I want to animate one pixel so i need to count the 16 loops
+#Set the counter to 0
+counter = 0
+
+#Use a loop to move the animation
+while True:
+    for index, (x,y) in enumerate(xy_coords):  #We can loop through pixel coords to get the x,y, pos and get its position in the list(index)
+        if index != counter: # Ive decide that if the pixel index is not the same as the counter value then turn pixel on
+            display.set_pixel(x, y, 9)
+        else: # Otherwise turn it off, so one pixel will turn off
+            display.set_pixel(x, y, 0)
+            
+
+    counter +=1 #Increase the counter by 1 every loop
+    counter = counter % len(pixel_numbers) # Here is a trick to reset the counter once it reaches the same value as the number of items in the list(16 pixels)
+
+    sleep(100) # slow down the animation
+
+```
+
+
+The code above demostrates how to animate one pixel using an algorithm.         
+
+
+Ive now put that into a function to make it neat and reuseable. We now have          
+a timer animation to use in our car wash.
+Below is a template for you to fill in with the correct functions and function calls.      
+**READ THE COMMENTS**
+
+
+```python
+
+from microbit import *
+import audio
+
+# Border animation setup
+pixel_numbers = [0, 1, 2, 3, 4, 9, 14, 19, 24, 23, 22, 21, 20, 15, 10, 5]
+xy_coords = [(n % 5, n // 5) for n in pixel_numbers]
+counter = 0
+
+# Wash type selection
+wash_type = None
+
+def loop_animation(_counter):
+    display.clear()
+    for index, (x, y) in enumerate(xy_coords):
+        if index == _counter:
+            display.set_pixel(x, y, 0)
+        else:
+            display.set_pixel(x, y, 9)
+    _counter = (_counter + 1) % len(xy_coords)
+    sleep(100)
+    return _counter
+
+#add countdown
+
+#add wait_for_start
+
+#add show_exit
+
+#while True:
+    #scroll("A=Ecar B=Bike A+B=Van")
+
+    # Wait for wash type selection
+    while wash_type is None:
+        if button_a.is_pressed() and button_b.is_pressed():
+            wash_type = "Van"
+        elif button_a.is_pressed():
+            wash_type = "E-Car"
+        elif button_b.is_pressed():
+            wash_type = "Motorbike"
+        sleep(200)
+
+    #scroll(wash_type)
+
+    # Wait for logo to be touched to start
+    #call wait_for_start()
+
+    # Enter wash: arrow + sound
+    display.show(Image.ARROW_E)
+    audio.play(Sound.GIGGLE)
+    sleep(1000)
+
+    # Wash process: animation + countdown
+    for i in range(30):  # enough frames for a 9–0 countdown
+        counter = loop_animation(counter)
+
+    #call countdown()
+
+    # Stop: sound + all pixels on
+    display.show(Image.HAPPY)
+    audio.play(Sound.HAPPY)
+    for x in range(5): #Turn all pixels on
+        for y in range(5):
+            display.set_pixel(x, y, 9)
+    sleep(1000)
+
+    # Exit arrow
+    #call show_exit
+
+    # Reset for next cycle
+    wash_type = None
+    counter = 0
+    display.clear()
+
+
+
+```
 
 ```python
 from microbit import *
 
+#I want to animate the border to show it as a timer
+#Ive created a list of the pixels I want to use for the border
+#The pixels are ordered from start to finsh of the border, IMPORTANT
 pixel_numbers = [0, 1, 2, 3, 4, 9, 14, 19, 24, 23, 22, 21, 20, 15, 10, 5]
+
+
+#This loop below goes through the list to create an x and y coord for every pixel
+# Im using modulo(%) to return an x value and (//) to return a y value
+# A list of tuples (x and y) will be saved into variable xy_coords
 xy_coords = [(n % 5, n // 5) for n in pixel_numbers]
 
-def loop_animation(counter):
+def loop_animation(counter): 
     for index, (x, y) in enumerate(xy_coords):
         if index == counter:
             display.set_pixel(x, y, 0)
