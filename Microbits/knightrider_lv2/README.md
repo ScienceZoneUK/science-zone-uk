@@ -196,14 +196,14 @@ Repeat forever:
 from microbit import *
 
 while True:
-    for x in range(0, 5):
-        for y in range(0, 5):
-            display.set_pixel(x, y, 9)
-        sleep(100)
-        for y in range(0, 5):
-            display.set_pixel(x, y, 0)
+    for x in range(0, 5): #loop through the top pixels L -> R
+        for y in range(0, 5): #for every top pixel vertically loop through the y pixels below 
+            display.set_pixel(x, y, 9) #for every x and y, turn pixel turn on
+        sleep(100) # wait 100ms
+        for y in range(0, 5): #loop through verticle column of pixels and set off
+            display.set_pixel(x, y, 0) #Turn of pixel at x and y
 
-    for x in range(4, -1, -1):
+    for x in range(4, -1, -1): # Do the same again but R -> L
         for y in range(0, 5):
             display.set_pixel(x, y, 9)
         sleep(100)
@@ -242,22 +242,22 @@ Repeat forever:
 from microbit import *
 
 while True:
-    for x in range(0, 5):
-        for y in range(0, 5):
-            display.set_pixel(x, y, 9)
-            if x > 0:
+    for x in range(0, 5): iterate through x coord for the verticle columns L->R
+        for y in range(0, 5): #Turn on column
+            display.set_pixel(x, y, 9) # As before we loop through pixels vertically and turn on a column of pixels at x and y
+            if x > 0: #if column has moved over 1 in x then light up a second column less bright
                 display.set_pixel(x - 1, y, 7)
-            if x > 1:
+            if x > 1:  #if column has moved over 2 in x then light up a third column dimmer again
                 display.set_pixel(x - 2, y, 2)
-        sleep(100)
-        for y in range(0, 5):
+        sleep(100) # Wait 100ms then Turn off column
+        for y in range(0, 5): iterate through all the columns and turn off the pixels
             display.set_pixel(x, y, 0)
             if x > 0:
-                display.set_pixel(x - 1, y, 0)
+                display.set_pixel(x - 1, y, 0) #Turn off second columm
             if x > 1:
-                display.set_pixel(x - 2, y, 0)
+                display.set_pixel(x - 2, y, 0) #Turn off third columm
 
-    for x in range(4, -1, -1):
+    for x in range(4, -1, -1): # Do the same again but R->L
         for y in range(0, 5):
             display.set_pixel(x, y, 9)
             if x < 4:
