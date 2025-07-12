@@ -172,8 +172,8 @@ The code above demostrates how to animate one pixel using an algorithm.
 
 
 Ive now put that into a function to make it neat and reuseable. We now have          
-a timer animation to use in our car wash.
-Below is a template for you to fill in with the correct functions and function calls.      
+a timer animation to use in our car wash.       
+Below is a template for you to fill in with the correct functions and function calls.            
 **READ THE COMMENTS**
 
 
@@ -201,24 +201,17 @@ def loop_animation(_counter):
     sleep(100)
     return _counter
 
-#add countdown
+#add countdown function
 
-#add wait_for_start
+#add wait_for_start function
 
-#add show_exit
+#add show_exit function
 
 #while True:
     #scroll("A=Ecar B=Bike A+B=Van")
 
     # Wait for wash type selection
-    while wash_type is None:
-        if button_a.is_pressed() and button_b.is_pressed():
-            wash_type = "Van"
-        elif button_a.is_pressed():
-            wash_type = "E-Car"
-        elif button_b.is_pressed():
-            wash_type = "Motorbike"
-        sleep(200)
+    # Add choose wash type 
 
     #scroll(wash_type)
 
@@ -285,8 +278,6 @@ def loop_animation(counter):
 Use buttons to let users pick what kind of vehicle they're washing.
 
 ```python
-wash_type = "None"
-display.scroll("Choose Wash")
 
 while wash_type == "None":
     if button_a.is_pressed() and button_b.is_pressed():
@@ -300,46 +291,53 @@ while wash_type == "None":
 display.scroll(wash_type)
 ```
 
-### 3. 🟢 Start the Wash
+### 3. 🟢 wait_for_start 
 Now we wait for the user to touch the Micro:bit’s logo to begin the wash.
 
 ```python
-while not pin_logo.is_touched():
-    display.show(Image.ARROW_W)
-    sleep(100)
-
-# Simulate driving in
-display.show(Image.ARROW_E)
-sleep(500)
+def wait_for_start():
+    while not pin_logo.is_touched():
+        display.show(Image.ARROW_N)
+        sleep(100)
 ```
 
-### 4. ♻️ Run Animation
+### 4. ♻️ loop_animation
 We now activate our LED border loop as the washing motion.
 
 ```python
-counter = 0
-for i in range(32):
-    counter = loop_animation(counter)
+def loop_animation(_counter):
+    display.clear()
+    for index, (x, y) in enumerate(xy_coords):
+        if index == _counter:
+            display.set_pixel(x, y, 0)
+        else:
+            display.set_pixel(x, y, 9)
+    _counter = (_counter + 1) % len(xy_coords)
+    sleep(100)
+    return _counter
 ```
 
 ### 5. ⏱ Countdown Timer
 Let’s count down while the wash is happening!
 
 ```python
-for i in range(9, -1, -1):
-    display.show(str(i))
-    sleep(500)
+def countdown():
+    for i in range(9, -1, -1):
+        display.show(str(i))
+        sleep(500)
 ```
 
 ### 6. 🚿 Rinse!
-Flash all the pixels to simulate a powerful rinse.
+Flash all the pixels to simulate a powerful rinse.            
+This code is already in the template.     
 
 ```python
-for x in range(5):
-    for y in range(5):
-        display.set_pixel(x, y, 9)
-
-sleep(1000)
+    display.show(Image.HAPPY)
+    audio.play(Sound.HAPPY)
+    for x in range(5):
+        for y in range(5):
+            display.set_pixel(x, y, 9)
+    sleep(1000)
 ```
 
 ### 7. ⏩ Exit and Reset
