@@ -45,6 +45,35 @@ The step-by-step processes.
 
 ---
 
+### 🌟 1. Warm-up activity
+Using the built-in function called `display.scroll()`, scroll text across the LED screen. It's a great way to check if your Micro\:bit is working and to try your first bit of Python.     
+**Pseudocode:**
+
+```
+Import the microbit tools
+Scroll the message "Hello!" across the screen
+```
+
+Copy into the editor and flash your microbit.    
+
+```python
+from microbit import *
+
+display.scroll("Hello!")
+```
+
+Troubleshooting if flash fails:       
+- Close the repl to enable flash button
+- If flash hangs up, disconnect/reconnect cable and flash again
+- Press reset button on back of microbit resets the code
+
+
+
+![Mu](mu_editor_flash.png)
+
+
+---
+
 ## 🧱 Stage 1 : Light a Single Pixel
 
 ### 🎯 Goal: Learn how to turn on one light at a specific position
