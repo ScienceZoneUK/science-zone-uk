@@ -1,5 +1,8 @@
 Getting started
 ---
+There is lots of info online
+[Click-Here](https://microbit.org/get-started/what-is-the-microbit/)    
+
 Open MU editor or download it [here](https://codewith.mu/)
 
 ![Mu](https://github.com/ScienceZoneUK/science-zone-uk/blob/main/Microbits/lv2/mu_editor.png)
