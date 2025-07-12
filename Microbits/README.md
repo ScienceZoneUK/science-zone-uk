@@ -1,7 +1,9 @@
 Getting started
 ---
 There is lots of info online
-[Click-Here](https://microbit.org/get-started/what-is-the-microbit/)    
+[Click-Here](https://microbit.org/get-started/what-is-the-microbit/)
+
+---
 
 Open MU editor or download it [here](https://codewith.mu/)
 
