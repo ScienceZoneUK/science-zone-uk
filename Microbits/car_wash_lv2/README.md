@@ -65,6 +65,46 @@ Now let’s build this step-by-step using MicroPython.
 ### 1. 💡 Setup Pixel Animation Function
 We’ll animate the border of the Micro:bit’s LED screen to simulate the washing motion.
 
+On the microbit we can use built-in IMAGES or draw our own low-fi icons and animate them quite easily.     
+We have a couple of methoods to use the pixels.
+
+
+## Method 1 
+### Use an image container
+
+- First read the code **DO NOT RUN**
+- 0-9 is pixel brightness
+- Each pixel row terminates with a ``` : ```     is contained between  ``` " " ```
+- we can display a custom image with a built in function ``` display.show(your_image)  ```
+- What will the code draw?  
+
+```python
+from microbit import *
+
+border = Image("99999:"
+              "90009:"
+              "90009:"
+              "90009:"
+              "99999")
+
+display.show(border)
+
+
+```
+
+## Method 2 
+### Control individual pixels
+
+```
+from microbit import *
+
+
+display.set_pixel(0, 0, 9)
+
+```
+
+
+
 ```python
 from microbit import *
 
