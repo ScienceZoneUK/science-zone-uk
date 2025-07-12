@@ -76,16 +76,31 @@ We have a couple of methoods to use the pixels.
 - 0-9 is pixel brightness
 - Each pixel row terminates with a ``` : ```     is contained between  ``` " " ```
 - we can display a custom image with a built in function ``` display.show(your_image)  ```
-- What will the code draw?  
+- What will the code draw?
+
+Here's the pixel grid illustrated:
+```
+    y →
+  x ↓
+     0   1   2   3   4
+   +-------------------
+0 | (0,0)(1,0)(2,0)(3,0)(4,0)
+1 | (0,1)(1,1)(2,1)(3,1)(4,1)
+2 | (0,2)(1,2)(2,2)(3,2)(4,2)
+3 | (0,3)(1,3)(2,3)(3,3)(4,3)
+4 | (0,4)(1,4)(2,4)(3,4)(4,4)
+
+
+```
 
 ```python
 from microbit import *
 
 border = Image("99999:"
-              "90009:"
-              "90009:"
-              "90009:"
-              "99999")
+              "00000:"
+              "00000:"
+              "00000:"
+              "00000")
 
 display.show(border)
 
@@ -102,6 +117,13 @@ from microbit import *
 display.set_pixel(0, 0, 9)
 
 ```
+
+## Challenge
+I want you to create a bright pixel border around the pixels
+- First discuss how you might achieve this
+- Use psuedocode to plan your **ATTACK**
+- Write some code
+- Is it possible to use both methods?
 
 
 
