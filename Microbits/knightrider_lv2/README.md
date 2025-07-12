@@ -47,12 +47,21 @@ The step-by-step processes.
 
 ### 🎯 Goal: Learn how to turn on one light at a specific position
 
+The microbit has a grid of pixels (5x5),     
+they have their own positions that we use     
+to individually set a brightness.
+
+
+
+
 #### 🧠 Pseudocode:
 
 ```
 Turn on a single LED at a specific (x, y) coordinate with full brightness.
 ```
 
+
+🐍 Python Code
 ```python
 from microbit import *
 
@@ -79,7 +88,7 @@ Repeat forever:
     Wait a moment
     Turn off the pixel before moving to the next
 ```
-
+🐍 Python Code
 ```python
 from microbit import *
 
@@ -106,7 +115,7 @@ while True:
 For each row from 0 to 4:
     Turn on the LED at column 2
 ```
-
+🐍 Python Code
 ```python
 from microbit import *
 
@@ -131,6 +140,7 @@ Repeat forever:
         Do the same in reverse
 ```
 
+🐍 Python Code
 ```python
 from microbit import *
 
@@ -167,6 +177,7 @@ Repeat forever:
     Then repeat in reverse from column 4 to 0
 ```
 
+🐍 Python Code
 ```python
 from microbit import *
 
