@@ -2,7 +2,7 @@ Getting started
 ---
 Open MU editor or download it [here](https://codewith.mu/)
 
-![Mu](mu_editor.png)
+![Mu](https://github.com/ScienceZoneUK/science-zone-uk/blob/main/Microbits/lv2/mu_editor.png)
 
 ## Microbit Documentation
 
@@ -35,7 +35,7 @@ from microbit import *
 display.scroll("Hello!")
 ```
 
-![Mu](mu_editor_flash.png)
+![Mu](https://github.com/ScienceZoneUK/science-zone-uk/blob/main/Microbits/lv2/mu_editor_flash.png)
 
 
 ---
