@@ -26,7 +26,12 @@ Use **Google Chrome** and go to:
 ## 💡 Teaching Prompts by Stage
 
 For all activities, it would be best for you to model how to use the microbit while walking through the steps.      
-Show learners how you test and debug code, use print() often to demonstrate how to check variables and loops are working etc.            
+Show learners how you test and debug code, use print() often to demonstrate how to check variables and loops are working etc.  
+
+There is psuedo code, use it to talk through the program problem.      
+The code has comments, use these to help understand what's going on, copy chunks of code and use print() to be a detective.        
+Run the workshop slowly, work through code snippets until everyone understands and can demonstrate understanding.     
+DO NOT WORRY if you don't finish the workshop :)
 
 ### 🌟 Warm-up (display.scroll)
 - ✅ Confirm Micro:bit setup is working
@@ -72,12 +77,13 @@ Microbit api docs here [CLICK](https://microbit-micropython.readthedocs.io/en/v2
 
 ### ✅ ALWAYS use the microbit library
 ```python
-from microbit import *          # Setup the microbit api
+from microbit import *          # Setup the microbit api globally, then there's no need to call the class, just call the methods(see below).
 
 ```
 
 ### ✅ Display
 ```python
+#Class is not being referenced, just calling the class methods
 display.scroll("Hello!")            # Scroll text
 display.set_pixel(x, y, brightness) # Light pixel at (x, y)
 display.clear()                     # Clear screen
@@ -117,6 +123,8 @@ pin0.write_digital(1)   # Output ON
 | Flashing fails (online)  | Unplug/replug Micro:bit, use Chrome only |
 | Mu won’t detect Micro:bit| Restart Mu or check USB port             |
 | Code runs too fast       | Add `sleep(100)` to slow it down         |
+| Microbit methods error   | ~~microbit~~.display.show()->display.show()|
+
 
 ---
 
