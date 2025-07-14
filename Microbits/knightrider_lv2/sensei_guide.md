@@ -82,8 +82,10 @@ from microbit import *          # Setup the microbit api globally, then there's 
 ```
 
 ### ✅ Display
+api docs for images [HERE](https://microbit-micropython.readthedocs.io/en/v2-docs/tutorials/images.html#images)
 ```python
 #Class is not being referenced, just calling the class methods
+display.show(Image.HEART)           # Display heart
 display.scroll("Hello!")            # Scroll text
 display.set_pixel(x, y, brightness) # Light pixel at (x, y)
 display.clear()                     # Clear screen
