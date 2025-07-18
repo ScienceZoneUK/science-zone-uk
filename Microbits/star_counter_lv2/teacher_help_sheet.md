@@ -49,8 +49,11 @@ from microbit import *          # Setup the microbit api
 
 ### ✅ Display
 
+all image names are here [CLICK](https://microbit-micropython.readthedocs.io/en/v2-docs/tutorials/images.html#images)
+
 ```python
 display.scroll("Hello!")            # Scroll text
+display.show(Image.HAPPY)           # Display happy face
 display.set_pixel(x, y, brightness) # Light pixel at (x, y)
 display.clear()                     # Clear screen
 ```
@@ -81,11 +84,6 @@ accelerometer.is_gesture(name) #See above recognised gesture name
 
 ```
 
-### ✅ Pins
-
-```python
-pin0.write_digital(1)    # Output ON
-```
 
 ---
 
