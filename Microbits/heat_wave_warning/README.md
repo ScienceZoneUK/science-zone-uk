@@ -73,6 +73,8 @@ from microbit import *
 display.show(Image.HAPPY)
 ```
 
+If you want to change your image look here for a [**list of images**](https://microbit-micropython.readthedocs.io/en/v2-docs/tutorials/images.html#)    
+
 **Flash and test:**  
 You should see a smiley face appear on your Micro:bit screen.
 
@@ -212,7 +214,7 @@ while True:
         display.show(Image.ANGRY)
 
     elif temp < 10:
-        display.show(Image.SNOWFLAKE)
+        display.show(Image.TARGET)
 
     else:
         display.show(Image.HAPPY)
