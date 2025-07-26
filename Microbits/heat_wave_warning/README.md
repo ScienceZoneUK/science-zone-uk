@@ -111,8 +111,17 @@ Your Micro:bit becomes a robot that **never stops checking** for button presses,
 
 ### ❓ `if` means “check something”
 
+To check for an event (button press) we must combine *while True* and *if*      
+otherwise it wont work as expected. 
+
+Test this code
 ```python
-if button_a.was_pressed():
+from microbit import *
+
+while True:
+    if button_a.is_pressed():
+        #Do stuff
+        print("hello")
 ```
 
 This means: “If Button A was pressed, then do the stuff underneath.”
