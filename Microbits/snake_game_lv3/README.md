@@ -59,6 +59,13 @@ print(snake)
 ---
 
 ### 💡 STEP 2: Show the Snake
+
+The Micro:bit has a grid of pixels (5x5).  
+Each pixel has its own position that we can reference using (x, y) coordinates.  
+We can individually set the brightness from 0 (off) to 9 (full brightness).
+
+![microbit pixel grid](https://github.com/ScienceZoneUK/science-zone-uk/blob/main/Microbits/car_wash_lv2/mb_pixels.png)
+
 ```python
 from microbit import *
 
