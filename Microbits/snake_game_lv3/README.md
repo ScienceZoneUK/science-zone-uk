@@ -322,13 +322,16 @@ while True:
 
 ---
 
-### 🍏 STEP 5: Add Apples!
+### 🍏 STEP 5: Add snake food!
 
 #### 🧪 Test Code:
 ```python
 import random
 print(random.randint(0, 4))  # Show random number from 0–4
 ```
+
+We can use the random module to create positons for our food.      
+First we must set a food postion, then update it when its been eaten.   
 
 #### ✅ Full Apple Code:
 ```python
@@ -370,6 +373,7 @@ while True:
 ---
 
 ## 🚩 CHALLENGES (For Coding Legends 💪)
+- Prevent snake from getting too long
 - Add **game over** if the snake hits itself.
 - Add a **score tracker** using the serial or LEDs.
 - Make **apples disappear** after a few seconds.
