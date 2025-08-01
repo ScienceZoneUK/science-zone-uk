@@ -22,7 +22,7 @@ while True:
     
     # Guessing
     guess = Bot(objects, target)
-    if (Bot(objects, target) == 0):
+    if (guess == 0):
         # We're guessing manually
         guess = input()
 
