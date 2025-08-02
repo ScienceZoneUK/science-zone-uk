@@ -32,7 +32,7 @@ It’s super fun and you can customise it with sounds, lights, or challenges!
 
 # Coding Activity
 
-## Step 1 setting up the transmiter (treasure)
+## 🧩 Step 1 setting up the transmiter (treasure)
 Transmiter
 ```
 from microbit import *
@@ -45,7 +45,7 @@ while True:
     sleep(200)
 ```
 
-## setting up the Receiver
+## Setting up the Receiver
 
 ```
 from microbit import *
