@@ -7,8 +7,19 @@
 📚 [Sensor Tutorial (Last Minute Engineers)](https://lastminuteengineers.com/water-level-sensor-arduino-tutorial/)  
 🐍 Python Editor: [https://python.microbit.org/v/3](https://python.microbit.org/v/3)  
 🧠 MicroPython Help: [https://microbit-micropython.readthedocs.io/en/v2-docs/index.html](https://microbit-micropython.readthedocs.io/en/v2-docs/index.html)  
+[Analogue to digital conversion](https://halvorsen.blog/documents/technology/iot/microbit.php)
 
 ---
+## Objectives:
+🧠 Knowledge & Understanding
+- Define what a sensor is and explain its role in environmental monitoring
+- Understand the difference between digital and analog signals
+- Explain how a water level sensor works and how it sends analog voltage
+- Understand the concept of analog-to-digital conversion using the micro:bit
+- Recognize that 0–3.3V signals are converted to 0–1023 by the micro:bit using binary
+- Describe how sensors fit into the Input ➔ Think ➔ Output system in computing
+
+
 
 ## 🌊 Mission:
 Your village is near a river. The rainy season is coming. You’ve been asked to build a **flood warning system** using your Micro:bit and a **water sensor**. Are you ready to become a Flood Alert Hero?
@@ -26,7 +37,7 @@ print("Hello World")
 ### 🟡 Medium: Display "Hello" on the LED screen
 ```python
 from microbit import *
-display.scroll("Hello")
+display.scroll("________")
 ```
 
 ### 🔴 Hard: Countdown then display message
@@ -34,10 +45,9 @@ display.scroll("Hello")
 from microbit import *
 
 for i in range(5, 0, -1):
-    display.show(str(i))
-    sleep(1000)
+    #Add your code
 
-display.scroll("Hello World")
+#Display your message
 ```
 
 ---
