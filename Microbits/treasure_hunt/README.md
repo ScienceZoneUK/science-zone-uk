@@ -1,4 +1,4 @@
-# 🪎 Micro-Bit Workshop : Treasure Hunt
+#  Micro-Bit Workshop : Treasure Hunt
 
 # 👋 Welcome!
 Ahoy, young coder! Ready to turn your Micro:bit into a real-life treasure detector?
@@ -29,6 +29,9 @@ It’s super fun and you can customise it with sounds, lights, or challenges!
 - Plug in your Micro:bit.
 - Go to: python.microbit.org/v/3
 - Start a new project.
+
+# Coding Activity 
+
 
 
 
