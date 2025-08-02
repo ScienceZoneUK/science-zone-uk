@@ -45,7 +45,8 @@ while True:
     sleep(200)
 ```
 
-## setting up the Reciever
+## setting up the Receiver
+
 ```
 from microbit import *
 import radio
