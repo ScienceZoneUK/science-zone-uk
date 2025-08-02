@@ -30,8 +30,20 @@ It’s super fun and you can customise it with sounds, lights, or challenges!
 - Go to: python.microbit.org/v/3
 - Start a new project.
 
-# Coding Activity 
+# Coding Activity
 
+## Step 1 setting up the transmiter (treasure)
+Transmiter
+```
+from microbit import *
+import radio
+radio.config(group=1, power=1)
+radio.on()
+
+while True:
+    radio.send('1')
+    sleep(200)
+```
 
 
 
