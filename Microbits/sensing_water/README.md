@@ -1,7 +1,7 @@
 
-# 💧 Flood Alert Heroes: Code to the Rescue!
+# 💧 Sensing Water
 ## Micro:bit Python Workshop Worksheet  
-**Age**: 11+ — **Time**: 1.5 hours
+**Time**: 1.5 hours
 
 📺 [Water Sensor Explained (YouTube)](https://www.youtube.com/watch?v=Drxf9VuTkPM)  
 📚 [Sensor Tutorial (Last Minute Engineers)](https://lastminuteengineers.com/water-level-sensor-arduino-tutorial/)  
@@ -58,7 +58,7 @@ for i in range(5, 0, -1):
 Sensors help machines "feel" things like water, light, or sound.
 
 ### 🧠 What is a Micro:bit?
-A small computer that reads sensors (input), makes decisions, and shows or plays results (output).
+A small computer that reads sensors (input), makes decisions(processes), and shows or plays results (output).
 
 ### 🧮 INPUT ➔ THINK ➔ OUTPUT
 - Sensor: "I'm wet!"
