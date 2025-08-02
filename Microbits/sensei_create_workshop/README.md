@@ -3,7 +3,7 @@
 
 ## 🧠 PROMPT TO GENERATE FUTURE WORKSHOPS
 
-> Create a 1.5-hour MicroPython workshop for [age group] using the Micro:bit. The theme should be **[insert topic here]**. 
+> Create a 1.5-hour MicroPython workshop for [age group] using the Micro:bit and the microbit python library. The theme should be **[insert topic here]**. 
 > The objectives are: [insert objective] [insert objective] [insert objective] [insert objective]
 > - Start with a discussion on why the topic is important.
 > - List all the coding concepts
