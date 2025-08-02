@@ -7,8 +7,8 @@ In this workshop, you'll create your very own Treasure Hunt game using MicroPyth
 
 # 🧠 Objectives
 
--  You will be able to recall key MicroPython functions such as `display.scroll()`, `radio.send()`, and `compass.heading()`.
--  You will be able to explain how radio signals and compass readings are used to detect proximity in the treasure hunt game.
+- You will be able to recall key MicroPython functions such as `display.scroll()`, `radio.send()`, and `compass.heading()`.
+- You will be able to explain how radio signals and compass readings are used to detect proximity in the treasure hunt game.
 - You will be able to write MicroPython code that uses the radio and compass to guide users in the game.
 - You will be able to compare signal strength values and analyse how these affect LED brightness on the receiver.
 - You will be able to assess the effectiveness of their radar design and suggest ways to improve feedback to the user.
@@ -29,6 +29,8 @@ It’s super fun — and you can customise it with sounds, lights, or challenges
 - Plug in your Micro:bit.
 - Go to: python.microbit.org/v/3
 - Start a new project.
+
+
 
 
 
