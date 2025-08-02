@@ -26,9 +26,9 @@ You’ll see your code come alive as the Micro:bit becomes a real tracker!
 It’s super fun — and you can customise it with sounds, lights, or challenges!
 
 # 💻 Get Set Up
-Plug in your Micro:bit.
-Go to: python.microbit.org/v/3
-Start a new project.
+- Plug in your Micro:bit.
+- Go to: python.microbit.org/v/3
+- Start a new project.
 
 
 
