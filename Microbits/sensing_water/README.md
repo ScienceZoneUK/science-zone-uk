@@ -77,10 +77,53 @@ A small computer that reads sensors (input), makes decisions, and shows or plays
 
 ![Water Level Animation](https://lastminuteengineers.com/wp-content/uploads/arduino/v2/Water-Level-Sensor-Working.gif)
 
-### 🔢 Analog Reading
-- 0 volts = number 0
-- 3.3 volts = number 1023
-- The micro:bit turns **voltage** into a **number** using binary (10 bits)
+### 🔢 Analog Values
+Your water sensor gives a number between **0** (dry) and **1023** (very wet).
+
+---
+
+## 🧪💧 How Does the Water Sensor Work with the Micro:bit?
+
+### 1️⃣ What the Sensor Does
+The **water level sensor** has metal lines. When water touches them, it sends more **electric power** (called **voltage**) to the micro:bit.  
+- **No water** = **low voltage**  
+- **More water** = **higher voltage**
+
+### 2️⃣ But Micro:bits Don't Understand Volts!
+The micro:bit doesn't measure voltage like we do — it **turns voltage into a number**.  
+It does this using a special function called **analog read**.
+
+### 3️⃣ The Magic Numbers: 0 to 1023
+
+| Voltage (0–3.3V) | Number it gives you |
+|------------------|---------------------|
+| 0 volts          | 0                   |
+| 1.65 volts       | 512                 |
+| 3.3 volts        | 1023                |
+
+So if the sensor gives 2 volts, the micro:bit might show a number like **620**.
+
+### 4️⃣ Why 1023? Why Not Just Use Volts?
+Because the micro:bit is a **computer**, and computers **use binary** — just 1s and 0s.
+
+To measure the voltage, it uses **10 binary digits (bits)** like little light switches:
+```
+0000000000 → 0  
+1111111111 → 1023
+```
+
+That gives **1024 tiny steps** to measure small changes in voltage.
+
+### 🍫 Chocolate Bar Example
+Imagine a chocolate bar cut into **1024 tiny pieces**:
+- No water? You get 0 pieces.
+- Half full? You get 512 pieces.
+- Fully full? You get 1023 pieces!
+
+### ✅ Summary
+- Sensor sends **0 to 3.3V**
+- Micro:bit turns it into **0 to 1023**
+- That number = how wet the sensor is!
 
 ---
 
@@ -92,6 +135,10 @@ A small computer that reads sensors (input), makes decisions, and shows or plays
 - **SIG** ➔ pin0     
 
 ![Sensor Schematic](water_level_sensor.png)
+
+
+### Electrical components
+![water level sensor](water_sensor_schematic.png)
 
 
 ## 🚧 Project Problem & Requirements
@@ -123,7 +170,18 @@ val = pin0.read_analog()
 print(val)
 ```
 
+
+### ☑ Test it out:
+Try it dry, half-wet, and fully wet.         
 🧠 *Q: What range of values do you see when there's no water vs full water?*
+
+
+| Test          | Sensor Value |
+|---------------|---------------|
+| Dry Sensor    |               |
+| Half Wet      |               |
+| Fully Wet     |               |
+
 
 ---
 
