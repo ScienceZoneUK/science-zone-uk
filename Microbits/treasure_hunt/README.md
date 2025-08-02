@@ -17,13 +17,13 @@ In this workshop, you'll create your very own Treasure Hunt game using MicroPyth
 # 🗺️ Why Treasure Hunt?
 Treasure Hunt is a great game to build because:
 
-It’s simple — just two Micro:bits and a bit of Python magic.
+It’s simple just two Micro:bits and a bit of Python magic.
 
 It teaches you how radio signals and compass readings work.
 
 You’ll see your code come alive as the Micro:bit becomes a real tracker!
 
-It’s super fun — and you can customise it with sounds, lights, or challenges!
+It’s super fun and you can customise it with sounds, lights, or challenges!
 
 # 💻 Get Set Up
 - Plug in your Micro:bit.
