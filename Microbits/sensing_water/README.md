@@ -138,7 +138,10 @@ Imagine a chocolate bar cut into **1024 tiny pieces**:
 
 
 ### Electrical components
-![water level sensor](water_sensor_schematic.png)
+![water level sensor](water_sensor_schematic.png)    
+
+### Microbit pins
+![water level sensor](microbit_io.png)
 
 
 ## 🚧 Project Problem & Requirements
