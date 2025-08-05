@@ -145,6 +145,23 @@ while True:
     sleep(200)
 ```
 
+python test
+
+```python
+import serial
+
+# Change if needed
+PORT = "/dev/ttyACM0"
+BAUD = 115200
+
+ser = serial.Serial(PORT, BAUD)
+
+while True:
+    line = ser.readline().decode('utf-8').strip()
+    print(line)
+
+
+```
 ---
 
 ### 🖥️ Read Serial Data on the Raspberry Pi
