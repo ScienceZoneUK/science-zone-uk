@@ -122,6 +122,12 @@ Run this to install latest updates:
 sudo apt update && sudo apt upgrade -y
 ```
 
+## Create a webserver      
+
+follow this tutorial       
+[click here](https://projects.raspberrypi.org/en/projects/python-web-server-with-flask/1)
+
+
 ---
 
 ## 🧪 Part 3: Connect the Micro:bit for Water Level Reading (45 mins)
