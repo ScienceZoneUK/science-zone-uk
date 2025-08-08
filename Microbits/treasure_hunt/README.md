@@ -1,4 +1,4 @@
-#  Micro-Bit Workshop : Treasure Hunt
+#  🏴‍☠️ Micro-Bit Workshop : Treasure Hunt
 
 # 👋 Welcome!
 Ahoy, young coder! Ready to turn your Micro:bit into a real-life treasure detector?
