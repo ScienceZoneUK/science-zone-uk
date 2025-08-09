@@ -162,6 +162,19 @@ Use the transmitter code to send messages like "A", "Hi!", or "1"
 
 Display icons instead of letters using `display.show(Image.HEART)`
 
+## 💡 Fun Experiments
+Try these after it works:
+
+🔋 Power the transmitter with batteries and walk around the room
+
+👀 Watch how signal strength changes on the receiver
+
+🛠 Change power=1 to power=7 and test the range
+
+🎨 Add icons like display.show(Image.HEART) when sending
+
+
+
 ## Let the players know that they are within range:
 ```
 from microbit import *
@@ -178,6 +191,7 @@ while True:
 ```
 
 ## Let the players know when they are out of range
+Informing a player that they are out of bounds will help them not proceed in the wrong direction while hunting
 
 ```
 from microbit import *
@@ -208,8 +222,8 @@ while True:
 
 
 
-## Challenge
-
+## Challenge (Optional)
+See what happens when you run this code for the receiver
 
 ```
 from microbit import *
@@ -235,18 +249,11 @@ while True:
 
 ```
 
-## 💡 Fun Experiments
-Try these after it works:
 
-🔋 Power the transmitter with batteries and walk around the room
-
-👀 Watch how signal strength changes on the receiver
-
-🛠 Change power=1 to power=7 and test the range
-
-🎨 Add icons like display.show(Image.HEART) when sending
-
-
+## Reflection
+Did your program work well?
+Which part was easiest/hardest?
+What did you learn about variables, buttons, shake, and animations?
 
 
 
