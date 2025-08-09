@@ -162,6 +162,52 @@ Use the transmitter code to send messages like "A", "Hi!", or "1"
 
 Display icons instead of letters using `display.show(Image.HEART)`
 
+## Let the players know that they are within range:
+```
+from microbit import *
+import radio
+
+radio.config(group=1)
+radio.on()
+
+while True:
+    message = radio.receive()
+    if message:
+        display.scroll("You rock!")
+
+```
+
+## Let the players know when they are out of range
+
+```
+from microbit import *
+import radio
+
+radio.config(group=1)
+radio.on()
+
+timeout = 2000  # milliseconds to wait before considering "out of bounds"
+last_received = running_time()  # track last time a message was received
+
+while True:
+    message = radio.receive()
+    now = running_time()
+
+    if message:
+        display.scroll("You rock!")
+        last_received = now  # reset timer when message received
+
+    # If no message received for 'timeout' milliseconds, show "Out of bounds"
+    elif now - last_received > timeout:
+        display.scroll("Out of bounds")
+        last_received = now  # reset to avoid scrolling repeatedly
+
+    sleep(100)
+
+```
+
+
+
 ## Challenge
 
 
