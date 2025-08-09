@@ -45,7 +45,7 @@ while True:
     sleep(200)
 ```
 
-##🧠 Code Breakdown – Line by Line
+## 🧠 Code Breakdown – Line by Line
 
 `from microbit import *`
 👉 This brings in everything your micro:bit needs to work:
