@@ -32,8 +32,9 @@ It’s super fun and you can customise it with sounds, lights, or challenges!
 
 # Coding Activity
 
-## 🧩 Setting up the transmiter (treasure)
-## Transmiter
+## 🧩 Setting up the Micro bits
+This project will require two microbits a transmitter and a reciever 
+## 1 Transmitter
 ```
 from microbit import *
 import radio
@@ -91,7 +92,7 @@ This code turns your micro:bit into a transmitter:
 * This helps you build a project like a signal strength meter (like the bars on your phone 📶)
 
 
-## Setting up the Receiver
+## 2 Setting up the Receiver
 
 ```
 from microbit import *
@@ -175,7 +176,8 @@ Try these after it works:
 
 
 
-## Let the players know that they are within range:
+## 3 Let the players know that they are within range:
+Displaying a message or image when th player is in range will help keep the player in range
 ```
 from microbit import *
 import radio
@@ -190,7 +192,9 @@ while True:
 
 ```
 
-## Let the players know when they are out of range
+
+
+## 4 Let the players know when they are out of range
 Informing a player that they are out of bounds will help them not proceed in the wrong direction while hunting
 
 ```
