@@ -45,6 +45,64 @@ while True:
     sleep(200)
 ```
 
+##🧠 Code Breakdown – Line by Line
+
+`from microbit import *`
+👉 This brings in everything your micro:bit needs to work:
+like `display`, `sleep()`, and `buttons`.
+
+`import radio`
+📡 This brings in the radio tools, so your micro:bit can send and receive messages wirelessly.
+
+`radio.config(group=1, power=1)`
+🛠 This sets up the radio system:
+
+`group=1`
+→ Think of this like a walkie-talkie channel.
+Only micro:bits using the same group number can talk to each other.
+
+`power=1`
+→ This controls how far the signal goes.
+`1` = short range (about 1 meter), `7 `= long range (up to 70+ meters).
+
+`radio.on()`
+🔛 This turns the radio on, so your micro:bit can start sending.
+
+`while True:`
+🔁 This starts a forever loop — your micro:bit will keep doing what’s inside this loop again and again.
+
+`radio.send('1')`
+📨 This sends the message `'1' `over the radio.
+
+💬 We’re not sending useful data — just something the other micro:bit can listen for.
+
+`sleep(200)`
+⏱ Wait for 200 milliseconds (0.2 seconds) before repeating.
+
+This gives the micro:bit a short pause between each message.
+
+## ✅ What the Code Does All Together
+This code turns your micro:bit into a transmitter:
+
+* It sends a radio message every 0.2 seconds
+
+* Any nearby micro:bit (using the same group) can listen and measure how strong the signal is
+
+* This helps you build a project like a signal strength meter (like the bars on your phone 📶)
+
+💡 Fun Experiments
+Try these after it works:
+
+🔋 Power the transmitter with batteries and walk around the room
+
+👀 Watch how signal strength changes on the receiver
+
+🛠 Change power=1 to power=7 and test the range
+
+🎨 Add icons like display.show(Image.HEART) when sending
+
+
+
 ## Setting up the Receiver
 
 ```
