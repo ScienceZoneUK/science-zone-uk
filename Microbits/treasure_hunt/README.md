@@ -155,12 +155,14 @@ Listens for messages from another micro:bit (transmitter)
 
 💡 It’s great for simple text messages like numbers or letters!
 
-💡 Try This!
-Change the sleep(200) to a longer time (e.g. 1000) to show the message longer
+## 💡 Try This!
+Change the `sleep(200)` to a longer time `(e.g. 1000)` to show the message longer
 
 Use the transmitter code to send messages like "A", "Hi!", or "1"
 
-Display icons instead of letters using display.show(Image.HEART)
+Display icons instead of letters using `display.show(Image.HEART)`
+
+## Challenge
 
 
 ```
