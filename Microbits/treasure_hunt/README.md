@@ -117,7 +117,7 @@ while True:
 
 ```
 
-##💡 Fun Experiments
+## 💡 Fun Experiments
 Try these after it works:
 
 🔋 Power the transmitter with batteries and walk around the room
