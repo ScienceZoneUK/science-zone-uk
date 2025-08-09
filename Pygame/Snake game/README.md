@@ -49,7 +49,7 @@ In Pygame, we can:
    ```bash
    pip install pygame
    
-# 🐍 Mini Snake Game — Step-by-Step Explanation (for children)
+# 🐍 Mini Snake Game — Step-by-Step Explanation
 
 This is an easy, friendly explanation of how the **Mini Snake Game** code works. Read it like a recipe — each step does one simple job.
 
