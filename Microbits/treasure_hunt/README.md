@@ -90,18 +90,6 @@ This code turns your micro:bit into a transmitter:
 
 * This helps you build a project like a signal strength meter (like the bars on your phone 📶)
 
-💡 Fun Experiments
-Try these after it works:
-
-🔋 Power the transmitter with batteries and walk around the room
-
-👀 Watch how signal strength changes on the receiver
-
-🛠 Change power=1 to power=7 and test the range
-
-🎨 Add icons like display.show(Image.HEART) when sending
-
-
 
 ## Setting up the Receiver
 
@@ -128,6 +116,18 @@ while True:
         display.show(light)
 
 ```
+
+##💡 Fun Experiments
+Try these after it works:
+
+🔋 Power the transmitter with batteries and walk around the room
+
+👀 Watch how signal strength changes on the receiver
+
+🛠 Change power=1 to power=7 and test the range
+
+🎨 Add icons like display.show(Image.HEART) when sending
+
 
 
 
