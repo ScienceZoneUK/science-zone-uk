@@ -98,6 +98,79 @@ from microbit import *
 import radio
 radio.config(group=1)
 radio.on()
+
+while True:
+    message = radio.receive()
+    if message:
+        display.show(message)
+        sleep(200)
+        display.clear()
+
+```
+## 🧠 Code Breakdown – Line by Line
+`from microbit import *`
+🎛 Loads everything we need to use the micro:bit’s features — like the display and buttons.
+
+`import radio`
+📡 Adds the radio tools so we can send and receive messages wirelessly.
+
+`radio.config(group=1)`
+🛠 Sets the radio group to 1.
+Only micro:bits in the same group can talk to each other.
+
+You must match the group with the transmitter!
+
+`radio.on()`
+🔛 Turns on the radio so the micro:bit can start listening.
+
+`while True:`
+🔁 Starts a forever loop.
+This makes the micro:bit keep checking for messages all the time.
+
+`message = radio.receive()`
+👂 Listens for a message from the radio.
+
+If it gets one, it stores it in the message variable.
+
+`if message:`
+✅ This means “if we got a message…”
+Then we can do something with it.
+
+`display.show(message)`
+📺 Shows the received message (like a number or letter) on the LED screen.
+
+`sleep(200)`
+⏱ Waits for 200 milliseconds so the message stays on screen briefly.
+
+`display.clear()`
+🧼 Clears the LED screen to get ready for the next message.
+
+## ✅ What This Code Does
+Listens for messages from another micro:bit (transmitter)
+
+* If a message is received:
+
+* It shows the message on the LED display
+
+** Waits briefly
+
+** Then clears the screen
+
+💡 It’s great for simple text messages like numbers or letters!
+
+💡 Try This!
+Change the sleep(200) to a longer time (e.g. 1000) to show the message longer
+
+Use the transmitter code to send messages like "A", "Hi!", or "1"
+
+Display icons instead of letters using display.show(Image.HEART)
+
+
+```
+from microbit import *
+import radio
+radio.config(group=1)
+radio.on()
 light = Image(5,5) # create an empty image
 
 # function to map signal stength to LED brightness
