@@ -255,9 +255,9 @@ while True:
 
 
 ## Reflection
-Did your program work well?
-Which part was easiest/hardest?
-What did you learn about variables, buttons, shake, and animations?
+* Did your program work well?
+* Which part was easiest/hardest?
+* What did you learn about variables, buttons, shake, and animations?
 
 
 
