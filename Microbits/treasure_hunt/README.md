@@ -149,10 +149,9 @@ Then we can do something with it.
 Listens for messages from another micro:bit (transmitter)
 
 * If a message is received:
-
-* It shows the message on the LED display
-    ** Waits briefly
-    ** Then clears the screen
+    * It shows the message on the LED display
+    * Waits briefly
+    * Then clears the screen
 
 💡 It’s great for simple text messages like numbers or letters!
 
