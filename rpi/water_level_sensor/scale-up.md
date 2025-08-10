@@ -39,6 +39,7 @@ In this workshop we are going to look at The Internet of Things paradigm and how
  - [Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html)
  - [Adafruit io prof Gallerger ](https://www.youtube.com/watch?v=H0IetHFuz98)
  - [Pico review](https://www.youtube.com/watch?v=cK9TnktZESM)
+ - [Adafruit io Dashboard](https://io.adafruit.com/cuvner/dashboards/water-level-data)
 
 
 ## Steps
@@ -90,14 +91,35 @@ Does the pico have wifi capabilities and how do you know if your board does?
 Compare and list the differences between a pico and a rpi-4/5?
 
 ### a.) 
-First things first we must test our pico is working
+First things first we must test our pico is working.
 
 Traditionally, we print 'Hello World' to the console; however, the microcontroller equivalent is to blink an LED as well.
+
 Every board has an onboard led and that is a simple built in periphiral to access.
 
-```python
+![blink_led](blink_led.png)
 
+- Do you understand the code?  
+- Why do we import board and digitalio?    
+- What is a pin direction, and why is it set to output? 
+- What is the variable led pointing to?
+
+We can use a help method to get info about any python object:
+
+help() – Built-in method to provide helpful information
+
+**Run this code**
+
+```python
+import board
+help(board)
 ```
+
+- What is the object that stores the pin info?
+- What pins are analog?
+- Can you find the pin address for the onboard led?
+
+
 
 
 
