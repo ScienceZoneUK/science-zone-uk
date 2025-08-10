@@ -156,7 +156,116 @@ while True:
 ### b. Find/use analog pin and wire up the water level
 
 
+#### 🧪 What It Does
+- Water touches the sensor → electricity flows
+- More water = more voltage
 
+![Water Level Animation](https://lastminuteengineers.com/wp-content/uploads/arduino/v2/Water-Level-Sensor-Working.gif)
+
+#### 🔢 Analog Values
+Your water sensor gives a number between **0** (dry) and **1023** (very wet).
+
+---
+
+#### 🧪💧 How Does the Water Sensor Work with the Micro:bit?
+
+##### 1️⃣ What the Sensor Does
+The **water level sensor** has metal lines. When water touches them, it sends more **electric power** (called **voltage**) to the micro:bit.  
+- **No water** = **low voltage**  
+- **More water** = **higher voltage**
+
+##### 2️⃣ But Microcontrollers Don't Understand Volts!
+Microcontrollers don't measure voltage like we do — they **turn voltage into a number**.  
+It does this using a special function called **analog read**.
+
+##### 3️⃣ The Magic Numbers: 0 to 1023
+
+| Voltage (0–3.3V) | Number it gives you |
+|------------------|---------------------|
+| 0 volts          | 0                   |
+| 1.65 volts       | 512                 |
+| 3.3 volts        | 1023                |
+
+So if the sensor gives 2 volts, the microcontroller might show a number like **620**.
+
+##### 4️⃣ Why 1023? Why Not Just Use Volts?
+Because the microcontrollers are a **computer**, and computers **use binary** — just 1s and 0s.
+
+To measure the voltage, it uses **10 binary digits (bits)** like little light switches:
+```
+0000000000 → 0  
+1111111111 → 1023
+```
+
+That gives **1024 tiny steps** to measure small changes in voltage.
+
+#### 🍫 Chocolate Bar Example
+Imagine a chocolate bar cut into **1024 tiny pieces**:
+- No water? You get 0 pieces.
+- Half full? You get 512 pieces.
+- Fully full? You get 1023 pieces!
+
+#### ✅ Summary
+- Sensor sends **0 to 3.3V**
+- Microcontroller turns it into **0 to 1023**
+- That number = how wet the sensor is!
+
+
+### Connect the sensor
+
+![pico and water level sensor](https://docs.sunfounder.com/projects/umsk/en/latest/_images/Lesson_25_Water_Level_Sensor_Module_bb.png)
+
+
+What connections do we need?
+Is the analog pin in the illustration correct?
+
+Look at this code, what is going on?
+- Once you can read it correctly run it.
+- Fix any errors
+- 
+```python
+import time
+import board
+import analogio
+
+# Create analog input on GP26
+water_sensor = analogio.AnalogIn(board.GP27_A1)
+
+while True:
+    print(water_sensor.value)  # Raw value (0–65535)
+    time.sleep(0.5)
+
+```
+
+
+Map adc value to water height
+
+```python
+import time
+import board
+import analogio
+
+# Analog input on GP26
+water_sensor = analogio.AnalogIn(board.GP26)
+
+# Calibration values — measure these yourself
+RAW_EMPTY = 12000   # ADC value when empty
+RAW_FULL  = 52000   # ADC value when full
+TANK_DEPTH_CM = 20  # height of your tank in cm
+
+def adc_to_level(raw):
+    # Clamp value within calibration range
+    raw = max(min(raw, RAW_FULL), RAW_EMPTY)
+    # Map to cm
+    return (raw - RAW_EMPTY) / (RAW_FULL - RAW_EMPTY) * TANK_DEPTH_CM
+
+while True:
+    raw_value = water_sensor.value
+    level_cm = adc_to_level(raw_value)
+    print(f"ADC: {raw_value}  Level: {level_cm:.1f} cm")
+    time.sleep(0.5)
+
+```
 
 
 
