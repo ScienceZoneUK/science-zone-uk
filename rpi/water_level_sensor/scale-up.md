@@ -92,6 +92,10 @@ Compare and list the differences between a pico and a rpi-4/5?
 
 ### a.) 
 First things first we must test our pico is working.
+- Connect the USB cable
+- Open thonny
+- Select the pico port (click bottom right)
+- Press the **STOP** button to connect
 
 Traditionally, we print 'Hello World' to the console; however, the microcontroller equivalent is to blink an LED as well.
 
@@ -102,22 +106,55 @@ Every board has an onboard led and that is a simple built in periphiral to acces
 - Do you understand the code?  
 - Why do we import board and digitalio?    
 - What is a pin direction, and why is it set to output? 
-- What is the variable led pointing to?
+- What is the variable, **led**, pointing to?
 
 We can use a help method to get info about any python object:
 
 help() – Built-in method to provide helpful information
 
-**Run this code**
+**Run this code using thonny**
 
 ```python
 import board
 help(board)
 ```
 
+![rp board pins](board.png)
+
+We can see the name of the GPIO on the left and the object dot notation on the right.
+
+Run your code and then answer these questions:
 - What is the object that stores the pin info?
 - What pins are analog?
 - Can you find the pin address for the onboard led?
+
+
+**Run this code using thonny**
+
+```python
+import time
+import board
+import digitalio
+
+# Setup onboard LED (built-in LED pin)
+led = digitalio.DigitalInOut(board.LED)
+led.direction = digitalio.Direction.OUTPUT
+
+while True:
+    led.value = True   # LED ON
+    time.sleep(0.5)    # wait 0.5 seconds
+    led.value = False  # LED OFF
+    time.sleep(0.5)    # wait 0.5 seconds
+
+```
+
+![Bravo](https://media.tenor.com/dk14TWjRq5AAAAAM/bravo-gif.gif)
+
+
+**CONGRATULATIONS** you have successfully tested your pico
+
+### b. Find/use analog pin and wire up the water level
+
 
 
 
