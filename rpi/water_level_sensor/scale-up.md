@@ -37,6 +37,8 @@ In this workshop we are going to look at The Internet of Things paradigm and how
  - [Mosquitto](https://mosquitto.org/)
  - [Web server](https://projects.raspberrypi.org/en/projects/python-web-server-with-flask)
  - [Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html)
+ - [Adafruit io prof Gallerger ](https://www.youtube.com/watch?v=H0IetHFuz98)
+ - [Pico review](https://www.youtube.com/watch?v=cK9TnktZESM)
 
 
 ## Steps
@@ -81,6 +83,22 @@ The pi pico is a powerful microcontroller, it might be small but it has a lot of
       1 × USB 1.1 controller and PHY, with host and device support
       12 × PIO state machines
 ```
+
+What are GPIO pins for?
+Can we connect an analog sensor?
+Does the pico have wifi capabilities and how do you know if your board does?
+Compare and list the differences between a pico and a rpi-4/5?
+
+### a.) 
+First things first we must test our pico is working
+
+Traditionally, we print 'Hello World' to the console; however, the microcontroller equivalent is to blink an LED as well.
+Every board has an onboard led and that is a simple built in periphiral to access.
+
+```python
+
+```
+
 
 
 
