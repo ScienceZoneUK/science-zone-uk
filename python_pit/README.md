@@ -3,7 +3,7 @@
 
 ## Overview
 
-Welcome to the **Python Pit** 8-week coding program! This program is designed to progressively teach Python programming concepts through hands-on activities and challenges. Each week focuses on specific topics, helping learners build their Python skills with practical examples, challenges, and pseudocode exercises.
+Welcome to the **Python Pit** coding program! This program is designed to progressively teach Python programming concepts through hands-on activities and challenges. Each week focuses on specific topics, helping learners build their Python skills with practical examples, challenges, and pseudocode exercises.
 
 The program is structured to cover key Python concepts from basic syntax to advanced problem-solving techniques. By the end of the 8 weeks, participants will have a strong understanding of Python programming and be able to apply it to various projects.
 
@@ -95,6 +95,26 @@ Once you have completed an assignment and pushed your changes to your forked rep
 Once your pull request is submitted, the repository owner (your teacher) will review your code and provide feedback. If changes are requested, you can make the necessary updates to your fork and the pull request will automatically update.
 
 ---
+
+## Contents
+
+wk0 - Print statements, Inputs, String manipulation, Concatenation
+wk01 - Variables, Inputting into variables
+wk015 - Variables, Maths operations
+wk02 - If statements
+wk03 - Lists and loops
+wk04 - Functions
+wk05 - Dictionaries
+wk06 - Functions and dictionaries
+wk07 - Instagram follows comparison game
+wk08 - Coffee machine program
+wk09 - Searching and sorting
+wk10 - APIs, fetching weather data
+wk11 - Pandas, datasets
+wk12 - Functions, Return values, Turtle graphics
+wk13 - Daily Schedule - Functions, Lists, Dictionaries, Loops
+wk14 - Input, Strings, Loops, Lists, Functions
+wk15 - Weather Warning App - Computational Thinking, If statements, Turtle
 
 ## How to Use This Repository
 
