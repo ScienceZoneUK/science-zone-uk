@@ -1,5 +1,5 @@
 
-# Python Pit 8-Week Program
+# Python Pit Program
 
 ## Overview
 
@@ -95,26 +95,6 @@ Once you have completed an assignment and pushed your changes to your forked rep
 Once your pull request is submitted, the repository owner (your teacher) will review your code and provide feedback. If changes are requested, you can make the necessary updates to your fork and the pull request will automatically update.
 
 ---
-
-## Contents
-
-wk0 - Print statements, Inputs, String manipulation, Concatenation
-wk01 - Variables, Inputting into variables
-wk015 - Variables, Maths operations
-wk02 - If statements
-wk03 - Lists and loops
-wk04 - Functions
-wk05 - Dictionaries
-wk06 - Functions and dictionaries
-wk07 - Instagram follows comparison game
-wk08 - Coffee machine program
-wk09 - Searching and sorting
-wk10 - APIs, fetching weather data
-wk11 - Pandas, datasets
-wk12 - Functions, Return values, Turtle graphics
-wk13 - Daily Schedule - Functions, Lists, Dictionaries, Loops
-wk14 - Input, Strings, Loops, Lists, Functions
-wk15 - Weather Warning App - Computational Thinking, If statements, Turtle
 
 ## How to Use This Repository
 
