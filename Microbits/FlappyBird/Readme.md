@@ -1,3 +1,6 @@
+# Flappy Bird
+## Objectives
+
 ## Step 1: Add the Bird to the Game
 First, we are going to add a sprite for the bird from the Game menu and make it blink.
 ```
