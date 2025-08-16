@@ -1,5 +1,11 @@
 # Rock Paper Scissors
 
+## 👋 Welcome, Game Maker!
+
+Hey there, future coder! 🎮 Ready to turn your micro:bit into a pocket-sized gaming machine?
+
+In this fun and interactive workshop, you’ll create your own Rock, Paper, Scissors game using MicroPython. With just a shake of your micro:bit, it will randomly choose between Rock, Paper, or Scissors — and show your choice with custom LED icons and sound effects!
+
 ## Objectives
 * Use gesture input with the micro:bit by detecting a shake to trigger gameplay.
 
