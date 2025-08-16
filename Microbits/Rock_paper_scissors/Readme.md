@@ -100,9 +100,9 @@ Now  SHAKE  If you try enough times, you should see a picture of paper on the sc
 In **Step 5**, you added an `if` condition to display **Paper** (`hand == 1`) and play a sound.
 
 But your game has **three possible outcomes**:
-1 = Paper
-2 = Rock
-3 = Scissors
+* 1 = Paper
+* 2 = Rock
+* 3 = Scissors
 
 Currently, only **Paper** is handled. So now, you’ll prepare your code to handle the **other cases**.
 
