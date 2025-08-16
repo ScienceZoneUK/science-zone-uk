@@ -22,8 +22,7 @@
 * Go to: python.microbit.org/v/3
 * Start a new project.
 ## Step 1
-Use the on shake block in the Workspace to run code when you shake the micro:bit.
-
+Write a function that will run whenever the micro:bit is shaken.
 ```
 def on_gesture_shake():
     pass
@@ -32,7 +31,7 @@ input.on_gesture(Gesture.SHAKE, on_gesture_shake)
 
 
 ## Step 2
-Make a new global variable called hand and place the set hand to block in the shake event.
+Define a variable named `hand` outside the function and update it inside the gesture handler.
 ```
 Python
 hand = 0
@@ -43,7 +42,12 @@ def on_gesture_shake():
 input.on_gesture(Gesture.SHAKE, on_gesture_shake)
 ```
 ## Step 3
-to pick a random number from 1 to 3 and store it in the variable named hand.
+Inside the shake function, use randint(1, 3) to simulate a random choice:
+
+* 1 for `Paper`
+* 2 for `Rock`
+* 3 for `Scissors`
+  
 ```
 hand = 0
 
@@ -53,7 +57,8 @@ def on_gesture_shake():
 input.on_gesture(Gesture.SHAKE, on_gesture_shake)
 ```
 ## Step 4
-Place an if block under the pick random and check whether hand is equal to 1. Add a show leds block that shows a picture of a piece of paper. The number 1 is the value for paper.
+Use an `if` statement to check if `hand` is 1, and display a Paper icon using LEDs.
+
 ```
 hand = 0
 
@@ -71,37 +76,28 @@ def on_gesture_shake():
 input.on_gesture(Gesture.SHAKE, on_gesture_shake)
 ```
 ## Step 5
-Place a play sound block under show leds and edit it to make it sound like paper.
+Add a `music.play_sound_effect()` function call after displaying the Paper icon.
+````
+if hand == 1:
+    basic.show_leds("""
+        # # # # #
+        # . . . #
+        # . . . #
+        # . . . #
+        # # # # #
+    """)
+    music.play_sound_effect(music.create_sound_effect(
+        WaveShape.NOISE, 4120, 1266, 255, 148, 500,
+        SoundExpressionEffect.WARBLE,
+        InterpolationCurve.CURVE),
+        SoundExpressionPlayMode.UNTIL_DONE)
 
 ````
-hand = 0
-
-def on_gesture_shake():
-    global hand
-    hand = randint(1, 3)
-    if hand == 1:
-        basic.show_leds("""
-            # # # # #
-            # . . . #
-            # . . . #
-            # . . . #
-            # # # # #
-            """)
-        music.play_sound_effect(music.create_sound_effect(WaveShape.NOISE,
-                4120,
-                1266,
-                255,
-                148,
-                500,
-                SoundExpressionEffect.WARBLE,
-                InterpolationCurve.CURVE),
-            SoundExpressionPlayMode.UNTIL_DONE)
-input.on_gesture(Gesture.SHAKE, on_gesture_shake)
-````
-Now click on the SHAKE button in the simulator. If you try enough times, you should see a picture of paper on the screen.
+Now  SHAKE  If you try enough times, you should see a picture of paper on the screen.
 
 ## Step 6
-Add an else section
+Add an ` else:` clause to handle other cases (Rock and Scissors). You can leave it empty for now or add a placeholder LED display.
+
 ```
 hand = 0
 
