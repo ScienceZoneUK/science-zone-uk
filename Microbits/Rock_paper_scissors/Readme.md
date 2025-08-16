@@ -1,7 +1,21 @@
 # Rock Paper Scissors
 
 ## Objectives
+* Use gesture input with the micro:bit by detecting a shake to trigger gameplay.
 
+* Generate random numbers in MicroPython to simulate random choices (rock, paper, or scissors).
+
+* Display images on the LED matrix to represent different hand gestures.
+
+* Play different sound effects using the music module to enhance the user experience.
+
+* Use conditional logic (if, elif, else) to select and display the appropriate game outcome.
+
+* Understand the use of variables to store and respond to changing game states.
+
+* Build an interactive micro:bit game that responds to both movement and chance.
+
+* Design intuitive visual and audio feedback to communicate outcomes effectively to users.
 
 ## Step 1
 Use the on shake block in the Workspace to run code when you shake the micro:bit.
