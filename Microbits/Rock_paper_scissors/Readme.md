@@ -17,6 +17,10 @@
 
 * Design intuitive visual and audio feedback to communicate outcomes effectively to users.
 
+## 💻 Get Set Up
+* Plug in your Micro:bit.
+* Go to: python.microbit.org/v/3
+* Start a new project.
 ## Step 1
 Use the on shake block in the Workspace to run code when you shake the micro:bit.
 
