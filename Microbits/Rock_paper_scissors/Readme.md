@@ -3,13 +3,13 @@
 ## Objectives
 * Use gesture input with the micro:bit by detecting a shake to trigger gameplay.
 
-* Generate random numbers in MicroPython to simulate random choices (rock, paper, or scissors).
-
-* Display images on the LED matrix to represent different hand gestures.
+* Use `randint()` to randomly select between Rock, Paper, and Scissors.
+  
+* Display images on the LED matrix to represent different hand gestures using `basic.show_leds()`.
 
 * Play different sound effects using the music module to enhance the user experience.
 
-* Use conditional logic (if, elif, else) to select and display the appropriate game outcome.
+* Use conditional logic `(if, elif, else)` to select and display the appropriate game outcome.
 
 * Understand the use of variables to store and respond to changing game states.
 
