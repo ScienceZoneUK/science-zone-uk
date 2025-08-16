@@ -215,5 +215,11 @@ def on_gesture_shake():
 input.on_gesture(Gesture.SHAKE, on_gesture_shake)
 
 ```
+🧪 Try It Out
 
+* Upload the code to your micro:bit or use the simulator.
+
+* Shake the micro:bit to see a random gesture and hear a corresponding sound.
+
+* Play Rock, Paper, Scissors with a friend!
 
