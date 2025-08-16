@@ -1,6 +1,6 @@
 # Rock Paper Scissors
 
-##Objectives
+## Objectives
 
 
 ## Step 1
