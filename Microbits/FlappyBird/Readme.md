@@ -1,6 +1,128 @@
 # Flappy Bird
 ## Objectives
 
+### 1. **Creating and Controlling Sprites**
+
+* **Objective:** Learn how to create and control sprites (characters or objects in the game) on the Micro\:bit LED display.
+* **Skills:**
+
+  * Creating a sprite with `game.create_sprite()`.
+  * Changing the sprite’s properties like position (`LedSpriteProperty.X` and `LedSpriteProperty.Y`).
+  * Making the sprite blink or change its appearance using `LedSpriteProperty.BLINK`.
+
+---
+
+### 2. **Using Buttons for Input**
+
+* **Objective:** Understand how to use input from buttons (A and B) to interact with the game.
+* **Skills:**
+
+  * Setting up event handlers for button presses using `input.on_button_pressed()`.
+  * Modifying sprite positions based on user input (e.g., moving the bird up and down when buttons A and B are pressed).
+
+---
+
+### 3. **Randomization in Games**
+
+* **Objective:** Learn how to use randomness to generate obstacles in the game, creating a dynamic and unpredictable experience.
+* **Skills:**
+
+  * Using `randint()` to generate random values (e.g., determining the hole's position in the obstacle grid).
+  * Dynamically creating new obstacles at random intervals to keep the game challenging.
+
+---
+
+### 4. **Game Logic and Collision Detection**
+
+* **Objective:** Understand how to check for collisions between objects and trigger game events (like game over).
+* **Skills:**
+
+  * Checking if the positions of the bird and obstacles overlap to detect a collision.
+  * Using `game.game_over()` to end the game when a collision occurs.
+
+---
+
+### 5. **Using Arrays to Manage Game Elements**
+
+* **Objective:** Learn how to manage multiple game elements (like obstacles) using arrays (lists).
+* **Skills:**
+
+  * Storing multiple obstacle sprites in a list (`obstacles: List[game.LedSprite]`).
+  * Iterating over the array using loops to move and update each obstacle.
+
+---
+
+### 6. **Creating a Scoring System**
+
+* **Objective:** Implement a scoring system to track player progress and display the score on the LED screen.
+* **Skills:**
+
+  * Using a variable to store the score (`score`).
+  * Incrementing the score when certain conditions are met (e.g., when an obstacle passes the bird).
+  * Displaying the score on the LED grid using `display.show()`.
+
+---
+
+### 7. **Game Timing and Speed Control**
+
+* **Objective:** Learn how to control the speed of the game and obstacles using timing and loops.
+* **Skills:**
+
+  * Using `sleep()` (or `basic.pause()`) to create a delay between actions, controlling the speed of the game.
+  * Making obstacles move faster over time by adjusting the pause time based on the game's progress.
+
+---
+
+### 8. **Using Loops and Conditional Logic**
+
+* **Objective:** Master using loops and conditional logic to control the flow of the game.
+* **Skills:**
+
+  * Using `for` loops to iterate over obstacles and perform actions like moving them.
+  * Implementing `if` statements to check for specific conditions (e.g., obstacle position, collision detection, game over).
+  * Creating infinite loops using `game.forever()` to continuously run the game.
+
+---
+
+### 9. **Basic Game Design and Mechanics**
+
+* **Objective:** Learn how to build a simple game with core mechanics, including sprite movement, collision detection, and scoring.
+* **Skills:**
+
+  * Designing a game loop that continually updates the game state.
+  * Managing game states (e.g., the game over condition).
+
+---
+
+### 10. **Improving Game Difficulty**
+
+* **Objective:** Understand how to adjust game difficulty dynamically to keep the player engaged.
+* **Skills:**
+
+  * Increasing the speed of obstacles over time to make the game more challenging.
+  * Adjusting the frequency of obstacle generation to increase game difficulty as the player progresses.
+
+---
+
+### **Bonus Objectives (Advanced):**
+
+* **Implementing Sound Effects**: Learn how to use the Micro\:bit’s sound capabilities to add effects when the bird hits an obstacle or when the game starts/ends.
+* **High Score System**: Implement a feature that tracks the highest score achieved in the game, even across different game sessions.
+
+---
+
+### **Summary of Skills to Be Learned:**
+
+* **Game Design Fundamentals:** Creating game mechanics, scoring, and game-over logic.
+* **Programming Techniques:** Random number generation, loops, conditional checks, and managing arrays.
+* **Micro\:bit Hardware Interaction:** Handling button inputs, controlling sprites, and using the LED display.
+* **Problem-Solving:** Implementing collision detection, speed control, and difficulty scaling.
+
+---
+
+By the end of this project, you'll have a solid foundation in game programming, problem-solving, and working with hardware interfaces (like the Micro\:bit's buttons and LED display). You'll also gain valuable experience in making games more engaging through dynamic difficulty and real-time interactions.
+
+
 ## Step 1: Add the Bird to the Game
 First, we are going to add a sprite for the bird from the Game menu and make it blink.
 ```
