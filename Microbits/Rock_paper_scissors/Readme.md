@@ -95,6 +95,19 @@ if hand == 1:
 ````
 Now  SHAKE  If you try enough times, you should see a picture of paper on the screen.
 
+### 🔍 **What you’ve done so far:**
+
+In **Step 5**, you added an `if` condition to display **Paper** (`hand == 1`) and play a sound.
+
+But your game has **three possible outcomes**:
+1 = Paper
+2 = Rock
+3 = Scissors
+
+Currently, only **Paper** is handled. So now, you’ll prepare your code to handle the **other cases**.
+
+---
+
 ## Step 6
 Add an ` else:` clause to handle other cases (Rock and Scissors). You can leave it empty for now or add a placeholder LED display.
 
@@ -128,18 +141,6 @@ input.on_gesture(Gesture.SHAKE, on_gesture_shake)
 
 
 
-### 🔍 **What you’ve done so far:**
-
-In **Step 5**, you added an `if` condition to display **Paper** (`hand == 1`) and play a sound.
-
-But your game has **three possible outcomes**:
-1 = Paper
-2 = Rock
-3 = Scissors
-
-Currently, only **Paper** is handled. So now, you’ll prepare your code to handle the **other cases**.
-
----
 
 ### 🧠 **What’s the goal of Step 6?**
 
