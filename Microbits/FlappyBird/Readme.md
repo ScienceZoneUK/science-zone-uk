@@ -61,7 +61,7 @@ def on_button_pressed_b():
 input.on_button_pressed(Button.B, on_button_pressed_b)
 ```
 
-Step 4: Make obstacles move
+## Step 4: Make obstacles move
 Access each obstacle using a for element loop (iterate over the obstacles array) and decrease the obstacle X coordinate by 1. Right click on the value block and rename it to obstacle ; then drag that obstacle block on top of sprite in the change x block.
 ```
 obstacles: List[game.LedSprite] = []
@@ -72,7 +72,7 @@ def on_forever():
     basic.pause(1000)
 basic.forever(on_forever)
 ```
-Step 5: Make obstacles disappear
+## Step 5: Make obstacles disappear
 Make obstacles disappear after reaching leftmost corner. Iterate over all obstacles, delete the obstacle sprites where the X coordinate equals 0, and remove them from the obstacles array.
 ```
 obstacles: List[game.LedSprite] = []
@@ -85,7 +85,7 @@ def on_forever():
     basic.pause(1000)
 basic.forever(on_forever)
 ```
-Step 6: Generate more obstacles
+## Step 6: Generate more obstacles
 At the moment, our code generates just one vertical obstacle. We need to put obstacle generation code into the forever loop so that it keeps generating more and more obstacles.
 
 ```
