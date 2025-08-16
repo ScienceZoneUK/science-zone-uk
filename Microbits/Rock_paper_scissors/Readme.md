@@ -329,3 +329,56 @@ input.on_gesture(Gesture.SHAKE, on_gesture_shake)
 
 * Play Rock, Paper, Scissors with a friend!
 
+
+## 🪞 Reflection: How Did It Go?
+
+Take a moment to think back on your Rock, Paper, Scissors game project. Answer the questions below to reflect on what you learned and how it went!
+
+---
+
+### ✅ **1. Did your program work the way you expected?**
+
+* What happened when you shook the micro\:bit?
+* Did the right LED patterns and sounds play?
+
+✍️ *Your thoughts:*
+
+---
+
+### 🧩 **2. Which part of the project was easiest?**
+
+* Was it the coding? The LED designs? The sound effects?
+
+✍️ *Your answer:*
+
+---
+
+### 🧠 **3. Which part was the hardest?**
+
+* Did you get stuck on any part of the logic or syntax?
+
+✍️ *Write about the challenge here:*
+
+---
+
+### 📚 **4. What did you learn about…**
+
+| Concept                | What you discovered or learned                       |
+| ---------------------- | ---------------------------------------------------- |
+| **Variables**          | e.g. storing random choices (hand = 1, 2, or 3)      |
+| **Buttons / Gestures** | e.g. using shake to trigger the game                 |
+| **Randomness**         | e.g. how to make the micro\:bit pick a random option |
+| **LED Animations**     | e.g. showing Rock, Paper, or Scissors as pictures    |
+| **Sound Effects**      | e.g. how to add unique sounds to match visuals       |
+
+✍️ *Fill in what you learned in each row.*
+
+---
+
+### 🌟 Bonus: If you had more time, what would you add or improve?
+
+✍️ *Your idea:*
+
+---
+
+
