@@ -10,7 +10,7 @@ import random
 # Initialize Pygame
 pygame.init()
 ```
-## Screen Setup and colours
+## Step 2 Screen Setup and colours
 ```
 # Screen dimensions
 WIDTH, HEIGHT = 400, 600
@@ -22,7 +22,7 @@ WHITE = (255, 255, 255)
 RED = (200, 0, 0)
 
 ```
-## Clock /Block Class
+## Step 3 Clock /Block Class
 ```
 
 # Clock
@@ -45,13 +45,13 @@ class Block:
 
 
 ```
-## Main Game Loop
+## Step 4 Main Game Loop
 ```
 def main():
     run = True
     blocks = []
 ```
-## Game Loop Body
+## Step 5 Game Loop Body
 ```
     while run:
         clock.tick(60)
@@ -61,13 +61,13 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
 ```
-## Spawn Blocks Randomly
+## Step 6 Spawn Blocks Randomly
 ```
         # Spawn new blocks randomly
         if random.randint(1, 30) == 1:
             blocks.append(Block())
 ```
-## Update & Draw Blocks
+## Step 7 Update & Draw Blocks
 ```
         # Update and draw blocks
         for block in blocks[:]:
@@ -76,13 +76,13 @@ def main():
             if block.y > HEIGHT:
                 blocks.remove(block)  # remove once it goes off-screen
 ```
-## Update Display
+## Step 8 Update Display
 ```
         pygame.display.flip()
 
     pygame.quit()
 ```
-## Entry Point
+## Step 9 Entry Point
 ```
 if __name__ == "__main__":
     main()
