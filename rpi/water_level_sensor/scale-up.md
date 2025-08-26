@@ -245,11 +245,11 @@ Look at this code:
 - Predict what will happen
 - Why are captals used?
 
-![analogue to digital water level](adc_level.png)
+![analogue to digital water level](adc_level2.png)
 
 An analogue value is non-sensical to most people. We need to provide some context for this.
 We use a process called **mapping** where by we map one value to another, for example:
-Take the number 10456. This is how many cornflakes make up one packet or 750 grams.
+Take the number 10456. This is how many cornflakes make up one 750g packet.
 What mathematical operation can I perform to map 1 cornflake to grams?
 
 # 🗺️ Mapping Numbers with `map()`
@@ -302,7 +302,7 @@ So what about **2000 flakes**?
 
 ```
 [0 flakes]----|--------------------------[10,456 flakes]
-               ^
+              ^
                2000 flakes (where we are)
 ```
 
@@ -323,6 +323,8 @@ We’re about **20%** along the first ruler, so we’re also about **20%** along
 ```python
 CORNFLAKES_IN_PACKET = 10456
 PACKET_WEIGHT_GRAMS = 750
+
+#Add the map function
 
 num_flakes = int(input("How many cornflakes do you have? "))
 
@@ -366,11 +368,18 @@ RAW_EMPTY = 12000   # ADC value when empty
 RAW_FULL  = 52000   # ADC value when full
 TANK_DEPTH_CM = 20  # height of your tank in cm
 
+# Generic map function
+def map_value(value, start1, stop1, start2, stop2):
+    """
+    Remaps a number from one range to another.
+    """
+    return ( (value - start1) * (stop2 - start2) / (stop1 - start1) ) + start2
+
 def adc_to_level(raw):
-    # Clamp value within calibration range
+    # Clamp so we don’t go outside expected range
     raw = max(min(raw, RAW_FULL), RAW_EMPTY)
-    # Map to cm
-    return (raw - RAW_EMPTY) / (RAW_FULL - RAW_EMPTY) * TANK_DEPTH_CM
+    # Map ADC value (RAW_EMPTY..RAW_FULL) -> (0..TANK_DEPTH_CM)
+    return map_value(raw, RAW_EMPTY, RAW_FULL, 0, TANK_DEPTH_CM)
 
 while True:
     raw_value = water_sensor.value
