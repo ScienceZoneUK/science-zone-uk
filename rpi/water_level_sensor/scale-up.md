@@ -405,7 +405,7 @@ while True:
 #### 📡 How can a pico communciate its data?
 
 
-
+[pico network](pico_network.png)
 
 
 
