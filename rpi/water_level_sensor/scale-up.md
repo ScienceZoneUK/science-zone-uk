@@ -8,6 +8,13 @@ What are the limitations of this setup?
 
 In this workshop we are going to look at The Internet of Things paradigm and how we can use it to improve our sensing setup
 
+## Aims
+- To scale up your rpi water level project
+- To make a robust communication network
+- To visualise the data in a meaningful way
+
+
+
 ## Objectives
 - Young coders can demonstrate competence using the commnad line
 - Young coders can explain IOT
@@ -42,6 +49,7 @@ In this workshop we are going to look at The Internet of Things paradigm and how
  - [Adafruit io Dashboard](https://io.adafruit.com/cuvner/dashboards/water-level-data)
 
 
+
 ## Steps
 - 1.) Setup pi, update, upgrade, connect to wifi
 - 2.) Setup pi pico and run hello world(blink_led)
@@ -67,6 +75,11 @@ Try to find the pi with your folder on it and swap with each other
 
 
 ## 2.) Pi pico
+
+In your last project, you used the Raspberry Pi and a Micro:bit to measure water level. This was perfect to prove a concept.
+Did you know there are 90,000 km of rivers in UK ([freshwaterhabitats.org.uk](https://freshwaterhabitats.org.uk/habitats/rivers/)).
+Would it be efficient to place RPI's, consider how powerful a pi is, the cost and the size of it.
+Now we want to roll this out across the UK
 
 The pi pico is a powerful microcontroller, it might be small but it has a lot of potential.
 
@@ -353,7 +366,7 @@ How many cornflakes do you have? 2000
 
 👉 Mapping is just a **translator**: it takes numbers from one world and finds their meaning in another.  
 
-
+Let's now use a map in a program that reads the analogue input.
 
 ```python
 import time
@@ -388,6 +401,7 @@ while True:
     time.sleep(0.5)
 
 ```
+
 
 
 
