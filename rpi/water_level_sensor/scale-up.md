@@ -401,11 +401,82 @@ while True:
     time.sleep(0.5)
 
 ```
+---
 
-#### 📡 How can a pico communciate its data?
+## 📡 How can a pico communicate its data?
 
 
-[pico network](pico_network.png)
+![pico network](pico_network.png)
+
+### 🌐 How Picos Talk in a Network (with MQTT)
+
+When computers read from sensors or give us raw numbers, those numbers don’t always make sense.  
+We use **mapping** to convert numbers from one scale to another.
+
+---
+
+## The concept unpacked
+
+Imagine:
+- Lots of kids in a classroom (the **Picos**).  
+- They all want to share info like “my sandwich is 80% eaten.”  
+- Instead of shouting across the room, they pass notes to the **teacher** (the **broker**).  
+- The teacher gives those notes only to kids who said, “I’m interested in sandwich updates” (the **subscribers**).  
+
+Result:  
+- Everyone shares safely.  
+- You only get info you actually want.  
+- The teacher keeps things organised.  
+
+---
+
+## 🛠 In reality
+
+- Each **Pico W** has Wi-Fi.  
+- It can connect to the internet and send/receive messages.  
+- The system they use is called **MQTT** (Message Queuing Telemetry Transport).  
+
+MQTT has 3 parts:  
+1. **Publisher** → sends a message (Pico sending `river1 = 12cm`).  
+2. **Subscriber** → listens for that message (a dashboard, or another Pico).  
+3. **Broker** → middleman server (like Adafruit IO) that delivers the message to the right place.  
+
+---
+
+## ✅ Why are we using MQTT?  
+
+Think of other ways devices could talk:  
+- 📣 **Broadcast/shouting** → everyone hears everything (wasteful, confusing).  
+- 📬 **Direct messages** → you’d need every Pico to know where every other Pico lives (complicated).  
+
+Instead, MQTT is like a **post office for messages**:  
+- 🔌 **Lightweight** → it uses very little power and data, perfect for tiny devices like Picos.  
+- 📮 **Organised** → messages go through a broker, so Picos don’t need to know about each other.  
+- 🎯 **Selective** → you only get the messages (topics) you subscribe to, so no overload.  
+- 🌍 **Scalable** → works for 2 Picos or 2,000, no big change in setup.  
+
+That’s why MQTT is used in the **Internet of Things (IoT)** — smart homes, sensors, wearables, and now your **UK river monitoring network**.  
+
+---
+
+## 🎯 Example Flow
+
+- Pico A publishes → `water/river1 = 12cm`  
+- Broker (Adafruit IO) holds it.  
+- Your dashboard subscribes → sees “12cm” instantly.  
+- RPI, pico, computer could also subscribe if it cares about river1.  
+
+---
+
+## 🧩 summary
+
+- MQTT = **post office for tiny computers**.  
+- Each Pico = a pen pal.  
+- The broker = the post office.  
+- Messages = letters.  
+- Subscribe = signing up for the letters you actually want.  
+
+That’s why your Picos can all be part of a **smart, efficient, and tidy network** 🌊.  
 
 
 
