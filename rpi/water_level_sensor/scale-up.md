@@ -1,4 +1,8 @@
 # River level sensor network
+
+![flooding](river_flood.png)
+[Source](https://www.bbc.co.uk/news/articles/cew2vxjgy7lo)
+
 Previously you used a rpi to serve a website that published river levels. The rpi does not have analog pins so we used a microbit to send the converted analog signal to the pi over serial communication. You used the flask framework to build a working website in html. You did all of this remotely over SSH.
 
 What are the limitations of this setup?
