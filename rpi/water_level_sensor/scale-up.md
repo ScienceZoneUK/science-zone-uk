@@ -79,9 +79,9 @@ Try to find the pi with your folder on it and swap with each other
 In your last project, you used the Raspberry Pi and a Micro:bit to measure water level. This was perfect to prove a concept.
 Did you know there are 90,000 km of rivers in UK ([freshwaterhabitats.org.uk](https://freshwaterhabitats.org.uk/habitats/rivers/)).
 Would it be efficient to place RPI's, consider how powerful a pi is, the cost and the size of it.
-Now we want to roll this out across the UK
+If we are going to scale up our measuring, we will need a small device with wifi and analogue inputs.
 
-The pi pico is a powerful microcontroller, it might be small but it has a lot of potential.
+The Pi Pico is a powerful microcontroller; it might be small, but it has a lot of potential for £8 including wifi.
 
 ``` text
   Form factor: 21 mm × 51 mm
@@ -180,7 +180,7 @@ Your water sensor gives a number between **0** (dry) and **1023** (very wet).
 
 ---
 
-#### 🧪💧 How Does the Water Sensor Work with the Micro:bit?
+#### 🧪💧 How Does the Water Sensor Work with the pico?
 
 ##### 1️⃣ What the Sensor Does
 The **water level sensor** has metal lines. When water touches them, it sends more **electric power** (called **voltage**) to the micro:bit.  
@@ -401,6 +401,14 @@ while True:
     time.sleep(0.5)
 
 ```
+
+#### 📡 How can a pico communciate its data?
+
+
+
+
+
+
 
 
 
