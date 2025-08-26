@@ -403,17 +403,38 @@ while True:
 ```
 ---
 
-## 📡 How can a pico communicate its data?
+## 📡 📱 🤖 🚦 IOT
 
 
 ![pico network](pico_network.png)
 
 ### 🌐 How Picos Talk in a Network (with MQTT)
 
-When computers read from sensors or give us raw numbers, those numbers don’t always make sense.  
-We use **mapping** to convert numbers from one scale to another.
+If a microcontroller has Wi-Fi capabilities, it means that it can send messages containing data.  
+Therefore, we must choose **how** we send our messages.  
+
+There are many **messaging protocols** (rules for talking) depending on what we want to achieve:
+
+- 📡 **HTTP** – the same system web browsers use.  
+  Good for webpages, but heavier and slower for tiny devices.  
+
+- 🔔 **WebSockets** – a live two-way chat between computers.  
+  Faster, but still more complex to set up.  
+
+- ✉️ **MQTT** – lightweight, simple, and designed for devices like the Raspberry Pi Pico.  
+  Perfect when you have lots of small devices sending quick updates (like river levels).  
+
+We choose **MQTT** because:  
+- It uses **very little power and data**.  
+- Devices don’t have to know about each other — they only talk to the **broker**.  
+- It’s easy to **scale up**: two Picos or two thousand, same system.  
+
+That’s why MQTT is one of the most popular protocols for the **Internet of Things (IoT)**.  
 
 ---
+
+![mqtt](mqtt.png)
+[mqtt image](https://www.tekonelectronics.com/en/news/tekon-blog/understanding-mqtt-protocol/)
 
 ## The concept unpacked
 
