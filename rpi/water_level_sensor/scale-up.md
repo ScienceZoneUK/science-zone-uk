@@ -241,11 +241,117 @@ while True:
 - Does the output mean anything to you or perhaps a member of the public?
 - What context would be helpful when measuring water height?
 
+Look at this code:
+- Predict what will happen
+- Why are captals used?
+
+![analogue to digital water level](adc_level.png)
+
+An analogue value is non-sensical to most people. We need to provide some context for this.
+We use a process called **mapping** where by we map one value to another, for example:
+Take the number 10456. This is how many cornflakes make up one packet or 750 grams.
+What mathematical operation can I perform to map 1 cornflake to grams?
+
+# 🗺️ Mapping Numbers with `map()`
+
+When computers read from sensors or give us raw numbers, those numbers don’t always make sense.  
+We use **mapping** to convert numbers from one scale to another.
+
+---
+
+## The `map()` Function
+
+We’ll copy the style from **Arduino/Processing** because it’s clear and easy to read.
+
+```python
+def map_value(value, start1, stop1, start2, stop2):
+    """
+    Remaps a number from one range to another.
+
+    value  - the number to be mapped
+    start1 - lower bound of the value's current range
+    stop1  - upper bound of the value's current range
+    start2 - lower bound of the value's target range
+    stop2  - upper bound of the value's target range
+    """
+    return ( (value - start1) * (stop2 - start2) / (stop1 - start1) ) + start2
+```
+
+---
+
+## Step-by-Step Explanation
+
+Think of **two rulers**:  
+
+- **Ruler A** = input numbers (like cornflakes count).  
+- **Ruler B** = output numbers (like grams).  
+
+We find out *where we are* on the first ruler, and then mark the **same spot** on the second ruler.  
+
+---
+
+## 🎯 Visual Example
+
+We know:  
+- **0 flakes = 0 g**  
+- **10,456 flakes = 750 g**  
+
+So what about **2000 flakes**?
+
+### Input ruler (flakes)
+
+```
+[0 flakes]----|--------------------------[10,456 flakes]
+               ^
+               2000 flakes (where we are)
+```
+
+### Output ruler (grams)
+
+```
+[0 g]---------|--------------------------[750 g]
+              ^
+              143 g (mapped result)
+```
+
+We’re about **20%** along the first ruler, so we’re also about **20%** along the second ruler.
+
+---
+
+## 📝 Python Cornflakes Example
+
+```python
+CORNFLAKES_IN_PACKET = 10456
+PACKET_WEIGHT_GRAMS = 750
+
+num_flakes = int(input("How many cornflakes do you have? "))
+
+weight = map_value(num_flakes, 0, CORNFLAKES_IN_PACKET, 0, PACKET_WEIGHT_GRAMS)
+
+print(f"{num_flakes} cornflakes weigh about {weight:.2f} grams")
+```
+
+---
+
+## ▶️ Example Run
+
+```
+How many cornflakes do you have? 2000
+2000 cornflakes weigh about 143.48 grams
+```
+
+---
+
+## Why this is useful
+
+- Works for **any ranges**:  
+  - ADC 0–65535 → water height 0–20 cm  
+  - Joystick 0–1023 → screen 0–799  
+  - Slider 0–100 → volume 0.0–1.0  
+
+👉 Mapping is just a **translator**: it takes numbers from one world and finds their meaning in another.  
 
 
-
-
-Map adc value to water height
 
 ```python
 import time
