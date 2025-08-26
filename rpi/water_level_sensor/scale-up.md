@@ -222,7 +222,7 @@ Is the analog pin in the illustration correct?
 Look at this code, what is going on?
 - Once you can read it correctly run it.
 - Fix any errors
-- 
+
 ```python
 import time
 import board
@@ -233,9 +233,16 @@ water_sensor = analogio.AnalogIn(board.GP27_A1)
 
 while True:
     print(water_sensor.value)  # Raw value (0–65535)
-    time.sleep(0.5)
+    sleep(0.5)
 
 ```
+
+**Great** we are now reading an analogue sensor but ask yourselve these questions:
+- Does the output mean anything to you or perhaps a member of the public?
+- What context would be helpful when measuring water height?
+
+
+
 
 
 Map adc value to water height
