@@ -568,7 +568,10 @@ from adafruit_io.adafruit_io import IO_MQTT
 Next we need to put our wifi and adafruit io config into variables.
 Create your own Adafruit io account [click here](https://io.adafruit.com/).
 
+![adafruit io](adafruitio.png)
 
+
+Add this code next
 
 ```python
 
@@ -594,7 +597,83 @@ wifi.radio.connect(WIFI_SSID, WIFI_PASS)
 print("Connected:", wifi.radio.ipv4_address)
 ```
 
-Run your code to check for errors.
+Run your code to check for errors.   
+
+Now we setup our connection to the internet and MQTT.    
+Here Ive broken down the MQTT setup into familiar context:
+Imagine:
+
+- Wi-Fi radio = the road.
+- Socket = the driveway that lets you connect to the road.
+- MQTT = the postal service that knows how to handle letters.
+- Broker (Adafruit IO) = the central post office.
+- Username/Password = your ID card so the post office trusts you.
+- SSL = sealing your letters in a locked envelope so nobody can snoop.
+- Port 8883 = the specific mailbox slot for “secure MQTT letters”.
+
+At the end, your Pico has a post office box set up — ready to send and receive messages with other devices safely.
+
+```python
+# Socket + MQTT (TLS/SSL on 8883)
+pool = socketpool.SocketPool(wifi.radio)
+mqtt = MQTT.MQTT(
+    broker="io.adafruit.com",
+    username=AIO_USERNAME,
+    password=AIO_KEY,
+    socket_pool=pool,
+    ssl_context=ssl.create_default_context()
+)
+io = IO_MQTT(mqtt)
+```
+
+Our picos are now ready to connect to the broker. First, we need to define some functions to handle the messages we will receive.
+
+```python
+
+# ---- callbacks ----
+
+def handle_connect(client):
+    print("Connected to Adafruit IO")
+    # Subscribe to the toggle feed
+    io.subscribe(FEED_TOGGLE)
+
+def handle_message(client, topic, payload):
+    # Only act when the toggle feed talks
+    if not topic.endswith(FEED_TOGGLE):
+        return
+    text = str(payload).strip().lower()
+    if text in ("on", "1", "true", "high"):
+        led.value = True
+    elif text in ("off", "0", "false", "low"):
+        led.value = False
+
+io.on_connect = handle_connect
+io.on_message = handle_message
+
+# Connect MQTT
+io.connect()
+
+```
+
+The laast thing we need to do is create a loop that keeps our MQTT alive.
+
+```python
+# Simple publisher loop + MQTT processing
+last_pub = 0
+while True:
+    io.loop()  # IMPORTANT: processes incoming MQTT messages
+
+    #Setup for publishing
+    now = time.monotonic()
+    if now - last_pub >= PUBLISH_EVERY_SECONDS:
+        last_pub = now
+        #water_level = 123  # TODO: replace with your real sensor read
+        #print("Publishing water level:", water_level)
+        #io.publish(FEED_PUBLISH, water_level)
+
+    time.sleep(0.05)
+
+```
 
 
 
