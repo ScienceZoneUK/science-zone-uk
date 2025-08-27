@@ -708,8 +708,153 @@ while True:
 👉 Check Adafruit IO → live graph of water levels 🌊.
 
 ---
+## 8️⃣ Raspberry pi webserver
 
-## 8️⃣ Reflection & Next Steps
+Lets use our pi's to subscribe to our river-level feed and visualise it on a website
+- Start up your pi
+- open terminal and update ``` sudo apt update ```
+- Get your ip address ``` hostname -I ```
+- Back on your pc open PUTTY and ssh in to your pi
+- Create a folder mqtt_water_level ``` mkdir mqtt_water_level ```
+- cd into folder ``` cd mqtt_water_level```
+- create a virtual environment for our webapp
+
+```python
+# Install venv if not installed
+sudo apt install python3-venv -y
+
+# Create a virtual environment
+python3 -m venv myenv
+
+# Activate it
+source myenv/bin/activate
+
+# Now install your packages inside
+pip install flask adafruit-io paho-mqtt
+```
+- Create a templates folder  ``` mkdir templates ```
+- cd into folder
+- make a index.html file ``` nano index.html ```
+- paste code and save
+
+index.html
+ ```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>River Level Monitor</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>🌊 River Height Monitor</h1>
+  <p>Latest Level: <span id="level">--</span> cm</p>
+  <canvas id="chart" width="400" height="200"></canvas>
+
+  <script>
+    const ctx = document.getElementById('chart').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [{
+          label: 'River Height (cm)',
+          data: [],
+          borderColor: 'blue',
+          fill: false
+        }]
+      }
+    });
+
+    async function fetchData() {
+      const res = await fetch('/data');
+      const json = await res.json();
+      if (json.level !== null) {
+        document.getElementById('level').textContent = json.level.toFixed(2);
+        chart.data.labels.push(new Date().toLocaleTimeString());
+        chart.data.datasets[0].data.push(json.level);
+        chart.update();
+      }
+    }
+
+    setInterval(fetchData, 2000);
+  </script>
+</body>
+</html>
+
+```
+- Go back into main folder `` cd .. ``
+- create a python app.py program ``` nano app.py ```
+- paste in the webapp code
+- add your adafruit io username and key
+
+app.py
+```python
+import threading
+from flask import Flask, render_template, jsonify
+import paho.mqtt.client as mqtt
+
+# ---- CONFIG ----
+AIO_USERNAME = "YOUR_USERNAME"
+AIO_KEY      = "YOUR_AIO_KEY"
+FEED         = "water-level"
+BROKER       = "io.adafruit.com"
+PORT         = 1883   # unsecured MQTT (8883 if you want TLS)
+# ----------------
+
+# Global storage of latest values
+latest_value = {"level": None}
+
+# Flask app
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+@app.route("/data")
+def data():
+    return jsonify(latest_value)
+
+# ---- MQTT Callbacks ----
+def on_connect(client, userdata, flags, rc):
+    print("Connected to Adafruit IO:", rc)
+    topic = f"{AIO_USERNAME}/feeds/{FEED}"
+    client.subscribe(topic)
+    print("Subscribed to", topic)
+
+def on_message(client, userdata, msg):
+    global latest_value
+    payload = msg.payload.decode()
+    print(f"MQTT: {msg.topic} -> {payload}")
+    latest_value["level"] = float(payload)
+
+# Setup MQTT client
+mqtt_client = mqtt.Client()
+mqtt_client.username_pw_set(AIO_USERNAME, AIO_KEY)
+mqtt_client.on_connect = on_connect
+mqtt_client.on_message = on_message
+
+# Background thread for MQTT loop
+def mqtt_thread():
+    mqtt_client.connect(BROKER, PORT, 60)
+    mqtt_client.loop_forever()
+
+threading.Thread(target=mqtt_thread, daemon=True).start()
+
+# Run Flask
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
+
+
+```
+- save code
+- run app.py ``` python app.py ```
+---
+
+
+---
+
+## 9️⃣ Reflection & Next Steps
 
 - **Fact:** MQTT is used in smart homes, car sensors, even satellites.  
 - **Question:** If you had 100 Picos in rivers, how would you keep track?  
