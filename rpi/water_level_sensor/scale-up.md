@@ -503,6 +503,53 @@ That’s why MQTT is used in the **Internet of Things (IoT)** — smart homes, s
 
 That’s why your Picos can all be part of a **smart, efficient, and tidy network** 🌊.  
 
+---
+## Pico wifi
+
+Let's quickly test if the pico can connect to the internet and get the time.
+
+```python
+import wifi
+import socketpool
+import ssl
+import adafruit_requests
+
+# --- Wi-Fi credentials ---
+WIFI_SSID = "YOUR_WIFI_NAME"
+WIFI_PASS = "YOUR_WIFI_PASSWORD"
+
+print("Connecting to Wi-Fi...")
+wifi.radio.connect(WIFI_SSID, WIFI_PASS)
+print("Connected!")
+print("My IP address:", wifi.radio.ipv4_address)
+
+# Create network pool + requests session
+pool = socketpool.SocketPool(wifi.radio)
+https = adafruit_requests.Session(pool, ssl.create_default_context())
+
+# Test: get current time from a public API
+url = "http://worldtimeapi.org/api/ip"
+
+print("Getting real-time data...")
+response = https.get(url)
+print("Status:", response.status_code)
+
+if response.status_code == 200:
+    data = response.json()
+    print("Current datetime:", data["datetime"])
+else:
+    print("Error getting time")
+
+response.close()
+
+```
+
+Do you see a message with the time?
+
+---
+
+
+
 
 
 
