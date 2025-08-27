@@ -569,8 +569,15 @@ Next we need to put our wifi and adafruit io config into variables.
 Create your own Adafruit io account [click here](https://io.adafruit.com/).
 
 ![adafruit io](adafruitio.png)
+Once you have an account you will need:
+- copy Username to program
+- copy Key to program
+- create feed "toggle-led"
+
+![adafruit io](feed.png)
 
 
+Then:
 Add this code next
 
 ```python
@@ -674,6 +681,119 @@ while True:
 ```
 
 
+### Full program
+```python
+import time, ssl, wifi, socketpool, board, digitalio
+import adafruit_minimqtt.adafruit_minimqtt as MQTT
+from adafruit_io.adafruit_io import IO_MQTT
+
+
+# ---------- CONFIG ----------
+AIO_USERNAME = "cuvner"
+AIO_KEY      = "add your own"
+
+WIFI_SSID    = "J&C"
+WIFI_PASS    = "Flat4141"
+
+FEED_TOGGLE  = "toggle-led"    # feed your Adafruit IO Toggle writes to
+PUBLISH_EVERY_SECONDS = 10     # Timer to control publishing messages
+# ---------------------------
+
+led = digitalio.DigitalInOut(board.LED)
+led.switch_to_output(value=False)
+
+# Wi-Fi
+print("Connecting to Wi-Fi...")
+wifi.radio.connect(WIFI_SSID, WIFI_PASS)
+print("Connected:", wifi.radio.ipv4_address)
+
+# Socket + MQTT (TLS/SSL on 8883)
+pool = socketpool.SocketPool(wifi.radio)
+mqtt = MQTT.MQTT(
+    broker="io.adafruit.com",
+    username=AIO_USERNAME,
+    password=AIO_KEY,
+    socket_pool=pool,
+    ssl_context=ssl.create_default_context()
+)
+io = IO_MQTT(mqtt)
+
+
+# ---- callbacks ----
+
+def handle_connect(client):
+    print("Connected to Adafruit IO")
+    print("Subscribing to:", FEED_TOGGLE)
+    io.subscribe(FEED_TOGGLE)   # subscribe by feed key
+
+def handle_message(client, topic, payload):
+    text = str(payload).strip().lower()
+    print(f"[MSG] {topic} -> '{text}'")
+    # Topic from IO_MQTT is the feed key ('toggle-led'); no full topic check needed
+    led.value = text in ("on", "1", "true", "high")
+    print("LED =>", "ON" if led.value else "OFF")
+
+io.on_connect = handle_connect
+io.on_message = handle_message
+
+io.connect()
+
+# Simple publisher loop + MQTT processing
+last_pub = 0
+while True:
+    io.loop()  # IMPORTANT: processes incoming MQTT messages
+
+    #Setup for publishing
+    now = time.monotonic()
+    if now - last_pub >= PUBLISH_EVERY_SECONDS:
+        last_pub = now
+        #water_level = 123  # TODO: replace with your real sensor read
+        #print("Publishing water level:", water_level)
+        #io.publish(FEED_PUBLISH, water_level)
+
+    time.sleep(0.05)
+
+```
+**SAVE YOUR WORK**
+
+You now need to combine the analogue sensor program:
+- Create a new mqtt program
+- Carefully copy lines across into a new mqtt program
+- HAVE A GO
+
+```python
+import time
+import board
+import analogio
+
+# Analog input on GP26
+water_sensor = analogio.AnalogIn(board.GP26)
+
+# Calibration values — measure these yourself
+RAW_EMPTY = 12000   # ADC value when empty
+RAW_FULL  = 52000   # ADC value when full
+TANK_DEPTH_CM = 20  # height of your tank in cm
+
+# Generic map function
+def map_value(value, start1, stop1, start2, stop2):
+    """
+    Remaps a number from one range to another.
+    """
+    return ( (value - start1) * (stop2 - start2) / (stop1 - start1) ) + start2
+
+def adc_to_level(raw):
+    # Clamp so we don’t go outside expected range
+    raw = max(min(raw, RAW_FULL), RAW_EMPTY)
+    # Map ADC value (RAW_EMPTY..RAW_FULL) -> (0..TANK_DEPTH_CM)
+    return map_value(raw, RAW_EMPTY, RAW_FULL, 0, TANK_DEPTH_CM)
+
+while True:
+    raw_value = water_sensor.value
+    level_cm = adc_to_level(raw_value)
+    print(f"ADC: {raw_value}  Level: {level_cm:.1f} cm")
+    time.sleep(0.5)
+
+```
 
 
 
