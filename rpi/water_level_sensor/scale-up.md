@@ -506,6 +506,8 @@ That’s why your Picos can all be part of a **smart, efficient, and tidy networ
 ---
 ## Pico wifi
 
+![pico wifi](pico_wifi.png)
+
 Let's quickly test if the pico can connect to the internet and get the time.
 
 ```python
@@ -545,8 +547,55 @@ response.close()
 ```
 
 Do you see a message with the time?
+Do you understand the code?
+Did I use MQTT or HTTPS messaging protocol?
 
 ---
+
+## Setup MQTT
+
+Let's take our blinking LED example and apply some IOT to it.
+Open up a new program.
+
+First import all your libraries. Notice all the libraries required for wifi and MQTT.
+
+```python
+import time, ssl, wifi, socketpool, board, digitalio
+import adafruit_minimqtt.adafruit_minimqtt as MQTT
+from adafruit_io.adafruit_io import IO_MQTT
+```
+
+Next we need to put our wifi and adafruit io config into variables.
+Create your own Adafruit io account [click here](https://io.adafruit.com/).
+
+
+
+```python
+
+# ---------- CONFIG ----------
+AIO_USERNAME = "YOUR_USERNAME"
+AIO_KEY      = "YOUR_AIO_KEY"
+
+WIFI_SSID    = "YOUR_WIFI"
+WIFI_PASS    = "YOUR_WIFI_PASSWORD"
+
+FEED_TOGGLE  = "led-toggle"    # feed your Adafruit IO Toggle writes to
+
+# ---------------------------
+
+```
+
+Now we connect to a router.
+
+```python
+# Wi-Fi
+print("Connecting to Wi-Fi...")
+wifi.radio.connect(WIFI_SSID, WIFI_PASS)
+print("Connected:", wifi.radio.ipv4_address)
+```
+
+Run your code to check for errors.
+
 
 
 
