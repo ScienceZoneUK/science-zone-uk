@@ -582,9 +582,11 @@ AIO_KEY      = "YOUR_AIO_KEY"
 WIFI_SSID    = "YOUR_WIFI"
 WIFI_PASS    = "YOUR_WIFI_PASSWORD"
 
-FEED_TOGGLE  = "led-toggle"    # feed your Adafruit IO Toggle writes to
-
+FEED_TOGGLE  = "toggle-led"    # feed your Adafruit IO Toggle writes to
 # ---------------------------
+
+led = digitalio.DigitalInOut(board.LED)
+led.switch_to_output(value=False)
 
 ```
 
@@ -634,23 +636,19 @@ Our picos are now ready to connect to the broker. First, we need to define some 
 
 def handle_connect(client):
     print("Connected to Adafruit IO")
-    # Subscribe to the toggle feed
-    io.subscribe(FEED_TOGGLE)
+    print("Subscribing to:", FEED_TOGGLE)
+    io.subscribe(FEED_TOGGLE)   # subscribe by feed key
 
 def handle_message(client, topic, payload):
-    # Only act when the toggle feed talks
-    if not topic.endswith(FEED_TOGGLE):
-        return
     text = str(payload).strip().lower()
-    if text in ("on", "1", "true", "high"):
-        led.value = True
-    elif text in ("off", "0", "false", "low"):
-        led.value = False
+    print(f"[MSG] {topic} -> '{text}'")
+    # Topic from IO_MQTT is the feed key ('toggle-led'); no full topic check needed
+    led.value = text in ("on", "1", "true", "high")
+    print("LED =>", "ON" if led.value else "OFF")
 
 io.on_connect = handle_connect
 io.on_message = handle_message
 
-# Connect MQTT
 io.connect()
 
 ```
