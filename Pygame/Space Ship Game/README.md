@@ -428,7 +428,7 @@ WHITE = (255, 255, 255)
 win = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("🚀 Space Ship Game")
 
-# Step 3: Load images (make sure these exist in an 'images' folder)
+# Step 3: Load images (Challenge 4 - Replace shapes with images)
 ship_img = pygame.image.load("images/spaceship.png")
 ship_img = pygame.transform.scale(ship_img, (40, 40))
 
@@ -438,7 +438,7 @@ enemy_img = pygame.transform.scale(enemy_img, (40, 40))
 bullet_img = pygame.image.load("images/bullet.png")
 bullet_img = pygame.transform.scale(bullet_img, (10, 20))
 
-# Step 4: Load sounds (make sure these exist in a 'sounds' folder)
+# Step 4: Load sounds (Challenge 5 - Add sound effects)
 shoot_sound = pygame.mixer.Sound("sounds/laser.wav")
 explosion_sound = pygame.mixer.Sound("sounds/explosion.wav")
 
@@ -457,7 +457,7 @@ enemies = []
 enemy_size = 40
 enemy_speed = 3
 
-# Step 8: Score
+# Step 8: Score (Challenge 1 - Add score counter)
 score = 0
 font = pygame.font.SysFont("Arial", 24)
 
@@ -484,7 +484,7 @@ while running:
         if keys[pygame.K_SPACE]:
             if len(bullets) < 5:  # limit bullets on screen
                 bullets.append([ship_x + ship_width // 2 - 5, ship_y])
-                shoot_sound.play()
+                shoot_sound.play()  # Challenge 5: Shooting sound
         
         # Move bullets
         for bullet in bullets:
@@ -495,9 +495,9 @@ while running:
         if random.randint(1, 30) == 1:
             enemies.append([random.randint(0, WIDTH-enemy_size), 0])
         
-        # Move enemies (faster with score)
+        # Move enemies (Challenge 2 - Speed increases with score)
         for enemy in enemies:
-            enemy[1] += enemy_speed + score // 20  # speed increases with score
+            enemy[1] += enemy_speed + score // 20  # <-- faster as score grows
         
         # Collision check (bullets vs enemies)
         for bullet in bullets[:]:
@@ -506,29 +506,29 @@ while running:
                     bullet[1] > enemy[1] and bullet[1] < enemy[1] + enemy_size):
                     enemies.remove(enemy)
                     bullets.remove(bullet)
-                    explosion_sound.play()
-                    score += 10
+                    explosion_sound.play()  # Challenge 5: Explosion sound
+                    score += 10  # Challenge 1: Score increases
                     break
         
-        # Check if enemy reaches bottom
+        # Check if enemy reaches bottom (Challenge 3 - Game Over condition)
         for enemy in enemies:
             if enemy[1] > HEIGHT - enemy_size:
                 game_over = True
         
         # Draw everything
         win.fill(BLACK)
-        win.blit(ship_img, (ship_x, ship_y))
+        win.blit(ship_img, (ship_x, ship_y))   # Challenge 4: Draw spaceship image
         for bullet in bullets:
-            win.blit(bullet_img, (bullet[0], bullet[1]))
+            win.blit(bullet_img, (bullet[0], bullet[1]))  # Challenge 4: Bullet image
         for enemy in enemies:
-            win.blit(enemy_img, (enemy[0], enemy[1]))
+            win.blit(enemy_img, (enemy[0], enemy[1]))     # Challenge 4: Alien image
         
-        # Draw score
+        # Draw score (Challenge 1 - Display score on screen)
         score_text = font.render(f"Score: {score}", True, WHITE)
         win.blit(score_text, (10, 10))
     
     else:
-        # Game Over Screen
+        # Game Over Screen (Challenge 3 - Show message when player loses)
         win.fill(BLACK)
         game_over_text = font.render("GAME OVER - Press R to Restart", True, WHITE)
         win.blit(game_over_text, (60, HEIGHT//2))
@@ -546,5 +546,6 @@ while running:
 
 pygame.quit()
 sys.exit()
+
 
 ```
