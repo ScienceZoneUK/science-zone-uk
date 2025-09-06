@@ -21,7 +21,7 @@ If using 3 micro:bits, the third micro:bit is programmed to keep score in the ga
 Make the number cards
 Choose a random number between 0 and 9.
 
-##Step 1
+## Step 1
 ```
 randomNbr = 0
 
@@ -33,7 +33,7 @@ input.on_gesture(Gesture.SCREEN_UP, on_gesture_screen_up)
 
 ```
 
-##Step 2
+## Step 2
 
 ```
 randomNbr = 0
@@ -47,7 +47,7 @@ def on_gesture_screen_up():
 input.on_gesture(Gesture.SCREEN_UP, on_gesture_screen_up)
 
 ```
-##Step 3
+## Step 3
 ```
 player1Score = 0
 player2Score = 0
