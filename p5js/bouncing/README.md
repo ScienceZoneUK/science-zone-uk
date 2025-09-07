@@ -8,7 +8,7 @@ Computers don’t know gravity, floors, or bouncing — we’ll teach them step 
 ---
 
 ## Step 1: Add the variables  
-💡 *Context:* These go **at the very top of your sketch**, before `setup()`.  
+💡 These go **at the very top of your sketch**, before `setup()`.  
 
 ```javascript
 // TOP of sketch
@@ -24,7 +24,7 @@ let sT = 0.01;
 ---
 
 ## Step 2: Create the canvas  
-💡 *Context:* The canvas goes inside the `setup()` function.  
+💡 The canvas goes inside the `setup()` function.  
 
 ```javascript
 // inside setup()
@@ -36,7 +36,7 @@ function setup() {
 ---
 
 ## Step 3: Make a draw loop  
-💡 *Context:* The `draw()` function runs over and over. Add it **below `setup()`**.  
+💡 The `draw()` function runs over and over. Add it **below `setup()`**.  
 
 ```javascript
 // after setup()
@@ -48,7 +48,7 @@ function draw() {
 ---
 
 ## Step 4: Add gravity  
-💡 *Context:* Gravity goes **at the top of `draw()`**, so it updates every frame.  
+💡 Gravity goes **at the top of `draw()`**, so it updates every frame.  
 
 ```javascript
 // inside draw(), near the top
@@ -58,7 +58,7 @@ vel += gravity;
 ---
 
 ## Step 5: Update position  
-💡 *Context:* After adding gravity, update the ball’s position.  
+💡 After adding gravity, update the ball’s position.  
 
 ```javascript
 // inside draw(), after gravity
@@ -68,7 +68,7 @@ y += vel;
 ---
 
 ## Step 6: Draw the ball  
-💡 *Context:* After updating position, draw the ball.  
+💡 After updating position, draw the ball.  
 
 ```javascript
 // inside draw(), after updating position
@@ -78,7 +78,7 @@ circle(x, y, balSize);
 ---
 
 ## Step 7: Add the ground  
-💡 *Context:* Still inside `draw()`, after drawing the ball, check if the ball hits the bottom.  
+💡 Still inside `draw()`, after drawing the ball, check if the ball hits the bottom.  
 
 ```javascript
 // inside draw(), after drawing the ball
@@ -91,7 +91,7 @@ if (y + balSize / 2 >= height) {
 ---
 
 ## Step 8: Lose energy when bouncing  
-💡 *Context:* Add this inside the ground check, so it happens only on bounce.  
+💡 Add this inside the ground check, so it happens only on bounce.  
 
 ```javascript
 // inside draw(), inside the ground check
@@ -101,7 +101,7 @@ vel *= -bounceFactor;
 ---
 
 ## Step 9: Stop tiny jitter  
-💡 *Context:* Also inside the ground check, after applying bounce.  
+💡 Also inside the ground check, after applying bounce.  
 
 ```javascript
 // inside draw(), inside the ground check
@@ -113,7 +113,7 @@ if (abs(vel) < sT) {
 ---
 
 ## Step 10: Add a trail  
-💡 *Context:* Change the background line in `draw()`.  
+💡 Change the background line in `draw()`.  
 
 ```javascript
 // replace background(220) with:
@@ -123,7 +123,7 @@ background(220, 20);
 ---
 
 ## Step 11: Reset the ball  
-💡 *Context:* This goes **after `draw()`**, as a separate function.  
+💡 This goes **after `draw()`**, as a separate function.  
 
 ```javascript
 // after draw()
@@ -136,7 +136,7 @@ function mousePressed() {
 ---
 
 ## Step 12: Experiment!  
-💡 *Context:* Try changing numbers **at the top of the sketch**:  
+💡 Try changing numbers **at the top of the sketch**:  
 - `gravity = 0.3` → Moon bounce 🌕  
 - `bounceFactor = 0.8` → Squishy ball 🏐  
 - `bounceFactor = 0.99` → Super bouncy ball 🏀  
@@ -144,7 +144,7 @@ function mousePressed() {
 ---
 
 ## Step 13: Stretch goal  
-💡 *Context:* Balls can roll sideways too. At the **top of the sketch**, create:  
+💡 Balls can roll sideways too. At the **top of the sketch**, create:  
 
 ```javascript
 let vx = 2;
