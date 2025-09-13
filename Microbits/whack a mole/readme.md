@@ -208,4 +208,4 @@ If you want, I can:
 * add sound effects, or
 * change cursor control to buttons instead of tilt.
 
-Which tweak would you like implemented next?
+
