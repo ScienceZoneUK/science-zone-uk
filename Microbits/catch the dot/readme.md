@@ -86,7 +86,7 @@ Ask students:
 5. Dot respawns at top, game continues endlessly.
 
 
-✅ ** Step 1:
+✅ Step 1:
 ## Connect your Micro\:bit**
 Plug your Micro\:bit into your computer with the USB cable.
 Open Google Chrome and go to: `python.microbit.org/v/3`
@@ -94,7 +94,7 @@ At the top, click the ⚡ **Connect** button, choose your Micro\:bit, and click 
 
 ---
 
-✅ ** Step 2:
+✅ Step 2:
 ## Create the file & imports**
 Create a new Python file in the editor and add the imports:
 
@@ -107,7 +107,7 @@ Flash this tiny program (or keep it in the editor) so the editor is connected an
 
 ---
 
-✅ ** Step 3:
+✅ Step 3:
 ## Set up the class and initial state**
 Add the class and the `__init__` which sets paddle, dot and score:
 
@@ -124,7 +124,7 @@ Flash this to confirm no syntax errors.
 
 ---
 
-✅ ** Step 4: 
+## ✅ Step 4: 
 ## Draw the game to the LED grid**
 Add the `draw()` method — clears screen, draws paddle and dot:
 
@@ -141,7 +141,7 @@ Flash and you should see a blank grid (or whatever positions are current).
 
 ---
 
-✅ ** Step 5:
+## ✅ Step 5:
 ## Move the paddle with buttons**
 Add `move_paddle()` to read buttons A and B (non-blocking):
 
@@ -157,7 +157,7 @@ Press A/B while flashing to check the method (it’s polled inside the loop late
 
 ---
 
-✅ ** Step 6:
+## ✅ Step 6:
 ## Make the dot fall and handle catch/miss**
 Add `update_dot()` — moves the dot down, checks landing, updates score and respawns:
 
@@ -177,7 +177,7 @@ Flash & test by letting the dot fall (you’ll need the full loop for visible an
 
 ---
 
-✅ ** Step 7:
+## ✅ Step 7:
 ## The main game loop**
 Add `play()` which runs the per-frame sequence: input → update → draw → pause.
 
@@ -194,7 +194,7 @@ Flash — the dot will now fall, you can press A/B to move the paddle.
 
 ---
 
-✅ ** Step 8:
+## ✅ Step 8:
 ## Create and start the game**
 At the bottom of the file, create the object and start playing:
 
@@ -207,7 +207,8 @@ Flash the whole file to your Micro\:bit and play: press A/B to move and try to c
 
 ---
 
-✅ **Step 9: Quick tweaks & tips**
+## ✅ Step 9: 
+## Quick tweaks & tips**
 
 * If the dot appears to jump immediately (you want it shown at the top first), swap the order in `play()` to call `draw()` before `update_dot()`.
 * To make it harder, reduce `sleep(500)` to `sleep(350)` or lower.
