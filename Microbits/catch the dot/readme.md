@@ -86,14 +86,16 @@ Ask students:
 5. Dot respawns at top, game continues endlessly.
 
 
-✅ **Step 1: Connect your Micro\:bit**
+✅ **Step 1:
+## Connect your Micro\:bit**
 Plug your Micro\:bit into your computer with the USB cable.
 Open Google Chrome and go to: `python.microbit.org/v/3`
 At the top, click the ⚡ **Connect** button, choose your Micro\:bit, and click **Connect**.
 
 ---
 
-✅ **Step 2: Create the file & imports**
+✅ **Step 2:
+## Create the file & imports**
 Create a new Python file in the editor and add the imports:
 
 ```python
@@ -105,7 +107,8 @@ Flash this tiny program (or keep it in the editor) so the editor is connected an
 
 ---
 
-✅ **Step 3: Set up the class and initial state**
+✅ **Step 3:
+## Set up the class and initial state**
 Add the class and the `__init__` which sets paddle, dot and score:
 
 ```python
@@ -121,7 +124,8 @@ Flash this to confirm no syntax errors.
 
 ---
 
-✅ **Step 4: Draw the game to the LED grid**
+✅ **Step 4: 
+## Draw the game to the LED grid**
 Add the `draw()` method — clears screen, draws paddle and dot:
 
 ```python
@@ -137,7 +141,8 @@ Flash and you should see a blank grid (or whatever positions are current).
 
 ---
 
-✅ **Step 5: Move the paddle with buttons**
+✅ **Step 5:
+## Move the paddle with buttons**
 Add `move_paddle()` to read buttons A and B (non-blocking):
 
 ```python
