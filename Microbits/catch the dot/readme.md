@@ -1,3 +1,17 @@
+# Catch the Dot ⚫️
+## Objectives
+
+
+| Bloom’s Level        | Learning Objective                                                                                                                      |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 🔵 **Remembering**   | Pupils will be able to **define** what a Micro\:bit is and recall its main input/output features (buttons, LED display, accelerometer). |
+| 🟢 **Understanding** | Pupils will be able to **describe** how a simple game loop works (input → update → output → repeat).                                    |
+| 🟡 **Applying**      | Pupils will be able to **use** Micro\:bit buttons to control a paddle in the “Catch the Dot” game.                                      |
+| 🟠 **Analysing**     | Pupils will be able to **compare** different strategies for catching the dot (e.g., moving early vs. waiting).                          |
+| 🔴 **Evaluating**    | Pupils will be able to **justify** how scoring makes a game more engaging and how feedback (points up/down) motivates players.          |
+| 🟣 **Creating**      | Pupils will be able to **design** their own variation of the game (e.g., faster dots, smaller paddle, or extra features like sounds).   |
+
+---
 
 ## 🎮 Game Concept
 
