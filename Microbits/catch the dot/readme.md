@@ -1,4 +1,60 @@
 # Catch the Dot  ⚫️
+
+1️⃣ **Why is Recording Data Important? (10 mins)**
+💬 **Discussion Points:**
+Ask students:
+
+* Why might we want to keep track of something in a game?
+* What kinds of scores do games usually track?
+
+Examples:
+
+* High score in an arcade game 🎮
+* Goals scored in soccer ⚽
+* Levels cleared in a video game 🕹️
+
+**Highlight:**
+Recording data helps us:
+
+* See progress over time
+* Compete with friends
+* Make games more exciting and challenging
+
+**Introduce the Micro\:bit:**
+Explain that the Micro\:bit is a tiny computer that can help us make games by using:
+
+* **Buttons:** control player movement
+* **LED screen:** show game pieces (paddle and falling dot)
+* **Random numbers:** spawn new objects
+
+---
+
+2️⃣ **Problem Introduction & Class Discussion (10 mins)**
+🌟 **Catch the Dot Problem:**
+We need to invent a Micro\:bit game called **Catch the Dot**.
+
+**Requirements:**
+
+* Paddle (2 pixels wide) at the bottom of the screen
+* Button A → Move paddle left
+* Button B → Move paddle right
+* Dot falls from the top, one step at a time
+* If the paddle catches the dot → Score +1
+* If the paddle misses the dot → Score -1
+
+💬 **Discussion Prompt:**
+Ask students:
+
+* How can we show the paddle and the dot at the same time?
+* What happens when the dot reaches the bottom?
+* How do we keep track of the score?
+* How can we make the game faster or harder?
+
+(Encourage groups or pairs to share their ideas before showing the solution.)
+
+---
+
+
 ## Objectives
 
 
