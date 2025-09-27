@@ -1,4 +1,4 @@
-```
+```python
 from microbit import *
 
 class TiltMaze:
