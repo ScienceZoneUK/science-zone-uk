@@ -78,65 +78,192 @@ Ask students:
 
 💻 **Step-by-Step Build**
 
-✅ **Step 3.1: Setup & Player Start**
+
+---
+
+## 🎮 Tilt Maze Game – Step-by-Step Guide
+
+This project creates a maze game using the **micro:bit**. You move a player by **tilting the micro:bit**, and the goal is to reach the **goal tile** at the end of the maze.
+
+---
+
+### 🔧 Step 1: Import the micro:bit module
 
 ```python
 from microbit import *
-
-player_x = 0
-player_y = 0
-
-while True:
-    display.clear()
-    display.set_pixel(player_x, player_y, 9)  # Draw player
-    sleep(300)
 ```
 
-✅ **Step 3.2: Add a Maze**
-
-```python
-maze = [
-    [0, 1, 0, 0, 0],
-    [0, 1, 0, 1, 0],
-    [0, 0, 0, 1, 0],
-    [1, 1, 0, 0, 0],
-    [0, 0, 0, 1, 2]
-]
-
-for y in range(5):
-    for x in range(5):
-        if maze[y][x] == 1:
-            display.set_pixel(x, y, 3)   # wall = dim
-        elif maze[y][x] == 2:
-            display.set_pixel(x, y, 7)   # goal = bright
-```
-
-✅ **Step 3.3: Tilt to Move**
-
-```python
-x_tilt = accelerometer.get_x()
-y_tilt = accelerometer.get_y()
-
-if x_tilt < -300 and player_x > 0 and maze[player_y][player_x - 1] != 1:
-    player_x -= 1
-elif x_tilt > 300 and player_x < 4 and maze[player_y][player_x + 1] != 1:
-    player_x += 1
-
-if y_tilt < -300 and player_y > 0 and maze[player_y - 1][player_x] != 1:
-    player_y -= 1
-elif y_tilt > 300 and player_y < 4 and maze[player_y + 1][player_x] != 1:
-    player_y += 1
-```
-
-✅ **Step 3.4: Winning the Game**
-
-```python
-if maze[player_y][player_x] == 2:
-    display.show(Image.HAPPY)
-    break
-```
+* This line gives you access to the micro:bit's screen, accelerometer, and sleep functions.
 
 ---
+
+### 🧱 Step 2: Create a class for the Maze Game
+
+```python
+class TiltMaze:
+```
+
+* We define a new **class** called `TiltMaze` to organize all the game logic.
+
+---
+
+### 🏁 Step 3: Set up the Maze and Player Position
+
+```python
+def __init__(self):
+    self.player_x = 0
+    self.player_y = 0
+```
+
+* The player starts at the **top-left corner** of the screen (0, 0).
+
+```python
+    self.maze = [
+        [0, 1, 0, 0, 0],
+        [0, 1, 0, 1, 0],
+        [0, 0, 0, 1, 0],
+        [1, 1, 0, 0, 0],
+        [0, 0, 0, 1, 2]
+    ]
+```
+
+* The maze is a **5×5 grid**.
+
+  * `0` = empty space
+  * `1` = wall
+  * `2` = goal
+
+---
+
+### 🖼️ Step 4: Draw the Maze and Player
+
+```python
+def draw(self):
+    display.clear()
+```
+
+* Clears the screen each time before drawing.
+
+```python
+    for y in range(5):
+        for x in range(5):
+            if self.maze[y][x] == 1:
+                display.set_pixel(x, y, 3)  # wall
+            elif self.maze[y][x] == 2:
+                display.set_pixel(x, y, 7)  # goal
+```
+
+* Loops through the grid and lights up walls and the goal using different brightness levels.
+
+```python
+    display.set_pixel(self.player_x, self.player_y, 9)  # player
+```
+
+* The player is the **brightest pixel** (brightness 9).
+
+---
+
+### 🕹️ Step 5: Detect Movement by Tilting
+
+```python
+def move(self):
+    x_tilt = accelerometer.get_x()
+    y_tilt = accelerometer.get_y()
+```
+
+* Reads the tilt of the micro:bit using the accelerometer.
+
+#### ➡️ Move Left or Right
+
+```python
+    if x_tilt < -300 and self.player_x > 0:
+        if self.maze[self.player_y][self.player_x - 1] != 1:
+            self.player_x -= 1
+    elif x_tilt > 300 and self.player_x < 4:
+        if self.maze[self.player_y][self.player_x + 1] != 1:
+            self.player_x += 1
+```
+
+* If tilted left/right and no wall in the way, move the player.
+
+#### ⬆️ Move Up or Down
+
+```python
+    if y_tilt < -300 and self.player_y > 0:
+        if self.maze[self.player_y - 1][self.player_x] != 1:
+            self.player_y -= 1
+    elif y_tilt > 300 and self.player_y < 4:
+        if self.maze[self.player_y + 1][self.player_x] != 1:
+            self.player_y += 1
+```
+
+* If tilted forward/backward and no wall in the way, move the player.
+
+---
+
+### 🎯 Step 6: Check if Player Reaches the Goal
+
+```python
+def check_goal(self):
+    return self.maze[self.player_y][self.player_x] == 2
+```
+
+* Returns `True` if the player is on the goal tile.
+
+---
+
+### 🌀 Step 7: Run the Game Loop
+
+```python
+def play(self):
+    while True:
+        self.move()
+        self.draw()
+        if self.check_goal():
+            display.show(Image.HAPPY)
+            break
+        sleep(300)
+```
+
+* The game runs in a **loop**:
+
+  * Move the player
+  * Redraw the screen
+  * If the goal is reached, show a **happy face** and stop
+  * Pause briefly between movements
+
+---
+
+### ▶️ Step 8: Start the Game
+
+```python
+game = TiltMaze()
+game.play()
+```
+
+* Creates a game object and starts it.
+
+---
+
+## 📝 Summary
+
+| Symbol | Meaning     |
+| ------ | ----------- |
+| `0`    | Empty space |
+| `1`    | Wall        |
+| `2`    | Goal tile   |
+
+| Tilt Direction | Movement                        |
+| -------------- | ------------------------------- |
+| Left           | Player moves left (if no wall)  |
+| Right          | Player moves right (if no wall) |
+| Forward        | Player moves up (if no wall)    |
+| Backward       | Player moves down (if no wall)  |
+
+---
+
+
+
 
 ### 4️⃣ Testing & Discussion (10–15 mins)
 
