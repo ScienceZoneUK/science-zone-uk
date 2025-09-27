@@ -1,3 +1,4 @@
+```
 from microbit import *
 
 class TiltMaze:
@@ -61,3 +62,5 @@ class TiltMaze:
 # Start the game
 game = TiltMaze()
 game.play()
+
+```
