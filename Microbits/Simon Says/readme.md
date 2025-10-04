@@ -227,13 +227,13 @@ while not game_over:
     # Add a new random move to the sequence
     sequence.append(random.choice(['A', 'B']))
 
-    # Show the sequence
+    # Show the sequence to the player
     for move in sequence:
         if move == 'A':
-            display.show(Image.ARROW_W)
+            display.show(Image.ARROW_W)  # West arrow for 'A'
             music.play(['C4'])
         else:
-            display.show(Image.ARROW_E)
+            display.show(Image.ARROW_E)  # East arrow for 'B'
             music.play(['E4'])
         sleep(500)
         display.clear()
@@ -243,14 +243,13 @@ while not game_over:
     for move in sequence:
         correct = False
         while not correct:
-            if button_a.was_pressed() and move == 'A':
+            if button_a.was_pressed() and move == 'A':  # 'A' button corresponds to ARROW_W
                 music.play(['C4'])
                 correct = True
-            elif button_b.was_pressed() and move == 'B':
+            elif button_b.was_pressed() and move == 'B':  # 'B' button corresponds to ARROW_E
                 music.play(['E4'])
                 correct = True
-            elif button_a.was_pressed() or button_b.was_pressed():
-                # Player pressed the wrong button
+            elif button_a.was_pressed() or button_b.was_pressed():  # Wrong button pressed
                 display.show(Image.SAD)
                 music.play(['C3'])
                 game_over = True
@@ -263,4 +262,6 @@ while not game_over:
 # Display final score
 display.scroll("Score: " + str(score))
 
+
+   
 ```
