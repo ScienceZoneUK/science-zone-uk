@@ -244,10 +244,10 @@ while not game_over:
         correct = False
         while not correct:
             if button_a.was_pressed() and move == 'A':  # 'A' button corresponds to ARROW_W
-                music.play(['C4'])
+                music.play(['C4'])  # Correct sound for 'A'
                 correct = True
             elif button_b.was_pressed() and move == 'B':  # 'B' button corresponds to ARROW_E
-                music.play(['E4'])
+                music.play(['E4'])  # Correct sound for 'B'
                 correct = True
             elif button_a.was_pressed() or button_b.was_pressed():  # Wrong button pressed
                 display.show(Image.SAD)
