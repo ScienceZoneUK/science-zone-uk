@@ -203,3 +203,64 @@ By the end of this lesson, pupils have:
 ---
 
 👉 Would you like me to also make a **Student Handout version** (fill-in-the-blanks, simplified steps, space for their own sequences) for the Music Memory Game, like we did for Tilt Maze and Balance Game?
+
+
+# Full Code
+```python
+from microbit import *
+import music
+import random
+
+# Initialize variables
+sequence = []
+score = 0
+game_over = False
+
+# Show heart at the start
+music.play(['C4'])
+display.show(Image.HEART)
+sleep(1000)
+display.clear()
+
+# Game loop
+while not game_over:
+    # Add a new random move to the sequence
+    sequence.append(random.choice(['A', 'B']))
+
+    # Show the sequence
+    for move in sequence:
+        if move == 'A':
+            display.show(Image.ARROW_W)
+            music.play(['C4'])
+        else:
+            display.show(Image.ARROW_E)
+            music.play(['E4'])
+        sleep(500)
+        display.clear()
+        sleep(200)
+
+    # Player's turn to repeat the sequence
+    for move in sequence:
+        correct = False
+        while not correct:
+            if button_a.was_pressed() and move == 'A':
+                music.play(['C4'])
+                correct = True
+            elif button_b.was_pressed() and move == 'B':
+                music.play(['E4'])
+                correct = True
+            elif button_a.was_pressed() or button_b.was_pressed():
+                # Player pressed the wrong button
+                display.show(Image.SAD)
+                music.play(['C3'])
+                game_over = True
+                break
+
+    # Check if game over
+    if not game_over:
+        score += 1
+
+# Display final score
+display.scroll("Score: " + str(score))
+
+```
