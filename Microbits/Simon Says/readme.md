@@ -1,4 +1,4 @@
-#Simon Says
+# Simon Says
 ## 🎯 Learning Objectives (Bloom’s Taxonomy)
 
 By the end of this lesson, pupils will be able to:
