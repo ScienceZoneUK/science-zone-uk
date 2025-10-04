@@ -211,57 +211,60 @@ from microbit import *
 import music
 import random
 
-# Initialize variables
+# Start variables
 sequence = []
 score = 0
 game_over = False
 
-# Show heart at the start
-music.play(['C4'])
-display.show(Image.HEART)
-sleep(1000)
-display.clear()
-
-# Game loop
 while not game_over:
-    # Add a new random move to the sequence
+    # Add a new random move (A or B) to the sequence
     sequence.append(random.choice(['A', 'B']))
 
     # Show the sequence to the player
     for move in sequence:
         if move == 'A':
-            display.show(Image.ARROW_W)  # West arrow for 'A'
-            music.play(['C4'])
+            display.show(Image.ARROW_W)  # Show arrow left for button A
+            music.play(['C4'])           # Play note C4
         else:
-            display.show(Image.ARROW_E)  # East arrow for 'B'
-            music.play(['E4'])
+            display.show(Image.ARROW_E)  # Show arrow right for button B
+            music.play(['E4'])           # Play note E4
         sleep(500)
         display.clear()
         sleep(200)
 
-    # Player's turn to repeat the sequence
+    # Player repeats the sequence
     for move in sequence:
         correct = False
         while not correct:
-            if button_a.was_pressed() and move == 'A':  # 'A' button corresponds to ARROW_W
-                music.play(['C4'])  # Correct sound for 'A'
-                correct = True
-            elif button_b.was_pressed() and move == 'B':  # 'B' button corresponds to ARROW_E
-                music.play(['E4'])  # Correct sound for 'B'
-                correct = True
-            elif button_a.was_pressed() or button_b.was_pressed():  # Wrong button pressed
-                display.show(Image.SAD)
-                music.play(['C3'])
-                game_over = True
-                break
+            if button_a.was_pressed():  # Player presses A
+                if move == 'A':
+                    music.play(['C4'])
+                    correct = True
+                else:
+                    display.show(Image.SAD)
+                    music.play(['C3'])
+                    game_over = True
+                    break
 
-    # Check if game over
+            if button_b.was_pressed():  # Player presses B
+                if move == 'B':
+                    music.play(['E4'])
+                    correct = True
+                else:
+                    display.show(Image.SAD)
+                    music.play(['C3'])
+                    game_over = True
+                    break
+
+        if game_over:  # If player made a mistake, stop checking further
+            break
+
+    # If player survived this round, increase score
     if not game_over:
         score += 1
 
-# Display final score
+# Show final score
 display.scroll("Score: " + str(score))
-
 
    
 ```
