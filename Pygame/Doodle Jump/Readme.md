@@ -351,7 +351,7 @@ sys.exit()
 ✅ Add a “Game Over” message when the jumper falls  
 
 ---
-
+0
 ## 🚀 Full Updated Code
 
 ```python
@@ -390,9 +390,14 @@ gravity = 0.4
 jump_force = -10
 score = 0
 
-# Platform settings
-platforms = [pygame.Rect(100, 500, 100, 10), pygame.Rect(200, 400, 100, 10),
-             pygame.Rect(50, 300, 100, 10), pygame.Rect(250, 200, 100, 10)]
+# Platform settings (closer spacing)
+platform_gap = 80  # smaller gap between platforms
+platforms = []
+y = 500
+for i in range(7):  # more platforms for closer spacing
+    x = random.randint(0, WIDTH - 100)
+    platforms.append(pygame.Rect(x, y, 100, 10))
+    y -= platform_gap  # place next one slightly above
 
 # Clock
 clock = pygame.time.Clock()
@@ -433,14 +438,14 @@ while True:
             player.y += abs(player_speed_y)
             for platform in platforms:
                 platform.y += abs(player_speed_y)
-                # Recycle platforms
+                # Recycle platforms (closer spacing)
                 if platform.y > HEIGHT:
                     platform.x = random.randint(0, WIDTH - 100)
-                    platform.y = random.randint(-50, 0)
+                    platform.y = random.randint(-40, 0)
 
-        # Add moving platforms
+        # Add faster moving platforms
         for platform in platforms:
-            platform.x += random.choice([-1, 1])
+            platform.x += random.choice([-3, 3])  # faster horizontal movement
             if platform.x < 0:
                 platform.x = 0
             elif platform.x > WIDTH - 100:
@@ -470,5 +475,9 @@ while True:
         pygame.quit()
         sys.exit()
 
+    pygame.display.update()
+    clock.tick(60)
+
+```
     pygame.display.update()
     clock.tick(60)
