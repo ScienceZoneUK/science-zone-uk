@@ -1,0 +1,101 @@
+
+
+## 🟣 Bouncing Ball — Study Guide
+
+### 🎯 **Goal**
+
+Make a colorful ball bounce around the screen — just like it’s alive!
+
+---
+
+### 🧠 **What You’ll Learn**
+
+* How to use **variables** to remember the ball’s position and speed
+* How to **move** things in p5.js
+* How to **make the ball bounce** when it hits the walls
+* How to **add color and fun effects**
+
+---
+
+### 🧩 **New Coding Words**
+
+| Word               | What It Means                                                     |
+| ------------------ | ----------------------------------------------------------------- |
+| **let**            | Creates a variable (a box that stores information).               |
+| **x, y**           | The ball’s position on the screen.                                |
+| **speedX, speedY** | How fast the ball moves (left-right and up-down).                 |
+| **width, height**  | The size of the canvas.                                           |
+| **if**             | Tells the computer to do something *only if* a condition is true. |
+
+---
+
+### 💻 **Step-by-Step Code**
+
+Copy this into the [p5.js Web Editor](https://editor.p5js.org):
+
+```javascript
+// Bouncing Ball Project
+
+// Step 1: Make some variables
+let x = 200;       // starting X position
+let y = 200;       // starting Y position
+let speedX = 3;    // how fast the ball moves left/right
+let speedY = 2;    // how fast the ball moves up/down
+let ballSize = 40; // size of the ball
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(255);
+
+  // Step 2: Draw the ball
+  fill(random(255), random(255), random(255)); // random color
+  noStroke();
+  ellipse(x, y, ballSize, ballSize);
+
+  // Step 3: Move the ball
+  x = x + speedX;
+  y = y + speedY;
+
+  // Step 4: Bounce off walls
+  if (x > width - ballSize / 2 || x < ballSize / 2) {
+    speedX = -speedX; // reverse direction
+  }
+
+  if (y > height - ballSize / 2 || y < ballSize / 2) {
+    speedY = -speedY; // reverse direction
+  }
+}
+```
+
+---
+
+### 🖱️ **Try It Out**
+
+* Press ▶ to run the sketch.
+* Watch the ball bounce around!
+* Every frame, it moves — and when it hits the walls, it turns around.
+
+---
+
+### 🌈 **Bonus Challenges**
+
+1. **Make it faster or slower** — try changing `speedX` or `speedY`.
+2. **Add more balls!**
+   (Hint: copy the drawing and movement code, and make new variables for each ball.)
+3. **Change the background color** every time it bounces.
+4. **Play a sound** when it hits the wall (you can add `p5.sound` later).
+
+---
+
+### 🗒️ **Reflection Questions**
+
+1. What happens when you change the ball’s speed?
+2. Why do we use `if` to make it bounce?
+3. Can you make the ball change color only when it bounces?
+
+---
+
+Would you like me to make the **bonus challenge version** where the ball **changes color only when it hits the wall**? That’s a fun next step that makes the bounce feel extra “alive.”
