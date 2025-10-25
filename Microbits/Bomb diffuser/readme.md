@@ -55,7 +55,7 @@ We need to make a Micro:bit that:
 
 ---
 
-✅ **Step 1: Import Libraries**
+**Step 1: Import Libraries**
 
 ```python
 from microbit import *
@@ -71,7 +71,7 @@ We’ll use:
 
 ---
 
-✅ **Step 2: Set a Random Timer**
+**Step 2: Set a Random Timer**
 
 ```python
 timer = random.randint(5, 15)
@@ -81,7 +81,7 @@ timer = random.randint(5, 15)
 
 ---
 
-✅ **Step 3: Start the Countdown**
+ **Step 3: Start the Countdown**
 
 ```python
 while timer > 0:
@@ -95,7 +95,7 @@ while timer > 0:
 
 ---
 
-✅ **Step 4: Check for Defuse Attempt**
+**Step 4: Check for Defuse Attempt**
 
 Inside the same loop, we’ll check if **both buttons** are pressed:
 
@@ -111,7 +111,7 @@ Inside the same loop, we’ll check if **both buttons** are pressed:
 
 ---
 
-✅ **Step 5: Explosion if Not Defused**
+ **Step 5: Explosion if Not Defused**
 
 After the loop ends, if time reaches zero, the bomb explodes:
 
@@ -126,7 +126,7 @@ if timer == 0:
 
 ---
 
-✅ **Step 6: Full Code**
+**Step 6: Full Code**
 
 ```python
 from microbit import *
@@ -220,7 +220,7 @@ Use the Micro:bit’s **display** to show hints like “Too slow!” or “Faste
 
 ---
 
-## ✅ **Wrap-Up**
+## **Wrap-Up**
 
 By the end of this lesson, students can:
 
