@@ -145,45 +145,7 @@ display.set_pixel(obstacle_x, obstacle_y, 5)
 
 ![Tilt Car Game Code](fullcode.png)
 
-```python
-from microbit import *
-import random
 
-car_x = 2
-car_y = 4
-obstacle_x = random.randint(0, 4)
-obstacle_y = 0
-game_over = False
-
-while not game_over:
-    display.clear()
-
-    # Move car with tilt
-    x_reading = accelerometer.get_x()
-    if x_reading < -200:
-        car_x = max(0, car_x - 1)
-    elif x_reading > 200:
-        car_x = min(4, car_x + 1)
-
-    # Move obstacle down
-    obstacle_y += 1
-    if obstacle_y > 4:
-        obstacle_y = 0
-        obstacle_x = random.randint(0, 4)
-
-    # Show car and obstacle
-    display.set_pixel(car_x, car_y, 9)
-    display.set_pixel(obstacle_x, obstacle_y, 5)
-
-    # Check collision
-    if car_x == obstacle_x and car_y == obstacle_y:
-        display.show(Image.SKULL)
-        game_over = True
-
-    sleep(400)
-
-display.scroll("CRASH!")
-```
 
 ---
 
