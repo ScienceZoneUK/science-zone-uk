@@ -138,39 +138,7 @@ while True:
 
 ✅ **Step 6: Full Code**
 
-```python
-from microbit import *
-
-player_a = 0
-player_b = 0
-
-while True:
-    display.clear()
-    display.set_pixel(player_a, 1, 9)
-    display.set_pixel(player_b, 3, 9)
-
-    if button_a.was_pressed():
-        player_a += 1
-
-    if button_b.was_pressed():
-        player_b += 1
-
-    if player_a >= 4:
-        display.scroll("A WINS!")
-        sleep(1000)
-        player_a = 0
-        player_b = 0
-        display.clear()
-
-    if player_b >= 4:
-        display.scroll("B WINS!")
-        sleep(1000)
-        player_a = 0
-        player_b = 0
-        display.clear()
-
-    sleep(100)
-```
+![Tilt Car Game Code](fullcode2.png)
 
 ---
 
