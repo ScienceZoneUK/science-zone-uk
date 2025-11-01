@@ -143,6 +143,8 @@ display.set_pixel(obstacle_x, obstacle_y, 5)
 
 ✅ **Step 7: Full Code**
 
+![Tilt Car Game Code](fullcode.png)
+
 ```python
 from microbit import *
 import random
