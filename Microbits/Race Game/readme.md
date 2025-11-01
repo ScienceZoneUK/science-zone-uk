@@ -138,7 +138,7 @@ while True:
 
 ✅ **Step 6: Full Code**
 
-![Tilt Car Game Code](fullcode2.png)
+![Tilt Car Game Code](fuullcode2.png)
 
 ---
 
