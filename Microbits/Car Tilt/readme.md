@@ -256,6 +256,3 @@ By the end of this lesson, students can:
 * Create a complete **Tilt Car Game** with collisions and feedback
 
 ---
-
-Would you like me to create the **Student Step-by-Step version** next (like your “✅ Step 1…” printable lesson guides)?
-That version walks through each step simply with code boxes and clear instructions for students.
