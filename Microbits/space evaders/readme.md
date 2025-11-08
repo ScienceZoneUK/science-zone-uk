@@ -274,67 +274,7 @@ You could make the game harder or easier!
 
 ## 🧩 **Full Code**
 
-```python
-from microbit import *
-import random
-
-player_x = 2
-player_y = 4
-bullet_x = -1
-bullet_y = -1
-enemy_x = random.randint(0, 4)
-enemy_y = 0
-enemy_direction = 1
-game_over = False
-
-while not game_over:
-    display.clear()
-
-    # Move player with tilt
-    x_reading = accelerometer.get_x()
-    if x_reading < -200:
-        player_x = max(0, player_x - 1)
-    elif x_reading > 200:
-        player_x = min(4, player_x + 1)
-
-    # Shoot bullet
-    if button_a.was_pressed() and bullet_y == -1:
-        bullet_x = player_x
-        bullet_y = player_y - 1
-
-    # Move bullet up
-    if bullet_y >= 0:
-        bullet_y -= 1
-        if bullet_y < 0:
-            bullet_x = -1
-
-    # Move enemy
-    enemy_x += enemy_direction
-    if enemy_x > 4 or enemy_x < 0:
-        enemy_direction *= -1
-        enemy_y += 1
-
-    # Check hit
-    if bullet_x == enemy_x and bullet_y == enemy_y:
-        display.show(Image.HAPPY)
-        display.scroll("You Win!")
-        game_over = True
-
-    # Check defeat
-    if enemy_y == player_y:
-        display.show(Image.SKULL)
-        display.scroll("Game Over")
-        game_over = True
-
-    # Draw elements
-    display.set_pixel(player_x, player_y, 9)
-    display.set_pixel(enemy_x, enemy_y, 5)
-    if bullet_y >= 0:
-        display.set_pixel(bullet_x, bullet_y, 7)
-
-    sleep(300)
-```
-
+![Tilt Car Game Code](fullcode.png)
 ---
 
 ## 🧩 **Extension Challenges**
