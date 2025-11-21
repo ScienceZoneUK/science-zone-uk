@@ -177,7 +177,8 @@ if __name__ == "__main__":
 
 ## Try and run the game and see what happens!
 
-Run "py *name*.py" in the command prompt to test your game! 
+Open the file where your code is stored inside of the command prompt.
+Run "py main.py" in the command prompt to test your game! 
 
 
 ## Continuing the Game Loop
@@ -230,7 +231,7 @@ Draw everything into our game window!
 
 ## Try and run the game and see what happens!
 
-Run "py *name*.py" in the command prompt to test your game! 
+Run "py main.py" in the command prompt to test your game! 
 
 
 
@@ -376,7 +377,7 @@ Copy this code into your python editor!
 
 ## Try and run the game and see what happens!
 
-Run "py *name*.py" in the command prompt to test your game! 
+Run "py main.py" in the command prompt to test your game! 
 
 
 ## Challenge 1: Player Tail
@@ -530,4 +531,5 @@ Make sure to update the draw method to draw in all of the evil coins aswell!
         for coin in self.evilCoins:
             coin.draw(display)
 ```
+
 
