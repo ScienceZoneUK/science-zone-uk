@@ -1,154 +1,210 @@
-# 🧠 **Tkinter Calculator **
+Calculator
+---
+
+# 🧱 **Step-by-Step Breakdown With Full Code Blocks**
 
 ---
 
-## ✅ **1. Importing Tkinter**
+# ✅ **Step 1 — Imports**
+
+### **Code Block**
 
 ```python
 import tkinter as tk
 from tkinter import ttk
 ```
 
-* `tkinter` provides the GUI tools.
-* `ttk` provides nicer, modern-looking widgets.
+### **Explanation**
+
+* `import tkinter as tk` loads Tkinter and shortens the name to `tk`.
+* `from tkinter import ttk` imports themed widgets such as `ttk.Button`.
+* These two lines load everything needed for the GUI.
 
 ---
 
-## ✅ **2. Creating the Calculator Class**
+# ✅ **Step 2 — Calculator Class Definition**
+
+### **Code Block**
 
 ```python
 class Calculator(tk.Tk):
 ```
 
-* This makes a **window** that *is itself* a Tkinter app.
-* We extend `tk.Tk` to build everything into one object.
+### **Explanation**
+
+* Creates a new class named `Calculator`.
+* It **inherits** from `tk.Tk`, meaning the class *is* a Tkinter window.
 
 ---
 
-## ✅ **3. Window Setup**
+# ✅ **Step 3 — Constructor (**init**)**
+
+### **Full Code Block**
 
 ```python
-self.title("Tkinter Calculator")
-self.geometry("300x400")
-self.resizable(False, False)
+def __init__(self):
+    super().__init__()
+    self.title("Tkinter Calculator")
+    self.geometry("300x400")
+    self.resizable(False, False)
+
+    self.expression = ""
+    self.create_widgets()
 ```
 
-* Sets the window title, size, and prevents resizing.
+### **Explanation**
+
+* `super().__init__()` initializes the Tkinter window.
+* `title()`, `geometry()`, and `resizable()` configure how the window looks.
+* `self.expression = ""` stores all typed numbers/operators.
+* `self.create_widgets()` builds the display and buttons.
 
 ---
 
-## ✅ **4. Expression Variable**
+# ✅ **Step 4 — Display Widget**
+
+### **Full Code Block**
 
 ```python
-self.expression = ""
+self.display = tk.Entry(self, font=("Arial", 20), bd=10, relief=tk.RIDGE, justify="right")
+self.display.pack(fill="both", ipadx=8, ipady=8, pady=10)
 ```
 
-* This stores what the user types (like “45+3*2”).
+### **Explanation**
+
+* Creates a large text entry box for showing input and results.
+* `justify="right"` makes it behave like a real calculator display.
+* `.pack()` places it at the top and stretches it across the window.
 
 ---
 
-## ✅ **5. Calculator Display**
+# ✅ **Step 5 — Buttons Frame**
+
+### **Full Code Block**
 
 ```python
-self.display = tk.Entry(...)
+buttons_frame = tk.Frame(self)
+buttons_frame.pack(expand=True, fill="both")
 ```
 
-* The display is just a big text entry box.
-* `justify="right"` makes numbers align like a real calculator.
-* The display holds the **current expression** or the **result**.
+### **Explanation**
+
+* Creates a container (`Frame`) to hold all calculator buttons.
+* `.pack(expand=True)` allows the frame to grow.
 
 ---
 
-## ✅ **6. Buttons Layout System**
+# ✅ **Step 6 — Button Definitions List**
 
-A list defines **text**, **row**, and **column**:
+### **Full Code Block**
 
 ```python
 buttons = [
-    ("7", 0, 0), ("8", 0, 1), ...
+    ("7", 0, 0), ("8", 0, 1), ("9", 0, 2), ("/", 0, 3),
+    ("4", 1, 0), ("5", 1, 1), ("6", 1, 2), ("*", 1, 3),
+    ("1", 2, 0), ("2", 2, 1), ("3", 2, 2), ("-", 2, 3),
+    ("0", 3, 0), (".", 3, 1), ("=", 3, 2), ("+", 3, 3),
+    ("C", 4, 0)
+]
 ```
 
-Each button uses:
+### **Explanation**
 
-```python
-ttk.Button(..., command=lambda t=text: self.on_button_click(t))
-```
-
-💡 The lambda is important — it sends the button’s text to `on_button_click`.
-
-Buttons are placed using `.grid()` and the frame rows/columns expand using:
-
-```python
-buttons_frame.rowconfigure(...)
-buttons_frame.columnconfigure(...)
-```
+* Each tuple defines:
+  **(text_on_button, row_number, column_number)**
+* This is how you build the grid layout.
 
 ---
 
-## ✅ **7. Button Behavior — The Calculator Brain**
+# ✅ **Step 7 — Creating Each Button**
 
-Everything happens inside:
+### **Full Code Block**
+
+```python
+for (text, row, col) in buttons:
+    button = ttk.Button(buttons_frame, text=text, command=lambda t=text: self.on_button_click(t))
+    button.grid(row=row, column=col, sticky="nsew", padx=2, pady=2)
+```
+
+### **Explanation**
+
+* Loops through each button definition.
+* Creates a button with the correct label (`text`).
+* `command=lambda t=text:` ensures the button sends **its own text** to the handler.
+* `.grid()` places buttons into rows & columns.
+* `sticky="nsew"` makes each button stretch to fill its grid cell.
+
+---
+
+# ✅ **Step 8 — Making Rows & Columns Expandable**
+
+### **Full Code Block**
+
+```python
+for i in range(5):
+    buttons_frame.rowconfigure(i, weight=1)
+for i in range(4):
+    buttons_frame.columnconfigure(i, weight=1)
+```
+
+### **Explanation**
+
+* Makes the 5 rows and 4 columns scale evenly.
+* Without these, buttons would not resize properly.
+
+---
+
+# ✅ **Step 9 — Button Click Handler**
+
+### **Full Code Block**
 
 ```python
 def on_button_click(self, char):
+    if char == "C":
+        self.expression = ""
+        self.display.delete(0, tk.END)
+    elif char == "=":
+        try:
+            result = str(eval(self.expression))
+            self.display.delete(0, tk.END)
+            self.display.insert(tk.END, result)
+            self.expression = result
+        except Exception:
+            self.display.delete(0, tk.END)
+            self.display.insert(tk.END, "Error")
+            self.expression = ""
+    else:
+        self.expression += str(char)
+        self.display.delete(0, tk.END)
+        self.display.insert(tk.END, self.expression)
 ```
 
-### ▶️ **A. Clear Button ("C")**
+### **Explanation**
 
-```python
-if char == "C":
-    self.expression = ""
-    self.display.delete(0, tk.END)
-```
+#### 🔹 **If user presses “C”**
 
-* Wipes both the visible display and the internal expression.
+* Clears the expression and display.
 
----
+#### 🔹 **If user presses “=”**
 
-### ▶️ **B. Equals ("=") Button**
+* Uses `eval()` to compute the math.
+* Shows the result.
+* Stores the result to continue calculating.
+* If invalid → shows `"Error"`.
 
-```python
-elif char == "=":
-    try:
-        result = str(eval(self.expression))
-```
+#### 🔹 **Otherwise (numbers or + - * / . )**
 
-* Evaluates the expression using `eval()`.
-* Writes the result in the display.
-* Stores the result so the user can continue calculating.
-
-If the expression is invalid:
-
-```python
-self.display.insert(tk.END, "Error")
-```
-
----
-
-### ▶️ **C. Any Other Button (numbers/operators)**
-
-```python
-else:
-    self.expression += str(char)
-    self.display.delete(0, tk.END)
-    self.display.insert(tk.END, self.expression)
-```
-
-* Adds the button text to the expression.
+* Adds the pressed character to `self.expression`.
 * Updates the display.
 
 ---
 
-## ✅ **8. Starting the App**
+# ✅ **Step 10 — Program Entry Point**
+
+### **Full Code Block**
 
 ```python
 if __name__ == "__main__":
     app = Calculator()
     app.mainloop()
 ```
-
-* Creates the `Calculator` object.
-* Starts the main Tkinter event loop (keeps the window open).
-
----
-
