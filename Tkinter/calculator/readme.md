@@ -1,4 +1,4 @@
-Calculator
+# Calculator
 ---
 
 # 🧱 **Step-by-Step Breakdown With Full Code Blocks**
