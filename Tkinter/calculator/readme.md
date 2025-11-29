@@ -271,7 +271,5 @@ class Calculator(tk.Tk):
 if __name__ == "__main__":
     app = Calculator()
     app.mainloop()
-<img width="468" height="637" alt="image" src="https://github.com/user-attachments/assets/2a5cf1bd-c4b2-474d-9094-f60a1b3c5bf3" />
-
 
 ```
