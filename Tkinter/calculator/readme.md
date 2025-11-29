@@ -39,7 +39,7 @@ class Calculator(tk.Tk):
 
 # ✅ **Step 3 — Constructor (**init**)**
 
-### **Full Code Block**
+
 
 ```python
 def __init__(self):
@@ -63,7 +63,7 @@ def __init__(self):
 
 # ✅ **Step 4 — Display Widget**
 
-### **Full Code Block**
+
 
 ```python
 self.display = tk.Entry(self, font=("Arial", 20), bd=10, relief=tk.RIDGE, justify="right")
@@ -80,7 +80,7 @@ self.display.pack(fill="both", ipadx=8, ipady=8, pady=10)
 
 # ✅ **Step 5 — Buttons Frame**
 
-### **Full Code Block**
+
 
 ```python
 buttons_frame = tk.Frame(self)
@@ -96,7 +96,7 @@ buttons_frame.pack(expand=True, fill="both")
 
 # ✅ **Step 6 — Button Definitions List**
 
-### **Full Code Block**
+
 
 ```python
 buttons = [
@@ -118,7 +118,7 @@ buttons = [
 
 # ✅ **Step 7 — Creating Each Button**
 
-### **Full Code Block**
+
 
 ```python
 for (text, row, col) in buttons:
@@ -138,7 +138,7 @@ for (text, row, col) in buttons:
 
 # ✅ **Step 8 — Making Rows & Columns Expandable**
 
-### **Full Code Block**
+
 
 ```python
 for i in range(5):
@@ -156,7 +156,7 @@ for i in range(4):
 
 # ✅ **Step 9 — Button Click Handler**
 
-### **Full Code Block**
+
 
 ```python
 def on_button_click(self, char):
@@ -201,7 +201,7 @@ def on_button_click(self, char):
 
 # ✅ **Step 10 — Program Entry Point**
 
-### **Full Code Block**
+
 
 ```python
 if __name__ == "__main__":
