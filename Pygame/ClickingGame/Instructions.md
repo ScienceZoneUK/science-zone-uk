@@ -2,7 +2,7 @@
 
 You will be making a clicking game, like cookie clicker.. maybe.
 
-<img width="500" height="673" alt="image" src="https://github.com/user-attachments/assets/1ee24c51-58bd-47a1-9f36-7ee21cfe2860"/>
+<img width="427" height="600" alt="image" src="https://github.com/user-attachments/assets/1ee24c51-58bd-47a1-9f36-7ee21cfe2860"/>
 
 Before you start copying code, we need to make a folder!
 Name it whatever you want but maybe "ClickingGame" so you know what it is.
