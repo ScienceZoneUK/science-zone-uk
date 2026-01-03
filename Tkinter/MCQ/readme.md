@@ -318,14 +318,42 @@ Go back and re-render.
 
 ---
 
-## 11) Submit = scoring + results popup
+## 11) 
+
+## 12) Submit = scoring + results popup
 
 ```python
 def submit(self):
-    score = 0
-    for i, q in enumerate(self.questions):
-        if self.user_answers[i] == q["answer"]:
-            score += 1
+        # Require answers for all questions (optional; you can relax this)
+        if any(a is None or a == -1 for a in self.user_answers):
+            if not messagebox.askyesno("Submit anyway?", "Some questions are unanswered. Submit anyway?"):
+                return
+
+        score = 0
+        for i, q in enumerate(self.questions):
+            if self.user_answers[i] == q["answer"]:
+                score += 1
+
+        self.score = score
+        total = len(self.questions)
+        percent = round((score / total) * 100, 1)
+
+        # Simple review summary
+        review_lines = []
+        for i, q in enumerate(self.questions):
+            ua = self.user_answers[i]
+            correct = q["answer"]
+            ua_txt = q["choices"][ua] if ua is not None and ua != -1 and ua < len(q["choices"]) else "(no answer)"
+            c_txt = q["choices"][correct]
+            mark = "✓" if ua == correct else "✗"
+            review_lines.append(f"{i+1}. {mark} Your: {ua_txt} | Correct: {c_txt}")
+
+        messagebox.showinfo(
+            "Result",
+            f"Score: {score}/{total} ({percent}%)\n\n" + "\n".join(review_lines[:12]) +
+            ("\n...\n(only first 12 shown)" if len(review_lines) > 12 else "")
+        )
+
 ```
 
 * It compares user answers vs correct answer index
@@ -341,7 +369,7 @@ It also builds a small “review” list (your answer vs correct).
 
 ---
 
-## 12) Reset button
+## 13) Reset button
 
 ```python
 def reset(self):
@@ -355,7 +383,7 @@ Starts everything over.
 
 ---
 
-## 13) Starting the app
+## 14) Starting the app
 
 ```python
 if __name__ == "__main__":
