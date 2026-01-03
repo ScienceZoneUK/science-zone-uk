@@ -173,8 +173,11 @@ Key idea:
 ### Title + progress
 
 ```python
-self.header = tk.Label(...)
-self.progress = tk.Label(...)
+self.header = tk.Label(self, text="Quiz", font=("Arial", 18, "bold"))
+self.header.pack(pady=(14, 8))
+
+self.progress = tk.Label(self, text="", font=("Arial", 11))
+self.progress.pack()
 ```
 
 * Header shows app title
