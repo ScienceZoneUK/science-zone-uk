@@ -216,10 +216,22 @@ Important:
 ## 7) Navigation buttons (Previous / Next / Submit / Reset)
 
 ```python
-self.prev_btn = tk.Button(..., command=self.prev_question)
-self.next_btn = tk.Button(..., command=self.next_question)
-self.submit_btn = tk.Button(..., command=self.submit)
-self.reset_btn = tk.Button(..., command=self.reset)
+self.buttons = tk.Frame(self)
+        self.buttons.pack(pady=14)
+
+        self.prev_btn = tk.Button(self.buttons, text="Previous", width=12, command=self.prev_question)
+        self.prev_btn.grid(row=0, column=0, padx=6)
+
+        self.next_btn = tk.Button(self.buttons, text="Next", width=12, command=self.next_question)
+        self.next_btn.grid(row=0, column=1, padx=6)
+
+        self.submit_btn = tk.Button(self.buttons, text="Submit", width=12, command=self.submit)
+        self.submit_btn.grid(row=0, column=2, padx=6)
+
+        self.reset_btn = tk.Button(self.buttons, text="Reset", width=12, command=self.reset)
+        self.reset_btn.grid(row=0, column=3, padx=6)
+
+        self.render()
 ```
 
 Each button calls a function that updates state and redraws the UI.
