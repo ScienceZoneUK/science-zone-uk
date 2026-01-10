@@ -1,5 +1,5 @@
 
-## 🧮 BMI Calculator (Beginner Friendly)
+## 🧮 BMI Calculator
 
 ### 📘 What is BMI?
 
