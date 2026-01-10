@@ -1,11 +1,3 @@
-Nice choice 👍 **BMI Calculator** is a perfect beginner Tkinter project.
-
-I’ll give you:
-1️⃣ Simple explanation
-2️⃣ Clean beginner-friendly code
-3️⃣ How to upgrade it later
-
----
 
 ## 🧮 BMI Calculator (Beginner Friendly)
 
@@ -116,11 +108,4 @@ python bmi_calculator.py
 
 ---
 
-If you want, I can:
 
-* Explain **each line**
-* Add **better UI**
-* Convert it to **calculator-style layout**
-* Make it **mobile-sized UI**
-
-Just tell me 😄
