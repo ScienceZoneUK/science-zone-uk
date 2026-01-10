@@ -25,7 +25,6 @@
 
 ---
 
-## 🧑‍💻 Complete Tkinter Code
 
 ```python
 import tkinter as tk
