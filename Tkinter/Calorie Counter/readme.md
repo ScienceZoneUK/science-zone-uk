@@ -24,9 +24,9 @@ TDEE: 1748.75 × 1.55 (moderately active) = ~2700 calories.
 
 ## Steps to make it easier
 
-### Take note of the dofferent variables you need
+#### Take note of the dofferent variables you need
 
-### Find a way you can take the TDEE from the usere to know what group they belong in
+#### Find a way you can take the TDEE from the usere to know what group they belong in
 
 
 
