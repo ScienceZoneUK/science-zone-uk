@@ -16,7 +16,7 @@ Lightly Active: BMR × 1.375 (light exercise 1-3 days/week)
 Moderately Active: BMR × 1.55 (moderate exercise 3-5 days/week)
 Very Active: BMR × 1.725 (hard exercise 6-7 days/week)
 Extra Active: BMR × 1.9 (very hard exercise or physical job) 
-### 3. Adjust for Weight Goals (Optional)
+### 3. Adjust for Weight Goals
 To lose weight: Aim for a deficit, like 500 calories less than your TDEE daily to lose about 1 pound (0.45 kg) per week. 
 ### Example Calculation (Male, 30 years, 175cm, 80kg, Moderately Active)
 BMR: (10 × 80) + (6.25 × 175) – (5 × 30) + 5 = 800 + 1093.75 – 150 + 5 = 1748.75 calories.
