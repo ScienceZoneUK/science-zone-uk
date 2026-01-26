@@ -1,3 +1,5 @@
+# this isn't brilliant code tbh, ask me (dan) if you wanna know how i would improve it.
+
 import tkinter
 from time import strftime
 
@@ -66,3 +68,4 @@ autoclicker_button.pack(fill = "both", expand = False)
 autoclicker_button.config(text = "buy autoclicker (" + str(autoclickers) + ")")
     
 root.mainloop()
+
