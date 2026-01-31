@@ -4,9 +4,16 @@ avoid retyping those algorithms programmers use this thing we call subroutines o
 This helps the code to be more easy to read quicker to type and neater etc. Here is how you define a function in 
 python 
 
+## How to define a subroutine 
 ```python
 
 def my_sub():
-  pass
+  print("Hello World)
 
+```
+## How to call a subroutine
+Before you can use a subroutine you'll have to call it to call it you will use the name of the subroutine then the 
+
+```python
+my_sub()
 ```
