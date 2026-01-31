@@ -1,4 +1,4 @@
-# These Classes should cover for the following classes that should cover for February 20th and February 21st 
+# These Classes should cover for the following sessions : February 20th and February 21st 
 
 ## Objectives of the student
 * To solidify knowledge on the syntax rules
