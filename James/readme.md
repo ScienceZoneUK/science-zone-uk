@@ -3,7 +3,7 @@
 ## Objectives of the student
 * To solidify knowledge on the syntax rules
 * To know when to use coditional statements(selection)
-* implement boolean rules
-* understand subroutines(Functions)
-* learn to use parameters in subroutine
-* 
+* Implement boolean rules
+* Understand subroutines(Functions)
+* Learn to use parameters in subroutine
+  
