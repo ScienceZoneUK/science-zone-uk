@@ -17,3 +17,11 @@ Before you can use a subroutine you'll have to call it to call it you will use t
 ```python
 my_sub()
 ```
+
+## Task 1
+* Call a subroutine that prints “Hello, world”
+* Call the same subroutine three times
+* Predict the output of a program that calls multiple subroutines
+* Change the order of subroutine calls and observe what changes
+
+
