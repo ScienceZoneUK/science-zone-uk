@@ -19,7 +19,8 @@ small_font = pygame.font.Font(None, 24)
 # Colors
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
-GREEN = (125, 11, 74)
+WINE = (125, 11, 74)
+GREEN = (34, 139, 34)
 DARK_GREEN = (82, 5, 47)
 RED = (220, 20, 60)
 BLUE = (30, 144, 255)
@@ -29,9 +30,9 @@ PURPLE = (138, 43, 226)
 GRAY = (100, 100, 100)
 
 # The path enemies follow
-path = [(50, 100), (200, 100), (200, 300), (400, 300),
-        (400, 150), (600, 150), (600, 400), (800, 400),
-        (800, 200), (950, 200)]
+path = [(50, 100), (400, 100), (400, 250),
+        (150, 250), (150, 400), (500, 400),
+        (500, 550), (950, 550)]
 
 # ENEMY CLASS
 class Enemy:
@@ -207,7 +208,46 @@ def draw_shop(money, selected_type):
         cost_text = small_font.render(f"${cost}", True, YELLOW if can_afford else RED)
         screen.blit(name_text, (x + 50, button_y + 10))
         screen.blit(cost_text, (x + 50, button_y + 30))
-      
+
+# TUTORIAL SCREEN
+def draw_tutorial():
+    screen.fill((51, 6, 31))
+    
+    # Title
+    title = big_font.render("TOWER DEFENSE", True, YELLOW)
+    screen.blit(title, (WIDTH // 2 - 250, 50))
+    
+    # Instructions
+    instructions = [
+        ("GOAL:", WHITE, 150),
+        ("Stop enemies from reaching the red circle!", WHITE, 190),
+        ("", WHITE, 220),
+        ("HOW TO PLAY:", YELLOW, 250),
+        ("1. Click a tower in the shop", WHITE, 290),
+        ("2. Click on the map to place it", WHITE, 320),
+        ("3. Press SPACE to start the wave", WHITE, 350),
+        ("4. Defeat all enemies!", WHITE, 380),
+        ("", WHITE, 410),
+        ("TOWERS:", BLUE, 440),
+        ("Basic (Blue) - $100: Good all-around tower", WHITE, 480),
+        ("Fast (Orange) - $150: Shoots fast but weak", WHITE, 510),
+        ("Strong (Purple) - $200: Powerful but slow", WHITE, 540),
+    ]
+    
+    for text, color, y in instructions:
+        line = small_font.render(text, True, color)
+        screen.blit(line, (100, y))
+    
+    # Start button
+    button = pygame.Rect(WIDTH // 2 - 150, HEIGHT - 100, 300, 60)
+    pygame.draw.rect(screen, GREEN, button)
+    pygame.draw.rect(screen, WHITE, button, 3)
+    
+    start_text = font.render("CLICK TO START", True, WHITE)
+    screen.blit(start_text, (WIDTH // 2 - 120, HEIGHT - 85))
+    
+    return button
+
 # MAIN GAME
 def main():
     # Game variables
@@ -291,11 +331,15 @@ def main():
                     enemies = []
                     wave_active = False
                     game_over = False
-                    #
+                    show_tutorial = True
                     enemies_to_spawn = 10
                     enemies_spawned = 0
         
         # Show tutorial (OPTIONAL - can be removed)
+        if show_tutorial:
+            draw_tutorial()
+            pygame.display.flip()
+            continue
         
         # Game logic
         if not game_over:
