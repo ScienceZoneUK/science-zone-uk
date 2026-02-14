@@ -41,7 +41,7 @@ How to resize a text
 <h1 style="font-size:60px;">Heading 1</h1>
 ```
 
-# Challenge
+# Headings Challenge
 
 ## Instructions
 - Inside the editor, complete the following steps:
