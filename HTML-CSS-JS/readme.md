@@ -22,5 +22,5 @@ Connecting a CSS file
 
 # Creating a JavaScript file
 
-A JavaScript file 
+When creating a JavaScript file (filename.js)
 
