@@ -19,3 +19,6 @@ When building a site with html it is important to have this structure down
 
 A CSS file is saved as a (file_name.css)
 Connecting a CSS file
+
+# Creating a Java Script file
+
