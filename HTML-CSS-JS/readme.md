@@ -68,3 +68,11 @@ How to resize a text
 - Set the text-align of the `<p>` to center
 - Set the font-size of the `<p>` to 20px
 
+```html
+
+<h1 style="background-color:DodgerBlue;">Hello World</h1>
+<p style="background-color:Tomato;">Lorem ipsum...</p>
+
+```
+
+
