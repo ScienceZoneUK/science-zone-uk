@@ -7,4 +7,4 @@
 
 ## Create a simple Calculator Using tkinter
 ## Requirements
-- The calculator should be able to add , substract and 
+- The calculator should be able to add , substract , multiply and divide
