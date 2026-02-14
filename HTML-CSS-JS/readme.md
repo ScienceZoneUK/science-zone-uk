@@ -61,3 +61,10 @@ How to resize a text
 <p style="font-family:courier;">This is a paragraph.</p>
 ```
 
+<h3> Inside the editor, complete the following steps:
+- Set the background color of the <body> to powderblue
+- Set the text color of the <h1> to blue
+- Set the font-family of the <h1> to verdana
+- Set the text-align of the <p> to center
+- Set the font-size of the <p> to 20px
+
