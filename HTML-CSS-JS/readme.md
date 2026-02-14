@@ -1,4 +1,4 @@
-HTML
+# HTML
 When building a site with html it is important to have this structure down
 ```html
 <!DOCTYPE html>
@@ -15,6 +15,7 @@ When building a site with html it is important to have this structure down
 </html>
 
 ```
-Connecting a CSS file
+# Creating a CSS File
 
 A CSS file is saved as a (file_name.css)
+Connecting a CSS file
