@@ -8,8 +8,8 @@ When building a site with html it is important to have this structure down
 </head>
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<h1></h1>
+<p></p>
 
 </body>
 </html>
