@@ -15,3 +15,4 @@ When building a site with html it is important to have this structure down
 </html>
 
 ```
+connecting a CSS file
