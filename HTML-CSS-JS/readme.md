@@ -51,3 +51,13 @@ How to resize a text
 - Change the text My Hobbies to use an `<h2>` heading
 - Change the text Photography to use an `<h3>` heading
 
+```html
+<h1 style="color:blue;">This is a heading</h1>
+<p style="color:red;">This is a paragraph.</p>
+```
+
+```html
+<h1 style="font-family:verdana;">This is a heading</h1>
+<p style="font-family:courier;">This is a paragraph.</p>
+```
+
