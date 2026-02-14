@@ -17,4 +17,4 @@ When building a site with html it is important to have this structure down
 ```
 Connecting a CSS file
 
-A CSS file is saved as a (.css)
+A CSS file is saved as a (file_name.css)
