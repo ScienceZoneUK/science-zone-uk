@@ -25,3 +25,55 @@ my_sub()
 * Change the order of subroutine calls and observe what changes
 
 
+
+```python
+
+balance = 1000  # Starting balance
+
+def show_menu():
+    print("\n--- ATM MENU ---")
+    print("1. Check Balance")
+    print("2. Deposit Money")
+    print("3. Withdraw Money")
+    print("4. Exit")
+
+def check_balance():
+    global balance
+    print("Your current balance is:", balance)
+
+def deposit_money():
+    global balance
+    amount = float(input("Enter amount to deposit: "))
+    balance += amount
+    print("Deposit successful!")
+
+def withdraw_money():
+    global balance
+    amount = float(input("Enter amount to withdraw: "))
+    if amount <= balance:
+        balance -= amount
+        print("Withdrawal successful!")
+    else:
+        print("Insufficient funds!")
+
+# Main program
+while True:
+    show_menu()
+    choice = input("Choose an option: ")
+
+    if choice == "1":
+        check_balance()
+    elif choice == "2":
+        deposit_money()
+    elif choice == "3":
+        withdraw_money()
+    elif choice == "4":
+        print("Thank you for using the ATM.")
+        break
+    else:
+        print("Invalid choice. Try again.")
+
+
+```
+
+
