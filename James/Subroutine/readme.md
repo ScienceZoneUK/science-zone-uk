@@ -25,7 +25,7 @@ my_sub()
 * Change the order of subroutine calls and observe what changes
 
 
-## Task2 
+## Task2 Upgrade the code Below
 
 ```python
 
@@ -76,5 +76,7 @@ while True:
 
 
 ```
+* Add PIN verification
 
+* Prevent negative deposits
 
