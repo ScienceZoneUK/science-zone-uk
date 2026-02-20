@@ -25,7 +25,7 @@ my_sub()
 * Change the order of subroutine calls and observe what changes
 
 
-## Task2 Upgrade the code Below
+## Task2 Upgrade the code below
 
 ```python
 
