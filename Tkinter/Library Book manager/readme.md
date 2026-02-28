@@ -1,4 +1,13 @@
 
+This code builds a **simple Library Book Manager desktop application** using:
+
+* `sqlite3` → for the database
+* `tkinter` → for the graphical user interface (GUI)
+* `ttk` → for styled widgets like tables and comboboxes
+
+It lets you **add, view, update, delete, and search books** stored in a local database file.
+
+---
 # Basic Requirements
 
 ```python
@@ -10,6 +19,43 @@ from tkinter import ttk, messagebox
 root.mainloop()
 
 ```
+
+
+# 1️⃣ Database Setup
+
+```python
+conn = sqlite3.connect("library.db")
+cursor = conn.cursor()
+```
+
+* Creates (or opens) a SQLite database file named **library.db**
+* `cursor` is used to execute SQL commands
+
+### Table Creation XDo not copy this bit its a breakdown of the code you'll see ahead
+
+```sql
+CREATE TABLE IF NOT EXISTS books (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    author TEXT NOT NULL,
+    year INTEGER,
+    status TEXT DEFAULT 'Available'
+)
+```
+
+This creates a table called `books` with:
+
+| Column   | Purpose                                         |
+| -------- | ----------------------------------------------- |
+| `id`     | Unique ID (auto-incremented)                    |
+| `title`  | Book title (required)                           |
+| `author` | Author name (required)                          |
+| `year`   | Publication year                                |
+| `status` | "Available" or "Borrowed" (default = Available) |
+
+---
+
+
 ```python
 import sqlite3
 import tkinter as tk
@@ -35,6 +81,93 @@ conn.commit()
 root.mainloop()
 
 ```
+
+# 2️⃣ Core Functions (App Logic)
+
+## ➕ `add_book()`
+
+* Validates that Title and Author are not empty.
+* Inserts a new book into the database.
+* Refreshes the table.
+* Clears input fields.
+
+Uses parameterized SQL:
+
+```python
+VALUES (?, ?, ?, ?)
+```
+
+This prevents SQL injection.
+
+---
+
+## 👀 `view_books()`
+
+* Clears all rows from the table widget.
+* Fetches all records from the database.
+* Inserts them into the Treeview.
+
+This keeps the UI synced with the database.
+
+---
+
+## ❌ `delete_book()`
+
+* Gets selected row from the table.
+* Deletes it from the database using its ID.
+* Refreshes the table.
+
+---
+
+## ✏️ `update_book()`
+
+* Gets selected row ID.
+* Updates that record with new values from input fields.
+* Refreshes the table.
+
+---
+
+## 🔍 `search_book()`
+
+* Clears the table.
+* Searches books where:
+
+  * title contains search text OR
+  * author contains search text
+* Uses SQL `LIKE` with `%` wildcard.
+
+Example:
+
+```sql
+WHERE title LIKE '%text%' OR author LIKE '%text%'
+```
+
+---
+
+## 🖱 `select_book(event)`
+
+Triggered when user clicks a row.
+
+* Gets selected row values
+* Fills the input fields with that row’s data
+* Makes editing easier
+
+---
+
+## 🧹 `clear_fields()`
+
+Resets input fields after adding a book.
+
+---
+
+
+
+#  Possible Improvements
+
+You could enhance it by adding:
+
+* Input validation for year (only numbers)
+* Confirmation before deleting
 ```python
 
 # ---------- Functions ----------
@@ -107,6 +240,122 @@ def clear_fields():
 
 
 ```
+# 3️⃣ GUI Setup (Tkinter Interface)
+
+## Main Window
+
+```python
+root = tk.Tk()
+root.title("Library Book Manager")
+root.geometry("800x500")
+```
+
+Creates the main window.
+
+---
+
+## Tkinter Variables
+
+```python
+title_var = tk.StringVar()
+```
+
+These store dynamic values connected to input fields.
+
+Why use them?
+
+* Automatically sync between Entry widgets and variables.
+
+---
+
+## Input Fields
+
+```python
+tk.Entry(root, textvariable=title_var)
+```
+
+* Labels + Entry widgets
+* Status uses `ttk.Combobox` with choices:
+
+  * Available
+  * Borrowed
+
+---
+
+## Buttons
+
+Each button connects to a function:
+
+```python
+tk.Button(root, text="Add Book", command=add_book)
+```
+
+When clicked → function runs.
+
+---
+
+## 📊 Table (Treeview)
+
+```python
+tree = ttk.Treeview(...)
+```
+
+Displays books in a table format.
+
+Columns:
+
+* ID
+* Title
+* Author
+* Year
+* Status
+
+```python
+tree.bind("<ButtonRelease-1>", select_book)
+```
+
+When user clicks a row → `select_book()` runs.
+
+---
+
+# 4️⃣ App Flow
+
+When program starts:
+
+1. Database is created (if not exists)
+2. GUI loads
+3. `view_books()` runs → displays saved books
+4. `root.mainloop()` starts the app event loop
+
+The app stays running until user closes it.
+
+---
+
+# 5️⃣ What This Program Demonstrates
+
+✅ SQLite database integration
+✅ CRUD operations (Create, Read, Update, Delete)
+✅ Search functionality
+✅ Tkinter GUI development
+✅ Event-driven programming
+✅ Parameterized SQL (secure queries)
+
+---
+
+# 6️⃣ Overall Architecture
+
+```
+User Action → Button Click → Function → SQL Query → Refresh Table
+```
+
+The GUI and database are tightly connected:
+
+* GUI updates database
+* Database updates GUI
+
+---
+
+
 ```python
 
 
