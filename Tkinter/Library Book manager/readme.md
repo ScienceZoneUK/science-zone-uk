@@ -3,6 +3,15 @@ import sqlite3
 import tkinter as tk
 from tkinter import ttk, messagebox
 
+
+root.mainloop()
+
+```
+```python
+import sqlite3
+import tkinter as tk
+from tkinter import ttk, messagebox
+
 # ---------- Database Setup ----------
 conn = sqlite3.connect("library.db")
 cursor = conn.cursor()
@@ -17,6 +26,13 @@ CREATE TABLE IF NOT EXISTS books (
 )
 """)
 conn.commit()
+
+
+
+root.mainloop()
+
+```
+```python
 
 # ---------- Functions ----------
 
@@ -85,6 +101,11 @@ def clear_fields():
     author_var.set("")
     year_var.set("")
     status_var.set("Available")
+
+
+```
+```python
+
 
 # ---------- GUI Setup ----------
 
