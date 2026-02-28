@@ -162,12 +162,7 @@ Resets input fields after adding a book.
 
 
 
-#  Possible Improvements
 
-You could enhance it by adding:
-
-* Input validation for year (only numbers)
-* Confirmation before deleting
 ```python
 
 # ---------- Functions ----------
@@ -405,7 +400,13 @@ view_books()
 root.mainloop()
 
 ```
+#  Possible Improvements
 
+You could enhance it by adding:
+
+* Input validation for year (only numbers)
+* Confirmation before deleting
+  
 
 <!---
 ```python
