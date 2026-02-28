@@ -329,12 +329,12 @@ The app stays running until user closes it.
 
 # 5️⃣ What This Program Demonstrates
 
-✅ SQLite database integration
-✅ CRUD operations (Create, Read, Update, Delete)
-✅ Search functionality
-✅ Tkinter GUI development
-✅ Event-driven programming
-✅ Parameterized SQL (secure queries)
+* ✅ SQLite database integration
+* ✅ CRUD operations (Create, Read, Update, Delete)
+* ✅ Search functionality
+* ✅ Tkinter GUI development
+* ✅ Event-driven programming
+* ✅ Parameterized SQL (secure queries)
 
 ---
 
