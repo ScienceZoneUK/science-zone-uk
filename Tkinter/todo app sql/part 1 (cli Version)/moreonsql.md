@@ -15,7 +15,7 @@ SELECT * FROM sales;
 ```
 
 **Explanation:**  
-Shows all rows and columns in the table. Perfect as a first step so students can see the dataset’s structure.  
+Shows all rows and columns in the table.  
 (Dataset sourced from *sales.csv*.) [\[sales \| Excel\]](https://chamberlayneorg-my.sharepoint.com/personal/fonwuchekwa_westonsecondary_co_uk/_layouts/15/Doc.aspx?sourcedoc=%7BE1B65BC7-444D-41F3-983E-16434C04903D%7D&file=sales.csv&action=default&mobileredirect=true)
 
 ***
@@ -41,7 +41,7 @@ FROM sales;
 ```
 
 **Explanation:**  
-Helps students understand date range.  
+Helps understand date range.  
 (This dataset ranges from 2010‑02‑02 to 2017‑05‑22.) 
 
 ***
