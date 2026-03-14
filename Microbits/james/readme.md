@@ -19,10 +19,10 @@ input.on_gesture(Gesture.SHAKE, on_gesture_shake)
 ```
 # Task one 
 Given that the code below displays something on the screen 
-'''python
+```python
  basic.showString("Hello!")
 
-'''
+```
 Create a dice using this code
 
 Make a list of random tasks and make the computer decide what task to show depending on the number selected
