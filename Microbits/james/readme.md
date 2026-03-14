@@ -1,5 +1,5 @@
 
-# Understanding Conditional Staements/ Selection in Python
+# Understanding Conditional Statements/ Selection in Python
 ```python
 
 number = 0
