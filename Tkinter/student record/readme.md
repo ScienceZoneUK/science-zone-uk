@@ -198,9 +198,7 @@ ID,Name,Grade
 
 ---
 
-# 🧱 Full Python Project Using `.txt`
-
-Here’s a clean working version:
+# Student Record app
 
 ```python
 FILE_NAME = "students.txt"
