@@ -233,7 +233,8 @@ def view_students():
                 print(f"ID: {student_id} | Name: {name} | Grade: {grade}")
     except FileNotFoundError:
         print("File not found.")
-
+```
+```python
 # Search student
 def search_student():
     student_id = input("Enter ID to search: ")
@@ -246,7 +247,8 @@ def search_student():
                 return
 
     print("❌ Student not found.")
-
+```
+```python
 # Delete student
 def delete_student():
     student_id = input("Enter ID to delete: ")
@@ -267,7 +269,8 @@ def delete_student():
         print("🗑️ Student deleted.")
     else:
         print("❌ Student not found.")
-
+```
+```python
 # Menu
 def menu():
     while True:
