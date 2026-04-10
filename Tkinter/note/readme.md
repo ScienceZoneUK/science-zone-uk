@@ -81,7 +81,28 @@ main()
 Once this works, you can level it up:
 
 * Add **timestamps** to notes
-  
+
+To make a time
+
+```python
+from datetime import datetime
+```
+
+```python
+
+def write_note():
+    note = input("Write your note: ")
+    
+    # Get current date and time
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    with open("notes.txt", "a") as file:
+        file.write(f"[{timestamp}] {note}\n")
+    
+    print("✅ Note saved with timestamp!\n")
+
+
+```
 * Delete a specific note
 
 * Build a **GUI app** using `tkinter`
