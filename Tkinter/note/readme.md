@@ -17,7 +17,7 @@ This project lets you:
 
 ---
 
-## 🧑‍💻 Code
+## Step 1 🧑‍💻 Code
 
 ```python
 def write_note():
@@ -76,7 +76,7 @@ main()
 
 ---
 
-## 🚀 Ideas to upgrade it
+## Step 2
 
 Once this works, you can level it up:
 
