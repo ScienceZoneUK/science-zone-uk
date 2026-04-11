@@ -104,5 +104,6 @@ def write_note():
 
 ```
 * Delete a specific note
+Using the delete method from the last class
 
 * Build a **GUI app** using `tkinter`
