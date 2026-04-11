@@ -19,6 +19,8 @@ This project lets you:
 
 ## Step 1 🧑‍💻 Code
 
+### The Function Blue Print
+
 ```python
 def write_note():
     note = input("Write your note: ")
