@@ -1,4 +1,4 @@
-Python function exercises 
+# Python function exercises 
 
 1. Hello Function
     Write a function greet() that prints "Hello, student!".
@@ -18,7 +18,7 @@ Python function exercises
 ⸻
 <br></br>
 
-Lists + Functions (8–14)
+# Lists + Functions (8–14)
 
 8. Find the Sum of a List
     Write a function list_sum(numbers) that returns the total.
