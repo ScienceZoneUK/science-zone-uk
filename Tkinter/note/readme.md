@@ -127,7 +127,7 @@ Using the delete method from the last class
 ⸻
 <br></br>
 
-# Lists + Functions (8–14)
+# Lists + Functions (8–10)
 
 8. Find the Sum of a List
     Write a function list_sum(numbers) that returns the total.
