@@ -20,8 +20,6 @@ Write a program that tries to open `data.txt`. If it doesn’t exist, print `"Fi
 **7. Close the File Properly**
 Rewrite code that uses `open()` so it properly closes the file using `with`.
 
----
-
 
 **8. Write to a File**
 Ask the user for their name and write it to `name.txt`.
