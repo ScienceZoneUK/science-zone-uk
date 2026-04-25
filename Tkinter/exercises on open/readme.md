@@ -33,32 +33,5 @@ Read from `source.txt` and write the contents into `copy.txt`.
 **11. Count Specific Word**
 Count how many times the word `"Python"` appears in a file.
 
-**12. Find Longest Line**
-Find and print the longest line in a file.
-
-**13. Remove Blank Lines**
-Read a file and print only the non-empty lines.
-
-**14. Uppercase File Content**
-Read a file and print all content in uppercase.
-
-
-**15. Sum Numbers from File**
-Given a file with one number per line, calculate the total sum.
-
-**16. Average of Numbers**
-Extend the previous task to calculate the average.
-
-**17. Handle Invalid Data**
-Modify the number-reading program to skip lines that are not valid numbers.
-
-
-
-**18. Create a Simple Log Writer**
-Write a program that asks the user for messages and appends them to `log.txt` with a new line each time.
-
-**19. Reverse File Content**
-Read a file and print its lines in reverse order.
-
-**20. Simple Search Tool**
+ple Search Tool**
 Ask the user for a word, then search for it in a file and print all lines containing that word.
