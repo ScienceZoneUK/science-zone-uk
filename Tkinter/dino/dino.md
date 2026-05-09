@@ -102,6 +102,7 @@ def game_loop():
     if obs[2] < 0:
         canvas.move(obstacle, WIDTH, 0)
 ```
+# Collision PHysics
 ```python
     # Collision detection
     overlap = not (
