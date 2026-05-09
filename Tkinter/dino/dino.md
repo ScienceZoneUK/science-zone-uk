@@ -40,7 +40,7 @@ velocity_y = 0
 gravity = 1
 jumping = False
 ```
-```
+```python
 # Obstacle
 obstacle = canvas.create_rectangle(
     700, 220, 740, 250,
