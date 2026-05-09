@@ -36,6 +36,7 @@ dino_photo = ImageTk.PhotoImage(dino_image)
 # Create Dino
 dino = canvas.create_image(70, 225, image=dino_photo)
 ```
+# Physics
 ```python
 velocity_y = 0
 gravity = 1
