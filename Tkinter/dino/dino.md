@@ -16,13 +16,14 @@ canvas.pack()
 root.mainloop()
 ```
 
-
+# Setting up the ground
 ```python
 
 
 # Ground
 canvas.create_line(0, GROUND_Y, WIDTH, GROUND_Y, width=2)
 ```
+# Setting up the Dino
 ```python
 # Load Dino PNG
 dino_image = Image.open("dino.png")
