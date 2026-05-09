@@ -1,3 +1,4 @@
+#Setting up the Window
 ```python
 import tkinter as tk
 from PIL import Image, ImageTk
