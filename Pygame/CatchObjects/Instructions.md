@@ -155,3 +155,12 @@ Try making the basket a different size per level, do you make it harder or easie
 
 ## Challenge 3 - Object overload!
 Make more objects spawn per level, how chaotic can you make it!
+
+## Challenge 4 - Speed controller
+Make the objects fall faster as the score increases.
+
+## Challenge 5 - Points for different colours
+Assign different points to each colour, eg; red = 5, green = 10 etc.
+
+## Challenge 6 - Power-up!
+Add a special object (like a star) that makes the basket bigger for 5 or 10 seconds
