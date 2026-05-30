@@ -72,15 +72,3 @@ else:
 
 ---
 
-### Skills You'll Learn
-
-* Working with REST APIs
-* Sending HTTP requests
-* Parsing JSON data
-* Functions and modules
-* Error handling
-* GUI development (if using Tkinter)
-* Web development (if using Flask)
-
----
-
