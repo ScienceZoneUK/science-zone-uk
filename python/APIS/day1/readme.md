@@ -1,3 +1,6 @@
+# Today you would be doing  some projects with API
+
+
 A **Weather App** is one of the best intermediate Python projects because it teaches APIs, JSON, error handling, and user interfaces.
 
 ### Features
