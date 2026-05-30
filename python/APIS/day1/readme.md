@@ -2,7 +2,6 @@ A **Weather App** is one of the best intermediate Python projects because it tea
 
 ### Features
 
-**Basic Version**
 
 * Enter a city name
 * Fetch current weather
@@ -13,16 +12,6 @@ A **Weather App** is one of the best intermediate Python projects because it tea
   * Humidity
   * Wind speed
 
-**Advanced Version**
-
-* 5-day forecast
-* Weather icons
-* Search history
-* GPS/location support
-* Graphs and charts
-* Desktop GUI or web interface
-
----
 
 ### Technologies
 
@@ -95,12 +84,3 @@ else:
 
 ---
 
-### Resume Upgrade Ideas
-
-1. Add a 7-day forecast.
-2. Create a modern GUI using Tkinter.
-3. Build a web version with Flask.
-4. Add weather charts using Matplotlib.
-5. Deploy online using [Render](https://render.com?utm_source=chatgpt.com) or [PythonAnywhere](https://www.pythonanywhere.com?utm_source=chatgpt.com).
-
-A Flask-based weather dashboard with search, forecasts, and charts is a strong portfolio project for internships and entry-level Python roles.
