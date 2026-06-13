@@ -117,7 +117,7 @@ Add basic styling:
 
 ---
 
-# ⚛️ Version 3: React Version (Optional Upgrade)
+# ⚛️ Version 3: React Version (Optional Upgrade) Actually don't do this but if you manage to get it right on you get #10 next lesson
 
 ```jsx
 import { useState } from "react";
