@@ -1,8 +1,5 @@
-Here’s a clean, beginner-friendly **Random Joke Generator API project** you can build step by step.
 
----
-
-# 😂 Random Joke Generator (API Project)
+#  Random Joke Generator (API Project)
 
 ## 🎯 Goal
 
@@ -144,41 +141,3 @@ export default function JokeApp() {
 }
 ```
 
----
-
-# 🚀 Stretch Goals (Level Up)
-
-## 🔥 Easy upgrades
-
-* Loading spinner while fetching
-* “Save favorite jokes”
-* Copy joke button
-
-## 🔥 Medium upgrades
-
-* Category filter (tech, programming, general)
-* Auto-refresh joke every 10 seconds
-
-## 🔥 Advanced upgrades
-
-* Joke history list
-* Share to Twitter/X button
-* Backend storage for favorites
-
----
-
-# 🧠 What You Learn
-
-* Working with public APIs
-* Async/await
-* DOM manipulation / React state
-* Handling JSON data
-* Building interactive UI
-
----
-
-If you want next steps, I can:
-
-* turn this into a **mini 3-day challenge plan**
-* add a **backend version (save jokes to database)**
-* or upgrade it into a **full Joke App with favorites + history**
