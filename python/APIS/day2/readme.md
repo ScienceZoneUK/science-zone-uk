@@ -33,6 +33,8 @@ It returns data like:
 }
 ```
 
+
+
 ---
 
 # 🧱 Version 1: HTML + JavaScript (Simple)
@@ -47,7 +49,7 @@ It returns data like:
 </head>
 <body>
 
-  <h1>😂 Joke Generator</h1>
+  <h1>Joke Generator</h1>
 
   <div id="joke">
     Click the button to get a joke!
