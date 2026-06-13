@@ -143,3 +143,96 @@ export default function JokeApp() {
 }
 ```
 
+
+# Now you see how that works in HTML and Javascript Here is the Python bit
+
+
+---
+
+# 🔌 API Used
+
+We’ll use:
+
+👉 [https://official-joke-api.appspot.com/random_joke](https://official-joke-api.appspot.com/random_joke)
+
+---
+
+# 🧰 Install Requirements
+
+You need the `requests` library:
+
+```bash
+pip install requests
+```
+
+---
+
+# 🧪 Version 1: Basic Joke Fetcher
+
+```python id="k3j9aa"
+import requests
+
+url = "https://official-joke-api.appspot.com/random_joke"
+
+response = requests.get(url)
+data = response.json()
+
+print("\n😂 Here's your joke:\n")
+print(data["setup"])
+print(data["punchline"])
+```
+
+---
+
+# 🔁 Version 2: Keep Getting New Jokes
+
+```python id="b8n2qk"
+import requests
+
+url = "https://official-joke-api.appspot.com/random_joke"
+
+while True:
+    input("\nPress Enter for a joke (or Ctrl+C to exit)...")
+
+    try:
+        response = requests.get(url)
+        data = response.json()
+
+        print("\n😂 Joke:")
+        print(data["setup"])
+        print(data["punchline"])
+
+    except Exception as e:
+        print("⚠️ Error fetching joke:", e)
+```
+
+---
+
+# 🎨 Version 3: Cleaner Output + Better UX
+
+```python id="x9m4rt"
+import requests
+
+def get_joke():
+    url = "https://official-joke-api.appspot.com/random_joke"
+    response = requests.get(url, timeout=5)
+    response.raise_for_status()
+    return response.json()
+
+print("😂 RANDOM JOKE GENERATOR")
+
+while True:
+    user_input = input("\nPress Enter for a joke or type 'quit': ")
+
+    if user_input.lower() == "quit":
+        print("Bye 👋")
+        break
+
+    try:
+        joke = get_joke()
+        print("\n🤣", joke["setup"])
+        print("👉", joke["punchline"])
+
+    except requests.exceptions.RequestException:
+        print("⚠️ Failed to fetch joke. Try again later.")
+```
