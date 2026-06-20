@@ -40,17 +40,23 @@ pip install requests
 ---
 
 # 🟢 Version 1 — Basic Movie Search
-
+If you are not able to get an API key I would give you mine
 ```python id="k8d2pq"
 import requests
 
 API_KEY = "your_api_key_here"
+```
+
+```python
 
 def search_movie(title):
     url = f"http://www.omdbapi.com/?apikey={API_KEY}&s={title}"
     response = requests.get(url)
     return response.json()
 ```
+Now, you receive the user input using`input()` for the name of the movie, and then it gets stored in the variable. You can call the variable anything you want
+
+Then you use the function you created in the first step
 
 ```python
 
