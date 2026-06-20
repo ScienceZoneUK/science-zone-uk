@@ -50,15 +50,21 @@ def search_movie(title):
     url = f"http://www.omdbapi.com/?apikey={API_KEY}&s={title}"
     response = requests.get(url)
     return response.json()
+```
+
+```
 
 movie_name = input("Enter movie name: ")
 data = search_movie(movie_name)
-
+```
+```
 if data["Response"] == "True":
     for movie in data["Search"]:
         print("\n🎬 Title:", movie["Title"])
         print("📅 Year:", movie["Year"])
         print("🎞️ Type:", movie["Type"])
+```
+```
 else:
     print("❌ No movies found")
 ```
