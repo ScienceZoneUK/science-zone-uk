@@ -152,5 +152,3 @@ while True:
 ```
 
 
-* add a **SQLite favorites database**
-* or turn it into a **full “Netflix-style” Python project**
