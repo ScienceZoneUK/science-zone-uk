@@ -53,4 +53,8 @@ The correct PIN is 4826.
 •	If correct, display "Welcome".
 •	Otherwise display "Incorrect PIN".
 •	Lock the account after 3 failures.
+
+
+# Progression to Day 3 API work CLick link below
+[Day 3 APIS ](https://github.com/ScienceZoneUK/science-zone-uk/blob/main/otherpath/readme1.md)
  
