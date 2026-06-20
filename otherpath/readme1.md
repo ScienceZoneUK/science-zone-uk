@@ -63,6 +63,7 @@ Then you use the function you created in the first step
 movie_name = input("Enter movie name: ")
 data = search_movie(movie_name)
 ```
+If it finds something similar, it then returns True if it's true, and then prints the movie
 ```python
 if data["Response"] == "True":
     for movie in data["Search"]:
