@@ -52,12 +52,12 @@ def search_movie(title):
     return response.json()
 ```
 
-```
+```python
 
 movie_name = input("Enter movie name: ")
 data = search_movie(movie_name)
 ```
-```
+```python
 if data["Response"] == "True":
     for movie in data["Search"]:
         print("\n🎬 Title:", movie["Title"])
