@@ -225,56 +225,163 @@ This is basically a **mini Flask built from scratch**.
 
 ---
 
-# 🚀 Next Upgrades (Highly Recommended)
+# 🌐 1. Serve a Basic HTML Page
 
-If you want to push this into a serious project:
+Add a new route like:
 
----
-
-## 1. Middleware Layer (VERY important)
-
-Add hooks like:
-
-* auth check
-* rate limiting
-* logging
-
-```python
-def middleware(func):
-    def wrapper(self, *args, **kwargs):
-        print("Request:", self.command, self.path)
-        return func(self, *args, **kwargs)
-    return wrapper
+```
+GET /
 ```
 
 ---
 
-## 2. Authentication (Tokens)
+## 🧱 Step 1: Create an HTML response
 
-* `/login`
-* generate `secrets.token_hex`
-* store in DB
+Inside your handler:
+
+```python id="html1"
+def home(self):
+    html = """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>My Custom Server</title>
+    </head>
+    <body>
+        <h1>🚀 Hello from Python Server</h1>
+        <p>This page is served without any framework.</p>
+    </body>
+    </html>
+    """
+
+    self.send_response(200)
+    self.send_header("Content-Type", "text/html")
+    self.end_headers()
+    self.wfile.write(html.encode())
+```
 
 ---
 
-## 3. SQLite Integration
+## 🧭 Step 2: Add route mapping
 
-Add:
+In your `ROUTES`:
 
-* users table
-* tasks table
-* logs table
+```python id="route2"
+ROUTES = {
+    ("GET", "/"): "home",
+    ("GET", "/tasks"): "get_tasks",
+}
+```
 
 ---
 
-## 4. Clean Routing Upgrade
+# ▶️ 3. Run the server
 
-Replace dict with decorator system:
+```bash id="run1"
+python server.py
+```
 
-```python
-@route("POST", "/tasks")
-def create_task(self, body):
-    ...
+Then open:
+
+```
+http://localhost:8080/
+```
+
+You’ll see your HTML page.
+
+---
+
+# 📄 4. Serving an actual `.html` file (better way)
+
+Instead of writing HTML in Python, load a file.
+
+---
+
+## Create file:
+
+```
+index.html
+```
+
+```html id="file1"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Site</title>
+</head>
+<body>
+    <h1>Hello from file 🚀</h1>
+</body>
+</html>
+```
+
+---
+
+## Load it in Python:
+
+```python id="file2"
+def home(self):
+    with open("index.html", "r", encoding="utf-8") as f:
+        html = f.read()
+
+    self.send_response(200)
+    self.send_header("Content-Type", "text/html")
+    self.end_headers()
+    self.wfile.write(html.encode())
+```
+
+---
+
+# 📦 5. Serve CSS / JS too (important upgrade)
+
+You can extend routing:
+
+```python id="static1"
+("GET", "/style.css"): "style",
+("GET", "/app.js"): "script",
+```
+
+Then:
+
+```python id="static2"
+def style(self):
+    with open("style.css", "rb") as f:
+        self.send_response(200)
+        self.send_header("Content-Type", "text/css")
+        self.end_headers()
+        self.wfile.write(f.read())
+```
+
+---
+
+# ⚡ 6. Better approach: Static file handler (recommended)
+
+Instead of writing many routes:
+
+```python id="static3"
+def serve_file(self, path, content_type):
+    try:
+        with open(path, "rb") as f:
+            self.send_response(200)
+            self.send_header("Content-Type", content_type)
+            self.end_headers()
+            self.wfile.write(f.read())
+    except FileNotFoundError:
+        self.send_error(404, "File not found")
+```
+
+Then:
+
+```python id="static4"
+def do_GET(self):
+    if self.path == "/":
+        return self.serve_file("index.html", "text/html")
+
+    if self.path.endswith(".css"):
+        return self.serve_file(self.path[1:], "text/css")
+
+    if self.path.endswith(".js"):
+        return self.serve_file(self.path[1:], "application/javascript")
 ```
 
 ---
