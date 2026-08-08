@@ -193,6 +193,20 @@ self.create_widgets()
 
 calls the method responsible for building the interface.
 
+## Your code should look like this
+`
+    def __init__(self, root):
+        self.root = root
+        self.root.title("File Organizer")
+        self.root.geometry("850x600")
+        self.root.minsize(700, 500)
+
+        self.selected_folder = None
+        self.files = []
+
+        self.create_widgets()
+`
+
 ---
 
 # 5. Build the interface
