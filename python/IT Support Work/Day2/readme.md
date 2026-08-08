@@ -1388,3 +1388,396 @@ MOVE
 ```
 
 That is the main concept behind the entire program.
+
+# Full Code
+```python
+import tkinter as tk
+from tkinter import ttk, filedialog, messagebox
+from pathlib import Path
+import shutil
+
+
+# File categories
+FILE_CATEGORIES = {
+    "Images": [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".svg", ".webp"],
+    "Documents": [".pdf", ".doc", ".docx", ".txt", ".rtf", ".odt"],
+    "Spreadsheets": [".xls", ".xlsx", ".csv"],
+    "Presentations": [".ppt", ".pptx"],
+    "Videos": [".mp4", ".mkv", ".avi", ".mov", ".wmv", ".flv"],
+    "Music": [".mp3", ".wav", ".flac", ".aac", ".ogg", ".m4a"],
+    "Archives": [".zip", ".rar", ".7z", ".tar", ".gz"],
+    "Programs": [".py", ".java", ".cpp", ".c", ".js", ".html", ".css"],
+}
+
+
+class FileOrganizer:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("File Organizer")
+        self.root.geometry("850x600")
+        self.root.minsize(700, 500)
+
+        self.selected_folder = None
+        self.files = []
+
+        self.create_widgets()
+
+    def create_widgets(self):
+        # ---------------- HEADER ----------------
+        header = ttk.Frame(self.root, padding=15)
+        header.pack(fill="x")
+
+        title = ttk.Label(
+            header,
+            text="📁 File Organizer",
+            font=("Arial", 24, "bold")
+        )
+        title.pack()
+
+        subtitle = ttk.Label(
+            header,
+            text="Organize your files automatically by type"
+        )
+        subtitle.pack(pady=5)
+
+        # ---------------- FOLDER SECTION ----------------
+        folder_frame = ttk.LabelFrame(
+            self.root,
+            text="Folder",
+            padding=10
+        )
+        folder_frame.pack(fill="x", padx=15, pady=10)
+
+        self.folder_label = ttk.Label(
+            folder_frame,
+            text="No folder selected"
+        )
+        self.folder_label.pack(side="left", fill="x", expand=True)
+
+        browse_button = ttk.Button(
+            folder_frame,
+            text="Browse",
+            command=self.select_folder
+        )
+        browse_button.pack(side="right")
+
+        # ---------------- BUTTONS ----------------
+        button_frame = ttk.Frame(self.root)
+        button_frame.pack(pady=5)
+
+        ttk.Button(
+            button_frame,
+            text="Scan Folder",
+            command=self.scan_folder
+        ).pack(side="left", padx=5)
+
+        ttk.Button(
+            button_frame,
+            text="Organize Files",
+            command=self.organize_files
+        ).pack(side="left", padx=5)
+
+        ttk.Button(
+            button_frame,
+            text="Clear",
+            command=self.clear
+        ).pack(side="left", padx=5)
+
+        # ---------------- FILE LIST ----------------
+        list_frame = ttk.LabelFrame(
+            self.root,
+            text="Files",
+            padding=10
+        )
+        list_frame.pack(
+            fill="both",
+            expand=True,
+            padx=15,
+            pady=10
+        )
+
+        columns = ("File", "Extension", "Category")
+
+        self.tree = ttk.Treeview(
+            list_frame,
+            columns=columns,
+            show="headings"
+        )
+
+        self.tree.heading("File", text="File Name")
+        self.tree.heading("Extension", text="Extension")
+        self.tree.heading("Category", text="Category")
+
+        self.tree.column("File", width=400)
+        self.tree.column("Extension", width=100)
+        self.tree.column("Category", width=200)
+
+        scrollbar = ttk.Scrollbar(
+            list_frame,
+            orient="vertical",
+            command=self.tree.yview
+        )
+
+        self.tree.configure(
+            yscrollcommand=scrollbar.set
+        )
+
+        self.tree.pack(
+            side="left",
+            fill="both",
+            expand=True
+        )
+
+        scrollbar.pack(
+            side="right",
+            fill="y"
+        )
+
+        # ---------------- STATUS ----------------
+        self.status_label = ttk.Label(
+            self.root,
+            text="Ready"
+        )
+        self.status_label.pack(
+            fill="x",
+            padx=15,
+            pady=5
+        )
+
+        self.progress = ttk.Progressbar(
+            self.root,
+            mode="determinate"
+        )
+        self.progress.pack(
+            fill="x",
+            padx=15,
+            pady=(0, 15)
+        )
+
+    # ------------------------------------------------
+    # Select folder
+    # ------------------------------------------------
+    def select_folder(self):
+        folder = filedialog.askdirectory(
+            title="Select a folder"
+        )
+
+        if folder:
+            self.selected_folder = Path(folder)
+
+            self.folder_label.config(
+                text=str(self.selected_folder)
+            )
+
+            self.status_label.config(
+                text="Folder selected. Click Scan Folder."
+            )
+
+    # ------------------------------------------------
+    # Determine category
+    # ------------------------------------------------
+    def get_category(self, file_path):
+        extension = file_path.suffix.lower()
+
+        for category, extensions in FILE_CATEGORIES.items():
+            if extension in extensions:
+                return category
+
+        return "Other"
+
+    # ------------------------------------------------
+    # Scan folder
+    # ------------------------------------------------
+    def scan_folder(self):
+        if not self.selected_folder:
+            messagebox.showwarning(
+                "No Folder",
+                "Please select a folder first."
+            )
+            return
+
+        # Clear old results
+        for item in self.tree.get_children():
+            self.tree.delete(item)
+
+        self.files = []
+
+        try:
+            for item in self.selected_folder.iterdir():
+
+                # Only files, not folders
+                if item.is_file():
+                    self.files.append(item)
+
+                    category = self.get_category(item)
+
+                    self.tree.insert(
+                        "",
+                        "end",
+                        values=(
+                            item.name,
+                            item.suffix.lower() or "None",
+                            category
+                        )
+                    )
+
+            count = len(self.files)
+
+            self.status_label.config(
+                text=f"{count} file(s) found."
+            )
+
+        except PermissionError:
+            messagebox.showerror(
+                "Permission Error",
+                "You do not have permission to access this folder."
+            )
+
+        except Exception as error:
+            messagebox.showerror(
+                "Error",
+                f"Something went wrong:\n{error}"
+            )
+
+    # ------------------------------------------------
+    # Organize files
+    # ------------------------------------------------
+    def organize_files(self):
+        if not self.selected_folder:
+            messagebox.showwarning(
+                "No Folder",
+                "Please select a folder first."
+            )
+            return
+
+        if not self.files:
+            messagebox.showwarning(
+                "No Files",
+                "Please scan the folder first."
+            )
+            return
+
+        answer = messagebox.askyesno(
+            "Confirm",
+            "Are you sure you want to organize these files?"
+        )
+
+        if not answer:
+            return
+
+        total = len(self.files)
+        moved = 0
+        errors = 0
+
+        self.progress["maximum"] = total
+        self.progress["value"] = 0
+
+        for file_path in self.files:
+
+            try:
+                category = self.get_category(file_path)
+
+                # Create category folder
+                destination_folder = (
+                    self.selected_folder / category
+                )
+
+                destination_folder.mkdir(
+                    exist_ok=True
+                )
+
+                destination = destination_folder / file_path.name
+
+                # Prevent overwriting files
+                if destination.exists():
+                    destination = self.get_unique_name(
+                        destination
+                    )
+
+                shutil.move(
+                    str(file_path),
+                    str(destination)
+                )
+
+                moved += 1
+
+            except Exception:
+                errors += 1
+
+            self.progress["value"] += 1
+            self.root.update_idletasks()
+
+        # Refresh the list
+        self.scan_folder()
+
+        self.status_label.config(
+            text=f"Finished: {moved} moved, {errors} errors."
+        )
+
+        messagebox.showinfo(
+            "Complete",
+            f"Organization complete!\n\n"
+            f"Files moved: {moved}\n"
+            f"Errors: {errors}"
+        )
+
+    # ------------------------------------------------
+    # Generate unique filename
+    # ------------------------------------------------
+    def get_unique_name(self, path):
+        counter = 1
+
+        while True:
+            new_name = (
+                f"{path.stem}_{counter}"
+                f"{path.suffix}"
+            )
+
+            new_path = path.parent / new_name
+
+            if not new_path.exists():
+                return new_path
+
+            counter += 1
+
+    # ------------------------------------------------
+    # Clear application
+    # ------------------------------------------------
+    def clear(self):
+        self.selected_folder = None
+        self.files = []
+
+        self.folder_label.config(
+            text="No folder selected"
+        )
+
+        for item in self.tree.get_children():
+            self.tree.delete(item)
+
+        self.progress["value"] = 0
+
+        self.status_label.config(
+            text="Ready"
+        )
+
+
+# ----------------------------------------------------
+# Start application
+# ----------------------------------------------------
+
+if __name__ == "__main__":
+    root = tk.Tk()
+
+    # Use ttk theme
+    style = ttk.Style()
+
+    try:
+        style.theme_use("clam")
+    except tk.TclError:
+        pass
+
+    app = FileOrganizer(root)
+
+    root.mainloop()
+
+```
