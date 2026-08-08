@@ -194,7 +194,7 @@ self.create_widgets()
 calls the method responsible for building the interface.
 
 ## Your code should look like this
-`
+```python
     def __init__(self, root):
         self.root = root
         self.root.title("File Organizer")
@@ -205,7 +205,7 @@ calls the method responsible for building the interface.
         self.files = []
 
         self.create_widgets()
-`
+```
 
 ---
 
@@ -256,7 +256,27 @@ subtitle = ttk.Label(
     text="Organize your files automatically by type"
 )
 ```
+## Your code should look like this
+```python
+    def create_widgets(self):
+        # ---------------- HEADER ----------------
+        header = ttk.Frame(self.root, padding=15)
+        header.pack(fill="x")
 
+        title = ttk.Label(
+            header,
+            text="📁 File Organizer",
+            font=("Arial", 24, "bold")
+        )
+        title.pack()
+
+        subtitle = ttk.Label(
+            header,
+            text="Organize your files automatically by type"
+        )
+        subtitle.pack(pady=5)
+
+```
 ---
 
 # 6. Create the folder section
