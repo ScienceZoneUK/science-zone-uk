@@ -1,4 +1,4 @@
-# GCSE Python Exercises --- Set 2
+# Python Exercises --- Set 2
 
 ## Input, Output & Calculations (1--6)
 
