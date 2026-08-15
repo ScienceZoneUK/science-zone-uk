@@ -64,7 +64,187 @@ def get_next_ticket_id():
     return 1
 
 ```
+# Create Ticket
+```python
+def create_ticket():
+    name = name_var.get().strip()
+    email = email_var.get().strip()
+    category = category_var.get().strip()
+    priority = priority_var.get()
+    issue = issue_text.get("1.0", tk.END).strip()
 
+    # Validation
+    if not name:
+        messagebox.showerror(
+            "Missing Information",
+            "Please enter your name."
+        )
+        return
+
+    if not email:
+        messagebox.showerror(
+            "Missing Information",
+            "Please enter your email address."
+        )
+        return
+
+    if not category:
+        messagebox.showerror(
+            "Missing Information",
+            "Please select a category."
+        )
+        return
+
+    if not issue:
+        messagebox.showerror(
+            "Missing Information",
+            "Please describe the problem."
+        )
+        return
+
+    # Generate ticket information
+    ticket_id = get_next_ticket_id()
+
+    current_time = datetime.now().strftime(
+        "%Y-%m-%d %H:%M:%S"
+    )
+
+    # Ticket text
+    ticket = f"""
+==================================================
+Ticket ID: {ticket_id}
+Date: {current_time}
+Name: {name}
+Email: {email}
+Category: {category}
+Priority: {priority}
+Status: Open
+
+Problem:
+{issue}
+
+==================================================
+
+"""
+
+    try:
+        with open(
+            TICKET_FILE,
+            "a",
+            encoding="utf-8"
+        ) as file:
+            file.write(ticket)
+
+    except Exception as error:
+        messagebox.showerror(
+            "File Error",
+            f"Could not save ticket:\n{error}"
+        )
+        return
+
+    messagebox.showinfo(
+        "Ticket Created",
+        f"Ticket #{ticket_id} created successfully!"
+    )
+
+    clear_form()
+    load_tickets()
+
+```
+# Clear Form
+```python
+def clear_form():
+    name_var.set("")
+    email_var.set("")
+    category_var.set("")
+    priority_var.set("Medium")
+
+    issue_text.delete(
+        "1.0",
+        tk.END
+    )
+
+```
+Load Tickets
+```python
+def load_tickets():
+    """Load saved tickets into the table."""
+
+    for item in ticket_tree.get_children():
+        ticket_tree.delete(item)
+
+    if not TICKET_FILE.exists():
+        return
+
+    try:
+        text = TICKET_FILE.read_text(
+            encoding="utf-8"
+        )
+
+        blocks = text.split(
+            "=================================================="
+        )
+
+        for block in blocks:
+
+            if "Ticket ID:" not in block:
+                continue
+
+            ticket_id = get_value(
+                block,
+                "Ticket ID:"
+            )
+
+            date_time = get_value(
+                block,
+                "Date:"
+            )
+
+            name = get_value(
+                block,
+                "Name:"
+            )
+
+            category = get_value(
+                block,
+                "Category:"
+            )
+
+            priority = get_value(
+                block,
+                "Priority:"
+            )
+
+            status = get_value(
+                block,
+                "Status:"
+            )
+
+            ticket_tree.insert(
+                "",
+                "end",
+                values=(
+                    ticket_id,
+                    date_time,
+                    name,
+                    category,
+                    priority,
+                    status
+                )
+            )
+
+    except Exception as error:
+        messagebox.showerror(
+            "Error",
+            f"Could not load tickets:\n{error}"
+        )
+
+
+```
+
+```python
+
+```
 
 
 ```python
