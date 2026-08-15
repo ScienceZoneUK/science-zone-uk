@@ -1,5 +1,5 @@
 # IT Ticketing System
-When staff have an IT related issue / problem they raise tickets documenting the issues they are faces this helps the IT support keep track of what is going on.
+When staff have an IT related issue / problem they raise tickets documenting the issues they are facing this helps the IT support keep track of what is going on.
 # Necessary Imports
 ```
 import tkinter as tk
