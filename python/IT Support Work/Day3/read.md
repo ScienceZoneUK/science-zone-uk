@@ -244,7 +244,7 @@ def load_tickets():
 
 
 ```
-
+# GET VALUE FROM TICKET
 
 ```python
 def get_value(block, label):
@@ -260,6 +260,7 @@ def get_value(block, label):
     return ""
 
 ```
+# SEARCH TICKETS
 ```python
 
 def search_tickets(*args):
@@ -352,7 +353,7 @@ def search_tickets(*args):
 
 
 ```
-
+# VIEW SELECTED TICKET
 ```python
 def view_ticket():
     selected = ticket_tree.selection()
@@ -392,7 +393,7 @@ def view_ticket():
             return
 
 ```
-
+# TICKET DETAILS WINDOW
 ```python
 
 def show_ticket_window(ticket):
