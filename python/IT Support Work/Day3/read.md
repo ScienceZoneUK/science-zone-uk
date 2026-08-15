@@ -771,7 +771,7 @@ scrollbar.pack(
 
 ```
 
-# VIEW BUTTON
+# View Button
 
 ```python
 ttk.Button(
@@ -784,22 +784,20 @@ ttk.Button(
 ```
 
 
-# LOAD EXISTING TICKETS
+# Load Existing Tickets
 
 ```python
 load_tickets()
 ```
 
 
-# START APPLICATION
+# Start Application
 
 ```python
 root.mainloop()
 ```
-```python
 
-```
-
+# Full Code
 
 ```python
 import tkinter as tk
