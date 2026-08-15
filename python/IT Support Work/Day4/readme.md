@@ -7,6 +7,6 @@ Now if a network is just computers being connected together to share information
 
 # IPv4 IPV6
 
-IPV6 is the latest versionl
+IPV6 is the latest version is made up of hexadecimal numbers to increase the number of Unique IP addresses            
 
 
