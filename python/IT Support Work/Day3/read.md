@@ -32,6 +32,7 @@ priority_var = tk.StringVar(value="Medium")
 search_var = tk.StringVar()
 
 ```
+# Ticket ID
 ```python
 def get_next_ticket_id():
     """Generate the next ticket ID."""
