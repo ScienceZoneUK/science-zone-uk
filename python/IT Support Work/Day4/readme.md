@@ -4,3 +4,6 @@ If you have been on the internet long enough, you probably have seen some VPN ad
 
 # DNS
 Now if a network is just computers being connected together to share information, and we establish that every computer has an IP address
+
+IPv4
+IpvF
