@@ -7,8 +7,63 @@ from pathlib import Path
 
 ```
 # Setting up the file location
+```python
+TICKET_FILE = Path("tickets.txt")
+```
+This could also be stored in a separate location if you're feeling fancy
+```python
+TICKET_FILE = Path("NEWLOCATION/tickets.txt")
+```
+Main window
+```python
+root = tk.Tk()
+root.title("IT Support Ticket Generator")
+root.geometry("950x650")
+root.minsize(800, 550)
+
+
+```
+# Variables
+```python
+name_var = tk.StringVar()
+email_var = tk.StringVar()
+category_var = tk.StringVar()
+priority_var = tk.StringVar(value="Medium")
+search_var = tk.StringVar()
+
 ```
 ```
+def get_next_ticket_id():
+    """Generate the next ticket ID."""
+
+    if not TICKET_FILE.exists():
+        return 1
+
+    try:
+        text = TICKET_FILE.read_text(encoding="utf-8")
+
+        ids = []
+
+        for line in text.splitlines():
+            if line.startswith("Ticket ID:"):
+                try:
+                    ticket_id = int(
+                        line.split(":")[1].strip()
+                    )
+                    ids.append(ticket_id)
+                except ValueError:
+                    pass
+
+        if ids:
+            return max(ids) + 1
+
+    except Exception:
+        pass
+
+    return 1
+
+```
+
 
 
 ```python
