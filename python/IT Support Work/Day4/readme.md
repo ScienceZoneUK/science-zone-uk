@@ -21,9 +21,8 @@ import platform
 import threading
 
 
-# ==========================================
 # MAIN WINDOW
-# ==========================================
+
 ```python
 root = tk.Tk()
 root.title("IP Address & Network Tool")
@@ -32,9 +31,9 @@ root.minsize(700, 500)
 ```
 
 
-# ==========================================
+
 # VARIABLES
-# ==========================================
+
 ```python
 hostname_var = tk.StringVar(value="Loading...")
 local_ip_var = tk.StringVar(value="Loading...")
@@ -44,9 +43,9 @@ ipv6_var = tk.StringVar(value="Loading...")
 status_var = tk.StringVar(value="Ready")
 ```
 
-# ==========================================
+
 # GET HOSTNAME
-# ==========================================
+
 ```python
 def get_hostname():
     try:
@@ -55,9 +54,9 @@ def get_hostname():
         return "Unavailable"
 ```
 
-# ==========================================
+
 # GET LOCAL IP
-# ==========================================
+
 ```python
 def get_local_ip():
     try:
@@ -81,9 +80,9 @@ def get_local_ip():
 
 ```
 
-# ==========================================
+
 # GET IPv4 ADDRESSES
-# ==========================================
+
 ```python
 def get_ipv4_addresses():
     try:
@@ -110,9 +109,9 @@ def get_ipv4_addresses():
 
 ```
 
-# ==========================================
+
 # GET IPv6 ADDRESSES
-# ==========================================
+
 ```python
 def get_ipv6_addresses():
     try:
@@ -139,9 +138,9 @@ def get_ipv6_addresses():
 
 ```
 
-# ==========================================
+
 # GET PUBLIC IP
-# ==========================================
+
 ```python
 def get_public_ip():
     try:
@@ -158,9 +157,9 @@ def get_public_ip():
         return "Unavailable"
 ```
 
-# ==========================================
+
 # REFRESH INFORMATION
-# ==========================================
+
 ```python
 def refresh_information():
 
@@ -220,9 +219,9 @@ def update_gui(
     )
 ```
 
-# ==========================================
+
 # PING HOST
-# ==========================================
+
 ```python
 def ping_host():
 
@@ -338,9 +337,9 @@ def show_ping_result(host, output):
     )
 ```
 
-# ==========================================
+
 # DNS LOOKUP
-# ==========================================
+
 ```python
 def dns_lookup():
 
@@ -426,9 +425,8 @@ def show_dns_result(host, result):
     )
 
 ```
-# ==========================================
 # COPY INFORMATION
-# ==========================================
+
 ```python
 def copy_information():
 
@@ -461,9 +459,9 @@ IPv6 Addresses:
     )
 
 ```
-# ==========================================
+
 # SAVE REPORT
-# ==========================================
+
 ```python
 def save_report():
 
@@ -526,9 +524,9 @@ IPv6 Addresses:
         )
 
 ```
-# ==========================================
+
 # STYLE
-# ==========================================
+
 ```python
 style = ttk.Style()
 
@@ -549,9 +547,9 @@ style.configure(
 
 ```
 
-# ==========================================
+
 # HEADER
-# ==========================================
+
 ```python
 header = ttk.Frame(
     root,
@@ -576,9 +574,9 @@ ttk.Label(
 )
 
 ```
-# ==========================================
+
 # INFORMATION PANEL
-# ==========================================
+
 ```python
 info_frame = ttk.LabelFrame(
     root,
@@ -662,9 +660,9 @@ create_info_row(
 ```
 
 
-# ==========================================
+
 # BUTTONS
-# ==========================================
+
 ```python
 button_frame = ttk.Frame(
     root,
@@ -704,9 +702,9 @@ ttk.Button(
 
 ```
 
-# ==========================================
+
 # PING SECTION
-# ==========================================
+
 ```python
 ping_frame = ttk.LabelFrame(
     root,
@@ -755,9 +753,9 @@ ping_button.pack(
 )
 ```
 
-# ==========================================
+
 # DNS SECTION
-# ==========================================
+
 ```python
 dns_frame = ttk.LabelFrame(
     root,
@@ -804,9 +802,9 @@ ttk.Button(
 )
 ```
 
-# ==========================================
+
 # STATUS
-# ==========================================
+
 ```python
 status_bar = ttk.Label(
     root,
@@ -821,16 +819,16 @@ status_bar.pack(
 )
 
 ```
-# ==========================================
+
 # INITIAL LOAD
-# ==========================================
+
 ```python
 refresh_information()
 
 ```
-# ==========================================
+
 # START
-# ==========================================
+
 ```python
 root.mainloop()
 
