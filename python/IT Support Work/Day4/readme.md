@@ -3,7 +3,7 @@ If you have been on the internet long enough, you probably have seen some VPN ad
 
 
 # DNS
-Now if a network is just computers being connected together to share information, and we establish that every computer has an IP address
+Now, if a network is just computers being connected together to share information, and we establish that every computer has an IP address. Therefore every the computers that store the websites that you view have their own IP Address one very popular one is googles IP Address : 142.251.211.78 if yo you look up that address it takes you straight to google.com. Now if we could only go to web pages using
 
 # IPv4 IPV6
 
