@@ -11,7 +11,9 @@ Now, if a network is just computers being connected together to share informatio
 IPV6 is the latest version and is made up of hexadecimal numbers to increase the number of Unique IP addresses, its predecessor tho still in use has a limit of 4.3 billion addresses. As technology is advancing, more and more devices log on to the internet every day, making it not enough or suitable for use in this day and age the IPv6 has 340 undecillion addresses, which is more than enough for now, at least until we expand to Mars in the future. 
 
 
+# IMPORTS
 
+``` python
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 import socket
@@ -19,7 +21,7 @@ import urllib.request
 import subprocess
 import platform
 import threading
-
+```
 
 # MAIN WINDOW
 
