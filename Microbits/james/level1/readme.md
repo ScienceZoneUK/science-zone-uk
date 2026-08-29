@@ -167,9 +167,3 @@ This gives you practice with nested `if` statements and loops.
 I'd recommend doing them in this order:
 
 **if/else → loops → lists → combining them**
-
-So:
-
-`1 → 2 → 5 → 7 → 9 → 10 → 11 → 12 → 13 → 15 → 16 → 17 → 18 → 19`
-
-The most important thing is **don't look up the solution immediately**. For GCSE, getting stuck and working out *which concept you need* is part of the practice.
