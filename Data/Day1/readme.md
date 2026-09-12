@@ -32,88 +32,230 @@ https://www.data.gov.uk/dataset/ea9b5b48-c757-4cec-9391-be90e260f249/schools_pup
 
 
 # The Task
+
+```python
+import pandas as pd
+
+df = pd.read_csv("the_file.csv")
 ```
+
+
+
+## Day 1 — Exploring Data with Python
+
+### Getting started
+
+First, install pandas:
+
+```python
 pip install pandas
 ```
-```
+
+Then import pandas:
+
+```python
 import pandas as pd
 ```
 
+Load your dataset:
+
+```python
+df = pd.read_csv("the_file.csv")
 ```
-Data = "the_file.csv"
+
+> **Your mission:** Explore the dataset and discover **3 interesting things** about it.
+
+---
+
+### 1. How big is the dataset?
+
+Find out how many **rows and columns** the dataset contains.
+
+```python
+df.shape
 ```
-1. **Inspect the dataset**
-   Find out how many rows and columns there are, and identify the types of data.
 
-   ```python
-   df.shape
-   df.info()
-   ```
+Now find out what type of data each column contains:
 
-2. **Look at the first and last records**
-   Get a feel for what the data looks like.
+```python
+df.info()
+```
 
-   ```python
-   df.head()
-   df.tail()
-   ```
+**Question:**
+How many rows and columns are there?
 
-3. **Calculate summary statistics**
-   Find the mean, minimum, maximum, and spread of numerical variables.
+---
 
-   ```python
-   df.describe()
-   ```
+### 2. What does the data look like?
 
-4. **Count categories**
-   Find out how many observations belong to each category.
+Look at the first 5 rows:
 
-   ```python
-   df["class"].value_counts()
-   ```
+```python
+df.head()
+```
 
-5. **Find the most and least common values**
-   Investigate which values occur most frequently.
+Look at the last 5 rows:
 
-   ```python
-   df["subject"].value_counts()
-   ```
+```python
+df.tail()
+```
 
-6. **Filter the data**
-   Find records that meet a particular condition.
+**Question:**
+What information does each row represent?
 
-   ```python
-   df[df["score"] > 80]
-   ```
+---
 
-7. **Compare groups**
-   Calculate statistics separately for different groups.
+### 3. What are the numbers telling us?
 
-   ```python
-   df.groupby("class")["score"].mean()
-   ```
+Calculate some basic statistics:
 
-8. **Look for relationships**
-   Investigate whether two numerical variables appear to be related.
+```python
+df.describe()
+```
 
-   ```python
-   df.plot.scatter(x="hours_studied", y="score")
-   ```
+Look at the:
 
-9. **Find unusual values (outliers)**
-   Look for observations that are unusually high or low.
+* mean
+* minimum
+* maximum
+* median
+* spread
 
-   ```python
-   df["score"].plot(kind="box")
-   ```
+**Question:**
+What is the most interesting statistic you found?
 
-10. **Make a data-driven discovery**
-    Ask students to find **three interesting things** about the dataset and support each discovery with a calculation, table, or graph.
+---
 
-### A useful challenge
+### 4. How many are in each category?
 
-For the final task:
+Choose a categorical column.
 
-> **"Explore this dataset. Find something interesting, investigate it using Python, create a visualisation, and explain what you discovered."**
+For example:
 
+```python
+df["class"].value_counts()
+```
+
+**Question:**
+Which category has the most observations?
+
+---
+
+### 5. What is the most common value?
+
+Choose another column:
+
+```python
+df["subject"].value_counts()
+```
+
+**Question:**
+What is the most common value?
+
+**Challenge:**
+What is the least common value?
+
+---
+
+### 6. Can we filter the data?
+
+Find records where a value is greater than 80:
+
+```python
+df[df["score"] > 80]
+```
+
+Try changing the number.
+
+**Questions:**
+
+* How many records have a score above 80?
+* What happens if you change `80` to `50`?
+* What happens if you use `<` instead of `>`?
+
+---
+
+### 7. Can we compare groups?
+
+Calculate the average score for each class:
+
+```python
+df.groupby("class")["score"].mean()
+```
+
+**Question:**
+Which class has the highest average score?
+
+**Challenge:**
+Can you find the lowest?
+
+---
+
+### 8. Can we find relationships?
+
+Compare two numerical variables:
+
+```python
+df.plot.scatter(
+    x="hours_studied",
+    y="score"
+)
+```
+
+**Questions:**
+
+* Can you see a pattern?
+* Do students who study more tend to have higher scores?
+* Are there any unusual points?
+
+---
+
+### 9. Can we find unusual values?
+
+Create a box plot:
+
+```python
+df["score"].plot(kind="box")
+```
+
+**Question:**
+Are there any scores that look unusual?
+
+These unusual observations are sometimes called **outliers**.
+
+---
+
+### 10. Become a data detective 🕵️
+
+Now explore the dataset independently.
+
+Find **3 interesting things** about the data.
+
+For each discovery, you must provide:
+
+**1. A question**
+
+> Do students who study more get higher scores?
+
+**2. Some Python**
+
+```python
+df.groupby("class")["score"].mean()
+```
+
+**3. Evidence**
+
+A number, table or graph.
+
+**4. A conclusion**
+
+> Class Red has a higher average score than Class Blue.
+
+### Final challenge
+
+> **What is the most interesting thing you discovered in the dataset?**
+
+And, importantly:
+
+> **Does the data prove your explanation, or does it simply suggest a pattern?**
 
