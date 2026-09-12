@@ -13,9 +13,9 @@ Imagine you have a spreadsheet containing information about 1,000 students:
 
 So you explore it by asking questions such as:
 
-What is the average exam score?
-What is the highest score?
-Are there any unusual scores?
-Do students who study more tend to score higher?
-Does attendance appear related to exam results?
-Are there differences between different groups?
+<p></p>What is the average exam score?
+<p></p>What is the highest score?
+<p></p>Are there any unusual scores?
+<p></p>Do students who study more tend to score higher?
+<p></p>Does attendance appear related to exam results?
+<p></p>Are there differences between different groups?
