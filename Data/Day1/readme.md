@@ -25,7 +25,7 @@ So you explore it by asking questions such as:
 
 
 
-#The task
+# The task
 
 1. **Inspect the dataset**
    Find out how many rows and columns there are, and identify the types of data.
