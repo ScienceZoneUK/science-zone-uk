@@ -35,6 +35,9 @@ https://www.data.gov.uk/dataset/ea9b5b48-c757-4cec-9391-be90e260f249/schools_pup
 ```
 pip install pandas
 ```
+```
+import pandas as pd
+```
 1. **Inspect the dataset**
    Find out how many rows and columns there are, and identify the types of data.
 
