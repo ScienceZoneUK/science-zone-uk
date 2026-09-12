@@ -38,6 +38,10 @@ pip install pandas
 ```
 import pandas as pd
 ```
+
+```
+Data = "the_file.csv"
+```
 1. **Inspect the dataset**
    Find out how many rows and columns there are, and identify the types of data.
 
