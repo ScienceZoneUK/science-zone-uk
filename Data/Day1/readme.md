@@ -22,7 +22,7 @@ So you explore it by asking questions such as:
 
 
 <p></p>
-Here are **10 beginner-friendly exploratory data tasks** students can do in Python. They progress from simple inspection to deeper investigation.
+
 
 1. **Inspect the dataset**
    Find out how many rows and columns there are, and identify the types of data.
@@ -92,10 +92,10 @@ Here are **10 beginner-friendly exploratory data tasks** students can do in Pyth
 10. **Make a data-driven discovery**
     Ask students to find **three interesting things** about the dataset and support each discovery with a calculation, table, or graph.
 
-### A useful student challenge
+### A useful challenge
 
-For the final task, give them the instruction:
+For the final task:
 
 > **"Explore this dataset. Find something interesting, investigate it using Python, create a visualisation, and explain what you discovered."**
 
-This is a great way to move students from **following Python instructions** to actually **thinking like data analysts**.
+
