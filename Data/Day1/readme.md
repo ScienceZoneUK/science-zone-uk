@@ -23,6 +23,12 @@ So you explore it by asking questions such as:
 
 <p></p>
 
+Data Sets
+
+https://archive.ics.uci.edu/dataset/53/iris?utm_source=chatgpt.com
+
+https://www.data.gov.uk/dataset/ea9b5b48-c757-4cec-9391-be90e260f249/schools_pupils_and_their_characteristics?utm_source=chatgpt.com
+
 
 
 # The Task
