@@ -60,7 +60,7 @@ import pandas as pd
 Load your dataset:
 
 ```python
-df = pd.read_csv("the_file.csv")
+df = pd.read_fwf("the_file.data")
 ```
 
 > **Your mission:** Explore the dataset and discover **3 interesting things** about it.
