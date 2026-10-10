@@ -20,7 +20,7 @@
 <p> Sort by revenue: Display the 10 transactions with the highest revenue.
 <p> Sort by quantity: Find transactions with the largest quantities sold.
 
-# Part 3
+# # Part 3
 ## Descriptive statistics
 <p> Calculate the mean: Find the average transaction revenue.
 <p> Calculate the median: Find the median transaction revenue and compare it with the mean.
@@ -30,7 +30,7 @@
 <p> Count transactions: Count the number of transactions for each payment method.
 <p> Count products: Find how many transactions contain each product.
 
-Part 4 — Grouping and aggregation
+# Part 4 — Grouping and aggregation
 <p> Revenue by category: Calculate total revenue for each product category.
 <p> Revenue by branch: Calculate total revenue for each branch.
 <p> Average revenue by branch: Compare average transaction revenue across branches.
@@ -40,7 +40,7 @@ Part 4 — Grouping and aggregation
 <p> Category and branch: Use `groupby()` with both `Category` and `Branch` to compare revenue.
 <p> Rank the categories: Sort categories from highest to lowest total revenue.
 
-Part 5 — Dates and trends
+# Part 5 — Dates and trends
 <p> Extract the month: Create a `Month` column from the Date column.
 <p> Monthly revenue: Calculate total revenue for each month.
 <p> Find the best month: Identify the month with the highest revenue.
@@ -48,7 +48,7 @@ Part 5 — Dates and trends
 <p> Find the best sales day: Identify the date with the highest total revenue.
 <p> Compare quarters: Create a quarter column and compare total revenue across quarters.
 
-Part 6 — Data quality and cleaning
+# Part 6 — Data quality and cleaning
 <p> Find missing values: Use `isnull().sum()` to check every column.
 <p> Find duplicate rows: Use `duplicated().sum()` to count duplicate rows.
 <p> Check transaction IDs: Check whether `Transaction_ID` values are unique.
@@ -58,7 +58,7 @@ Part 6 — Data quality and cleaning
 <p> Verify revenue: Calculate revenue again using quantity, price, and discount, then compare it with `Revenue`.
 <p> Create a cleaned copy: Apply appropriate cleaning steps only when necessary, keeping the original DataFrame unchanged.
 
-Part 7 — Visualisation
+# Part 7 — Visualisation
 <p> Bar chart: Plot total revenue by category.
 <p> Horizontal bar chart: Plot total quantity sold by product.
 <p> Histogram: Plot the distribution of transaction revenue.
@@ -68,7 +68,7 @@ Part 7 — Visualisation
 <p> Scatter plot: Plot quantity against revenue and describe the relationship.
 <p> Improve chart design: Add a title, axis labels, readable category names, and suitable formatting to three charts.
 
-Part 8 — Independent analysis challenge
+# Part 8 — Independent analysis challenge
 <p> Business question: Which product category should the store investigate for a sales improvement opportunity? Support your answer with evidence.
 <p> Branch comparison: Which branch performs best in total revenue, and does it also have the highest average transaction revenue?
 <p> Discount investigation: Compare revenue across discount levels. Explain why this comparison alone cannot establish whether discounts increase sales.
