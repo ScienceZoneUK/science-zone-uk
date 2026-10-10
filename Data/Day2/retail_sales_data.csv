@@ -1,0 +1,501 @@
+Transaction_ID,Date,Branch,Product,Category,Quantity,Unit_Price,Discount,Payment_Method,Revenue
+T0470,2025-01-02,South,Tea Bags,Groceries,1,3.75,0.2,Mobile Pay,3.0
+T0360,2025-01-02,West,Tea Bags,Groceries,1,3.75,0.0,Card,3.75
+T0258,2025-01-03,North,Pen Pack,Stationery,1,1.8,0.0,Cash,1.8
+T0422,2025-01-04,South,Coffee Mug,Home,1,8.5,0.05,Card,8.07
+T0005,2025-01-04,North,Backpack,Accessories,2,24.99,0.0,Card,49.98
+T0218,2025-01-04,West,Desk Lamp,Home,3,22.0,0.0,Cash,66.0
+T0166,2025-01-05,North,Desk Lamp,Home,4,22.0,0.05,Card,83.6
+T0342,2025-01-05,South,Headphones,Electronics,2,39.99,0.0,Card,79.98
+T0020,2025-01-06,South,Biscuits,Groceries,3,2.2,0.05,Mobile Pay,6.27
+T0122,2025-01-07,South,Hoodie,Clothing,1,32.0,0.0,Card,32.0
+T0490,2025-01-07,West,USB Cable,Electronics,5,7.99,0.0,Card,39.95
+T0388,2025-01-09,West,Headphones,Electronics,2,39.99,0.05,Card,75.98
+T0320,2025-01-09,West,USB Cable,Electronics,1,7.99,0.0,Cash,7.99
+T0193,2025-01-09,West,Backpack,Accessories,1,24.99,0.0,Cash,24.99
+T0396,2025-01-09,Central,Notebook,Stationery,2,2.5,0.0,Cash,5.0
+T0100,2025-01-11,Central,Hoodie,Clothing,1,32.0,0.0,Cash,32.0
+T0437,2025-01-13,Central,Desk Lamp,Home,1,22.0,0.0,Card,22.0
+T0283,2025-01-14,Central,Tea Bags,Groceries,1,3.75,0.0,Card,3.75
+T0192,2025-01-14,North,Backpack,Accessories,1,24.99,0.1,Cash,22.49
+T0196,2025-01-16,West,Notebook,Stationery,6,2.5,0.1,Mobile Pay,13.5
+T0301,2025-01-16,South,Desk Lamp,Home,4,22.0,0.0,Card,88.0
+T0460,2025-01-17,Central,Desk Lamp,Home,1,22.0,0.15,Card,18.7
+T0014,2025-01-17,South,USB Cable,Electronics,1,7.99,0.0,Card,7.99
+T0160,2025-01-19,South,Hoodie,Clothing,1,32.0,0.05,Gift Card,30.4
+T0340,2025-01-20,Central,Backpack,Accessories,1,24.99,0.1,Gift Card,22.49
+T0231,2025-01-20,Central,Notebook,Stationery,1,2.5,0.0,Cash,2.5
+T0059,2025-01-21,Central,USB Cable,Electronics,1,7.99,0.0,Card,7.99
+T0046,2025-01-21,South,Hoodie,Clothing,1,32.0,0.05,Mobile Pay,30.4
+T0220,2025-01-22,South,Coffee Mug,Home,1,8.5,0.15,Cash,7.22
+T0371,2025-01-23,Central,Coffee Mug,Home,1,8.5,0.0,Card,8.5
+T0007,2025-01-23,West,Tea Bags,Groceries,2,3.75,0.0,Card,7.5
+T0009,2025-01-24,Central,Biscuits,Groceries,1,2.2,0.0,Mobile Pay,2.2
+T0018,2025-01-25,West,Pen Pack,Stationery,1,1.8,0.0,Cash,1.8
+T0260,2025-01-25,West,Water Bottle,Accessories,1,12.5,0.1,Card,11.25
+T0271,2025-01-25,South,Biscuits,Groceries,1,2.2,0.0,Card,2.2
+T0123,2025-01-27,Central,Headphones,Electronics,5,39.99,0.0,Card,199.95
+T0206,2025-01-27,North,Headphones,Electronics,2,39.99,0.0,Card,79.98
+T0055,2025-01-27,Central,Pen Pack,Stationery,2,1.8,0.1,Card,3.24
+T0251,2025-01-27,Central,Biscuits,Groceries,2,2.2,0.0,Mobile Pay,4.4
+T0336,2025-01-27,Central,Pen Pack,Stationery,1,1.8,0.1,Mobile Pay,1.62
+T0035,2025-01-28,Central,Biscuits,Groceries,2,2.2,0.05,Card,4.18
+T0121,2025-01-28,West,T-shirt,Clothing,1,15.0,0.15,Card,12.75
+T0043,2025-01-30,North,Notebook,Stationery,2,2.5,0.0,Card,5.0
+T0378,2025-01-30,North,T-shirt,Clothing,1,15.0,0.0,Card,15.0
+T0359,2025-01-30,Central,T-shirt,Clothing,2,15.0,0.1,Card,27.0
+T0463,2025-01-31,North,Hoodie,Clothing,1,32.0,0.0,Card,32.0
+T0445,2025-02-02,North,Hoodie,Clothing,1,32.0,0.15,Card,27.2
+T0361,2025-02-02,Central,T-shirt,Clothing,6,15.0,0.15,Gift Card,76.5
+T0268,2025-02-02,South,Tea Bags,Groceries,3,3.75,0.0,Card,11.25
+T0030,2025-02-02,North,USB Cable,Electronics,1,7.99,0.05,Card,7.59
+T0194,2025-02-02,Central,Desk Lamp,Home,1,22.0,0.0,Card,22.0
+T0089,2025-02-02,West,Coffee Mug,Home,1,8.5,0.0,Card,8.5
+T0370,2025-02-04,Central,Pen Pack,Stationery,2,1.8,0.0,Card,3.6
+T0492,2025-02-04,Central,Notebook,Stationery,1,2.5,0.0,Mobile Pay,2.5
+T0099,2025-02-05,North,Biscuits,Groceries,1,2.2,0.0,Card,2.2
+T0071,2025-02-05,Central,Biscuits,Groceries,4,2.2,0.05,Mobile Pay,8.36
+T0032,2025-02-06,North,T-shirt,Clothing,1,15.0,0.05,Cash,14.25
+T0124,2025-02-07,North,Hoodie,Clothing,2,32.0,0.0,Mobile Pay,64.0
+T0413,2025-02-07,North,Pen Pack,Stationery,1,1.8,0.0,Mobile Pay,1.8
+T0393,2025-02-08,North,Biscuits,Groceries,1,2.2,0.0,Mobile Pay,2.2
+T0405,2025-02-08,Central,Biscuits,Groceries,4,2.2,0.15,Card,7.48
+T0333,2025-02-10,West,USB Cable,Electronics,4,7.99,0.05,Card,30.36
+T0164,2025-02-10,North,Hoodie,Clothing,4,32.0,0.05,Card,121.6
+T0255,2025-02-11,Central,USB Cable,Electronics,1,7.99,0.0,Mobile Pay,7.99
+T0401,2025-02-11,Central,Biscuits,Groceries,6,2.2,0.05,Card,12.54
+T0403,2025-02-12,South,Desk Lamp,Home,3,22.0,0.05,Cash,62.7
+T0291,2025-02-14,West,Pen Pack,Stationery,1,1.8,0.2,Cash,1.44
+T0161,2025-02-16,Central,Coffee Mug,Home,5,8.5,0.1,Card,38.25
+T0380,2025-02-17,South,T-shirt,Clothing,3,15.0,0.0,Card,45.0
+T0115,2025-02-17,South,Headphones,Electronics,1,39.99,0.05,Mobile Pay,37.99
+T0003,2025-02-17,North,Water Bottle,Accessories,1,12.5,0.05,Mobile Pay,11.88
+T0238,2025-02-18,North,T-shirt,Clothing,2,15.0,0.0,Card,30.0
+T0404,2025-02-18,West,T-shirt,Clothing,4,15.0,0.0,Card,60.0
+T0034,2025-02-19,West,Biscuits,Groceries,1,2.2,0.0,Mobile Pay,2.2
+T0315,2025-02-19,South,Coffee Mug,Home,1,8.5,0.2,Mobile Pay,6.8
+T0244,2025-02-21,Central,T-shirt,Clothing,3,15.0,0.1,Mobile Pay,40.5
+T0010,2025-02-21,South,Coffee Mug,Home,1,8.5,0.05,Card,8.07
+T0481,2025-02-22,North,Pen Pack,Stationery,1,1.8,0.15,Card,1.53
+T0002,2025-02-22,West,Biscuits,Groceries,3,2.2,0.0,Card,6.6
+T0223,2025-02-24,Central,Water Bottle,Accessories,1,12.5,0.0,Card,12.5
+T0053,2025-02-24,North,Tea Bags,Groceries,2,3.75,0.0,Mobile Pay,7.5
+T0102,2025-02-28,Central,Backpack,Accessories,5,24.99,0.0,Mobile Pay,124.95
+T0147,2025-02-28,North,Desk Lamp,Home,5,22.0,0.05,Card,104.5
+T0067,2025-03-01,South,Headphones,Electronics,1,39.99,0.2,Card,31.99
+T0182,2025-03-01,West,Backpack,Accessories,1,24.99,0.0,Card,24.99
+T0461,2025-03-02,South,Water Bottle,Accessories,1,12.5,0.1,Mobile Pay,11.25
+T0383,2025-03-02,North,Tea Bags,Groceries,6,3.75,0.0,Mobile Pay,22.5
+T0289,2025-03-04,West,Water Bottle,Accessories,3,12.5,0.0,Card,37.5
+T0485,2025-03-05,West,Hoodie,Clothing,3,32.0,0.0,Card,96.0
+T0056,2025-03-08,West,Biscuits,Groceries,5,2.2,0.0,Cash,11.0
+T0294,2025-03-08,Central,Coffee Mug,Home,2,8.5,0.15,Cash,14.45
+T0466,2025-03-09,North,Water Bottle,Accessories,1,12.5,0.0,Mobile Pay,12.5
+T0050,2025-03-09,South,USB Cable,Electronics,4,7.99,0.15,Card,27.17
+T0174,2025-03-09,West,Pen Pack,Stationery,4,1.8,0.0,Card,7.2
+T0175,2025-03-09,South,T-shirt,Clothing,4,15.0,0.0,Mobile Pay,60.0
+T0482,2025-03-10,Central,Biscuits,Groceries,6,2.2,0.0,Cash,13.2
+T0337,2025-03-12,North,Notebook,Stationery,5,2.5,0.2,Card,10.0
+T0486,2025-03-13,South,Water Bottle,Accessories,1,12.5,0.0,Mobile Pay,12.5
+T0438,2025-03-14,North,USB Cable,Electronics,1,7.99,0.0,Cash,7.99
+T0279,2025-03-15,North,Hoodie,Clothing,2,32.0,0.0,Card,64.0
+T0191,2025-03-16,Central,Backpack,Accessories,2,24.99,0.1,Mobile Pay,44.98
+T0081,2025-03-17,Central,Biscuits,Groceries,2,2.2,0.15,Mobile Pay,3.74
+T0198,2025-03-17,South,Pen Pack,Stationery,1,1.8,0.05,Card,1.71
+T0430,2025-03-20,West,Tea Bags,Groceries,1,3.75,0.0,Gift Card,3.75
+T0227,2025-03-20,West,Biscuits,Groceries,1,2.2,0.2,Card,1.76
+T0184,2025-03-21,West,Coffee Mug,Home,2,8.5,0.1,Mobile Pay,15.3
+T0368,2025-03-21,Central,Headphones,Electronics,1,39.99,0.15,Card,33.99
+T0213,2025-03-21,Central,Backpack,Accessories,3,24.99,0.0,Card,74.97
+T0474,2025-03-22,West,Desk Lamp,Home,2,22.0,0.2,Card,35.2
+T0140,2025-03-24,West,USB Cable,Electronics,1,7.99,0.0,Mobile Pay,7.99
+T0500,2025-03-25,South,Desk Lamp,Home,5,22.0,0.0,Card,110.0
+T0483,2025-03-26,North,Desk Lamp,Home,1,22.0,0.0,Mobile Pay,22.0
+T0133,2025-03-26,South,Headphones,Electronics,2,39.99,0.1,Card,71.98
+T0040,2025-03-26,West,Coffee Mug,Home,1,8.5,0.0,Card,8.5
+T0012,2025-03-29,West,T-shirt,Clothing,3,15.0,0.0,Card,45.0
+T0235,2025-03-30,West,Notebook,Stationery,1,2.5,0.0,Cash,2.5
+T0074,2025-03-31,Central,Hoodie,Clothing,2,32.0,0.0,Card,64.0
+T0061,2025-04-01,South,Coffee Mug,Home,1,8.5,0.1,Mobile Pay,7.65
+T0398,2025-04-02,North,Pen Pack,Stationery,4,1.8,0.0,Card,7.2
+T0037,2025-04-04,Central,Headphones,Electronics,2,39.99,0.15,Card,67.98
+T0450,2025-04-04,West,USB Cable,Electronics,2,7.99,0.0,Cash,15.98
+T0443,2025-04-06,North,Biscuits,Groceries,2,2.2,0.0,Card,4.4
+T0143,2025-04-07,West,T-shirt,Clothing,1,15.0,0.1,Mobile Pay,13.5
+T0172,2025-04-08,North,Hoodie,Clothing,1,32.0,0.1,Cash,28.8
+T0389,2025-04-11,North,USB Cable,Electronics,1,7.99,0.05,Card,7.59
+T0446,2025-04-11,West,Desk Lamp,Home,1,22.0,0.05,Cash,20.9
+T0316,2025-04-12,Central,Hoodie,Clothing,2,32.0,0.0,Card,64.0
+T0269,2025-04-13,West,Notebook,Stationery,1,2.5,0.0,Gift Card,2.5
+T0144,2025-04-15,West,Headphones,Electronics,2,39.99,0.15,Mobile Pay,67.98
+T0054,2025-04-15,West,Biscuits,Groceries,2,2.2,0.0,Card,4.4
+T0047,2025-04-15,West,Biscuits,Groceries,3,2.2,0.0,Card,6.6
+T0128,2025-04-17,North,Biscuits,Groceries,1,2.2,0.05,Card,2.09
+T0428,2025-04-18,Central,Desk Lamp,Home,3,22.0,0.1,Mobile Pay,59.4
+T0075,2025-04-18,South,Coffee Mug,Home,3,8.5,0.05,Card,24.22
+T0112,2025-04-19,South,USB Cable,Electronics,3,7.99,0.0,Cash,23.97
+T0188,2025-04-19,Central,Biscuits,Groceries,2,2.2,0.2,Mobile Pay,3.52
+T0310,2025-04-21,West,Hoodie,Clothing,1,32.0,0.0,Cash,32.0
+T0101,2025-04-22,North,Desk Lamp,Home,2,22.0,0.1,Cash,39.6
+T0082,2025-04-23,West,Backpack,Accessories,3,24.99,0.05,Card,71.22
+T0195,2025-04-24,South,Hoodie,Clothing,1,32.0,0.1,Card,28.8
+T0181,2025-04-24,South,Biscuits,Groceries,1,2.2,0.1,Cash,1.98
+T0366,2025-04-25,West,Notebook,Stationery,3,2.5,0.2,Mobile Pay,6.0
+T0201,2025-04-27,West,Coffee Mug,Home,1,8.5,0.0,Mobile Pay,8.5
+T0219,2025-04-28,South,T-shirt,Clothing,2,15.0,0.05,Card,28.5
+T0130,2025-04-29,West,Headphones,Electronics,3,39.99,0.1,Card,107.97
+T0394,2025-04-29,West,Pen Pack,Stationery,3,1.8,0.0,Card,5.4
+T0190,2025-04-30,Central,USB Cable,Electronics,3,7.99,0.1,Card,21.57
+T0131,2025-04-30,North,Headphones,Electronics,3,39.99,0.05,Card,113.97
+T0078,2025-05-01,North,Biscuits,Groceries,1,2.2,0.1,Card,1.98
+T0045,2025-05-01,North,Coffee Mug,Home,1,8.5,0.15,Cash,7.22
+T0183,2025-05-01,West,T-shirt,Clothing,1,15.0,0.0,Cash,15.0
+T0247,2025-05-02,West,Desk Lamp,Home,2,22.0,0.1,Card,39.6
+T0039,2025-05-02,West,Backpack,Accessories,1,24.99,0.0,Mobile Pay,24.99
+T0248,2025-05-03,North,Headphones,Electronics,5,39.99,0.1,Card,179.96
+T0489,2025-05-03,Central,Desk Lamp,Home,1,22.0,0.0,Cash,22.0
+T0114,2025-05-04,West,Tea Bags,Groceries,2,3.75,0.1,Mobile Pay,6.75
+T0149,2025-05-05,North,Desk Lamp,Home,2,22.0,0.0,Mobile Pay,44.0
+T0189,2025-05-05,North,Backpack,Accessories,3,24.99,0.0,Cash,74.97
+T0079,2025-05-06,West,Desk Lamp,Home,2,22.0,0.1,Card,39.6
+T0110,2025-05-06,West,Pen Pack,Stationery,1,1.8,0.0,Cash,1.8
+T0329,2025-05-07,South,Headphones,Electronics,2,39.99,0.0,Mobile Pay,79.98
+T0086,2025-05-07,West,Biscuits,Groceries,1,2.2,0.1,Cash,1.98
+T0016,2025-05-07,West,Tea Bags,Groceries,2,3.75,0.0,Mobile Pay,7.5
+T0433,2025-05-08,Central,Biscuits,Groceries,2,2.2,0.0,Cash,4.4
+T0083,2025-05-08,South,Pen Pack,Stationery,2,1.8,0.1,Gift Card,3.24
+T0379,2025-05-11,West,Water Bottle,Accessories,1,12.5,0.0,Mobile Pay,12.5
+T0176,2025-05-12,South,Desk Lamp,Home,5,22.0,0.0,Mobile Pay,110.0
+T0284,2025-05-14,South,Tea Bags,Groceries,1,3.75,0.2,Mobile Pay,3.0
+T0096,2025-05-14,South,Coffee Mug,Home,1,8.5,0.0,Mobile Pay,8.5
+T0022,2025-05-15,Central,T-shirt,Clothing,3,15.0,0.0,Mobile Pay,45.0
+T0312,2025-05-16,Central,Tea Bags,Groceries,1,3.75,0.0,Card,3.75
+T0158,2025-05-16,Central,USB Cable,Electronics,2,7.99,0.0,Mobile Pay,15.98
+T0349,2025-05-17,Central,USB Cable,Electronics,1,7.99,0.1,Card,7.19
+T0419,2025-05-18,North,Headphones,Electronics,1,39.99,0.0,Card,39.99
+T0415,2025-05-19,West,Pen Pack,Stationery,1,1.8,0.0,Cash,1.8
+T0093,2025-05-20,West,Coffee Mug,Home,2,8.5,0.0,Mobile Pay,17.0
+T0331,2025-05-21,West,Headphones,Electronics,1,39.99,0.05,Mobile Pay,37.99
+T0456,2025-05-21,West,Water Bottle,Accessories,2,12.5,0.0,Cash,25.0
+T0230,2025-05-21,South,Hoodie,Clothing,1,32.0,0.0,Card,32.0
+T0397,2025-05-21,West,T-shirt,Clothing,5,15.0,0.0,Mobile Pay,75.0
+T0374,2025-05-21,North,Notebook,Stationery,2,2.5,0.05,Cash,4.75
+T0087,2025-05-21,South,Desk Lamp,Home,1,22.0,0.0,Card,22.0
+T0150,2025-05-22,South,Coffee Mug,Home,1,8.5,0.1,Mobile Pay,7.65
+T0187,2025-05-22,West,Water Bottle,Accessories,5,12.5,0.15,Card,53.12
+T0066,2025-05-23,South,USB Cable,Electronics,2,7.99,0.0,Mobile Pay,15.98
+T0469,2025-05-23,West,Tea Bags,Groceries,5,3.75,0.0,Card,18.75
+T0208,2025-05-23,Central,Hoodie,Clothing,1,32.0,0.0,Cash,32.0
+T0426,2025-05-24,North,Coffee Mug,Home,1,8.5,0.15,Cash,7.22
+T0185,2025-05-24,West,Notebook,Stationery,2,2.5,0.0,Gift Card,5.0
+T0151,2025-05-25,West,Tea Bags,Groceries,1,3.75,0.05,Mobile Pay,3.56
+T0077,2025-05-26,Central,T-shirt,Clothing,2,15.0,0.05,Mobile Pay,28.5
+T0372,2025-05-29,South,Water Bottle,Accessories,3,12.5,0.1,Cash,33.75
+T0425,2025-05-30,North,Tea Bags,Groceries,2,3.75,0.0,Card,7.5
+T0148,2025-05-30,West,T-shirt,Clothing,3,15.0,0.0,Gift Card,45.0
+T0262,2025-05-30,West,Coffee Mug,Home,1,8.5,0.0,Card,8.5
+T0008,2025-05-31,North,Biscuits,Groceries,2,2.2,0.15,Mobile Pay,3.74
+T0042,2025-06-01,Central,Water Bottle,Accessories,5,12.5,0.05,Mobile Pay,59.38
+T0023,2025-06-02,South,Biscuits,Groceries,2,2.2,0.0,Mobile Pay,4.4
+T0407,2025-06-03,West,Backpack,Accessories,2,24.99,0.05,Mobile Pay,47.48
+T0440,2025-06-03,South,Notebook,Stationery,3,2.5,0.0,Cash,7.5
+T0072,2025-06-03,West,T-shirt,Clothing,1,15.0,0.0,Mobile Pay,15.0
+T0217,2025-06-04,South,Water Bottle,Accessories,3,12.5,0.1,Card,33.75
+T0168,2025-06-04,Central,Water Bottle,Accessories,6,12.5,0.15,Card,63.75
+T0297,2025-06-05,North,Hoodie,Clothing,2,32.0,0.0,Cash,64.0
+T0295,2025-06-05,North,Backpack,Accessories,1,24.99,0.15,Card,21.24
+T0125,2025-06-05,West,Pen Pack,Stationery,6,1.8,0.0,Cash,10.8
+T0216,2025-06-07,Central,Notebook,Stationery,1,2.5,0.2,Card,2.0
+T0309,2025-06-07,West,Desk Lamp,Home,1,22.0,0.15,Gift Card,18.7
+T0495,2025-06-08,North,Pen Pack,Stationery,2,1.8,0.0,Cash,3.6
+T0224,2025-06-08,North,Tea Bags,Groceries,1,3.75,0.0,Card,3.75
+T0146,2025-06-09,North,T-shirt,Clothing,1,15.0,0.0,Gift Card,15.0
+T0327,2025-06-10,South,Backpack,Accessories,2,24.99,0.0,Mobile Pay,49.98
+T0202,2025-06-10,North,Coffee Mug,Home,1,8.5,0.0,Mobile Pay,8.5
+T0308,2025-06-10,West,Water Bottle,Accessories,3,12.5,0.0,Card,37.5
+T0406,2025-06-11,West,Notebook,Stationery,5,2.5,0.05,Mobile Pay,11.88
+T0414,2025-06-12,South,USB Cable,Electronics,1,7.99,0.0,Card,7.99
+T0376,2025-06-13,West,Tea Bags,Groceries,1,3.75,0.0,Card,3.75
+T0304,2025-06-13,West,Tea Bags,Groceries,6,3.75,0.0,Card,22.5
+T0387,2025-06-13,North,Water Bottle,Accessories,1,12.5,0.0,Mobile Pay,12.5
+T0275,2025-06-14,South,Pen Pack,Stationery,1,1.8,0.05,Card,1.71
+T0153,2025-06-14,West,Water Bottle,Accessories,6,12.5,0.0,Card,75.0
+T0472,2025-06-15,West,Headphones,Electronics,1,39.99,0.05,Mobile Pay,37.99
+T0417,2025-06-16,Central,Coffee Mug,Home,1,8.5,0.0,Mobile Pay,8.5
+T0222,2025-06-16,South,Backpack,Accessories,3,24.99,0.05,Card,71.22
+T0442,2025-06-19,West,T-shirt,Clothing,1,15.0,0.0,Cash,15.0
+T0382,2025-06-20,North,Headphones,Electronics,5,39.99,0.0,Gift Card,199.95
+T0266,2025-06-20,North,Backpack,Accessories,1,24.99,0.0,Mobile Pay,24.99
+T0317,2025-06-20,North,Desk Lamp,Home,2,22.0,0.0,Card,44.0
+T0006,2025-06-22,South,Pen Pack,Stationery,1,1.8,0.0,Cash,1.8
+T0036,2025-06-23,West,Pen Pack,Stationery,1,1.8,0.0,Card,1.8
+T0237,2025-06-23,South,Biscuits,Groceries,2,2.2,0.1,Card,3.96
+T0021,2025-06-24,Central,Pen Pack,Stationery,1,1.8,0.0,Gift Card,1.8
+T0212,2025-06-24,Central,Backpack,Accessories,1,24.99,0.1,Mobile Pay,22.49
+T0243,2025-06-24,North,Desk Lamp,Home,1,22.0,0.2,Card,17.6
+T0167,2025-06-26,South,Hoodie,Clothing,1,32.0,0.2,Card,25.6
+T0409,2025-06-27,Central,Notebook,Stationery,1,2.5,0.0,Card,2.5
+T0365,2025-06-28,North,Pen Pack,Stationery,1,1.8,0.0,Mobile Pay,1.8
+T0254,2025-06-28,South,Notebook,Stationery,1,2.5,0.0,Card,2.5
+T0439,2025-06-28,West,Desk Lamp,Home,1,22.0,0.1,Card,19.8
+T0210,2025-06-29,West,Notebook,Stationery,1,2.5,0.0,Card,2.5
+T0277,2025-06-30,Central,Hoodie,Clothing,6,32.0,0.0,Card,192.0
+T0011,2025-07-01,Central,Water Bottle,Accessories,2,12.5,0.1,Cash,22.5
+T0265,2025-07-02,Central,Pen Pack,Stationery,1,1.8,0.1,Mobile Pay,1.62
+T0453,2025-07-03,West,Notebook,Stationery,2,2.5,0.0,Gift Card,5.0
+T0120,2025-07-04,North,Backpack,Accessories,1,24.99,0.1,Card,22.49
+T0432,2025-07-04,Central,Tea Bags,Groceries,4,3.75,0.0,Card,15.0
+T0476,2025-07-04,North,Headphones,Electronics,1,39.99,0.05,Card,37.99
+T0350,2025-07-04,West,Tea Bags,Groceries,1,3.75,0.05,Card,3.56
+T0186,2025-07-05,South,Pen Pack,Stationery,6,1.8,0.0,Card,10.8
+T0025,2025-07-05,Central,Headphones,Electronics,1,39.99,0.0,Card,39.99
+T0458,2025-07-07,West,T-shirt,Clothing,3,15.0,0.0,Cash,45.0
+T0116,2025-07-08,South,Desk Lamp,Home,2,22.0,0.0,Card,44.0
+T0058,2025-07-09,Central,Hoodie,Clothing,2,32.0,0.0,Card,64.0
+T0305,2025-07-09,West,T-shirt,Clothing,2,15.0,0.0,Card,30.0
+T0204,2025-07-10,South,Backpack,Accessories,2,24.99,0.05,Mobile Pay,47.48
+T0180,2025-07-10,South,Pen Pack,Stationery,2,1.8,0.0,Mobile Pay,3.6
+T0163,2025-07-11,North,Coffee Mug,Home,1,8.5,0.0,Card,8.5
+T0468,2025-07-12,Central,Desk Lamp,Home,1,22.0,0.1,Card,19.8
+T0364,2025-07-13,North,Coffee Mug,Home,1,8.5,0.2,Mobile Pay,6.8
+T0402,2025-07-14,Central,Coffee Mug,Home,2,8.5,0.0,Mobile Pay,17.0
+T0385,2025-07-14,South,Desk Lamp,Home,2,22.0,0.0,Card,44.0
+T0097,2025-07-14,South,Headphones,Electronics,3,39.99,0.1,Mobile Pay,107.97
+T0019,2025-07-17,South,Coffee Mug,Home,2,8.5,0.0,Gift Card,17.0
+T0496,2025-07-20,Central,Hoodie,Clothing,2,32.0,0.1,Card,57.6
+T0436,2025-07-20,North,Desk Lamp,Home,3,22.0,0.05,Card,62.7
+T0332,2025-07-22,South,USB Cable,Electronics,5,7.99,0.1,Card,35.96
+T0341,2025-07-23,South,Desk Lamp,Home,1,22.0,0.1,Mobile Pay,19.8
+T0493,2025-07-23,West,T-shirt,Clothing,1,15.0,0.1,Card,13.5
+T0017,2025-07-24,West,USB Cable,Electronics,1,7.99,0.2,Card,6.39
+T0272,2025-07-24,South,Tea Bags,Groceries,1,3.75,0.2,Gift Card,3.0
+T0494,2025-07-25,North,Pen Pack,Stationery,2,1.8,0.0,Card,3.6
+T0142,2025-07-26,West,T-shirt,Clothing,3,15.0,0.0,Card,45.0
+T0400,2025-07-27,North,Desk Lamp,Home,2,22.0,0.2,Card,35.2
+T0351,2025-07-27,South,Biscuits,Groceries,2,2.2,0.15,Mobile Pay,3.74
+T0292,2025-07-29,Central,Hoodie,Clothing,1,32.0,0.2,Card,25.6
+T0429,2025-07-29,North,Biscuits,Groceries,2,2.2,0.05,Card,4.18
+T0465,2025-07-30,North,Notebook,Stationery,6,2.5,0.15,Mobile Pay,12.75
+T0062,2025-07-30,South,Biscuits,Groceries,4,2.2,0.1,Card,7.92
+T0154,2025-07-30,West,Notebook,Stationery,1,2.5,0.0,Card,2.5
+T0205,2025-07-30,West,USB Cable,Electronics,4,7.99,0.15,Mobile Pay,27.17
+T0303,2025-08-01,North,Desk Lamp,Home,2,22.0,0.0,Card,44.0
+T0307,2025-08-03,South,Water Bottle,Accessories,5,12.5,0.15,Mobile Pay,53.12
+T0250,2025-08-03,North,Backpack,Accessories,3,24.99,0.1,Mobile Pay,67.47
+T0092,2025-08-03,North,T-shirt,Clothing,3,15.0,0.0,Card,45.0
+T0090,2025-08-04,Central,Coffee Mug,Home,4,8.5,0.05,Mobile Pay,32.3
+T0420,2025-08-04,South,Headphones,Electronics,2,39.99,0.0,Mobile Pay,79.98
+T0107,2025-08-04,West,Desk Lamp,Home,1,22.0,0.2,Mobile Pay,17.6
+T0480,2025-08-05,West,Tea Bags,Groceries,1,3.75,0.0,Card,3.75
+T0242,2025-08-05,North,T-shirt,Clothing,1,15.0,0.0,Gift Card,15.0
+T0274,2025-08-06,North,Pen Pack,Stationery,1,1.8,0.2,Cash,1.44
+T0459,2025-08-06,North,Pen Pack,Stationery,3,1.8,0.05,Card,5.13
+T0375,2025-08-07,West,T-shirt,Clothing,2,15.0,0.2,Mobile Pay,24.0
+T0276,2025-08-07,Central,Backpack,Accessories,2,24.99,0.0,Mobile Pay,49.98
+T0057,2025-08-07,North,T-shirt,Clothing,1,15.0,0.0,Cash,15.0
+T0444,2025-08-08,South,Coffee Mug,Home,1,8.5,0.0,Mobile Pay,8.5
+T0106,2025-08-08,South,Biscuits,Groceries,1,2.2,0.0,Card,2.2
+T0435,2025-08-09,North,Pen Pack,Stationery,1,1.8,0.0,Card,1.8
+T0423,2025-08-09,South,Biscuits,Groceries,5,2.2,0.0,Cash,11.0
+T0498,2025-08-11,South,Pen Pack,Stationery,2,1.8,0.05,Mobile Pay,3.42
+T0108,2025-08-11,South,Backpack,Accessories,3,24.99,0.2,Cash,59.98
+T0497,2025-08-12,North,Tea Bags,Groceries,5,3.75,0.0,Card,18.75
+T0070,2025-08-12,North,Notebook,Stationery,2,2.5,0.1,Card,4.5
+T0051,2025-08-13,Central,T-shirt,Clothing,3,15.0,0.05,Mobile Pay,42.75
+T0324,2025-08-14,North,USB Cable,Electronics,1,7.99,0.0,Card,7.99
+T0084,2025-08-15,West,Hoodie,Clothing,3,32.0,0.15,Mobile Pay,81.6
+T0076,2025-08-15,North,Biscuits,Groceries,1,2.2,0.0,Mobile Pay,2.2
+T0455,2025-08-16,North,Desk Lamp,Home,1,22.0,0.05,Card,20.9
+T0286,2025-08-16,South,Pen Pack,Stationery,3,1.8,0.2,Mobile Pay,4.32
+T0152,2025-08-17,West,T-shirt,Clothing,2,15.0,0.0,Card,30.0
+T0306,2025-08-19,West,Water Bottle,Accessories,1,12.5,0.0,Mobile Pay,12.5
+T0314,2025-08-19,Central,T-shirt,Clothing,1,15.0,0.2,Card,12.0
+T0411,2025-08-19,West,Desk Lamp,Home,1,22.0,0.05,Card,20.9
+T0234,2025-08-19,Central,Pen Pack,Stationery,3,1.8,0.1,Cash,4.86
+T0179,2025-08-21,West,USB Cable,Electronics,2,7.99,0.05,Mobile Pay,15.18
+T0353,2025-08-21,West,Tea Bags,Groceries,6,3.75,0.0,Mobile Pay,22.5
+T0117,2025-08-21,North,Headphones,Electronics,1,39.99,0.0,Card,39.99
+T0157,2025-08-22,North,Notebook,Stationery,3,2.5,0.0,Card,7.5
+T0448,2025-08-23,South,Hoodie,Clothing,1,32.0,0.05,Mobile Pay,30.4
+T0064,2025-08-24,North,USB Cable,Electronics,1,7.99,0.1,Card,7.19
+T0094,2025-08-28,West,Backpack,Accessories,6,24.99,0.0,Cash,149.94
+T0177,2025-08-28,West,Pen Pack,Stationery,1,1.8,0.2,Gift Card,1.44
+T0344,2025-08-28,North,Headphones,Electronics,1,39.99,0.0,Mobile Pay,39.99
+T0134,2025-08-28,South,Tea Bags,Groceries,1,3.75,0.0,Cash,3.75
+T0264,2025-08-29,South,Notebook,Stationery,2,2.5,0.2,Mobile Pay,4.0
+T0098,2025-08-29,South,Notebook,Stationery,3,2.5,0.0,Card,7.5
+T0362,2025-08-30,North,Notebook,Stationery,1,2.5,0.0,Mobile Pay,2.5
+T0257,2025-08-30,West,Tea Bags,Groceries,3,3.75,0.1,Card,10.12
+T0203,2025-08-31,West,Pen Pack,Stationery,1,1.8,0.0,Card,1.8
+T0027,2025-09-01,West,T-shirt,Clothing,1,15.0,0.0,Gift Card,15.0
+T0338,2025-09-01,South,Desk Lamp,Home,2,22.0,0.1,Card,39.6
+T0348,2025-09-02,West,USB Cable,Electronics,5,7.99,0.0,Card,39.95
+T0431,2025-09-03,West,Hoodie,Clothing,1,32.0,0.0,Cash,32.0
+T0207,2025-09-04,South,Water Bottle,Accessories,3,12.5,0.0,Card,37.5
+T0145,2025-09-06,North,Pen Pack,Stationery,1,1.8,0.05,Mobile Pay,1.71
+T0026,2025-09-06,North,Pen Pack,Stationery,5,1.8,0.0,Card,9.0
+T0452,2025-09-08,West,Headphones,Electronics,1,39.99,0.0,Cash,39.99
+T0197,2025-09-09,Central,Tea Bags,Groceries,4,3.75,0.0,Card,15.0
+T0139,2025-09-09,South,Pen Pack,Stationery,2,1.8,0.0,Mobile Pay,3.6
+T0285,2025-09-09,West,Water Bottle,Accessories,1,12.5,0.15,Card,10.62
+T0135,2025-09-10,West,Desk Lamp,Home,1,22.0,0.0,Mobile Pay,22.0
+T0457,2025-09-11,South,T-shirt,Clothing,2,15.0,0.05,Mobile Pay,28.5
+T0171,2025-09-12,South,Headphones,Electronics,3,39.99,0.0,Card,119.97
+T0386,2025-09-12,West,Desk Lamp,Home,1,22.0,0.2,Mobile Pay,17.6
+T0273,2025-09-12,South,Tea Bags,Groceries,2,3.75,0.15,Mobile Pay,6.38
+T0261,2025-09-13,North,Hoodie,Clothing,2,32.0,0.05,Mobile Pay,60.8
+T0015,2025-09-13,North,Coffee Mug,Home,4,8.5,0.05,Card,32.3
+T0454,2025-09-16,West,Biscuits,Groceries,2,2.2,0.05,Mobile Pay,4.18
+T0319,2025-09-17,South,T-shirt,Clothing,2,15.0,0.1,Card,27.0
+T0232,2025-09-17,Central,Coffee Mug,Home,2,8.5,0.05,Card,16.15
+T0044,2025-09-18,Central,Pen Pack,Stationery,4,1.8,0.0,Mobile Pay,7.2
+T0358,2025-09-19,West,Desk Lamp,Home,3,22.0,0.0,Card,66.0
+T0069,2025-09-19,South,Pen Pack,Stationery,1,1.8,0.05,Card,1.71
+T0253,2025-09-20,North,Backpack,Accessories,3,24.99,0.0,Mobile Pay,74.97
+T0215,2025-09-20,West,Pen Pack,Stationery,1,1.8,0.0,Cash,1.8
+T0416,2025-09-20,Central,Coffee Mug,Home,1,8.5,0.0,Cash,8.5
+T0347,2025-09-21,North,USB Cable,Electronics,1,7.99,0.05,Gift Card,7.59
+T0113,2025-09-22,West,Water Bottle,Accessories,1,12.5,0.1,Cash,11.25
+T0252,2025-09-22,South,Pen Pack,Stationery,1,1.8,0.1,Card,1.62
+T0296,2025-09-23,South,Headphones,Electronics,3,39.99,0.0,Card,119.97
+T0326,2025-09-23,West,Water Bottle,Accessories,2,12.5,0.2,Cash,20.0
+T0479,2025-09-23,South,Biscuits,Groceries,1,2.2,0.0,Mobile Pay,2.2
+T0357,2025-09-24,West,Desk Lamp,Home,1,22.0,0.0,Card,22.0
+T0399,2025-09-27,West,Headphones,Electronics,3,39.99,0.0,Card,119.97
+T0355,2025-09-28,Central,Tea Bags,Groceries,1,3.75,0.15,Card,3.19
+T0282,2025-09-29,North,USB Cable,Electronics,1,7.99,0.05,Gift Card,7.59
+T0471,2025-10-01,North,Coffee Mug,Home,1,8.5,0.0,Card,8.5
+T0118,2025-10-02,West,Tea Bags,Groceries,1,3.75,0.0,Card,3.75
+T0377,2025-10-03,North,Desk Lamp,Home,1,22.0,0.0,Mobile Pay,22.0
+T0334,2025-10-03,North,Headphones,Electronics,5,39.99,0.05,Card,189.95
+T0109,2025-10-03,South,Desk Lamp,Home,2,22.0,0.1,Card,39.6
+T0408,2025-10-04,Central,USB Cable,Electronics,1,7.99,0.1,Cash,7.19
+T0028,2025-10-04,West,Tea Bags,Groceries,2,3.75,0.1,Gift Card,6.75
+T0024,2025-10-04,West,T-shirt,Clothing,4,15.0,0.05,Card,57.0
+T0088,2025-10-04,North,Pen Pack,Stationery,1,1.8,0.0,Mobile Pay,1.8
+T0132,2025-10-06,North,Water Bottle,Accessories,2,12.5,0.15,Card,21.25
+T0367,2025-10-06,North,Coffee Mug,Home,2,8.5,0.1,Card,15.3
+T0270,2025-10-06,North,Desk Lamp,Home,1,22.0,0.1,Card,19.8
+T0392,2025-10-07,Central,Desk Lamp,Home,1,22.0,0.15,Cash,18.7
+T0427,2025-10-07,West,Backpack,Accessories,2,24.99,0.05,Mobile Pay,47.48
+T0356,2025-10-08,North,T-shirt,Clothing,1,15.0,0.0,Card,15.0
+T0085,2025-10-08,West,Desk Lamp,Home,4,22.0,0.1,Card,79.2
+T0038,2025-10-09,Central,Pen Pack,Stationery,1,1.8,0.2,Gift Card,1.44
+T0141,2025-10-09,South,Notebook,Stationery,2,2.5,0.0,Card,5.0
+T0129,2025-10-10,West,Pen Pack,Stationery,1,1.8,0.0,Card,1.8
+T0052,2025-10-11,North,Headphones,Electronics,5,39.99,0.0,Card,199.95
+T0290,2025-10-11,North,Hoodie,Clothing,1,32.0,0.1,Cash,28.8
+T0073,2025-10-11,West,Backpack,Accessories,1,24.99,0.05,Mobile Pay,23.74
+T0178,2025-10-13,South,USB Cable,Electronics,1,7.99,0.0,Cash,7.99
+T0060,2025-10-14,North,Coffee Mug,Home,5,8.5,0.1,Mobile Pay,38.25
+T0418,2025-10-14,West,Water Bottle,Accessories,2,12.5,0.0,Card,25.0
+T0228,2025-10-16,South,Hoodie,Clothing,1,32.0,0.15,Mobile Pay,27.2
+T0299,2025-10-16,Central,Notebook,Stationery,3,2.5,0.0,Mobile Pay,7.5
+T0346,2025-10-18,West,Biscuits,Groceries,3,2.2,0.0,Mobile Pay,6.6
+T0313,2025-10-19,Central,T-shirt,Clothing,1,15.0,0.05,Card,14.25
+T0233,2025-10-20,North,Biscuits,Groceries,1,2.2,0.05,Gift Card,2.09
+T0169,2025-10-20,South,USB Cable,Electronics,2,7.99,0.2,Card,12.78
+T0249,2025-10-20,West,Desk Lamp,Home,2,22.0,0.0,Cash,44.0
+T0033,2025-10-20,West,Hoodie,Clothing,2,32.0,0.1,Card,57.6
+T0221,2025-10-21,Central,Coffee Mug,Home,3,8.5,0.0,Card,25.5
+T0451,2025-10-22,North,Coffee Mug,Home,1,8.5,0.0,Cash,8.5
+T0091,2025-10-22,South,Coffee Mug,Home,2,8.5,0.15,Mobile Pay,14.45
+T0103,2025-10-22,North,Biscuits,Groceries,4,2.2,0.0,Card,8.8
+T0300,2025-10-23,West,Headphones,Electronics,2,39.99,0.1,Cash,71.98
+T0298,2025-10-25,South,Backpack,Accessories,1,24.99,0.05,Mobile Pay,23.74
+T0165,2025-10-26,West,Backpack,Accessories,1,24.99,0.05,Card,23.74
+T0239,2025-10-26,West,Biscuits,Groceries,1,2.2,0.0,Card,2.2
+T0322,2025-10-26,West,Desk Lamp,Home,1,22.0,0.05,Card,20.9
+T0335,2025-10-28,North,Water Bottle,Accessories,1,12.5,0.05,Cash,11.88
+T0127,2025-10-29,Central,Coffee Mug,Home,1,8.5,0.05,Mobile Pay,8.07
+T0119,2025-10-29,North,T-shirt,Clothing,2,15.0,0.2,Card,24.0
+T0449,2025-10-30,North,Pen Pack,Stationery,2,1.8,0.0,Card,3.6
+T0156,2025-10-30,West,USB Cable,Electronics,4,7.99,0.15,Card,27.17
+T0068,2025-11-02,West,Coffee Mug,Home,1,8.5,0.1,Cash,7.65
+T0199,2025-11-02,West,T-shirt,Clothing,1,15.0,0.0,Card,15.0
+T0105,2025-11-04,Central,Pen Pack,Stationery,3,1.8,0.05,Card,5.13
+T0381,2025-11-06,North,Hoodie,Clothing,1,32.0,0.0,Card,32.0
+T0136,2025-11-06,Central,Headphones,Electronics,1,39.99,0.0,Gift Card,39.99
+T0488,2025-11-07,Central,T-shirt,Clothing,1,15.0,0.0,Mobile Pay,15.0
+T0259,2025-11-08,North,T-shirt,Clothing,1,15.0,0.1,Card,13.5
+T0236,2025-11-09,West,Backpack,Accessories,1,24.99,0.15,Card,21.24
+T0462,2025-11-09,North,Biscuits,Groceries,1,2.2,0.05,Mobile Pay,2.09
+T0325,2025-11-10,Central,Desk Lamp,Home,4,22.0,0.1,Mobile Pay,79.2
+T0318,2025-11-10,South,USB Cable,Electronics,1,7.99,0.2,Cash,6.39
+T0410,2025-11-11,Central,Hoodie,Clothing,1,32.0,0.1,Cash,28.8
+T0484,2025-11-12,Central,Biscuits,Groceries,1,2.2,0.0,Card,2.2
+T0395,2025-11-13,West,Biscuits,Groceries,2,2.2,0.05,Mobile Pay,4.18
+T0126,2025-11-13,West,Water Bottle,Accessories,3,12.5,0.0,Card,37.5
+T0245,2025-11-13,North,Backpack,Accessories,2,24.99,0.0,Mobile Pay,49.98
+T0049,2025-11-15,North,Hoodie,Clothing,6,32.0,0.0,Cash,192.0
+T0246,2025-11-16,South,Backpack,Accessories,3,24.99,0.0,Mobile Pay,74.97
+T0421,2025-11-17,Central,Desk Lamp,Home,2,22.0,0.0,Card,44.0
+T0477,2025-11-17,West,Headphones,Electronics,3,39.99,0.1,Mobile Pay,107.97
+T0229,2025-11-18,West,USB Cable,Electronics,1,7.99,0.0,Cash,7.99
+T0173,2025-11-18,Central,Biscuits,Groceries,1,2.2,0.1,Cash,1.98
+T0080,2025-11-19,West,Hoodie,Clothing,1,32.0,0.05,Card,30.4
+T0225,2025-11-21,South,Pen Pack,Stationery,2,1.8,0.0,Card,3.6
+T0211,2025-11-21,West,Notebook,Stationery,1,2.5,0.0,Card,2.5
+T0278,2025-11-23,North,Coffee Mug,Home,1,8.5,0.1,Gift Card,7.65
+T0447,2025-11-24,Central,USB Cable,Electronics,2,7.99,0.05,Card,15.18
+T0013,2025-11-24,Central,Tea Bags,Groceries,2,3.75,0.05,Card,7.12
+T0001,2025-11-24,North,Pen Pack,Stationery,1,1.8,0.0,Card,1.8
+T0352,2025-11-24,North,Headphones,Electronics,1,39.99,0.0,Card,39.99
+T0343,2025-11-25,North,T-shirt,Clothing,2,15.0,0.15,Mobile Pay,25.5
+T0391,2025-11-25,South,Tea Bags,Groceries,2,3.75,0.0,Card,7.5
+T0226,2025-11-27,North,Backpack,Accessories,1,24.99,0.0,Card,24.99
+T0339,2025-11-27,North,Notebook,Stationery,4,2.5,0.0,Cash,10.0
+T0048,2025-11-27,Central,Headphones,Electronics,2,39.99,0.15,Card,67.98
+T0363,2025-11-27,West,Coffee Mug,Home,1,8.5,0.15,Mobile Pay,7.22
+T0280,2025-11-27,Central,USB Cable,Electronics,1,7.99,0.15,Cash,6.79
+T0434,2025-11-27,South,Biscuits,Groceries,2,2.2,0.2,Gift Card,3.52
+T0345,2025-11-28,South,Headphones,Electronics,3,39.99,0.0,Mobile Pay,119.97
+T0029,2025-11-29,Central,USB Cable,Electronics,1,7.99,0.0,Card,7.99
+T0256,2025-11-29,South,USB Cable,Electronics,3,7.99,0.0,Mobile Pay,23.97
+T0138,2025-11-30,West,Desk Lamp,Home,4,22.0,0.0,Cash,88.0
+T0311,2025-12-01,Central,Biscuits,Groceries,2,2.2,0.0,Card,4.4
+T0390,2025-12-02,West,Biscuits,Groceries,1,2.2,0.1,Gift Card,1.98
+T0209,2025-12-03,South,Tea Bags,Groceries,1,3.75,0.0,Mobile Pay,3.75
+T0499,2025-12-03,North,Tea Bags,Groceries,1,3.75,0.0,Mobile Pay,3.75
+T0065,2025-12-04,Central,Water Bottle,Accessories,1,12.5,0.0,Gift Card,12.5
+T0170,2025-12-04,Central,Coffee Mug,Home,1,8.5,0.05,Mobile Pay,8.07
+T0369,2025-12-05,Central,Coffee Mug,Home,2,8.5,0.15,Card,14.45
+T0214,2025-12-05,South,Coffee Mug,Home,2,8.5,0.0,Card,17.0
+T0095,2025-12-06,West,Notebook,Stationery,1,2.5,0.0,Card,2.5
+T0155,2025-12-06,Central,Biscuits,Groceries,6,2.2,0.0,Card,13.2
+T0354,2025-12-07,Central,Water Bottle,Accessories,3,12.5,0.05,Cash,35.62
+T0263,2025-12-09,Central,Pen Pack,Stationery,2,1.8,0.0,Card,3.6
+T0111,2025-12-09,South,Coffee Mug,Home,1,8.5,0.0,Card,8.5
+T0241,2025-12-10,Central,Tea Bags,Groceries,3,3.75,0.1,Cash,10.12
+T0373,2025-12-11,North,USB Cable,Electronics,1,7.99,0.15,Card,6.79
+T0137,2025-12-11,North,Headphones,Electronics,2,39.99,0.1,Card,71.98
+T0159,2025-12-12,West,T-shirt,Clothing,1,15.0,0.0,Mobile Pay,15.0
+T0467,2025-12-13,South,Coffee Mug,Home,2,8.5,0.05,Cash,16.15
+T0441,2025-12-13,North,Backpack,Accessories,4,24.99,0.1,Cash,89.96
+T0281,2025-12-14,Central,Desk Lamp,Home,5,22.0,0.0,Cash,110.0
+T0293,2025-12-15,North,T-shirt,Clothing,1,15.0,0.15,Mobile Pay,12.75
+T0412,2025-12-15,South,Hoodie,Clothing,2,32.0,0.0,Mobile Pay,64.0
+T0328,2025-12-15,West,Biscuits,Groceries,3,2.2,0.0,Card,6.6
+T0323,2025-12-15,Central,Water Bottle,Accessories,1,12.5,0.15,Card,10.62
+T0473,2025-12-16,West,Notebook,Stationery,1,2.5,0.05,Card,2.38
+T0491,2025-12-16,Central,Backpack,Accessories,3,24.99,0.2,Card,59.98
+T0267,2025-12-17,North,Desk Lamp,Home,6,22.0,0.0,Mobile Pay,132.0
+T0302,2025-12-17,Central,Coffee Mug,Home,1,8.5,0.0,Card,8.5
+T0321,2025-12-19,North,Biscuits,Groceries,1,2.2,0.0,Mobile Pay,2.2
+T0475,2025-12-19,South,Backpack,Accessories,4,24.99,0.0,Card,99.96
+T0104,2025-12-20,South,Biscuits,Groceries,1,2.2,0.05,Mobile Pay,2.09
+T0487,2025-12-20,South,Notebook,Stationery,3,2.5,0.05,Card,7.12
+T0424,2025-12-22,West,Water Bottle,Accessories,2,12.5,0.0,Gift Card,25.0
+T0162,2025-12-22,Central,Headphones,Electronics,4,39.99,0.0,Card,159.96
+T0041,2025-12-23,West,Tea Bags,Groceries,6,3.75,0.05,Card,21.38
+T0004,2025-12-26,South,T-shirt,Clothing,1,15.0,0.0,Mobile Pay,15.0
+T0200,2025-12-26,North,Pen Pack,Stationery,4,1.8,0.05,Card,6.84
+T0063,2025-12-26,West,Pen Pack,Stationery,1,1.8,0.0,Card,1.8
+T0330,2025-12-27,West,Water Bottle,Accessories,2,12.5,0.0,Card,25.0
+T0478,2025-12-27,North,Pen Pack,Stationery,1,1.8,0.0,Cash,1.8
+T0384,2025-12-27,South,Water Bottle,Accessories,1,12.5,0.0,Mobile Pay,12.5
+T0464,2025-12-27,Central,Headphones,Electronics,1,39.99,0.0,Card,39.99
+T0031,2025-12-29,Central,Biscuits,Groceries,1,2.2,0.0,Mobile Pay,2.2
+T0240,2025-12-29,South,Pen Pack,Stationery,1,1.8,0.0,Mobile Pay,1.8
+T0287,2025-12-30,South,Pen Pack,Stationery,2,1.8,0.0,Mobile Pay,3.6
+T0288,2025-12-31,South,Tea Bags,Groceries,4,3.75,0.05,Cash,14.25
