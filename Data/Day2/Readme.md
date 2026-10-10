@@ -20,7 +20,7 @@
 <p> Sort by revenue: Display the 10 transactions with the highest revenue.
 <p> Sort by quantity: Find transactions with the largest quantities sold.
 
-# # Part 3
+# Part 3
 ## Descriptive statistics
 <p> Calculate the mean: Find the average transaction revenue.
 <p> Calculate the median: Find the median transaction revenue and compare it with the mean.
