@@ -1,13 +1,13 @@
 
 Part 1 — Loading and understanding CSV files
-[ ] Load the dataset: Import pandas and load `retail_sales_data.csv` into a DataFrame called `df`. 
-[ ] Preview the data: Display the first 10 rows and the last 5 rows.
-[ ] Explore the dimensions: Find the number of rows and columns using `shape`.
-[ ] Inspect column names: Display all column names and their data types.
-[ ] Understand the structure: Use `info()` and explain what the output tells you.
-[ ] Select columns: Display only the `Product`, `Quantity`, and `Revenue` columns.
-[ ] Select rows: Display the first 15 transactions.
-[ ] Check data types: Confirm that `Date` is a date and `Revenue` is numeric. Convert `Date` using `pd.to_datetime()`.
+<p>Load the dataset: Import pandas and load `retail_sales_data.csv` into a DataFrame called `df`. 
+<p> Preview the data: Display the first 10 rows and the last 5 rows.
+<p> Explore the dimensions: Find the number of rows and columns using `shape`.
+<p> Inspect column names: Display all column names and their data types.
+<p> Understand the structure: Use `info()` and explain what the output tells you.
+<p> Select columns: Display only the `Product`, `Quantity`, and `Revenue` columns.
+<p> Select rows: Display the first 15 transactions.
+<p> Check data types: Confirm that `Date` is a date and `Revenue` is numeric. Convert `Date` using `pd.to_datetime()`.
 
 Part 2 — Filtering and sorting
 [ ] Filter by category: Display only transactions in the Electronics category.
