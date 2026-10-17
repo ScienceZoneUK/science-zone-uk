@@ -20,7 +20,12 @@ electronics = df[df["Category"] == "Electronics"]
 
 print(electronics.head(10))
 ````
-<p> Filter by branch: Display transactions from the North branch.
+Filter by branch: Display transactions from the North branch.
+  ```python
+electronics = df[df["Category"] == "Electronics"]
+
+print(electronics.head(10))
+````
 <p> Combine conditions: Find Electronics transactions from the North branch.
 <p> Filter by revenue: Display transactions with revenue greater than 50.
 <p> Filter by discount: Find transactions with a discount of at least 10%.
