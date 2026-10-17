@@ -13,6 +13,13 @@
 # Part 2 
 ## Filtering and sorting
 <p> Filter by category: Display only transactions in the Electronics category.
+  ```
+  
+  ```python
+electronics = df[df["Category"] == "Electronics"]
+
+print(electronics.head(10))
+````
 <p> Filter by branch: Display transactions from the North branch.
 <p> Combine conditions: Find Electronics transactions from the North branch.
 <p> Filter by revenue: Display transactions with revenue greater than 50.
